@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="jajagoModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="jajagoModelStoreContainer">
+          <EntitySet Name="Resources" EntityType="jajagoModel.Store.Resources" store:Type="Tables" />
+          <EntitySet Name="Taxonomies" EntityType="jajagoModel.Store.Taxonomies" store:Type="Tables" />
+          <EntitySet Name="Taxons" EntityType="jajagoModel.Store.Taxons" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="Resources">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="taxonomy_id" Type="bigint" Nullable="false" />
+          <Property Name="taxon_id" Type="bigint" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="path" Type="nvarchar" MaxLength="100" />
+          <Property Name="created_at" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Taxonomies">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="position" Type="int" />
+        </EntityType>
+        <EntityType Name="Taxons">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="parent_id" Type="bigint" Nullable="false" />
+          <Property Name="taxonomy_id" Type="bigint" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="jajagoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="jajagoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Resources" EntityType="jajagoModel.Resource" />
+          <EntitySet Name="Taxonomies" EntityType="jajagoModel.Taxonomy" />
+          <EntitySet Name="Taxons" EntityType="jajagoModel.Taxon" />
+        </EntityContainer>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="taxonomy_id" Type="Int64" Nullable="false" />
+          <Property Name="taxon_id" Type="Int64" />
+          <Property Name="name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="path" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="created_at" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Taxonomy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="position" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Taxon">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="parent_id" Type="Int64" Nullable="false" />
+          <Property Name="taxonomy_id" Type="Int64" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="jajagoModelStoreContainer" CdmEntityContainer="jajagoEntities">
+          <EntitySetMapping Name="Resources"><EntityTypeMapping TypeName="jajagoModel.Resource"><MappingFragment StoreEntitySet="Resources">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="taxonomy_id" ColumnName="taxonomy_id" />
+            <ScalarProperty Name="taxon_id" ColumnName="taxon_id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="path" ColumnName="path" />
+            <ScalarProperty Name="created_at" ColumnName="created_at" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Taxonomies"><EntityTypeMapping TypeName="jajagoModel.Taxonomy"><MappingFragment StoreEntitySet="Taxonomies">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="position" ColumnName="position" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Taxons"><EntityTypeMapping TypeName="jajagoModel.Taxon"><MappingFragment StoreEntitySet="Taxons">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+            <ScalarProperty Name="taxonomy_id" ColumnName="taxonomy_id" />
+            <ScalarProperty Name="name" ColumnName="name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Resources">
+        <EntityTypeShape EntityType="jajagoModel.Resource" Width="1.5" PointX="0.75" PointY="0.75" Height="1.959453125" IsExpanded="true" />
+        <EntityTypeShape EntityType="jajagoModel.Taxonomy" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4535937499999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="jajagoModel.Taxon" Width="1.5" PointX="4.75" PointY="0.875" Height="1.622213541666667" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
