@@ -18,5 +18,12 @@ namespace TestProject
             Assert.IsNotNull(rm.Catalog());
 
         }
+
+        [TestMethod]
+        public void TestScan()
+        {
+            ResourceManager rm = new ResourceManager();
+            Assert.IsTrue(rm.Scan("d:\\") == 0);
+        }
     }
 }

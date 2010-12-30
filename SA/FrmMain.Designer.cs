@@ -29,93 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("流行");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("经典");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("钢琴");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("类型", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("周杰伦");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("刘德华");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("歌手", new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("音乐", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("动作");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("恐怖");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("爱情");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("科幻");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("类型", new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12});
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("成龙");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("周星驰");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("演员", new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode15});
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("大陆");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("欧美");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("日本");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("韩国");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("国家", new System.Windows.Forms.TreeNode[] {
-            treeNode17,
-            treeNode18,
-            treeNode19,
-            treeNode20});
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("国语");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("粤语");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("英语 ");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("语言", new System.Windows.Forms.TreeNode[] {
-            treeNode22,
-            treeNode23,
-            treeNode24});
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("电影", new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode16,
-            treeNode21,
-            treeNode25});
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("演唱会");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("小品");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("动画");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("短片");
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("视频", new System.Windows.Forms.TreeNode[] {
-            treeNode27,
-            treeNode28,
-            treeNode29,
-            treeNode30});
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("古装");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("偶像");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("港台");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("欧美");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("大陆");
-            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("连续剧", new System.Windows.Forms.TreeNode[] {
-            treeNode32,
-            treeNode33,
-            treeNode34,
-            treeNode35,
-            treeNode36});
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("软件");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("音乐");
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("电影");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("视频");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("连续剧");
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("软件");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("音乐");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("电影");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("视频");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("连续剧");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("软件");
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.treeCatalog = new System.Windows.Forms.TreeView();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.treeView2 = new System.Windows.Forms.TreeView();
@@ -135,12 +59,13 @@
             this.button11 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.label9 = new System.Windows.Forms.Label();
+            this.pnResources = new System.Windows.Forms.Panel();
+            this.btnScan = new System.Windows.Forms.Button();
+            this.lbOut = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -152,6 +77,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnResources.SuspendLayout();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -208,11 +134,8 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.treeView1);
+            this.tabPage4.Controls.Add(this.pnResources);
+            this.tabPage4.Controls.Add(this.treeCatalog);
             this.tabPage4.Controls.Add(this.checkBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 21);
             this.tabPage4.Name = "tabPage4";
@@ -222,150 +145,15 @@
             this.tabPage4.Text = "手机资源";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // treeCatalog
             // 
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.97688F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.02312F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(152, 46);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(515, 302);
-            this.tableLayoutPanel1.TabIndex = 6;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 12);
-            this.label5.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(503, 19);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 12);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "路径";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(358, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 12);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "大小 ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(210, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 12);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "格式";
-            // 
-            // treeView1
-            // 
-            this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.treeCatalog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
-            this.treeView1.Location = new System.Drawing.Point(6, 34);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "节点1";
-            treeNode1.Text = "流行";
-            treeNode2.Name = "节点2";
-            treeNode2.Text = "经典";
-            treeNode3.Name = "节点3";
-            treeNode3.Text = "钢琴";
-            treeNode4.Name = "节点1";
-            treeNode4.Text = "类型";
-            treeNode5.Name = "节点4";
-            treeNode5.Text = "周杰伦";
-            treeNode6.Name = "节点5";
-            treeNode6.Text = "刘德华";
-            treeNode7.Name = "节点0";
-            treeNode7.Text = "歌手";
-            treeNode8.Name = "节点0";
-            treeNode8.Text = "音乐";
-            treeNode9.Name = "节点0";
-            treeNode9.Text = "动作";
-            treeNode10.Name = "节点1";
-            treeNode10.Text = "恐怖";
-            treeNode11.Name = "节点2";
-            treeNode11.Text = "爱情";
-            treeNode12.Name = "节点3";
-            treeNode12.Text = "科幻";
-            treeNode13.Name = "节点3";
-            treeNode13.Text = "类型";
-            treeNode14.Name = "节点4";
-            treeNode14.Text = "成龙";
-            treeNode15.Name = "节点5";
-            treeNode15.Text = "周星驰";
-            treeNode16.Name = "节点6";
-            treeNode16.Text = "演员";
-            treeNode17.Name = "节点6";
-            treeNode17.Text = "大陆";
-            treeNode18.Name = "节点7";
-            treeNode18.Text = "欧美";
-            treeNode19.Name = "节点8";
-            treeNode19.Text = "日本";
-            treeNode20.Name = "节点9";
-            treeNode20.Text = "韩国";
-            treeNode21.Name = "节点7";
-            treeNode21.Text = "国家";
-            treeNode22.Name = "节点10";
-            treeNode22.Text = "国语";
-            treeNode23.Name = "节点11";
-            treeNode23.Text = "粤语";
-            treeNode24.Name = "节点12";
-            treeNode24.Text = "英语 ";
-            treeNode25.Name = "节点8";
-            treeNode25.Text = "语言";
-            treeNode26.Name = "节点2";
-            treeNode26.Text = "电影";
-            treeNode27.Name = "节点10";
-            treeNode27.Text = "演唱会";
-            treeNode28.Name = "节点12";
-            treeNode28.Text = "小品";
-            treeNode29.Name = "节点14";
-            treeNode29.Text = "动画";
-            treeNode30.Name = "节点15";
-            treeNode30.Text = "短片";
-            treeNode31.Name = "节点9";
-            treeNode31.Text = "视频";
-            treeNode32.Name = "节点1";
-            treeNode32.Text = "古装";
-            treeNode33.Name = "节点2";
-            treeNode33.Text = "偶像";
-            treeNode34.Name = "节点3";
-            treeNode34.Text = "港台";
-            treeNode35.Name = "节点4";
-            treeNode35.Text = "欧美";
-            treeNode36.Name = "节点5";
-            treeNode36.Text = "大陆";
-            treeNode37.Name = "节点0";
-            treeNode37.Text = "连续剧";
-            treeNode38.Name = "节点0";
-            treeNode38.Text = "软件";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode26,
-            treeNode31,
-            treeNode37,
-            treeNode38});
-            this.treeView1.Size = new System.Drawing.Size(116, 319);
-            this.treeView1.TabIndex = 1;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect_1);
+            this.treeCatalog.Location = new System.Drawing.Point(6, 34);
+            this.treeCatalog.Name = "treeCatalog";
+            this.treeCatalog.Size = new System.Drawing.Size(116, 319);
+            this.treeCatalog.TabIndex = 1;
+            this.treeCatalog.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeCatalog_AfterSelect);
             // 
             // checkBox1
             // 
@@ -399,22 +187,22 @@
                         | System.Windows.Forms.AnchorStyles.Left)));
             this.treeView2.Location = new System.Drawing.Point(8, 90);
             this.treeView2.Name = "treeView2";
-            treeNode39.Name = "节点0";
-            treeNode39.Text = "音乐";
-            treeNode40.Name = "节点2";
-            treeNode40.Text = "电影";
-            treeNode41.Name = "节点9";
-            treeNode41.Text = "视频";
-            treeNode42.Name = "节点0";
-            treeNode42.Text = "连续剧";
-            treeNode43.Name = "节点0";
-            treeNode43.Text = "软件";
+            treeNode1.Name = "节点0";
+            treeNode1.Text = "音乐";
+            treeNode2.Name = "节点2";
+            treeNode2.Text = "电影";
+            treeNode3.Name = "节点9";
+            treeNode3.Text = "视频";
+            treeNode4.Name = "节点0";
+            treeNode4.Text = "连续剧";
+            treeNode5.Name = "节点0";
+            treeNode5.Text = "软件";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode39,
-            treeNode40,
-            treeNode41,
-            treeNode42,
-            treeNode43});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5});
             this.treeView2.Size = new System.Drawing.Size(121, 266);
             this.treeView2.TabIndex = 5;
             // 
@@ -603,13 +391,33 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label9
+            // pnResources
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(171, 2);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 12);
-            this.label9.TabIndex = 1;
+            this.pnResources.Controls.Add(this.lbOut);
+            this.pnResources.Controls.Add(this.btnScan);
+            this.pnResources.Location = new System.Drawing.Point(142, 34);
+            this.pnResources.Name = "pnResources";
+            this.pnResources.Size = new System.Drawing.Size(568, 319);
+            this.pnResources.TabIndex = 2;
+            // 
+            // btnScan
+            // 
+            this.btnScan.Location = new System.Drawing.Point(31, 17);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(75, 23);
+            this.btnScan.TabIndex = 0;
+            this.btnScan.Text = "扫描本地资源";
+            this.btnScan.UseVisualStyleBackColor = true;
+            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
+            // 
+            // lbOut
+            // 
+            this.lbOut.AutoSize = true;
+            this.lbOut.Location = new System.Drawing.Point(31, 66);
+            this.lbOut.Name = "lbOut";
+            this.lbOut.Size = new System.Drawing.Size(41, 12);
+            this.lbOut.TabIndex = 1;
+            this.lbOut.Text = "label5";
             // 
             // FrmMain
             // 
@@ -629,8 +437,6 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -644,6 +450,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnResources.ResumeLayout(false);
+            this.pnResources.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,7 +466,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView treeCatalog;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage3;
@@ -667,9 +475,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comBobox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
@@ -679,9 +484,9 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.TreeView treeView2;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel pnResources;
+        private System.Windows.Forms.Button btnScan;
+        private System.Windows.Forms.Label lbOut;
     }
 }
 

@@ -9,10 +9,15 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 
+using System.Data.Objects;
+using com.jajago.SA.Biz;
+
 namespace com.jajago.SA
 {
     public partial class FrmMain : Form
     {
+        ResourceManager rsm = new ResourceManager();
+
         public FrmMain()
         {
             InitializeComponent();
@@ -21,6 +26,20 @@ namespace com.jajago.SA
             Thread.Sleep(3000);
             th.Abort();
             Thread.Sleep(1000);
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(pictureBox1, "家家购");
+
+            foreach (Taxonomy taxonomy in rsm.Catalog())
+            {
+                treeCatalog.Nodes.Add(taxonomy.name);
+            }
+            // TODO: 读取本地资源，如果没有，提示扫描硬盘；
+
+
+
         }
 
         private void DoSplash()
@@ -45,7 +64,7 @@ namespace com.jajago.SA
             {
                 comBobox2.Items.Clear();
                 comBobox2.Text = "";
-                if (comboBox1.SelectedItem == "诺基亚")
+                if ("诺基亚" == comboBox1.SelectedItem )
                 {
                     comBobox2.Items.Add("N97");
                     comBobox2.Items.Add("A9");
@@ -70,12 +89,11 @@ namespace com.jajago.SA
                     MessageBox.Show("k660i");
         }
 
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(pictureBox1,"家家购");
-        }
+ 
 
-        private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
+
+
+        private void treeCatalog_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node.Text == "大陆")
             {
@@ -83,14 +101,39 @@ namespace com.jajago.SA
                 //sw.WriteLine("123");
                 //sw.WriteLine("酷购科技");
                 //sw.Close();
-                StreamReader sr = new StreamReader(@"E:\temp.txt",Encoding.UTF8);
-                label5.Text=sr.ReadToEnd();
+                StreamReader sr = new StreamReader(@"E:\temp.txt", Encoding.UTF8);
+                
                 //MessageBox.Show("这是大陆歌曲");
             }
             if (e.Node.Text == "欧美")
             {
-                label5.Text = "欧美视频";
+                
             }
+        }
+
+        private void btnScan_Click(object sender, EventArgs e)
+        {
+            // 暂时指定扫描D盘
+            //rsm.Scan("d:\\");
+
+            string dir = "d:\\";
+
+            DirectoryInfo Dir = new DirectoryInfo(dir);
+            StringBuilder sb = new StringBuilder();
+
+            foreach (DirectoryInfo d in Dir.GetDirectories())   //查找子目录 
+            {
+                sb.AppendLine(Dir + d.ToString());   //listBox1中填加文件名
+            }
+
+            foreach (FileInfo f in Dir.GetFiles("*.*"))       //查找文件
+            {
+                sb.AppendLine(Dir + f.ToString());   //listBox1中填加文件名
+            }
+
+            lbOut.Text = sb.ToString();
+
+
         }
     }
 }

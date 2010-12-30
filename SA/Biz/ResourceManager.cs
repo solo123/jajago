@@ -15,5 +15,10 @@ namespace com.jajago.SA.Biz
             jajagoEntities ent = new jajagoEntities();
             return ent.Taxonomies;
         }
+        public int Scan(string path)
+        {
+            return 0;
+        }
+
     }
 }
