@@ -22,15 +22,10 @@ namespace com.jajago.SA
             InitializeComponent();
         }
 
-        private void frmPop_Load(object sender, EventArgs e)
+        private void Form_Load(object sender, EventArgs e)
         {
- 
-
             run_scan = new Thread(new ThreadStart(do_scan));
             run_scan.Start();
-
-            //do_scan();
-
         }
 
 
@@ -87,5 +82,7 @@ namespace com.jajago.SA
             }
 
         }
+
+
     }
 }

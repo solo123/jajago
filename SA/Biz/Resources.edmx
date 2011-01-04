@@ -123,8 +123,8 @@
     <Diagrams>
       <Diagram Name="Resources">
         <EntityTypeShape EntityType="jajagoModel.Resource" Width="1.5" PointX="0.75" PointY="0.75" Height="1.959453125" IsExpanded="true" />
-        <EntityTypeShape EntityType="jajagoModel.Taxonomy" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4535937499999996" IsExpanded="true" />
-        <EntityTypeShape EntityType="jajagoModel.Taxon" Width="1.5" PointX="4.75" PointY="0.875" Height="1.622213541666667" IsExpanded="true" />
+        <EntityTypeShape EntityType="jajagoModel.Taxonomy" Width="1.5" PointX="2.375" PointY="0.75" Height="1.4535937499999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="jajagoModel.Taxon" Width="1.5" PointX="4" PointY="0.75" Height="1.622213541666667" IsExpanded="true" />
       </Diagram>
     </Diagrams>
   </Designer>
