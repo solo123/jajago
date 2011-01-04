@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Biz\BuffLines.cs" />
     <Compile Include="Biz\JajagoBiz.cs" />
     <Compile Include="Biz\ResourceManager.cs" />
     <Compile Include="Biz\Resources.Designer.cs">
@@ -77,6 +78,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="pop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pop.Designer.cs">
+      <DependentUpon>pop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="splash.cs">
@@ -87,6 +94,9 @@
     </Compile>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pop.resx">
+      <DependentUpon>pop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +116,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Properties\DataSources\com.jajago.SA.Biz.jajagoEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
