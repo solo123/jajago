@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pgbStart = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tim = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // progressBar1
+            // pgbStart
             // 
-            this.progressBar1.Location = new System.Drawing.Point(55, 301);
-            this.progressBar1.Maximum = 3;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(327, 22);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 1;
+            this.pgbStart.Location = new System.Drawing.Point(55, 301);
+            this.pgbStart.Maximum = 3;
+            this.pgbStart.Name = "pgbStart";
+            this.pgbStart.Size = new System.Drawing.Size(327, 22);
+            this.pgbStart.Step = 1;
+            this.pgbStart.TabIndex = 1;
             // 
             // label1
             // 
@@ -55,10 +55,9 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "正在加载中...";
             // 
-            // timer1
+            // tim
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.tim.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1
             // 
@@ -77,7 +76,7 @@
             this.ClientSize = new System.Drawing.Size(456, 335);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.pgbStart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "splash";
             this.ShowInTaskbar = false;
@@ -93,10 +92,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar pgbStart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tim;
 
     }
 }

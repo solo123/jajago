@@ -38,8 +38,6 @@ namespace com.jajago.SA
             }
             // TODO: 读取本地资源，如果没有，提示扫描硬盘；
 
-
-
         }
 
         private void DoSplash()
@@ -64,12 +62,12 @@ namespace com.jajago.SA
             {
                 comBobox2.Items.Clear();
                 comBobox2.Text = "";
-                if ("诺基亚" == comboBox1.SelectedItem )
+                if (comboBox1.SelectedItem.Equals("诺基亚"))
                 {
                     comBobox2.Items.Add("N97");
                     comBobox2.Items.Add("A9");
                 }
-                if (comboBox1.SelectedItem == "索爱")
+                if (comboBox1.SelectedItem.Equals("索爱"))
                 {
                     comBobox2.Items.Add("k660i");
                     comBobox2.Items.Add("k750");
@@ -85,13 +83,9 @@ namespace com.jajago.SA
         private void comBobox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comBobox2.Items != null && comBobox2.Items.Count > 0 && comBobox2.SelectedItem != null)
-                if (comBobox2.SelectedItem == "k660i")
+                if (comBobox2.SelectedItem.Equals("k660i"))
                     MessageBox.Show("k660i");
         }
-
- 
-
-
 
         private void treeCatalog_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -101,9 +95,8 @@ namespace com.jajago.SA
                 //sw.WriteLine("123");
                 //sw.WriteLine("酷购科技");
                 //sw.Close();
-                StreamReader sr = new StreamReader(@"E:\temp.txt", Encoding.UTF8);
-                
-                //MessageBox.Show("这是大陆歌曲");
+                //StreamReader sr = new StreamReader(@"E:\temp.txt", Encoding.UTF8);
+                MessageBox.Show("这是大陆歌曲");
             }
             if (e.Node.Text == "欧美")
             {
@@ -116,24 +109,23 @@ namespace com.jajago.SA
             // 暂时指定扫描D盘
             //rsm.Scan("d:\\");
 
-            string dir = "d:\\";
+            Thread th = new Thread(new ThreadStart(DoPop));
+            th.Start();
+            Thread.Sleep(3000);
+        }
 
-            DirectoryInfo Dir = new DirectoryInfo(dir);
-            StringBuilder sb = new StringBuilder();
+        private void DoPop()
+        {
+            frmPop fp = new frmPop();
+            fp.ShowDialog();
+        }
 
-            foreach (DirectoryInfo d in Dir.GetDirectories())   //查找子目录 
-            {
-                sb.AppendLine(Dir + d.ToString());   //listBox1中填加文件名
-            }
-
-            foreach (FileInfo f in Dir.GetFiles("*.*"))       //查找文件
-            {
-                sb.AppendLine(Dir + f.ToString());   //listBox1中填加文件名
-            }
-
-            lbOut.Text = sb.ToString();
-
-
+        BuffLines buf = new BuffLines();
+        int idx = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            buf.AddLine("hello:" + (idx++).ToString());
+            label5.Text = buf.ToString();
         }
     }
 }

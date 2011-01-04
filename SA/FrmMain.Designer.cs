@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("音乐");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("电影");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("视频");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("连续剧");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("软件");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("音乐");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("电影");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("视频");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("连续剧");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("软件");
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pnResources = new System.Windows.Forms.Panel();
+            this.btnScan = new System.Windows.Forms.Button();
             this.treeCatalog = new System.Windows.Forms.TreeView();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -59,13 +61,13 @@
             this.button11 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pnResources = new System.Windows.Forms.Panel();
-            this.btnScan = new System.Windows.Forms.Button();
-            this.lbOut = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.pnResources.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -77,7 +79,6 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnResources.SuspendLayout();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -145,6 +146,26 @@
             this.tabPage4.Text = "手机资源";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // pnResources
+            // 
+            this.pnResources.Controls.Add(this.label5);
+            this.pnResources.Controls.Add(this.button1);
+            this.pnResources.Controls.Add(this.btnScan);
+            this.pnResources.Location = new System.Drawing.Point(142, 34);
+            this.pnResources.Name = "pnResources";
+            this.pnResources.Size = new System.Drawing.Size(568, 319);
+            this.pnResources.TabIndex = 2;
+            // 
+            // btnScan
+            // 
+            this.btnScan.Location = new System.Drawing.Point(31, 17);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(75, 23);
+            this.btnScan.TabIndex = 0;
+            this.btnScan.Text = "扫描本地资源";
+            this.btnScan.UseVisualStyleBackColor = true;
+            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
+            // 
             // treeCatalog
             // 
             this.treeCatalog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -187,22 +208,22 @@
                         | System.Windows.Forms.AnchorStyles.Left)));
             this.treeView2.Location = new System.Drawing.Point(8, 90);
             this.treeView2.Name = "treeView2";
-            treeNode1.Name = "节点0";
-            treeNode1.Text = "音乐";
-            treeNode2.Name = "节点2";
-            treeNode2.Text = "电影";
-            treeNode3.Name = "节点9";
-            treeNode3.Text = "视频";
-            treeNode4.Name = "节点0";
-            treeNode4.Text = "连续剧";
-            treeNode5.Name = "节点0";
-            treeNode5.Text = "软件";
+            treeNode6.Name = "节点0";
+            treeNode6.Text = "音乐";
+            treeNode7.Name = "节点2";
+            treeNode7.Text = "电影";
+            treeNode8.Name = "节点9";
+            treeNode8.Text = "视频";
+            treeNode9.Name = "节点0";
+            treeNode9.Text = "连续剧";
+            treeNode10.Name = "节点0";
+            treeNode10.Text = "软件";
             this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5});
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10});
             this.treeView2.Size = new System.Drawing.Size(121, 266);
             this.treeView2.TabIndex = 5;
             // 
@@ -391,33 +412,24 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pnResources
+            // button1
             // 
-            this.pnResources.Controls.Add(this.lbOut);
-            this.pnResources.Controls.Add(this.btnScan);
-            this.pnResources.Location = new System.Drawing.Point(142, 34);
-            this.pnResources.Name = "pnResources";
-            this.pnResources.Size = new System.Drawing.Size(568, 319);
-            this.pnResources.TabIndex = 2;
+            this.button1.Location = new System.Drawing.Point(199, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnScan
+            // label5
             // 
-            this.btnScan.Location = new System.Drawing.Point(31, 17);
-            this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(75, 23);
-            this.btnScan.TabIndex = 0;
-            this.btnScan.Text = "扫描本地资源";
-            this.btnScan.UseVisualStyleBackColor = true;
-            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
-            // 
-            // lbOut
-            // 
-            this.lbOut.AutoSize = true;
-            this.lbOut.Location = new System.Drawing.Point(31, 66);
-            this.lbOut.Name = "lbOut";
-            this.lbOut.Size = new System.Drawing.Size(41, 12);
-            this.lbOut.TabIndex = 1;
-            this.lbOut.Text = "label5";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(280, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "label5";
             // 
             // FrmMain
             // 
@@ -437,6 +449,8 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.pnResources.ResumeLayout(false);
+            this.pnResources.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -450,8 +464,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnResources.ResumeLayout(false);
-            this.pnResources.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,7 +498,8 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel pnResources;
         private System.Windows.Forms.Button btnScan;
-        private System.Windows.Forms.Label lbOut;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -18,16 +18,16 @@ namespace com.jajago.SA
 
         private void splash_Load(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
+            tim.Enabled = true;
             label1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (progressBar1.Value < progressBar1.Maximum)
+            if (pgbStart.Value < pgbStart.Maximum)
             {
-                progressBar1.Step = 1;
-                progressBar1.PerformStep();
+                pgbStart.Step = 1;
+                pgbStart.PerformStep();
             }
         }
     }
