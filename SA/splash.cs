@@ -29,6 +29,8 @@ namespace com.jajago.SA
                 pgbStart.Step = 1;
                 pgbStart.PerformStep();
             }
+            else
+                this.Close();
         }
     }
 }

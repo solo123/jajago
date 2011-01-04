@@ -78,11 +78,11 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="pop.cs">
+    <Compile Include="FrmScan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pop.Designer.cs">
-      <DependentUpon>pop.cs</DependentUpon>
+    <Compile Include="FrmScan.Designer.cs">
+      <DependentUpon>FrmScan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,8 +95,8 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pop.resx">
-      <DependentUpon>pop.cs</DependentUpon>
+    <EmbeddedResource Include="FrmScan.resx">
+      <DependentUpon>FrmScan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -167,6 +167,7 @@
     <Content Include="jajago.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\ajax-loader.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

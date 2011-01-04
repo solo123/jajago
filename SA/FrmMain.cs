@@ -21,11 +21,7 @@ namespace com.jajago.SA
         public FrmMain()
         {
             InitializeComponent();
-            Thread th = new Thread(new ThreadStart(DoSplash));
-            th.Start();
-            Thread.Sleep(3000);
-            th.Abort();
-            Thread.Sleep(1000);
+            //DoSplash();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -106,18 +102,12 @@ namespace com.jajago.SA
 
         private void btnScan_Click(object sender, EventArgs e)
         {
-            // 暂时指定扫描D盘
-            //rsm.Scan("d:\\");
-
-            Thread th = new Thread(new ThreadStart(DoPop));
-            th.Start();
-            Thread.Sleep(3000);
+            FrmScan fp = new FrmScan();
+            fp.ShowDialog();
         }
 
         private void DoPop()
         {
-            frmPop fp = new frmPop();
-            fp.ShowDialog();
         }
 
         BuffLines buf = new BuffLines();

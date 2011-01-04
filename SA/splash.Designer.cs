@@ -57,6 +57,7 @@
             // 
             // tim
             // 
+            this.tim.Interval = 500;
             this.tim.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1

@@ -60,6 +60,13 @@ namespace com.jajago.SA.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ajax_loader {
+            get {
+                object obj = ResourceManager.GetObject("ajax-loader", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);

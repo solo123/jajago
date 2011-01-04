@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.Objects;
-
+using System.IO;
 
 namespace com.jajago.SA.Biz
 {
@@ -19,8 +19,8 @@ namespace com.jajago.SA.Biz
         {
             return 0;
         }
-
-        public static void ListFiles(FileSystemInfo info, string Ext, TextBox obj)
+        /*
+        public static void ListFiles(FileSystemInfo info, string Ext, object obj)
         {
             if (!info.Exists) return;
 
@@ -52,6 +52,7 @@ namespace com.jajago.SA.Biz
             }
 
         }
+         * */
 
     }
 }

@@ -12,35 +12,33 @@ using System.Threading;
 using com.jajago.SA.Biz;
 namespace com.jajago.SA
 {
-    public partial class frmPop : Form
+    public partial class FrmScan : Form
     {
         private BuffLines buff = new BuffLines();
-        public frmPop()
+        private Thread run_scan = null;
+
+        public FrmScan()
         {
             InitializeComponent();
         }
 
         private void frmPop_Load(object sender, EventArgs e)
         {
-            tim.Enabled = true;
-        }
-
-        Thread run_scan = null;
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (pgbpop.Value < pgbpop.Maximum)
-            {
-                pgbpop.Step = 1;
-                pgbpop.PerformStep();
-            }
+ 
 
             run_scan = new Thread(new ThreadStart(do_scan));
             run_scan.Start();
+
+            //do_scan();
+
         }
+
+
         private void do_scan()
         {
             abort_scan = false;
-            scan(new DirectoryInfo("d:\\"));
+            scan(new DirectoryInfo("c:\\"));
+            pictureBox1.Image = null;
         }
 
         bool abort_scan = false;
@@ -58,7 +56,9 @@ namespace com.jajago.SA
                     scan(di);
                 }
             }
-            catch { }
+            catch(Exception e) { 
+                buff.AddLine( "<<ERROR>> " + e.Message );
+            }
 
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo f in files)
@@ -80,7 +80,7 @@ namespace com.jajago.SA
 
             if (run_scan != null && run_scan.IsAlive)
             {
-                run_scan.Abort();
+                //run_scan.Abort();
                 run_scan.Join();
 
                 MessageBox.Show("Abort!");
