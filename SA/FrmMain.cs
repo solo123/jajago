@@ -28,12 +28,17 @@ namespace com.jajago.SA
         {
             toolTip1.SetToolTip(pictureBox1, "家家购");
 
-            foreach (Taxonomy taxonomy in rsm.Catalog())
+            foreach (ResourceTaxonomy t in rsm.taxonomy)
             {
-                treeCatalog.Nodes.Add(taxonomy.name);
+                treeCatalog.Nodes.Add(t.name);
             }
+            treeCatalog.AfterSelect += new TreeViewEventHandler(catalog_selected);
             // TODO: 读取本地资源，如果没有，提示扫描硬盘；
 
+        }
+        private void catalog_selected(object sender, TreeViewEventArgs e)
+        {
+            gridResource.DataSource = rsm.GetList(treeCatalog.SelectedNode.Text);
         }
 
         private void DoSplash()
@@ -50,25 +55,6 @@ namespace com.jajago.SA
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://www.jajago.com");
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox1.Items != null && comboBox1.Items.Count > 0 && comboBox1.SelectedItem != null)
-            {
-                comBobox2.Items.Clear();
-                comBobox2.Text = "";
-                if (comboBox1.SelectedItem.Equals("诺基亚"))
-                {
-                    comBobox2.Items.Add("N97");
-                    comBobox2.Items.Add("A9");
-                }
-                if (comboBox1.SelectedItem.Equals("索爱"))
-                {
-                    comBobox2.Items.Add("k660i");
-                    comBobox2.Items.Add("k750");
-                }
-            }
         }
 
         private void splitContainer2_SplitterMoved(object sender, SplitterEventArgs e)
@@ -110,12 +96,7 @@ namespace com.jajago.SA
         {
         }
 
-        BuffLines buf = new BuffLines();
-        int idx = 0;
-        private void button1_Click(object sender, EventArgs e)
-        {
-            buf.AddLine("hello:" + (idx++).ToString());
-            label5.Text = buf.ToString();
-        }
+
+
     }
 }

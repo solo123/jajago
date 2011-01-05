@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
 
 using com.jajago.SA.Biz;
 
@@ -23,7 +24,6 @@ namespace TestProject
         public void TestScan()
         {
             ResourceManager rm = new ResourceManager();
-            Assert.IsTrue(rm.Scan("d:\\") == 0);
         }
     }
 }

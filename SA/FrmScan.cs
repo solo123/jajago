@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using System.Threading;
 using com.jajago.SA.Biz;
+
 namespace com.jajago.SA
 {
     public partial class FrmScan : Form
@@ -28,61 +29,22 @@ namespace com.jajago.SA
             run_scan.Start();
         }
 
-
         private void do_scan()
         {
-            abort_scan = false;
-            scan(new DirectoryInfo("c:\\"));
+            ResourceManager rm = new ResourceManager();
+            rm.scan(new DirectoryInfo("d:\\"));
             pictureBox1.Image = null;
-        }
-
-        bool abort_scan = false;
-
-        private void scan(DirectoryInfo dir)
-        {
-            if (abort_scan) return;
-            // subdir
-            try
-            {
-                DirectoryInfo[] dirs = dir.GetDirectories();
-                foreach (DirectoryInfo di in dirs)
-                {
-                    if (abort_scan) return;
-                    scan(di);
-                }
-            }
-            catch(Exception e) { 
-                buff.AddLine( "<<ERROR>> " + e.Message );
-            }
-
-            FileInfo[] files = dir.GetFiles();
-            foreach (FileInfo f in files)
-            {
-                if (abort_scan) return;
-                if (f.Extension == ".jpg" || f.Extension == ".gif")
-                {
-                    buff.AddLine(abort_scan.ToString() + "|" + dir + f.FullName);
-                    lbOut.Text = buff.ToString();
-                }
-            }
-
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            abort_scan = true;
-
             if (run_scan != null && run_scan.IsAlive)
             {
-                //run_scan.Abort();
                 run_scan.Join();
-
                 MessageBox.Show("Abort!");
             }
 
         }
-
 
     }
 }

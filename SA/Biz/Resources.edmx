@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="jajagoModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="jajagoModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="jajagoModelStoreContainer">
           <EntitySet Name="Resources" EntityType="jajagoModel.Store.Resources" store:Type="Tables" />
           <EntitySet Name="Taxonomies" EntityType="jajagoModel.Store.Taxonomies" store:Type="Tables" />
@@ -14,32 +14,31 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="taxonomy_id" Type="bigint" Nullable="false" />
-          <Property Name="taxon_id" Type="bigint" />
+          <Property Name="taxonomy_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="taxon_id" Type="nvarchar" MaxLength="50" />
           <Property Name="name" Type="nvarchar" MaxLength="100" />
           <Property Name="path" Type="nvarchar" MaxLength="100" />
-          <Property Name="created_at" Type="nvarchar" MaxLength="100" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <EntityType Name="Taxonomies">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="nvarchar" MaxLength="100" />
           <Property Name="position" Type="int" />
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <EntityType Name="Taxons">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="parent_id" Type="bigint" Nullable="false" />
-          <Property Name="taxonomy_id" Type="bigint" Nullable="false" />
+          <Property Name="parent_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="taxonomy_id" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="jajagoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -52,55 +51,67 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="taxonomy_id" Type="Int64" Nullable="false" />
-          <Property Name="taxon_id" Type="Int64" />
-          <Property Name="name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="path" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="created_at" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="taxonomy_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="taxon_id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="path" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="created_at" />
+          <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Taxonomy">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="position" Type="Int32" />
+          <Property Type="String" Name="name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="position" />
+          <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Taxon">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="parent_id" Type="Int64" Nullable="false" />
-          <Property Name="taxonomy_id" Type="Int64" Nullable="false" />
-          <Property Name="name" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="parent_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="taxonomy_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="name" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="jajagoModelStoreContainer" CdmEntityContainer="jajagoEntities">
-          <EntitySetMapping Name="Resources"><EntityTypeMapping TypeName="jajagoModel.Resource"><MappingFragment StoreEntitySet="Resources">
-            <ScalarProperty Name="id" ColumnName="id" />
-            <ScalarProperty Name="taxonomy_id" ColumnName="taxonomy_id" />
-            <ScalarProperty Name="taxon_id" ColumnName="taxon_id" />
-            <ScalarProperty Name="name" ColumnName="name" />
-            <ScalarProperty Name="path" ColumnName="path" />
-            <ScalarProperty Name="created_at" ColumnName="created_at" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Taxonomies"><EntityTypeMapping TypeName="jajagoModel.Taxonomy"><MappingFragment StoreEntitySet="Taxonomies">
-            <ScalarProperty Name="id" ColumnName="id" />
-            <ScalarProperty Name="name" ColumnName="name" />
-            <ScalarProperty Name="position" ColumnName="position" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Taxons"><EntityTypeMapping TypeName="jajagoModel.Taxon"><MappingFragment StoreEntitySet="Taxons">
-            <ScalarProperty Name="id" ColumnName="id" />
-            <ScalarProperty Name="parent_id" ColumnName="parent_id" />
-            <ScalarProperty Name="taxonomy_id" ColumnName="taxonomy_id" />
-            <ScalarProperty Name="name" ColumnName="name" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Resources">
+            <EntityTypeMapping TypeName="jajagoModel.Resource">
+              <MappingFragment StoreEntitySet="Resources">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="taxon_id" ColumnName="taxon_id" />
+                <ScalarProperty Name="taxonomy_id" ColumnName="taxonomy_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Taxonomies">
+            <EntityTypeMapping TypeName="jajagoModel.Taxonomy">
+              <MappingFragment StoreEntitySet="Taxonomies">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="position" ColumnName="position" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Taxons">
+            <EntityTypeMapping TypeName="jajagoModel.Taxon">
+              <MappingFragment StoreEntitySet="Taxons">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="taxonomy_id" ColumnName="taxonomy_id" />
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -122,9 +133,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="Resources">
-        <EntityTypeShape EntityType="jajagoModel.Resource" Width="1.5" PointX="0.75" PointY="0.75" Height="1.959453125" IsExpanded="true" />
-        <EntityTypeShape EntityType="jajagoModel.Taxonomy" Width="1.5" PointX="2.375" PointY="0.75" Height="1.4535937499999996" IsExpanded="true" />
-        <EntityTypeShape EntityType="jajagoModel.Taxon" Width="1.5" PointX="4" PointY="0.75" Height="1.622213541666667" IsExpanded="true" />
+        <EntityTypeShape EntityType="jajagoModel.Resource" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9594531249999996" />
+        <EntityTypeShape EntityType="jajagoModel.Taxonomy" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4535937499999996" />
+        <EntityTypeShape EntityType="jajagoModel.Taxon" Width="1.5" PointX="0.75" PointY="3.75" Height="1.622213541666667" />
       </Diagram>
     </Diagrams>
   </Designer>

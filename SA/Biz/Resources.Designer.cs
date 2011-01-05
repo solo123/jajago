@@ -161,13 +161,13 @@ namespace com.jajago.SA.Biz
         /// <summary>
         /// 创建新的 Resource 对象。
         /// </summary>
-        /// <param name="id">id 属性的初始值。</param>
         /// <param name="taxonomy_id">taxonomy_id 属性的初始值。</param>
-        public static Resource CreateResource(global::System.Int64 id, global::System.Int64 taxonomy_id)
+        /// <param name="id">id 属性的初始值。</param>
+        public static Resource CreateResource(global::System.String taxonomy_id, global::System.String id)
         {
             Resource resource = new Resource();
-            resource.id = id;
             resource.taxonomy_id = taxonomy_id;
+            resource.id = id;
             return resource;
         }
 
@@ -177,36 +177,9 @@ namespace com.jajago.SA.Biz
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int64 id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                if (_id != value)
-                {
-                    OnidChanging(value);
-                    ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("id");
-                    OnidChanged();
-                }
-            }
-        }
-        private global::System.Int64 _id;
-        partial void OnidChanging(global::System.Int64 value);
-        partial void OnidChanged();
-    
-        /// <summary>
-        /// 没有元数据文档可用。
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int64 taxonomy_id
+        public global::System.String taxonomy_id
         {
             get
             {
@@ -216,13 +189,13 @@ namespace com.jajago.SA.Biz
             {
                 Ontaxonomy_idChanging(value);
                 ReportPropertyChanging("taxonomy_id");
-                _taxonomy_id = StructuralObject.SetValidValue(value);
+                _taxonomy_id = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("taxonomy_id");
                 Ontaxonomy_idChanged();
             }
         }
-        private global::System.Int64 _taxonomy_id;
-        partial void Ontaxonomy_idChanging(global::System.Int64 value);
+        private global::System.String _taxonomy_id;
+        partial void Ontaxonomy_idChanging(global::System.String value);
         partial void Ontaxonomy_idChanged();
     
         /// <summary>
@@ -230,7 +203,7 @@ namespace com.jajago.SA.Biz
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int64> taxon_id
+        public global::System.String taxon_id
         {
             get
             {
@@ -240,13 +213,13 @@ namespace com.jajago.SA.Biz
             {
                 Ontaxon_idChanging(value);
                 ReportPropertyChanging("taxon_id");
-                _taxon_id = StructuralObject.SetValidValue(value);
+                _taxon_id = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("taxon_id");
                 Ontaxon_idChanged();
             }
         }
-        private Nullable<global::System.Int64> _taxon_id;
-        partial void Ontaxon_idChanging(Nullable<global::System.Int64> value);
+        private global::System.String _taxon_id;
+        partial void Ontaxon_idChanging(global::System.String value);
         partial void Ontaxon_idChanged();
     
         /// <summary>
@@ -302,7 +275,7 @@ namespace com.jajago.SA.Biz
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String created_at
+        public Nullable<global::System.DateTime> created_at
         {
             get
             {
@@ -312,14 +285,41 @@ namespace com.jajago.SA.Biz
             {
                 Oncreated_atChanging(value);
                 ReportPropertyChanging("created_at");
-                _created_at = StructuralObject.SetValidValue(value, true);
+                _created_at = StructuralObject.SetValidValue(value);
                 ReportPropertyChanged("created_at");
                 Oncreated_atChanged();
             }
         }
-        private global::System.String _created_at;
-        partial void Oncreated_atChanging(global::System.String value);
+        private Nullable<global::System.DateTime> _created_at;
+        partial void Oncreated_atChanging(Nullable<global::System.DateTime> value);
         partial void Oncreated_atChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.String _id;
+        partial void OnidChanging(global::System.String value);
+        partial void OnidChanged();
 
         #endregion
     
@@ -338,15 +338,15 @@ namespace com.jajago.SA.Biz
         /// <summary>
         /// 创建新的 Taxon 对象。
         /// </summary>
-        /// <param name="id">id 属性的初始值。</param>
         /// <param name="parent_id">parent_id 属性的初始值。</param>
         /// <param name="taxonomy_id">taxonomy_id 属性的初始值。</param>
-        public static Taxon CreateTaxon(global::System.Int64 id, global::System.Int64 parent_id, global::System.Int64 taxonomy_id)
+        /// <param name="id">id 属性的初始值。</param>
+        public static Taxon CreateTaxon(global::System.String parent_id, global::System.String taxonomy_id, global::System.String id)
         {
             Taxon taxon = new Taxon();
-            taxon.id = id;
             taxon.parent_id = parent_id;
             taxon.taxonomy_id = taxonomy_id;
+            taxon.id = id;
             return taxon;
         }
 
@@ -356,36 +356,9 @@ namespace com.jajago.SA.Biz
         /// <summary>
         /// 没有元数据文档可用。
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int64 id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                if (_id != value)
-                {
-                    OnidChanging(value);
-                    ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("id");
-                    OnidChanged();
-                }
-            }
-        }
-        private global::System.Int64 _id;
-        partial void OnidChanging(global::System.Int64 value);
-        partial void OnidChanged();
-    
-        /// <summary>
-        /// 没有元数据文档可用。
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int64 parent_id
+        public global::System.String parent_id
         {
             get
             {
@@ -395,13 +368,13 @@ namespace com.jajago.SA.Biz
             {
                 Onparent_idChanging(value);
                 ReportPropertyChanging("parent_id");
-                _parent_id = StructuralObject.SetValidValue(value);
+                _parent_id = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("parent_id");
                 Onparent_idChanged();
             }
         }
-        private global::System.Int64 _parent_id;
-        partial void Onparent_idChanging(global::System.Int64 value);
+        private global::System.String _parent_id;
+        partial void Onparent_idChanging(global::System.String value);
         partial void Onparent_idChanged();
     
         /// <summary>
@@ -409,7 +382,7 @@ namespace com.jajago.SA.Biz
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int64 taxonomy_id
+        public global::System.String taxonomy_id
         {
             get
             {
@@ -419,13 +392,13 @@ namespace com.jajago.SA.Biz
             {
                 Ontaxonomy_idChanging(value);
                 ReportPropertyChanging("taxonomy_id");
-                _taxonomy_id = StructuralObject.SetValidValue(value);
+                _taxonomy_id = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("taxonomy_id");
                 Ontaxonomy_idChanged();
             }
         }
-        private global::System.Int64 _taxonomy_id;
-        partial void Ontaxonomy_idChanging(global::System.Int64 value);
+        private global::System.String _taxonomy_id;
+        partial void Ontaxonomy_idChanging(global::System.String value);
         partial void Ontaxonomy_idChanged();
     
         /// <summary>
@@ -451,6 +424,33 @@ namespace com.jajago.SA.Biz
         private global::System.String _name;
         partial void OnnameChanging(global::System.String value);
         partial void OnnameChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.String _id;
+        partial void OnidChanging(global::System.String value);
+        partial void OnidChanged();
 
         #endregion
     
@@ -470,7 +470,7 @@ namespace com.jajago.SA.Biz
         /// 创建新的 Taxonomy 对象。
         /// </summary>
         /// <param name="id">id 属性的初始值。</param>
-        public static Taxonomy CreateTaxonomy(global::System.Int64 id)
+        public static Taxonomy CreateTaxonomy(global::System.String id)
         {
             Taxonomy taxonomy = new Taxonomy();
             taxonomy.id = id;
@@ -479,33 +479,6 @@ namespace com.jajago.SA.Biz
 
         #endregion
         #region 基元属性
-    
-        /// <summary>
-        /// 没有元数据文档可用。
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int64 id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                if (_id != value)
-                {
-                    OnidChanging(value);
-                    ReportPropertyChanging("id");
-                    _id = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("id");
-                    OnidChanged();
-                }
-            }
-        }
-        private global::System.Int64 _id;
-        partial void OnidChanging(global::System.Int64 value);
-        partial void OnidChanged();
     
         /// <summary>
         /// 没有元数据文档可用。
@@ -554,6 +527,33 @@ namespace com.jajago.SA.Biz
         private Nullable<global::System.Int32> _position;
         partial void OnpositionChanging(Nullable<global::System.Int32> value);
         partial void OnpositionChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.String _id;
+        partial void OnidChanging(global::System.String value);
+        partial void OnidChanged();
 
         #endregion
     

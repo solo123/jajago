@@ -5,54 +5,95 @@ using System.Text;
 using System.Data.Objects;
 using System.IO;
 
+using System.Text.RegularExpressions;
+using System.Configuration;
+using System.Collections.Specialized;
+
 namespace com.jajago.SA.Biz
 {
+    public class ResourceTaxonomy
+    {
+        public string name { get; set; }
+        public string search_pattern { get; set; }
+        public Regex regex {get;set;}
+    }
    
     public class ResourceManager : JajagoBiz
     {
+        public List<ResourceTaxonomy> taxonomy = new List<ResourceTaxonomy>();
+        jajagoEntities ent = new jajagoEntities();
+
+        public ResourceManager()
+        {
+            NameValueCollection taxons = (NameValueCollection)ConfigurationManager.GetSection("taxonomy");
+            foreach (string t in taxons.AllKeys)
+            {
+                ResourceTaxonomy rt = new ResourceTaxonomy();
+                rt.name = t;
+                rt.search_pattern = taxons[t];
+                rt.regex = new Regex(@"\.("+ taxons[t] +")$");
+                taxonomy.Add(rt);
+            }
+        }
+
         public ObjectSet<Taxonomy> Catalog()
         {
-            jajagoEntities ent = new jajagoEntities();
             return ent.Taxonomies;
         }
-        public int Scan(string path)
-        {
-            return 0;
-        }
-        /*
-        public static void ListFiles(FileSystemInfo info, string Ext, object obj)
-        {
-            if (!info.Exists) return;
 
-            DirectoryInfo dir = info as DirectoryInfo;
-            //不是目录 
-            if (dir == null) return;
+        public IQueryable<Resource> GetList(string taxonomy)
+        {
+            return from r in ent.Resources
+                    where r.taxonomy_id == taxonomy
+                    select r;
+        }
+        public void scan(DirectoryInfo dir)
+        {
             try
             {
-
-                FileSystemInfo[] files = dir.GetFileSystemInfos();
-                for (int i = 0; i < files.Length; i++)
+                DirectoryInfo[] dirs = dir.GetDirectories();
+                foreach (DirectoryInfo di in dirs)
                 {
-                    FileInfo file = files[i] as FileInfo;
-                    //是文件
-                    if (file != null && file.Extension.ToUpper() == "." + Ext.ToUpper())
-                    {
-                        obj.Text = obj.Text + file.FullName + "\r\n";
-                        obj.Refresh();
-                    }
-                    //对于子目录，进行递归调用 
-                    else
-                        ListFiles(files[i], Ext, obj);
+                    scan(di);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+
+
+            FileInfo[] files = dir.GetFiles();
+            foreach (FileInfo f in files)
+            {
+                add_to_db(f);
+            }
+        }
+
+        private void add_to_db(FileInfo f)
+        {
+            foreach (ResourceTaxonomy rt in taxonomy)
+            {
+                if (rt.regex.IsMatch(f.Extension))
+                {
+                    Resource res = new Resource();
+                    res.name = f.Name;
+                    res.id = Guid.NewGuid().ToString();
+                    res.taxon_id = null;
+                    res.taxonomy_id = rt.name;
+                    res.path = f.FullName;
+                    res.created_at = DateTime.Now;
+                    ent.AddToResources(res);
+                    ent.SaveChanges();
+
+                    break;
 
                 }
             }
-            catch (UnauthorizedAccessException ex)
-            {
-                obj.Text = obj.Text + ex.Message;
-            }
-
         }
-         * */
+
 
     }
 }
