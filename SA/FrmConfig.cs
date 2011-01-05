@@ -23,15 +23,15 @@ namespace com.jajago.SA
 
         private void btnAddResourcePath_Click(object sender, EventArgs e)
         {
-            listResourcePath.Items.Add("hello!");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 listResourcePath.Items.Add(folderBrowserDialog1.SelectedPath);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("资源路径");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("资源配置", new System.Windows.Forms.TreeNode[] {
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("节点4");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("节点5");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("其他配置", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("资源路径");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("资源配置", new System.Windows.Forms.TreeNode[] {
+            treeNode16});
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("其他配置", new System.Windows.Forms.TreeNode[] {
+            treeNode18,
+            treeNode19});
             this.treeConfig = new System.Windows.Forms.TreeView();
             this.plConfig = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
@@ -52,19 +52,19 @@
             // 
             this.treeConfig.Location = new System.Drawing.Point(12, 12);
             this.treeConfig.Name = "treeConfig";
-            treeNode6.Name = "node_resource_path";
-            treeNode6.Text = "资源路径";
-            treeNode7.Name = "节点0";
-            treeNode7.Text = "资源配置";
-            treeNode8.Name = "节点4";
-            treeNode8.Text = "节点4";
-            treeNode9.Name = "节点5";
-            treeNode9.Text = "节点5";
-            treeNode10.Name = "节点3";
-            treeNode10.Text = "其他配置";
+            treeNode16.Name = "node_resource_path";
+            treeNode16.Text = "资源路径";
+            treeNode17.Name = "节点0";
+            treeNode17.Text = "资源配置";
+            treeNode18.Name = "节点4";
+            treeNode18.Text = "节点4";
+            treeNode19.Name = "节点5";
+            treeNode19.Text = "节点5";
+            treeNode20.Name = "节点3";
+            treeNode20.Text = "其他配置";
             this.treeConfig.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode10});
+            treeNode17,
+            treeNode20});
             this.treeConfig.Size = new System.Drawing.Size(175, 246);
             this.treeConfig.TabIndex = 0;
             this.treeConfig.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeConfig_AfterSelect);
@@ -111,11 +111,6 @@
             // 
             this.listResourcePath.FormattingEnabled = true;
             this.listResourcePath.ItemHeight = 12;
-            this.listResourcePath.Items.AddRange(new object[] {
-            "faf adf af a",
-            "adfalsdf a f",
-            "asdfjlaf a ",
-            "adfla f"});
             this.listResourcePath.Location = new System.Drawing.Point(6, 19);
             this.listResourcePath.Name = "listResourcePath";
             this.listResourcePath.Size = new System.Drawing.Size(415, 112);
@@ -123,7 +118,7 @@
             // 
             // btnAddResourcePath
             // 
-            this.btnAddResourcePath.Location = new System.Drawing.Point(346, 137);
+            this.btnAddResourcePath.Location = new System.Drawing.Point(265, 137);
             this.btnAddResourcePath.Name = "btnAddResourcePath";
             this.btnAddResourcePath.Size = new System.Drawing.Size(75, 23);
             this.btnAddResourcePath.TabIndex = 2;
@@ -133,11 +128,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(265, 138);
+            this.button1.Location = new System.Drawing.Point(346, 137);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "删除";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
