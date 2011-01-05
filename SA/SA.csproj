@@ -53,6 +53,7 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -72,6 +73,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfig.Designer.cs">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmContainer.Designer.cs">
+      <DependentUpon>FrmContainer.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -93,6 +106,12 @@
     <Compile Include="splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmConfig.resx">
+      <DependentUpon>FrmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmContainer.resx">
+      <DependentUpon>FrmContainer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
