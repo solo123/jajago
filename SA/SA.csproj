@@ -112,7 +112,9 @@
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="Biz\Resources.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

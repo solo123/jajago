@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("音乐");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("电影");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("视频");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("连续剧");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("软件");
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnScan = new System.Windows.Forms.Button();
+            this.btnselect = new System.Windows.Forms.Button();
             this.pnResources = new System.Windows.Forms.Panel();
+            this.lbcount = new System.Windows.Forms.Label();
+            this.btnwrite = new System.Windows.Forms.Button();
+            this.treeselect = new System.Windows.Forms.TreeView();
             this.gridResource = new System.Windows.Forms.DataGridView();
             this.treeCatalog = new System.Windows.Forms.TreeView();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -136,6 +135,7 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.btnScan);
+            this.tabPage4.Controls.Add(this.btnselect);
             this.tabPage4.Controls.Add(this.pnResources);
             this.tabPage4.Controls.Add(this.treeCatalog);
             this.tabPage4.Controls.Add(this.checkBox1);
@@ -157,24 +157,68 @@
             this.btnScan.UseVisualStyleBackColor = true;
             this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
             // 
+            // btnselect
+            // 
+            this.btnselect.Location = new System.Drawing.Point(186, 6);
+            this.btnselect.Name = "btnselect";
+            this.btnselect.Size = new System.Drawing.Size(75, 23);
+            this.btnselect.TabIndex = 3;
+            this.btnselect.Text = "选中";
+            this.btnselect.UseVisualStyleBackColor = true;
+            this.btnselect.Click += new System.EventHandler(this.btnselect_Click);
+            // 
             // pnResources
             // 
+            this.pnResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnResources.Controls.Add(this.lbcount);
+            this.pnResources.Controls.Add(this.btnwrite);
+            this.pnResources.Controls.Add(this.treeselect);
             this.pnResources.Controls.Add(this.gridResource);
             this.pnResources.Location = new System.Drawing.Point(142, 34);
             this.pnResources.Name = "pnResources";
             this.pnResources.Size = new System.Drawing.Size(568, 319);
             this.pnResources.TabIndex = 2;
             // 
+            // lbcount
+            // 
+            this.lbcount.AutoSize = true;
+            this.lbcount.Location = new System.Drawing.Point(317, 276);
+            this.lbcount.Name = "lbcount";
+            this.lbcount.Size = new System.Drawing.Size(0, 12);
+            this.lbcount.TabIndex = 6;
+            // 
+            // btnwrite
+            // 
+            this.btnwrite.Location = new System.Drawing.Point(404, 293);
+            this.btnwrite.Name = "btnwrite";
+            this.btnwrite.Size = new System.Drawing.Size(75, 23);
+            this.btnwrite.TabIndex = 4;
+            this.btnwrite.Text = "写入";
+            this.btnwrite.UseVisualStyleBackColor = true;
+            this.btnwrite.Click += new System.EventHandler(this.btnwrite_Click);
+            // 
+            // treeselect
+            // 
+            this.treeselect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.treeselect.Location = new System.Drawing.Point(288, 3);
+            this.treeselect.Name = "treeselect";
+            this.treeselect.Size = new System.Drawing.Size(277, 254);
+            this.treeselect.TabIndex = 1;
+            // 
             // gridResource
             // 
-            this.gridResource.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridResource.AllowUserToResizeColumns = false;
+            this.gridResource.AllowUserToResizeRows = false;
+            this.gridResource.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
             this.gridResource.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridResource.Location = new System.Drawing.Point(0, 0);
             this.gridResource.Name = "gridResource";
             this.gridResource.RowTemplate.Height = 23;
-            this.gridResource.Size = new System.Drawing.Size(568, 319);
+            this.gridResource.Size = new System.Drawing.Size(282, 319);
             this.gridResource.TabIndex = 0;
             // 
             // treeCatalog
@@ -185,7 +229,6 @@
             this.treeCatalog.Name = "treeCatalog";
             this.treeCatalog.Size = new System.Drawing.Size(116, 319);
             this.treeCatalog.TabIndex = 1;
-            this.treeCatalog.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeCatalog_AfterSelect);
             // 
             // checkBox1
             // 
@@ -219,22 +262,6 @@
                         | System.Windows.Forms.AnchorStyles.Left)));
             this.treeView2.Location = new System.Drawing.Point(8, 90);
             this.treeView2.Name = "treeView2";
-            treeNode1.Name = "节点0";
-            treeNode1.Text = "音乐";
-            treeNode2.Name = "节点2";
-            treeNode2.Text = "电影";
-            treeNode3.Name = "节点9";
-            treeNode3.Text = "视频";
-            treeNode4.Name = "节点0";
-            treeNode4.Text = "连续剧";
-            treeNode5.Name = "节点0";
-            treeNode5.Text = "软件";
-            this.treeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5});
             this.treeView2.Size = new System.Drawing.Size(121, 266);
             this.treeView2.TabIndex = 5;
             // 
@@ -321,7 +348,6 @@
             this.splitContainer2.Size = new System.Drawing.Size(718, 384);
             this.splitContainer2.SplitterDistance = 180;
             this.splitContainer2.TabIndex = 0;
-            this.splitContainer2.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer2_SplitterMoved);
             // 
             // label4
             // 
@@ -441,6 +467,7 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.pnResources.ResumeLayout(false);
+            this.pnResources.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridResource)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
@@ -490,6 +517,10 @@
         private System.Windows.Forms.Panel pnResources;
         private System.Windows.Forms.Button btnScan;
         private System.Windows.Forms.DataGridView gridResource;
+        private System.Windows.Forms.Button btnselect;
+        private System.Windows.Forms.Button btnwrite;
+        private System.Windows.Forms.TreeView treeselect;
+        private System.Windows.Forms.Label lbcount;
     }
 }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.Objects;
 using System.IO;
+using System.Data.SqlClient;
 
 using System.Text.RegularExpressions;
 using System.Configuration;
@@ -47,6 +48,7 @@ namespace com.jajago.SA.Biz
                     where r.taxonomy_id == taxonomy
                     select r;
         }
+
         public void scan(DirectoryInfo dir)
         {
             try
@@ -61,9 +63,6 @@ namespace com.jajago.SA.Biz
             {
                 Console.WriteLine(e.Message);
             }
-
-
-
 
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo f in files)
