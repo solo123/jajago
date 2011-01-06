@@ -33,6 +33,7 @@
             this.aaaaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shoujiCxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.huiyuanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.tuiChuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolMain = new System.Windows.Forms.ToolStrip();
             this.tsResource = new System.Windows.Forms.ToolStripButton();
@@ -40,7 +41,6 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.StatusMain = new System.Windows.Forms.StatusStrip();
-            this.menuConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuMain.SuspendLayout();
             this.ToolMain.SuspendLayout();
             this.SuspendLayout();
@@ -77,11 +77,19 @@
             this.huiyuanToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.huiyuanToolStripMenuItem.Text = "会员专区";
             // 
+            // menuConfig
+            // 
+            this.menuConfig.Name = "menuConfig";
+            this.menuConfig.Size = new System.Drawing.Size(41, 20);
+            this.menuConfig.Text = "选项";
+            this.menuConfig.Click += new System.EventHandler(this.menuConfig_Click);
+            // 
             // tuiChuToolStripMenuItem
             // 
             this.tuiChuToolStripMenuItem.Name = "tuiChuToolStripMenuItem";
             this.tuiChuToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.tuiChuToolStripMenuItem.Text = "关于";
+            this.tuiChuToolStripMenuItem.Click += new System.EventHandler(this.tuiChuToolStripMenuItem_Click);
             // 
             // ToolMain
             // 
@@ -103,7 +111,7 @@
             this.tsResource.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsResource.Name = "tsResource";
             this.tsResource.Size = new System.Drawing.Size(23, 22);
-            this.tsResource.Text = "abc";
+            this.tsResource.Text = "打开窗口";
             this.tsResource.Click += new System.EventHandler(this.tsResource_Click);
             // 
             // toolStripButton1
@@ -140,13 +148,6 @@
             this.StatusMain.Size = new System.Drawing.Size(333, 22);
             this.StatusMain.TabIndex = 3;
             this.StatusMain.Text = "statusStrip1";
-            // 
-            // menuConfig
-            // 
-            this.menuConfig.Name = "menuConfig";
-            this.menuConfig.Size = new System.Drawing.Size(41, 20);
-            this.menuConfig.Text = "选项";
-            this.menuConfig.Click += new System.EventHandler(this.menuConfig_Click);
             // 
             // FrmContainer
             // 

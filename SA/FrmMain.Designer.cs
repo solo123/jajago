@@ -172,26 +172,28 @@
             this.pnResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnResources.Controls.Add(this.treeselect);
             this.pnResources.Controls.Add(this.lbcount);
             this.pnResources.Controls.Add(this.btnwrite);
-            this.pnResources.Controls.Add(this.treeselect);
             this.pnResources.Controls.Add(this.gridResource);
-            this.pnResources.Location = new System.Drawing.Point(142, 34);
+            this.pnResources.Location = new System.Drawing.Point(126, 34);
             this.pnResources.Name = "pnResources";
-            this.pnResources.Size = new System.Drawing.Size(568, 319);
+            this.pnResources.Size = new System.Drawing.Size(588, 319);
             this.pnResources.TabIndex = 2;
             // 
             // lbcount
             // 
+            this.lbcount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbcount.AutoSize = true;
-            this.lbcount.Location = new System.Drawing.Point(317, 276);
+            this.lbcount.Location = new System.Drawing.Point(379, 278);
             this.lbcount.Name = "lbcount";
             this.lbcount.Size = new System.Drawing.Size(0, 12);
             this.lbcount.TabIndex = 6;
             // 
             // btnwrite
             // 
-            this.btnwrite.Location = new System.Drawing.Point(404, 293);
+            this.btnwrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnwrite.Location = new System.Drawing.Point(424, 293);
             this.btnwrite.Name = "btnwrite";
             this.btnwrite.Size = new System.Drawing.Size(75, 23);
             this.btnwrite.TabIndex = 4;
@@ -202,23 +204,25 @@
             // treeselect
             // 
             this.treeselect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.treeselect.Location = new System.Drawing.Point(288, 3);
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.treeselect.Location = new System.Drawing.Point(365, 0);
             this.treeselect.Name = "treeselect";
-            this.treeselect.Size = new System.Drawing.Size(277, 254);
+            this.treeselect.Size = new System.Drawing.Size(221, 271);
             this.treeselect.TabIndex = 1;
             // 
             // gridResource
             // 
-            this.gridResource.AllowUserToResizeColumns = false;
             this.gridResource.AllowUserToResizeRows = false;
-            this.gridResource.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.gridResource.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridResource.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridResource.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridResource.Location = new System.Drawing.Point(0, 0);
             this.gridResource.Name = "gridResource";
+            this.gridResource.ReadOnly = true;
             this.gridResource.RowTemplate.Height = 23;
-            this.gridResource.Size = new System.Drawing.Size(282, 319);
+            this.gridResource.Size = new System.Drawing.Size(360, 319);
             this.gridResource.TabIndex = 0;
             // 
             // treeCatalog

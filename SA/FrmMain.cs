@@ -104,7 +104,13 @@ namespace com.jajago.SA
 
         private void btnwrite_Click(object sender, EventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(@"D:\test");
+            StreamWriter sw = new StreamWriter("d:\\temp.txt");
+            DataGridViewSelectedRowCollection cells = gridResource.SelectedRows;
+            foreach (DataGridViewRow cell in cells)
+            {
+                sw.WriteLine(cell.Cells[2].Value.ToString());
+            }
+            sw.Close();
         }
 
     }

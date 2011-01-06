@@ -28,5 +28,10 @@ namespace com.jajago.SA
             FrmConfig f = new FrmConfig();
             f.ShowDialog();
         }
+
+        private void tuiChuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("这是酷购科技实用平台软件！");
+        }
     }
 }

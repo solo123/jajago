@@ -29,9 +29,14 @@ namespace com.jajago.SA
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDelResourcePath_Click(object sender, EventArgs e)
         {
+            listResourcePath.Items.Remove(listResourcePath.SelectedItem);
+        }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
