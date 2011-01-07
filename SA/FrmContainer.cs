@@ -11,11 +11,13 @@ namespace com.jajago.SA
 {
     public partial class FrmContainer : Form
     {
+        private FrmResource frmResource;
+        private FrmMobiles frmMobiles;
+
         public FrmContainer()
         {
             InitializeComponent();
         }
-        private FrmResource frmResource;
         private void tsResource_Click(object sender, EventArgs e)
         {
 
@@ -40,6 +42,18 @@ namespace com.jajago.SA
         private void tuiChuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("这是酷购科技实用平台软件！");
+        }
+
+        private void tsMobiles_Click(object sender, EventArgs e)
+        {
+            if (frmMobiles == null || frmMobiles.IsDisposed)
+            {
+                frmMobiles = new FrmMobiles();
+                frmMobiles.MdiParent = this;
+            }
+            frmMobiles.WindowState = FormWindowState.Maximized;
+            this.ActivateMdiChild(frmMobiles);
+            frmMobiles.Show();
         }
     }
 }

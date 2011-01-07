@@ -67,7 +67,8 @@ namespace com.jajago.SA
             }
 
             ShowDirAndFile sdf = new ShowDirAndFile(show_dir_and_file);
-            sdf(dir.FullName, null);
+            this.Invoke(sdf, dir.FullName, null);
+            //sdf(dir.FullName, null);
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo f in files)
             {

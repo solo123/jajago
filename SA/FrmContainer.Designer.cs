@@ -37,7 +37,7 @@
             this.tuiChuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolMain = new System.Windows.Forms.ToolStrip();
             this.tsResource = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsMobiles = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.StatusMain = new System.Windows.Forms.StatusStrip();
@@ -95,7 +95,7 @@
             // 
             this.ToolMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsResource,
-            this.toolStripButton1,
+            this.tsMobiles,
             this.toolStripButton2,
             this.toolStripButton3});
             this.ToolMain.Location = new System.Drawing.Point(0, 24);
@@ -114,14 +114,15 @@
             this.tsResource.Text = "打开窗口";
             this.tsResource.Click += new System.EventHandler(this.tsResource_Click);
             // 
-            // toolStripButton1
+            // tsMobiles
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.tsMobiles.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsMobiles.Image = ((System.Drawing.Image)(resources.GetObject("tsMobiles.Image")));
+            this.tsMobiles.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsMobiles.Name = "tsMobiles";
+            this.tsMobiles.Size = new System.Drawing.Size(23, 22);
+            this.tsMobiles.Text = "toolStripButton1";
+            this.tsMobiles.Click += new System.EventHandler(this.tsMobiles_Click);
             // 
             // toolStripButton2
             // 
@@ -180,7 +181,7 @@
         private System.Windows.Forms.ToolStripMenuItem shoujiCxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem huiyuanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tuiChuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsMobiles;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripMenuItem menuConfig;
