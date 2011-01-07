@@ -112,6 +112,54 @@ namespace com.jajago.SA.Biz
             }
         }
         private ObjectSet<Taxon> _Taxons;
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        public ObjectSet<SearchPath> SearchPaths
+        {
+            get
+            {
+                if ((_SearchPaths == null))
+                {
+                    _SearchPaths = base.CreateObjectSet<SearchPath>("SearchPaths");
+                }
+                return _SearchPaths;
+            }
+        }
+        private ObjectSet<SearchPath> _SearchPaths;
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        public ObjectSet<Image> Images
+        {
+            get
+            {
+                if ((_Images == null))
+                {
+                    _Images = base.CreateObjectSet<Image>("Images");
+                }
+                return _Images;
+            }
+        }
+        private ObjectSet<Image> _Images;
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        public ObjectSet<Music> Musics
+        {
+            get
+            {
+                if ((_Musics == null))
+                {
+                    _Musics = base.CreateObjectSet<Music>("Musics");
+                }
+                return _Musics;
+            }
+        }
+        private ObjectSet<Music> _Musics;
 
         #endregion
         #region AddTo 方法
@@ -139,6 +187,30 @@ namespace com.jajago.SA.Biz
         {
             base.AddObject("Taxons", taxon);
         }
+    
+        /// <summary>
+        /// 用于向 SearchPaths EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// </summary>
+        public void AddToSearchPaths(SearchPath searchPath)
+        {
+            base.AddObject("SearchPaths", searchPath);
+        }
+    
+        /// <summary>
+        /// 用于向 Images EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// </summary>
+        public void AddToImages(Image image)
+        {
+            base.AddObject("Images", image);
+        }
+    
+        /// <summary>
+        /// 用于向 Musics EntitySet 添加新对象的方法，已弃用。请考虑改用关联的 ObjectSet&lt;T&gt; 属性的 .Add 方法。
+        /// </summary>
+        public void AddToMusics(Music music)
+        {
+            base.AddObject("Musics", music);
+        }
 
         #endregion
     }
@@ -147,6 +219,356 @@ namespace com.jajago.SA.Biz
     #endregion
     
     #region 实体
+    
+    /// <summary>
+    /// 没有元数据文档可用。
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="jajagoModel", Name="Image")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Image : EntityObject
+    {
+        #region 工厂方法
+    
+        /// <summary>
+        /// 创建新的 Image 对象。
+        /// </summary>
+        /// <param name="id">id 属性的初始值。</param>
+        public static Image CreateImage(global::System.String id)
+        {
+            Image image = new Image();
+            image.id = id;
+            return image;
+        }
+
+        #endregion
+        #region 基元属性
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.String _id;
+        partial void OnidChanging(global::System.String value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String width
+        {
+            get
+            {
+                return _width;
+            }
+            set
+            {
+                OnwidthChanging(value);
+                ReportPropertyChanging("width");
+                _width = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("width");
+                OnwidthChanged();
+            }
+        }
+        private global::System.String _width;
+        partial void OnwidthChanging(global::System.String value);
+        partial void OnwidthChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String height
+        {
+            get
+            {
+                return _height;
+            }
+            set
+            {
+                OnheightChanging(value);
+                ReportPropertyChanging("height");
+                _height = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("height");
+                OnheightChanged();
+            }
+        }
+        private global::System.String _height;
+        partial void OnheightChanging(global::System.String value);
+        partial void OnheightChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String dpi
+        {
+            get
+            {
+                return _dpi;
+            }
+            set
+            {
+                OndpiChanging(value);
+                ReportPropertyChanging("dpi");
+                _dpi = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("dpi");
+                OndpiChanged();
+            }
+        }
+        private global::System.String _dpi;
+        partial void OndpiChanging(global::System.String value);
+        partial void OndpiChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String filetype
+        {
+            get
+            {
+                return _filetype;
+            }
+            set
+            {
+                OnfiletypeChanging(value);
+                ReportPropertyChanging("filetype");
+                _filetype = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("filetype");
+                OnfiletypeChanged();
+            }
+        }
+        private global::System.String _filetype;
+        partial void OnfiletypeChanging(global::System.String value);
+        partial void OnfiletypeChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] thumb
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_thumb);
+            }
+            set
+            {
+                OnthumbChanging(value);
+                ReportPropertyChanging("thumb");
+                _thumb = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("thumb");
+                OnthumbChanged();
+            }
+        }
+        private global::System.Byte[] _thumb;
+        partial void OnthumbChanging(global::System.Byte[] value);
+        partial void OnthumbChanged();
+
+        #endregion
+    
+    }
+    
+    /// <summary>
+    /// 没有元数据文档可用。
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="jajagoModel", Name="Music")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Music : EntityObject
+    {
+        #region 工厂方法
+    
+        /// <summary>
+        /// 创建新的 Music 对象。
+        /// </summary>
+        /// <param name="id">id 属性的初始值。</param>
+        public static Music CreateMusic(global::System.String id)
+        {
+            Music music = new Music();
+            music.id = id;
+            return music;
+        }
+
+        #endregion
+        #region 基元属性
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.String _id;
+        partial void OnidChanging(global::System.String value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String title
+        {
+            get
+            {
+                return _title;
+            }
+            set
+            {
+                OntitleChanging(value);
+                ReportPropertyChanging("title");
+                _title = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("title");
+                OntitleChanged();
+            }
+        }
+        private global::System.String _title;
+        partial void OntitleChanging(global::System.String value);
+        partial void OntitleChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String artist
+        {
+            get
+            {
+                return _artist;
+            }
+            set
+            {
+                OnartistChanging(value);
+                ReportPropertyChanging("artist");
+                _artist = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("artist");
+                OnartistChanged();
+            }
+        }
+        private global::System.String _artist;
+        partial void OnartistChanging(global::System.String value);
+        partial void OnartistChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String album
+        {
+            get
+            {
+                return _album;
+            }
+            set
+            {
+                OnalbumChanging(value);
+                ReportPropertyChanging("album");
+                _album = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("album");
+                OnalbumChanged();
+            }
+        }
+        private global::System.String _album;
+        partial void OnalbumChanging(global::System.String value);
+        partial void OnalbumChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String publish
+        {
+            get
+            {
+                return _publish;
+            }
+            set
+            {
+                OnpublishChanging(value);
+                ReportPropertyChanging("publish");
+                _publish = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("publish");
+                OnpublishChanged();
+            }
+        }
+        private global::System.String _publish;
+        partial void OnpublishChanging(global::System.String value);
+        partial void OnpublishChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String music_type
+        {
+            get
+            {
+                return _music_type;
+            }
+            set
+            {
+                Onmusic_typeChanging(value);
+                ReportPropertyChanging("music_type");
+                _music_type = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("music_type");
+                Onmusic_typeChanged();
+            }
+        }
+        private global::System.String _music_type;
+        partial void Onmusic_typeChanging(global::System.String value);
+        partial void Onmusic_typeChanged();
+
+        #endregion
+    
+    }
     
     /// <summary>
     /// 没有元数据文档可用。
@@ -320,6 +742,109 @@ namespace com.jajago.SA.Biz
         private global::System.String _id;
         partial void OnidChanging(global::System.String value);
         partial void OnidChanged();
+
+        #endregion
+    
+    }
+    
+    /// <summary>
+    /// 没有元数据文档可用。
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="jajagoModel", Name="SearchPath")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SearchPath : EntityObject
+    {
+        #region 工厂方法
+    
+        /// <summary>
+        /// 创建新的 SearchPath 对象。
+        /// </summary>
+        /// <param name="path">path 属性的初始值。</param>
+        public static SearchPath CreateSearchPath(global::System.String path)
+        {
+            SearchPath searchPath = new SearchPath();
+            searchPath.path = path;
+            return searchPath;
+        }
+
+        #endregion
+        #region 基元属性
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String path
+        {
+            get
+            {
+                return _path;
+            }
+            set
+            {
+                if (_path != value)
+                {
+                    OnpathChanging(value);
+                    ReportPropertyChanging("path");
+                    _path = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("path");
+                    OnpathChanged();
+                }
+            }
+        }
+        private global::System.String _path;
+        partial void OnpathChanging(global::System.String value);
+        partial void OnpathChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int64> count
+        {
+            get
+            {
+                return _count;
+            }
+            set
+            {
+                OncountChanging(value);
+                ReportPropertyChanging("count");
+                _count = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("count");
+                OncountChanged();
+            }
+        }
+        private Nullable<global::System.Int64> _count;
+        partial void OncountChanging(Nullable<global::System.Int64> value);
+        partial void OncountChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> updated_at
+        {
+            get
+            {
+                return _updated_at;
+            }
+            set
+            {
+                Onupdated_atChanging(value);
+                ReportPropertyChanging("updated_at");
+                _updated_at = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("updated_at");
+                Onupdated_atChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _updated_at;
+        partial void Onupdated_atChanging(Nullable<global::System.DateTime> value);
+        partial void Onupdated_atChanged();
 
         #endregion
     
@@ -554,6 +1079,30 @@ namespace com.jajago.SA.Biz
         private global::System.String _id;
         partial void OnidChanging(global::System.String value);
         partial void OnidChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String pattern
+        {
+            get
+            {
+                return _pattern;
+            }
+            set
+            {
+                OnpatternChanging(value);
+                ReportPropertyChanging("pattern");
+                _pattern = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("pattern");
+                OnpatternChanged();
+            }
+        }
+        private global::System.String _pattern;
+        partial void OnpatternChanging(global::System.String value);
+        partial void OnpatternChanged();
 
         #endregion
     

@@ -16,7 +16,7 @@ namespace com.jajago.SA
 {
     public partial class FrmMain : Form
     {
-        ResourceManager rsm = new ResourceManager();
+        ResourceManager rsm = ResourceManager.Instance;
         List<TreeNode> selectedRoot = new List<TreeNode>();
 
         public FrmMain()
@@ -29,26 +29,25 @@ namespace com.jajago.SA
         {
             toolTip1.SetToolTip(pictureBox1, "家家购");
 
-            foreach (ResourceTaxonomy t in rsm.taxonomy)
+            foreach (Taxonomy t in rsm.AllTaxonomies)
             {
-                treeCatalog.Nodes.Add(t.name);
+                TreeNode node = new TreeNode(t.name);
+                node.Tag = t;
+                treeCatalog.Nodes.Add(node);
                 treeView2.Nodes.Add(t.name);
+
+
+                TreeNode node1 = new TreeNode(t.name);
+                treeselect.Nodes.Add(node1);
+                selectedRoot.Add(node);
             }
             treeCatalog.AfterSelect += new TreeViewEventHandler(catalog_selected);
             // TODO: 读取本地资源，如果没有，提示扫描硬盘；
-
-
-            foreach (ResourceTaxonomy t in rsm.taxonomy)
-            {
-                TreeNode node = new TreeNode(t.name);
-                treeselect.Nodes.Add(node);
-                selectedRoot.Add(node);
-            }
-
         }
         private void catalog_selected(object sender, TreeViewEventArgs e)
         {
-            gridResource.DataSource = rsm.GetList(treeCatalog.SelectedNode.Text);
+            Taxonomy tx = (Taxonomy)treeCatalog.SelectedNode.Tag;
+            gridResource.DataSource = rsm.GetList(tx.id);
         }
 
         private void DoSplash()
@@ -81,6 +80,7 @@ namespace com.jajago.SA
         }
 
         int allcount = 0;
+        jajagoEntities ent = new jajagoEntities();
         private void btnselect_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection cells = gridResource.SelectedRows;

@@ -6,10 +6,35 @@
     <edmx:StorageModels>
     <Schema Namespace="jajagoModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="jajagoModelStoreContainer">
+          <EntitySet Name="Images" EntityType="jajagoModel.Store.Images" store:Type="Tables" />
+          <EntitySet Name="Musics" EntityType="jajagoModel.Store.Musics" store:Type="Tables" />
           <EntitySet Name="Resources" EntityType="jajagoModel.Store.Resources" store:Type="Tables" />
+          <EntitySet Name="SearchPath" EntityType="jajagoModel.Store.SearchPath" store:Type="Tables" />
           <EntitySet Name="Taxonomies" EntityType="jajagoModel.Store.Taxonomies" store:Type="Tables" />
           <EntitySet Name="Taxons" EntityType="jajagoModel.Store.Taxons" store:Type="Tables" />
         </EntityContainer>
+        <EntityType Name="Images">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="width" Type="nvarchar" MaxLength="100" />
+          <Property Name="height" Type="nvarchar" MaxLength="100" />
+          <Property Name="dpi" Type="nvarchar" MaxLength="100" />
+          <Property Name="filetype" Type="nvarchar" MaxLength="100" />
+          <Property Name="thumb" Type="varbinary" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="Musics">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="title" Type="nvarchar" MaxLength="200" />
+          <Property Name="artist" Type="nvarchar" MaxLength="200" />
+          <Property Name="album" Type="nvarchar" MaxLength="200" />
+          <Property Name="publish" Type="nvarchar" MaxLength="50" />
+          <Property Name="music_type" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="Resources">
           <Key>
             <PropertyRef Name="id" />
@@ -17,9 +42,17 @@
           <Property Name="taxonomy_id" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="taxon_id" Type="nvarchar" MaxLength="50" />
           <Property Name="name" Type="nvarchar" MaxLength="100" />
-          <Property Name="path" Type="nvarchar" MaxLength="100" />
+          <Property Name="path" Type="nvarchar" MaxLength="500" />
           <Property Name="created_at" Type="datetime" />
           <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SearchPath">
+          <Key>
+            <PropertyRef Name="path" />
+          </Key>
+          <Property Name="path" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="count" Type="bigint" />
+          <Property Name="updated_at" Type="datetime" />
         </EntityType>
         <EntityType Name="Taxonomies">
           <Key>
@@ -28,6 +61,7 @@
           <Property Name="name" Type="nvarchar" MaxLength="100" />
           <Property Name="position" Type="int" />
           <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="pattern" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Taxons">
           <Key>
@@ -46,6 +80,9 @@
           <EntitySet Name="Resources" EntityType="jajagoModel.Resource" />
           <EntitySet Name="Taxonomies" EntityType="jajagoModel.Taxonomy" />
           <EntitySet Name="Taxons" EntityType="jajagoModel.Taxon" />
+          <EntitySet Name="SearchPaths" EntityType="jajagoModel.SearchPath" />
+          <EntitySet Name="Images" EntityType="jajagoModel.Image" />
+          <EntitySet Name="Musics" EntityType="jajagoModel.Music" />
         </EntityContainer>
         <EntityType Name="Resource">
           <Key>
@@ -65,6 +102,7 @@
           <Property Type="String" Name="name" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="Int32" Name="position" />
           <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pattern" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Taxon">
           <Key>
@@ -74,6 +112,36 @@
           <Property Type="String" Name="taxonomy_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="name" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SearchPath">
+          <Key>
+            <PropertyRef Name="path" />
+          </Key>
+          <Property Type="String" Name="path" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="count" />
+          <Property Type="DateTime" Name="updated_at" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="id" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="width" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="height" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="dpi" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="filetype" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="thumb" MaxLength="4000" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Music">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="title" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="artist" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="album" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="publish" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="music_type" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -96,6 +164,7 @@
           <EntitySetMapping Name="Taxonomies">
             <EntityTypeMapping TypeName="jajagoModel.Taxonomy">
               <MappingFragment StoreEntitySet="Taxonomies">
+                <ScalarProperty Name="pattern" ColumnName="pattern" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="position" ColumnName="position" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -109,6 +178,39 @@
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="taxonomy_id" ColumnName="taxonomy_id" />
                 <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SearchPaths">
+            <EntityTypeMapping TypeName="jajagoModel.SearchPath">
+              <MappingFragment StoreEntitySet="SearchPath">
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="count" ColumnName="count" />
+                <ScalarProperty Name="path" ColumnName="path" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Images">
+            <EntityTypeMapping TypeName="jajagoModel.Image">
+              <MappingFragment StoreEntitySet="Images">
+                <ScalarProperty Name="thumb" ColumnName="thumb" />
+                <ScalarProperty Name="filetype" ColumnName="filetype" />
+                <ScalarProperty Name="dpi" ColumnName="dpi" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Musics">
+            <EntityTypeMapping TypeName="jajagoModel.Music">
+              <MappingFragment StoreEntitySet="Musics">
+                <ScalarProperty Name="music_type" ColumnName="music_type" />
+                <ScalarProperty Name="publish" ColumnName="publish" />
+                <ScalarProperty Name="album" ColumnName="album" />
+                <ScalarProperty Name="artist" ColumnName="artist" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -136,6 +238,9 @@
         <EntityTypeShape EntityType="jajagoModel.Resource" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9594531249999996" />
         <EntityTypeShape EntityType="jajagoModel.Taxonomy" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4535937499999996" />
         <EntityTypeShape EntityType="jajagoModel.Taxon" Width="1.5" PointX="0.75" PointY="3.75" Height="1.622213541666667" />
+        <EntityTypeShape EntityType="jajagoModel.SearchPath" Width="1.5" PointX="3.375" PointY="3.75" Height="1.4535937499999996" />
+        <EntityTypeShape EntityType="jajagoModel.Image" Width="1.5" PointX="5.375" PointY="0.75" Height="1.9594531249999996" />
+        <EntityTypeShape EntityType="jajagoModel.Music" Width="1.5" PointX="5.375" PointY="3.75" Height="1.9594531249999996" />
       </Diagram>
     </Diagrams>
   </Designer>

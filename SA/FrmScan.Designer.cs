@@ -31,6 +31,8 @@
             this.lbOut = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbFolder = new System.Windows.Forms.Label();
+            this.lbFile = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,12 +64,32 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // lbFolder
+            // 
+            this.lbFolder.AutoSize = true;
+            this.lbFolder.Location = new System.Drawing.Point(71, 99);
+            this.lbFolder.Name = "lbFolder";
+            this.lbFolder.Size = new System.Drawing.Size(41, 12);
+            this.lbFolder.TabIndex = 4;
+            this.lbFolder.Text = "label1";
+            // 
+            // lbFile
+            // 
+            this.lbFile.AutoSize = true;
+            this.lbFile.Location = new System.Drawing.Point(71, 125);
+            this.lbFile.Name = "lbFile";
+            this.lbFile.Size = new System.Drawing.Size(41, 12);
+            this.lbFile.TabIndex = 5;
+            this.lbFile.Text = "label2";
+            // 
             // FrmScan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(505, 354);
+            this.Controls.Add(this.lbFile);
+            this.Controls.Add(this.lbFolder);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lbOut);
@@ -86,5 +108,7 @@
         private System.Windows.Forms.Label lbOut;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbFolder;
+        private System.Windows.Forms.Label lbFile;
     }
 }

@@ -15,15 +15,14 @@ namespace TestProject
         [TestMethod]
         public void TestMethod1()
         {
-            ResourceManager rm = new ResourceManager();
-            Assert.IsNotNull(rm.Catalog());
+           // ResourceManager rm = new ResourceManager();
 
         }
 
         [TestMethod]
         public void TestScan()
         {
-            ResourceManager rm = new ResourceManager();
+            //ResourceManager rm = new ResourceManager();
         }
     }
 }

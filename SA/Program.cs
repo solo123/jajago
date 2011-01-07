@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
+using com.jajago.SA.Biz;
 namespace com.jajago.SA
 {
     static class Program
@@ -15,6 +16,9 @@ namespace com.jajago.SA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+
+            ResourceManager rm = ResourceManager.Instance;
             Application.Run(new FrmContainer());
 
 

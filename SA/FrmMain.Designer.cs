@@ -37,9 +37,9 @@
             this.btnScan = new System.Windows.Forms.Button();
             this.btnselect = new System.Windows.Forms.Button();
             this.pnResources = new System.Windows.Forms.Panel();
+            this.treeselect = new System.Windows.Forms.TreeView();
             this.lbcount = new System.Windows.Forms.Label();
             this.btnwrite = new System.Windows.Forms.Button();
-            this.treeselect = new System.Windows.Forms.TreeView();
             this.gridResource = new System.Windows.Forms.DataGridView();
             this.treeCatalog = new System.Windows.Forms.TreeView();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -181,6 +181,15 @@
             this.pnResources.Size = new System.Drawing.Size(588, 319);
             this.pnResources.TabIndex = 2;
             // 
+            // treeselect
+            // 
+            this.treeselect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.treeselect.Location = new System.Drawing.Point(365, 0);
+            this.treeselect.Name = "treeselect";
+            this.treeselect.Size = new System.Drawing.Size(221, 271);
+            this.treeselect.TabIndex = 1;
+            // 
             // lbcount
             // 
             this.lbcount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -200,15 +209,6 @@
             this.btnwrite.Text = "写入";
             this.btnwrite.UseVisualStyleBackColor = true;
             this.btnwrite.Click += new System.EventHandler(this.btnwrite_Click);
-            // 
-            // treeselect
-            // 
-            this.treeselect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeselect.Location = new System.Drawing.Point(365, 0);
-            this.treeselect.Name = "treeselect";
-            this.treeselect.Size = new System.Drawing.Size(221, 271);
-            this.treeselect.TabIndex = 1;
             // 
             // gridResource
             // 
@@ -464,6 +464,7 @@
             this.MinimumSize = new System.Drawing.Size(745, 513);
             this.Name = "FrmMain";
             this.Text = "家家购";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

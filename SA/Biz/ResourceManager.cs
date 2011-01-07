@@ -12,41 +12,44 @@ using System.Collections.Specialized;
 
 namespace com.jajago.SA.Biz
 {
-    public class ResourceTaxonomy
-    {
-        public string name { get; set; }
-        public string search_pattern { get; set; }
-        public Regex regex {get;set;}
-    }
-   
+ 
     public class ResourceManager : JajagoBiz
     {
-        public List<ResourceTaxonomy> taxonomy = new List<ResourceTaxonomy>();
-        jajagoEntities ent = new jajagoEntities();
+        private static ResourceManager theInstance = null;
 
-        public ResourceManager()
+        jajagoEntities ent = new jajagoEntities();
+        public List<Taxonomy> AllTaxonomies = new List<Taxonomy>();
+        public event EventHandler OnAddResource;
+
+        private ResourceManager()
         {
-            NameValueCollection taxons = (NameValueCollection)ConfigurationManager.GetSection("taxonomy");
-            foreach (string t in taxons.AllKeys)
+            foreach (Taxonomy t in ent.Taxonomies)
             {
-                ResourceTaxonomy rt = new ResourceTaxonomy();
-                rt.name = t;
-                rt.search_pattern = taxons[t];
-                rt.regex = new Regex(@"\.("+ taxons[t] +")$");
-                taxonomy.Add(rt);
+                AllTaxonomies.Add(t);
+            }
+
+        }
+        public static ResourceManager Instance
+        {
+            get 
+            {
+                if (theInstance == null) theInstance = new ResourceManager();
+                return theInstance;
             }
         }
 
-        public ObjectSet<Taxonomy> Catalog()
+        public IQueryable<object> GetList(string taxonomy_id)
         {
-            return ent.Taxonomies;
-        }
-
-        public IQueryable<Resource> GetList(string taxonomy)
-        {
-            return from r in ent.Resources
-                    where r.taxonomy_id == taxonomy
-                    select r;
+            switch (taxonomy_id)
+            {
+                case "IMG":
+                    return from r in ent.Musics select r;
+                default:
+                    return from r in ent.Resources
+                            where r.taxonomy_id == taxonomy_id
+                            select r;
+            }
+            
         }
 
         public void scan(DirectoryInfo dir)
@@ -67,32 +70,79 @@ namespace com.jajago.SA.Biz
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo f in files)
             {
-                add_to_db(f);
+                AddFileItem(f);
             }
         }
 
-        private void add_to_db(FileInfo f)
+        public void AddFileItem(FileInfo f)
         {
-            foreach (ResourceTaxonomy rt in taxonomy)
+            foreach (Taxonomy t in AllTaxonomies)
             {
-                if (rt.regex.IsMatch(f.Extension))
+                if (t.pattern != null)
                 {
-                    Resource res = new Resource();
-                    res.name = f.Name;
-                    res.id = Guid.NewGuid().ToString();
-                    res.taxon_id = null;
-                    res.taxonomy_id = rt.name;
-                    res.path = f.FullName;
-                    res.created_at = DateTime.Now;
-                    ent.AddToResources(res);
-                    ent.SaveChanges();
+                    Regex regex = new Regex(@"\.(" + t.pattern + ")$");
+                    if (regex.IsMatch(f.Extension))
+                    {
+                        Resource res = new Resource();
+                        res.name = f.Name;
+                        res.id = Guid.NewGuid().ToString();
+                        res.taxon_id = null;
+                        res.taxonomy_id = t.id;
+                        res.path = f.FullName;
+                        res.created_at = DateTime.Now;
+                        ent.AddToResources(res);
 
-                    break;
+                        if (t.id == "IMG")
+                        {
+                            Music music = new Music();
+                            music.id = res.id;
+                            ent.AddToMusics(music);
+                        }
 
+                        ent.SaveChanges();
+                        if (OnAddResource != null) OnAddResource(res, null);
+                        break;
+
+                    }
                 }
             }
         }
 
+        public IQueryable<SearchPath> GetSearchPath()
+        {
+            return from r in ent.SearchPaths
+                    select r;
+        }
 
+        public void ClearSearchPath()
+        {
+            var o = from r in ent.SearchPaths
+                    select r;
+            foreach (var oo in o)
+                ent.DeleteObject(oo);
+
+            ent.SaveChanges();
+        }
+        public void AddSearchPath(string path)
+        {
+            SearchPath sp = new SearchPath();
+            sp.path = path;
+            sp.count = 0;
+            sp.updated_at = DateTime.Now;
+            ent.AddToSearchPaths(sp);
+            ent.SaveChanges();
+        }
+
+        public void AddMusic(string path)
+        {
+            /*
+            Music ms = new Music();
+            sp.path = path;
+            sp.count = 0;
+            sp.updated_at = DateTime.Now;
+            ent.AddToSearchPaths(sp);
+            ent.SaveChanges();
+             * */
+        }
     }
 }

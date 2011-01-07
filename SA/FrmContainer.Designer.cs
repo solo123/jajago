@@ -55,7 +55,7 @@
             this.tuiChuToolStripMenuItem});
             this.MenuMain.Location = new System.Drawing.Point(0, 0);
             this.MenuMain.Name = "MenuMain";
-            this.MenuMain.Size = new System.Drawing.Size(333, 24);
+            this.MenuMain.Size = new System.Drawing.Size(729, 24);
             this.MenuMain.TabIndex = 1;
             this.MenuMain.Text = "menuStrip1";
             // 
@@ -100,7 +100,7 @@
             this.toolStripButton3});
             this.ToolMain.Location = new System.Drawing.Point(0, 24);
             this.ToolMain.Name = "ToolMain";
-            this.ToolMain.Size = new System.Drawing.Size(333, 25);
+            this.ToolMain.Size = new System.Drawing.Size(729, 25);
             this.ToolMain.TabIndex = 2;
             this.ToolMain.Text = "toolStrip1";
             // 
@@ -143,9 +143,9 @@
             // 
             // StatusMain
             // 
-            this.StatusMain.Location = new System.Drawing.Point(0, 244);
+            this.StatusMain.Location = new System.Drawing.Point(0, 415);
             this.StatusMain.Name = "StatusMain";
-            this.StatusMain.Size = new System.Drawing.Size(333, 22);
+            this.StatusMain.Size = new System.Drawing.Size(729, 22);
             this.StatusMain.TabIndex = 3;
             this.StatusMain.Text = "statusStrip1";
             // 
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 266);
+            this.ClientSize = new System.Drawing.Size(729, 437);
             this.Controls.Add(this.StatusMain);
             this.Controls.Add(this.ToolMain);
             this.Controls.Add(this.MenuMain);
