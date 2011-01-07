@@ -23,6 +23,8 @@
           <Property Name="dpi" Type="nvarchar" MaxLength="100" />
           <Property Name="filetype" Type="nvarchar" MaxLength="100" />
           <Property Name="thumb" Type="varbinary" MaxLength="4000" />
+          <Property Name="filename" Type="nvarchar" MaxLength="200" />
+          <Property Name="fileext" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Musics">
           <Key>
@@ -131,6 +133,8 @@
           <Property Type="String" Name="dpi" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="filetype" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="Binary" Name="thumb" MaxLength="4000" FixedLength="false" />
+          <Property Type="String" Name="filename" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="fileext" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Music">
           <Key>
@@ -193,6 +197,8 @@
           <EntitySetMapping Name="Images">
             <EntityTypeMapping TypeName="jajagoModel.Image">
               <MappingFragment StoreEntitySet="Images">
+                <ScalarProperty Name="fileext" ColumnName="fileext" />
+                <ScalarProperty Name="filename" ColumnName="filename" />
                 <ScalarProperty Name="thumb" ColumnName="thumb" />
                 <ScalarProperty Name="filetype" ColumnName="filetype" />
                 <ScalarProperty Name="dpi" ColumnName="dpi" />

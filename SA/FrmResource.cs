@@ -14,12 +14,12 @@ using com.jajago.SA.Biz;
 
 namespace com.jajago.SA
 {
-    public partial class FrmMain : Form
+    public partial class FrmResource : Form
     {
         ResourceManager rsm = ResourceManager.Instance;
         List<TreeNode> selectedRoot = new List<TreeNode>();
 
-        public FrmMain()
+        public FrmResource()
         {
             InitializeComponent();
             //DoSplash();

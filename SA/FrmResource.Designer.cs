@@ -1,6 +1,6 @@
 ﻿namespace com.jajago.SA
 {
-    partial class FrmMain
+    partial class FrmResource
     {
         /// <summary>
         /// 必需的设计器变量。

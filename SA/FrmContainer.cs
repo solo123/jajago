@@ -15,20 +15,20 @@ namespace com.jajago.SA
         {
             InitializeComponent();
         }
-        FrmMain f;
+        private FrmResource frmResource;
         private void tsResource_Click(object sender, EventArgs e)
         {
-            
-            if (f==null || f.IsDisposed)
+
+            if (frmResource == null || frmResource.IsDisposed)
             {
-                
-                f = new FrmMain();
+
+                frmResource = new FrmResource();
+                frmResource.MdiParent = this;
                 
             }
-            f.MdiParent = this;
-            
-            f.Show();
-            f.WindowState = FormWindowState.Maximized;
+            frmResource.WindowState = FormWindowState.Maximized;
+            this.ActivateMdiChild(frmResource);  
+            frmResource.Show();
         }
 
         private void menuConfig_Click(object sender, EventArgs e)

@@ -19,7 +19,6 @@ namespace com.jajago.SA.Biz
 
         jajagoEntities ent = new jajagoEntities();
         public List<Taxonomy> AllTaxonomies = new List<Taxonomy>();
-        public event EventHandler OnAddResource;
 
         private ResourceManager()
         {
@@ -29,6 +28,7 @@ namespace com.jajago.SA.Biz
             }
 
         }
+
         public static ResourceManager Instance
         {
             get 
@@ -38,11 +38,12 @@ namespace com.jajago.SA.Biz
             }
         }
 
+        // 读取资源列表
         public IQueryable<object> GetList(string taxonomy_id)
         {
             switch (taxonomy_id)
             {
-                case "IMG":
+                case "MUSIC":
                     return from r in ent.Musics select r;
                 default:
                     return from r in ent.Resources
@@ -52,29 +53,9 @@ namespace com.jajago.SA.Biz
             
         }
 
-        public void scan(DirectoryInfo dir)
-        {
-            try
-            {
-                DirectoryInfo[] dirs = dir.GetDirectories();
-                foreach (DirectoryInfo di in dirs)
-                {
-                    scan(di);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
 
-            FileInfo[] files = dir.GetFiles();
-            foreach (FileInfo f in files)
-            {
-                AddFileItem(f);
-            }
-        }
-
-        public void AddFileItem(FileInfo f)
+        public event EventHandler OnAddResource;
+        public void AddResource(FileInfo f)
         {
             foreach (Taxonomy t in AllTaxonomies)
             {
@@ -92,7 +73,7 @@ namespace com.jajago.SA.Biz
                         res.created_at = DateTime.Now;
                         ent.AddToResources(res);
 
-                        if (t.id == "IMG")
+                        if (t.id == "MUSIC")
                         {
                             Music music = new Music();
                             music.id = res.id;
@@ -133,16 +114,5 @@ namespace com.jajago.SA.Biz
             ent.SaveChanges();
         }
 
-        public void AddMusic(string path)
-        {
-            /*
-            Music ms = new Music();
-            sp.path = path;
-            sp.count = 0;
-            sp.updated_at = DateTime.Now;
-            ent.AddToSearchPaths(sp);
-            ent.SaveChanges();
-             * */
-        }
     }
 }

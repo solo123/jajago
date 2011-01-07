@@ -86,11 +86,11 @@
     <Compile Include="FrmContainer.Designer.cs">
       <DependentUpon>FrmContainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMain.cs">
+    <Compile Include="FrmResource.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <Compile Include="FrmResource.Designer.cs">
+      <DependentUpon>FrmResource.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmScan.cs">
       <SubType>Form</SubType>
@@ -112,8 +112,8 @@
     <EmbeddedResource Include="FrmContainer.resx">
       <DependentUpon>FrmContainer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <EmbeddedResource Include="FrmResource.resx">
+      <DependentUpon>FrmResource.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmScan.resx">
       <DependentUpon>FrmScan.cs</DependentUpon>

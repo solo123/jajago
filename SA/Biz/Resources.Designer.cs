@@ -390,6 +390,54 @@ namespace com.jajago.SA.Biz
         private global::System.Byte[] _thumb;
         partial void OnthumbChanging(global::System.Byte[] value);
         partial void OnthumbChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String filename
+        {
+            get
+            {
+                return _filename;
+            }
+            set
+            {
+                OnfilenameChanging(value);
+                ReportPropertyChanging("filename");
+                _filename = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("filename");
+                OnfilenameChanged();
+            }
+        }
+        private global::System.String _filename;
+        partial void OnfilenameChanging(global::System.String value);
+        partial void OnfilenameChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String fileext
+        {
+            get
+            {
+                return _fileext;
+            }
+            set
+            {
+                OnfileextChanging(value);
+                ReportPropertyChanging("fileext");
+                _fileext = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("fileext");
+                OnfileextChanged();
+            }
+        }
+        private global::System.String _fileext;
+        partial void OnfileextChanging(global::System.String value);
+        partial void OnfileextChanged();
 
         #endregion
     
