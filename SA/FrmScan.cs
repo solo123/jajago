@@ -71,7 +71,7 @@ namespace com.jajago.SA
             FileInfo[] files = dir.GetFiles();
             foreach (FileInfo f in files)
             {
-                rm.AddFileItem(f);
+                rm.AddResource(f);
             }
         }
         private void OnAddResource(object sender, EventArgs e)
