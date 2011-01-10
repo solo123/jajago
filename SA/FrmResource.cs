@@ -42,7 +42,6 @@ namespace com.jajago.SA
                 selectedRoot.Add(node);
             }
             treeCatalog.AfterSelect += new TreeViewEventHandler(catalog_selected);
-            // TODO: 读取本地资源，如果没有，提示扫描硬盘；
         }
         private void catalog_selected(object sender, TreeViewEventArgs e)
         {
@@ -86,7 +85,7 @@ namespace com.jajago.SA
             DataGridViewSelectedRowCollection cells = gridResource.SelectedRows;
             foreach (DataGridViewRow cell in cells)
             {
-                foreach(TreeNode parent in selectedRoot)
+                foreach (TreeNode parent in selectedRoot)
                 {
                     parent.Collapse();
                     if (parent.Text == cell.Cells[0].Value.ToString())
@@ -97,9 +96,9 @@ namespace com.jajago.SA
                     }
                 }
             }
-            int count=gridResource.SelectedRows.Count;
-            lbcount.Text = "本次选中"+count+"条,"+"总共选中"+allcount+"条";
-            
+            int count = gridResource.SelectedRows.Count;
+            lbcount.Text = "本次选中" + count + "条," + "总共选中" + allcount + "条";
+
         }
 
         private void btnwrite_Click(object sender, EventArgs e)
@@ -113,5 +112,21 @@ namespace com.jajago.SA
             sw.Close();
         }
 
+        Boolean IsClick = false;
+        private void splitter1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (IsClick)
+            {
+                splitContainer2.Panel1.Show();
+                splitContainer2.Panel1Collapsed = false;
+                IsClick = false;
+            }
+            else
+            {
+                splitContainer2.Panel1.Hide();
+                splitContainer2.Panel1Collapsed = true;
+                IsClick = true;
+            }
+        }
     }
 }

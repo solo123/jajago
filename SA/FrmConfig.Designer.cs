@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("资源路径");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("资源配置", new System.Windows.Forms.TreeNode[] {
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("节点4");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("节点5");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("其他配置", new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("资源路径");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("资源配置", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("节点4");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("其他配置", new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode4});
             this.treeConfig = new System.Windows.Forms.TreeView();
             this.plConfig = new System.Windows.Forms.Panel();
             this.btnDelResourcePath = new System.Windows.Forms.Button();
@@ -52,19 +52,19 @@
             // 
             this.treeConfig.Location = new System.Drawing.Point(12, 12);
             this.treeConfig.Name = "treeConfig";
-            treeNode6.Name = "node_resource_path";
-            treeNode6.Text = "资源路径";
-            treeNode7.Name = "节点0";
-            treeNode7.Text = "资源配置";
-            treeNode8.Name = "节点4";
-            treeNode8.Text = "节点4";
-            treeNode9.Name = "节点5";
-            treeNode9.Text = "节点5";
-            treeNode10.Name = "节点3";
-            treeNode10.Text = "其他配置";
+            treeNode1.Name = "node_resource_path";
+            treeNode1.Text = "资源路径";
+            treeNode2.Name = "节点0";
+            treeNode2.Text = "资源配置";
+            treeNode3.Name = "节点4";
+            treeNode3.Text = "节点4";
+            treeNode4.Name = "节点5";
+            treeNode4.Text = "节点5";
+            treeNode5.Name = "节点3";
+            treeNode5.Text = "其他配置";
             this.treeConfig.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode10});
+            treeNode2,
+            treeNode5});
             this.treeConfig.Size = new System.Drawing.Size(175, 246);
             this.treeConfig.TabIndex = 0;
             this.treeConfig.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeConfig_AfterSelect);

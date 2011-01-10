@@ -75,7 +75,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resource.sdf">
+    <Content Include="Resources.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
