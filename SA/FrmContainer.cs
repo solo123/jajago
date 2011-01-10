@@ -55,5 +55,12 @@ namespace com.jajago.SA
             this.ActivateMdiChild(frmMobiles);
             frmMobiles.Show();
         }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTest f = new FrmTest();
+            f.MdiParent = this;
+            f.Show();
+        }
     }
 }
