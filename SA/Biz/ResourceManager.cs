@@ -2,13 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.Objects;
 using System.IO;
-using System.Data.SqlClient;
 
 using System.Text.RegularExpressions;
-using System.Configuration;
-using System.Collections.Specialized;
 
 namespace com.jajago.SA.Biz
 {
@@ -45,6 +41,8 @@ namespace com.jajago.SA.Biz
             {
                 case "MUSIC":
                     return from r in ent.Musics select r;
+                case "IMAGE":
+                    return from r in ent.Images select r;
                 default:
                     return from r in ent.Resources
                             where r.taxonomy_id == taxonomy_id
@@ -79,6 +77,12 @@ namespace com.jajago.SA.Biz
                             music.id = res.id;
                             ent.AddToMusics(music);
                         }
+                        else if (t.id == "IMAGE")
+                        {
+                            Image image = new Image();
+                            image.id = res.id;
+                            ent.AddToImages(image);
+                        }
 
                         ent.SaveChanges();
                         if (OnAddResource != null) OnAddResource(res, null);
@@ -104,6 +108,7 @@ namespace com.jajago.SA.Biz
 
             ent.SaveChanges();
         }
+
         public void AddSearchPath(string path)
         {
             SearchPath sp = new SearchPath();
