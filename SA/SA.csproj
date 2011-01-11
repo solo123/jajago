@@ -48,6 +48,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\ipad.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -67,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biz\BuffLines.cs" />
+    <Compile Include="Biz\ImageManager.cs" />
     <Compile Include="Biz\JajagoBiz.cs" />
     <Compile Include="Biz\ResourceManager.cs" />
     <Compile Include="Biz\Resources.Designer.cs">
@@ -220,6 +224,7 @@
     <Content Include="Resources\btn_member.jpg" />
     <Content Include="Resources\btn_mobile.jpg" />
     <Content Include="Resources\btn_resource.jpg" />
+    <Content Include="Resources\ipad.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Biz\Biz.csproj">

@@ -183,10 +183,11 @@
             this.Controls.Add(this.StatusMain);
             this.Controls.Add(this.ToolMain);
             this.Controls.Add(this.MenuMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuMain;
             this.Name = "FrmContainer";
-            this.Text = "FrmContainer";
+            this.Text = "酷购手机助手";
             this.MenuMain.ResumeLayout(false);
             this.MenuMain.PerformLayout();
             this.ToolMain.ResumeLayout(false);

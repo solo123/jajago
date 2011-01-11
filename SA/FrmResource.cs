@@ -112,21 +112,6 @@ namespace com.jajago.SA
             sw.Close();
         }
 
-        Boolean IsClick = false;
-        private void splitter1_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (IsClick)
-            {
-                splitContainer2.Panel1.Show();
-                splitContainer2.Panel1Collapsed = false;
-                IsClick = false;
-            }
-            else
-            {
-                splitContainer2.Panel1.Hide();
-                splitContainer2.Panel1Collapsed = true;
-                IsClick = true;
-            }
-        }
+
     }
 }
