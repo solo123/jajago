@@ -17,12 +17,9 @@ namespace com.jajago.SA
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-
+            FrmSplash.ShowSplash();
             ResourceManager rm = ResourceManager.Instance;
             Application.Run(new FrmContainer());
-
-
-            // hggg
         }
     }
 }

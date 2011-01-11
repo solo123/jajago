@@ -1,6 +1,6 @@
 ﻿namespace com.jajago.SA
 {
-    partial class splash
+    partial class FrmSplash
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pgbStart = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.tim = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,11 +53,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "正在加载中...";
             // 
-            // tim
-            // 
-            this.tim.Interval = 500;
-            this.tim.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::com.jajago.SA.Properties.Resources.ecshop_logo;
@@ -69,7 +62,7 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // splash
+            // FrmSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,12 +72,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pgbStart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "splash";
+            this.Name = "FrmSplash";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "splash";
             this.TransparencyKey = System.Drawing.Color.Black;
-            this.Load += new System.EventHandler(this.splash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -96,7 +88,6 @@
         private System.Windows.Forms.ProgressBar pgbStart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer tim;
 
     }
 }

@@ -16,7 +16,11 @@ namespace com.jajago.SA
 
         public FrmContainer()
         {
+            // Load....
+            System.Threading.Thread.Sleep(1000);
+
             InitializeComponent();
+            FrmSplash.CloseSplash();
         }
         private void tsResource_Click(object sender, EventArgs e)
         {

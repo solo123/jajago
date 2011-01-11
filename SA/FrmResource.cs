@@ -51,7 +51,7 @@ namespace com.jajago.SA
 
         private void DoSplash()
         {
-            splash sp = new splash();
+            FrmSplash sp = new FrmSplash();
             sp.ShowDialog();
         }
 
