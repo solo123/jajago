@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using System.IO;
+using System.Diagnostics;
 namespace com.jajago.SA
 {
     public partial class FrmContainer : Form
@@ -16,7 +18,11 @@ namespace com.jajago.SA
 
         public FrmContainer()
         {
+            // Load....
+            System.Threading.Thread.Sleep(1000);
+
             InitializeComponent();
+            FrmSplash.CloseSplash();
         }
         private void tsResource_Click(object sender, EventArgs e)
         {
@@ -41,7 +47,6 @@ namespace com.jajago.SA
 
         private void tuiChuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("这是酷购科技实用平台软件！");
         }
 
         private void tsMobiles_Click(object sender, EventArgs e)
@@ -61,6 +66,48 @@ namespace com.jajago.SA
             FrmTest f = new FrmTest();
             f.MdiParent = this;
             f.Show();
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            KillSelfThenRun();
+        }
+
+        private void KillSelfThenRun()
+        {
+            string batFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "AutoUpdate.bat");
+            using (StreamWriter sw = File.CreateText(batFile))
+            {
+                sw.WriteLine(@"
+@echo off 
+
+:TASKLIST 
+tasklist /FI ""IMAGENAME eq com.jajago.sa.exe"" | find /i ""com.jajago.sa.exe""  >  nul
+ 
+IF ERRORLEVEL 2 GOTO FOUND
+IF ERRORLEVEL 1 GOTO NOT_FOUND 
+goto :NOT_FOUND
+ 
+:FOUND
+echo still running!!!!!
+goto :TASKLIST
+ 
+:NOT_FOUND 
+echo good, not running.
+goto EXIT 
+ 
+:EXIT 
+echo exit now!
+pause
+");
+            }
+            ProcessStartInfo info = new ProcessStartInfo(batFile);
+            //info.WindowStyle = ProcessWindowStyle.Hidden;
+            Process.Start(info);
+
+            // 强制关闭当前进程
+            Environment.Exit(0);
         }
     }
 }

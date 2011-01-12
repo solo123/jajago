@@ -35,13 +35,14 @@
             this.huiyuanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.tuiChuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolMain = new System.Windows.Forms.ToolStrip();
+            this.StatusMain = new System.Windows.Forms.StatusStrip();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsResource = new System.Windows.Forms.ToolStripButton();
             this.tsMobiles = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.StatusMain = new System.Windows.Forms.StatusStrip();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuMain.SuspendLayout();
             this.ToolMain.SuspendLayout();
             this.SuspendLayout();
@@ -88,11 +89,19 @@
             // tuiChuToolStripMenuItem
             // 
             this.tuiChuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testToolStripMenuItem});
+            this.testToolStripMenuItem,
+            this.updateToolStripMenuItem});
             this.tuiChuToolStripMenuItem.Name = "tuiChuToolStripMenuItem";
             this.tuiChuToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.tuiChuToolStripMenuItem.Text = "关于";
             this.tuiChuToolStripMenuItem.Click += new System.EventHandler(this.tuiChuToolStripMenuItem_Click);
+            // 
+            // testToolStripMenuItem
+            // 
+            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.testToolStripMenuItem.Text = "test";
+            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // ToolMain
             // 
@@ -103,47 +112,9 @@
             this.toolStripButton3});
             this.ToolMain.Location = new System.Drawing.Point(0, 24);
             this.ToolMain.Name = "ToolMain";
-            this.ToolMain.Size = new System.Drawing.Size(729, 25);
+            this.ToolMain.Size = new System.Drawing.Size(729, 39);
             this.ToolMain.TabIndex = 2;
             this.ToolMain.Text = "toolStrip1";
-            // 
-            // tsResource
-            // 
-            this.tsResource.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsResource.Image = ((System.Drawing.Image)(resources.GetObject("tsResource.Image")));
-            this.tsResource.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsResource.Name = "tsResource";
-            this.tsResource.Size = new System.Drawing.Size(23, 22);
-            this.tsResource.Text = "打开窗口";
-            this.tsResource.Click += new System.EventHandler(this.tsResource_Click);
-            // 
-            // tsMobiles
-            // 
-            this.tsMobiles.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsMobiles.Image = ((System.Drawing.Image)(resources.GetObject("tsMobiles.Image")));
-            this.tsMobiles.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsMobiles.Name = "tsMobiles";
-            this.tsMobiles.Size = new System.Drawing.Size(23, 22);
-            this.tsMobiles.Text = "toolStripButton1";
-            this.tsMobiles.Click += new System.EventHandler(this.tsMobiles_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
             // 
             // StatusMain
             // 
@@ -153,12 +124,56 @@
             this.StatusMain.TabIndex = 3;
             this.StatusMain.Text = "statusStrip1";
             // 
-            // testToolStripMenuItem
+            // updateToolStripMenuItem
             // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.testToolStripMenuItem.Text = "test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.updateToolStripMenuItem.Text = "update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // tsResource
+            // 
+            this.tsResource.AutoSize = false;
+            this.tsResource.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsResource.Image = global::com.jajago.SA.Properties.Resources.btn_resource;
+            this.tsResource.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsResource.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsResource.Name = "tsResource";
+            this.tsResource.Size = new System.Drawing.Size(124, 36);
+            this.tsResource.Text = "打开窗口";
+            this.tsResource.Click += new System.EventHandler(this.tsResource_Click);
+            // 
+            // tsMobiles
+            // 
+            this.tsMobiles.AutoSize = false;
+            this.tsMobiles.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsMobiles.Image = global::com.jajago.SA.Properties.Resources.btn_mobile;
+            this.tsMobiles.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsMobiles.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsMobiles.Name = "tsMobiles";
+            this.tsMobiles.Size = new System.Drawing.Size(124, 36);
+            this.tsMobiles.Text = "toolStripButton1";
+            this.tsMobiles.Click += new System.EventHandler(this.tsMobiles_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.AutoSize = false;
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::com.jajago.SA.Properties.Resources.btn_member;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(124, 36);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 36);
+            this.toolStripButton3.Text = "toolStripButton3";
             // 
             // FrmContainer
             // 
@@ -168,10 +183,11 @@
             this.Controls.Add(this.StatusMain);
             this.Controls.Add(this.ToolMain);
             this.Controls.Add(this.MenuMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuMain;
             this.Name = "FrmContainer";
-            this.Text = "FrmContainer";
+            this.Text = "酷购手机助手";
             this.MenuMain.ResumeLayout(false);
             this.MenuMain.PerformLayout();
             this.ToolMain.ResumeLayout(false);
@@ -196,5 +212,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripMenuItem menuConfig;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }

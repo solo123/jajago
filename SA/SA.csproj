@@ -48,6 +48,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\ipad.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -67,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biz\BuffLines.cs" />
+    <Compile Include="Biz\ImageManager.cs" />
     <Compile Include="Biz\JajagoBiz.cs" />
     <Compile Include="Biz\MobileManager.cs" />
     <Compile Include="Biz\MobileModels.Designer.cs">
@@ -124,11 +128,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="splash.cs">
+    <Compile Include="FrmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="splash.Designer.cs">
-      <DependentUpon>splash.cs</DependentUpon>
+    <Compile Include="FrmSplash.Designer.cs">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmConfig.resx">
       <DependentUpon>FrmConfig.cs</DependentUpon>
@@ -161,8 +165,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="splash.resx">
-      <DependentUpon>splash.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSplash.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
@@ -227,6 +231,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\ajax-loader.gif" />
+    <Content Include="Resources\btn_member.jpg" />
+    <Content Include="Resources\btn_mobile.jpg" />
+    <Content Include="Resources\btn_resource.jpg" />
+    <Content Include="Resources\ipad.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Biz\Biz.csproj">

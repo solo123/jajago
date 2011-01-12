@@ -67,6 +67,27 @@ namespace com.jajago.SA.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap btn_member {
+            get {
+                object obj = ResourceManager.GetObject("btn_member", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_mobile {
+            get {
+                object obj = ResourceManager.GetObject("btn_mobile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap btn_resource {
+            get {
+                object obj = ResourceManager.GetObject("btn_resource", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);

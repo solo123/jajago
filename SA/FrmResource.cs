@@ -49,7 +49,7 @@ namespace com.jajago.SA
 
         private void DoSplash()
         {
-            splash sp = new splash();
+            FrmSplash sp = new FrmSplash();
             sp.ShowDialog();
         }
 
@@ -110,6 +110,7 @@ namespace com.jajago.SA
             sw.Close();
         }
 
+<<<<<<< HEAD
         Boolean IsClick = false;
         private void splitter1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -130,5 +131,8 @@ namespace com.jajago.SA
             FrmMobiles fms = new FrmMobiles();
             fms.Show();
         }
+=======
+
+>>>>>>> 59c4662d76b89b802d16d9f551b3a9194ae8fbb5
     }
 }

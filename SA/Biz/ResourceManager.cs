@@ -41,7 +41,7 @@ namespace com.jajago.SA.Biz
             {
                 case "MUSIC":
                     return from r in ent.Musics select r;
-                case "IMAGE":
+                case "IMG":
                     return from r in ent.Images select r;
                 default:
                     return from r in ent.Resources
@@ -77,10 +77,11 @@ namespace com.jajago.SA.Biz
                             music.id = res.id;
                             ent.AddToMusics(music);
                         }
-                        else if (t.id == "IMAGE")
+                        else if (t.id == "IMG")
                         {
                             Image image = new Image();
                             image.id = res.id;
+                            image.thumb = ImageManager.BinaryThumbnail(res.path, 100);
                             ent.AddToImages(image);
                         }
 
