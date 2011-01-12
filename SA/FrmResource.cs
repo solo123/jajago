@@ -110,29 +110,6 @@ namespace com.jajago.SA
             sw.Close();
         }
 
-<<<<<<< HEAD
-        Boolean IsClick = false;
-        private void splitter1_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (IsClick)
-            {
-                splitContainer2.Panel1Collapsed = false;
-                IsClick = false;
-            }
-            else
-            {
-                splitContainer2.Panel1Collapsed = true;
-                IsClick = true;
-            }
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FrmMobiles fms = new FrmMobiles();
-            fms.Show();
-        }
-=======
-
->>>>>>> 59c4662d76b89b802d16d9f551b3a9194ae8fbb5
     }
 }
