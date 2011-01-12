@@ -68,6 +68,12 @@
   <ItemGroup>
     <Compile Include="Biz\BuffLines.cs" />
     <Compile Include="Biz\JajagoBiz.cs" />
+    <Compile Include="Biz\MobileManager.cs" />
+    <Compile Include="Biz\MobileModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MobileModels.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Biz\ResourceManager.cs" />
     <Compile Include="Biz\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -164,6 +170,10 @@
     <EntityDeploy Include="Biz\Resources.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Biz\MobileModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MobileModels.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="Properties\DataSources\com.jajago.SA.Biz.jajagoEntities.datasource" />
     <None Include="Properties\Settings.settings">

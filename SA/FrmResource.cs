@@ -35,8 +35,6 @@ namespace com.jajago.SA
                 node.Tag = t;
                 treeCatalog.Nodes.Add(node);
                 treeView2.Nodes.Add(t.name);
-
-
                 TreeNode node1 = new TreeNode(t.name);
                 treeselect.Nodes.Add(node1);
                 selectedRoot.Add(node);
@@ -117,16 +115,20 @@ namespace com.jajago.SA
         {
             if (IsClick)
             {
-                splitContainer2.Panel1.Show();
                 splitContainer2.Panel1Collapsed = false;
                 IsClick = false;
             }
             else
             {
-                splitContainer2.Panel1.Hide();
                 splitContainer2.Panel1Collapsed = true;
                 IsClick = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmMobiles fms = new FrmMobiles();
+            fms.Show();
         }
     }
 }

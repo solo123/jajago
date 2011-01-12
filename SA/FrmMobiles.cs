@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using com.jajago.SA.Biz;
 
 namespace com.jajago.SA
 {
@@ -14,6 +15,21 @@ namespace com.jajago.SA
         public FrmMobiles()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MobileManager mm = MobileManager.Instance;
+            dataGridView1.DataSource = mm.GetList();
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            int id = Convert.ToInt32(row.Cells[0].Value);
+            FrmMobile fm = new FrmMobile();
+            fm.Show();
+            fm.ShowMobile(id);
         }
     }
 }

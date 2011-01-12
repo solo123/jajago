@@ -33,8 +33,11 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -58,10 +61,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -127,6 +128,7 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.button1);
             this.splitContainer2.Panel1.Controls.Add(this.label4);
             this.splitContainer2.Panel1.Controls.Add(this.comboBox3);
             // 
@@ -137,6 +139,16 @@
             this.splitContainer2.Size = new System.Drawing.Size(724, 390);
             this.splitContainer2.SplitterDistance = 162;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(5, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "手机列表";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -159,6 +171,27 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 20);
             this.comboBox3.TabIndex = 0;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.splitter1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(5, 390);
+            this.splitter1.TabIndex = 1;
+            this.splitter1.TabStop = false;
+            this.splitter1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.splitter1_MouseClick);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(558, 390);
+            this.webBrowser1.TabIndex = 0;
+            this.webBrowser1.Url = new System.Uri("http://www.jajago.com", System.UriKind.Absolute);
             // 
             // tabPage1
             // 
@@ -238,9 +271,9 @@
             // 
             this.treeselect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeselect.Location = new System.Drawing.Point(365, 0);
+            this.treeselect.Location = new System.Drawing.Point(359, 0);
             this.treeselect.Name = "treeselect";
-            this.treeselect.Size = new System.Drawing.Size(221, 271);
+            this.treeselect.Size = new System.Drawing.Size(227, 271);
             this.treeselect.TabIndex = 1;
             // 
             // lbcount
@@ -432,27 +465,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(558, 390);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri("http://www.jajago.com", System.UriKind.Absolute);
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.splitter1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(5, 390);
-            this.splitter1.TabIndex = 1;
-            this.splitter1.TabStop = false;
-            this.splitter1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.splitter1_MouseClick);
-            // 
             // FrmResource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -528,6 +540,7 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
