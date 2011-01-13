@@ -84,6 +84,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.edmx</DependentUpon>
     </Compile>
+    <Compile Include="FrmAllImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAllImage.Designer.cs">
+      <DependentUpon>FrmAllImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,15 @@
     <Compile Include="FrmSplash.Designer.cs">
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcResources.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcResources.Designer.cs">
+      <DependentUpon>UcResources.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmAllImage.resx">
+      <DependentUpon>FrmAllImage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConfig.resx">
       <DependentUpon>FrmConfig.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +191,9 @@
     </Compile>
     <EmbeddedResource Include="FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcResources.resx">
+      <DependentUpon>UcResources.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
