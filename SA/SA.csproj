@@ -146,6 +146,12 @@
     <Compile Include="FrmSplash.Designer.cs">
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcResources.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcResources.Designer.cs">
+      <DependentUpon>UcResources.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAllImage.resx">
       <DependentUpon>FrmAllImage.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +191,9 @@
     </Compile>
     <EmbeddedResource Include="FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcResources.resx">
+      <DependentUpon>UcResources.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>

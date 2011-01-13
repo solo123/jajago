@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnScan = new System.Windows.Forms.Button();
@@ -39,7 +38,6 @@
             this.treeselect = new System.Windows.Forms.TreeView();
             this.lbcount = new System.Windows.Forms.Label();
             this.btnwrite = new System.Windows.Forms.Button();
-            this.gridResource = new System.Windows.Forms.DataGridView();
             this.treeCatalog = new System.Windows.Forms.TreeView();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -49,14 +47,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ucResources = new com.jajago.SA.UcResources();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.pnResources.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridResource)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,7 +69,6 @@
             this.linkLabel1.Text = "关于";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage4);
@@ -119,17 +114,16 @@
             this.btnselect.TabIndex = 3;
             this.btnselect.Text = "选中";
             this.btnselect.UseVisualStyleBackColor = true;
-            this.btnselect.Click += new System.EventHandler(this.btnselect_Click);
             // 
             // pnResources
             // 
             this.pnResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnResources.Controls.Add(this.ucResources);
             this.pnResources.Controls.Add(this.treeselect);
             this.pnResources.Controls.Add(this.lbcount);
             this.pnResources.Controls.Add(this.btnwrite);
-            this.pnResources.Controls.Add(this.gridResource);
             this.pnResources.Location = new System.Drawing.Point(126, 34);
             this.pnResources.Name = "pnResources";
             this.pnResources.Size = new System.Drawing.Size(601, 421);
@@ -139,11 +133,9 @@
             // 
             this.treeselect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
-
             this.treeselect.Location = new System.Drawing.Point(378, 0);
             this.treeselect.Name = "treeselect";
             this.treeselect.Size = new System.Drawing.Size(221, 373);
-
             this.treeselect.TabIndex = 1;
             // 
             // lbcount
@@ -164,25 +156,6 @@
             this.btnwrite.TabIndex = 4;
             this.btnwrite.Text = "写入";
             this.btnwrite.UseVisualStyleBackColor = true;
-            this.btnwrite.Click += new System.EventHandler(this.btnwrite_Click);
-            // 
-            // gridResource
-            // 
-            this.gridResource.AllowUserToAddRows = false;
-            this.gridResource.AllowUserToDeleteRows = false;
-            this.gridResource.AllowUserToResizeRows = false;
-            this.gridResource.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridResource.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridResource.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridResource.Location = new System.Drawing.Point(0, 0);
-            this.gridResource.Name = "gridResource";
-            this.gridResource.ReadOnly = true;
-            this.gridResource.RowTemplate.Height = 23;
-            this.gridResource.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridResource.Size = new System.Drawing.Size(373, 421);
-            this.gridResource.TabIndex = 0;
             // 
             // treeCatalog
             // 
@@ -192,6 +165,7 @@
             this.treeCatalog.Name = "treeCatalog";
             this.treeCatalog.Size = new System.Drawing.Size(116, 421);
             this.treeCatalog.TabIndex = 1;
+            this.treeCatalog.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.catalog_selected);
             // 
             // checkBox1
             // 
@@ -214,7 +188,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 21);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(716, 359);
+            this.tabPage5.Size = new System.Drawing.Size(729, 461);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "套装";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -291,6 +265,16 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // ucResources
+            // 
+            this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucResources.Location = new System.Drawing.Point(14, 8);
+            this.ucResources.Name = "ucResources";
+            this.ucResources.Size = new System.Drawing.Size(358, 411);
+            this.ucResources.TabIndex = 7;
+            // 
             // FrmResource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -310,7 +294,6 @@
             this.tabPage4.PerformLayout();
             this.pnResources.ResumeLayout(false);
             this.pnResources.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridResource)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -337,11 +320,11 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel pnResources;
         private System.Windows.Forms.Button btnScan;
-        private System.Windows.Forms.DataGridView gridResource;
         private System.Windows.Forms.Button btnselect;
         private System.Windows.Forms.Button btnwrite;
         private System.Windows.Forms.TreeView treeselect;
         private System.Windows.Forms.Label lbcount;
+        private com.jajago.SA.UcResources ucResources;
 
     }
 }

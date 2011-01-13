@@ -44,7 +44,8 @@ namespace com.jajago.SA
         private void catalog_selected(object sender, TreeViewEventArgs e)
         {
             Taxonomy tx = (Taxonomy)treeCatalog.SelectedNode.Tag;
-            gridResource.DataSource = rsm.GetList(tx.id);
+            ucResources.current_taxonomy = tx;
+            
         }
 
         private void DoSplash()
@@ -76,6 +77,7 @@ namespace com.jajago.SA
             fp.ShowDialog();
         }
 
+        /*
         int allcount = 0;
         jajagoEntities ent = new jajagoEntities();
         private void btnselect_Click(object sender, EventArgs e)
@@ -109,7 +111,7 @@ namespace com.jajago.SA
             }
             sw.Close();
         }
-
+        */
 
     }
 }
