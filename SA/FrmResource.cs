@@ -40,11 +40,39 @@ namespace com.jajago.SA
                 selectedRoot.Add(node);
             }
             treeCatalog.AfterSelect += new TreeViewEventHandler(catalog_selected);
+            listView1.DoubleClick += new EventHandler(show_pic);
         }
+
+        private void show_pic(object sender,EventArgs e)
+        {
+            FrmShowPic fsp = new FrmShowPic();
+            fsp.ShowDialog();
+        }
+
         private void catalog_selected(object sender, TreeViewEventArgs e)
         {
             Taxonomy tx = (Taxonomy)treeCatalog.SelectedNode.Tag;
-            gridResource.DataSource = rsm.GetList(tx.id);
+            if (tx.id == "IMG")
+            {
+                gridResource.Visible = false;
+                listView1.Visible = true;
+                imageList1.Images.Add(System.Drawing.Image.FromFile(@"d:\logo.jpg"));
+                listView1.View = View.LargeIcon;
+                imageList1.ImageSize = new Size(82, 82);
+                listView1.LargeImageList = imageList1;
+                for (int j = 0; j < this.imageList1.Images.Count; j++)
+                {
+                    ListViewItem item = new ListViewItem();
+                    item.ImageIndex = j;
+                    listView1.Items.Add(item);
+                }
+            }
+            else
+            {
+                gridResource.Visible = true;
+                listView1.Visible = false;
+                gridResource.DataSource = rsm.GetList(tx.id);
+            }
         }
 
         private void DoSplash()
@@ -110,7 +138,7 @@ namespace com.jajago.SA
             sw.Close();
         }
 
-<<<<<<< HEAD
+
         Boolean IsClick = false;
         private void splitter1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -131,8 +159,6 @@ namespace com.jajago.SA
             FrmMobiles fms = new FrmMobiles();
             fms.Show();
         }
-=======
 
->>>>>>> 59c4662d76b89b802d16d9f551b3a9194ae8fbb5
     }
 }

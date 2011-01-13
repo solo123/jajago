@@ -51,7 +51,6 @@ namespace com.jajago.SA.Biz
             
         }
 
-
         public event EventHandler OnAddResource;
         public void AddResource(FileInfo f)
         {
