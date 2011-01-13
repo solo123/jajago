@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using com.jajago.SA.Biz;
+
+using com.jajago.Biz;
 using System.IO;
 
 namespace com.jajago.SA
@@ -24,8 +25,7 @@ namespace com.jajago.SA
             Mobile m = mm.GetMobile(id);
             lbName.Text = m.title;
             lbDescription.Text = m.description;
-            lbProps.Text = m.props;
-            lbStandard.Text = m.standard;
+
             tsslTitle.Text = m.title;
             //byte[] img = m.small_icon;
             System.Drawing.Image returnImage = System.Drawing.Image.FromFile(@"d:\logo.jpg");

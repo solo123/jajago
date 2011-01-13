@@ -1,0 +1,1 @@
+sqlcecmd -d "data source=D:\work\jajago\SA\bin\Debug\Mobiles.sdf;password=liang" -i "out.txt"
