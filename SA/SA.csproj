@@ -96,12 +96,6 @@
     <Compile Include="FrmContainer.Designer.cs">
       <DependentUpon>FrmContainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmImport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmImport.Designer.cs">
-      <DependentUpon>FrmImport.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMobile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmContainer.resx">
       <DependentUpon>FrmContainer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmImport.resx">
-      <DependentUpon>FrmImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMobile.resx">
       <DependentUpon>FrmMobile.cs</DependentUpon>
