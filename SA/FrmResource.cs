@@ -40,39 +40,11 @@ namespace com.jajago.SA
                 selectedRoot.Add(node);
             }
             treeCatalog.AfterSelect += new TreeViewEventHandler(catalog_selected);
-            listView1.DoubleClick += new EventHandler(show_pic);
         }
-
-        private void show_pic(object sender,EventArgs e)
-        {
-            FrmShowPic fsp = new FrmShowPic();
-            fsp.ShowDialog();
-        }
-
         private void catalog_selected(object sender, TreeViewEventArgs e)
         {
             Taxonomy tx = (Taxonomy)treeCatalog.SelectedNode.Tag;
-            if (tx.id == "IMG")
-            {
-                gridResource.Visible = false;
-                listView1.Visible = true;
-                imageList1.Images.Add(System.Drawing.Image.FromFile(@"d:\logo.jpg"));
-                listView1.View = View.LargeIcon;
-                imageList1.ImageSize = new Size(82, 82);
-                listView1.LargeImageList = imageList1;
-                for (int j = 0; j < this.imageList1.Images.Count; j++)
-                {
-                    ListViewItem item = new ListViewItem();
-                    item.ImageIndex = j;
-                    listView1.Items.Add(item);
-                }
-            }
-            else
-            {
-                gridResource.Visible = true;
-                listView1.Visible = false;
-                gridResource.DataSource = rsm.GetList(tx.id);
-            }
+            gridResource.DataSource = rsm.GetList(tx.id);
         }
 
         private void DoSplash()
@@ -138,27 +110,6 @@ namespace com.jajago.SA
             sw.Close();
         }
 
-
-        Boolean IsClick = false;
-        private void splitter1_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (IsClick)
-            {
-                splitContainer2.Panel1Collapsed = false;
-                IsClick = false;
-            }
-            else
-            {
-                splitContainer2.Panel1Collapsed = true;
-                IsClick = true;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FrmMobiles fms = new FrmMobiles();
-            fms.Show();
-        }
 
     }
 }

@@ -1,0 +1,818 @@
+delete from mobileattributes
+go
+delete from mobiles
+go
+delete from mobileinattributes
+go
+INSERT INTO MobileAttributes (id,title) VALUES (58, '尺寸体积')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (59, '外观样式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (81, '价格等级')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (342, '机身颜色')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (343, '来电识别')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (344, '输入方式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (335, '其它')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (334, '颜色')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (173, '技术标准')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (174, '传输范围')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (175, '通话时间')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (176, '电池容量')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (177, '电池电压')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (178, '适用机型')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (179, '待机时间')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (180, '适用机型')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (181, '适用机型')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (182, '适用手机')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (183, '适用机型')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (184, '卡式类型')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (185, '工作电压')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (186, '尺寸')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (187, '闪存容量')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (194, '上市时间')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (195, '手机类型')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (197, '支持频段')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (198, '数据传输')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (199, '屏幕材质')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (200, '屏幕色彩')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (201, '主屏尺寸')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (202, '主屏参数')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (203, '和弦铃声')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (204, '铃音描述')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (205, '操作系统')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (206, 'CPU')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (207, '机身内存')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (208, '存储卡')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (209, '电池规格')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (211, '理论通话时间')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (212, '理论待机时间')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (213, '手机重量')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (214, '机身特点')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (215, '产品天线')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (216, '摄像头')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (217, '摄像头像素')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (218, '连拍功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (219, 'LED闪光灯')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (220, '数码变焦')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (221, '拍照描述')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (222, '视频拍摄')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (223, '视频播放')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (224, '音乐播放')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (225, '收音机')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (226, '游戏')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (227, 'Java功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (228, 'Flash功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (229, 'TV-OUT')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (230, '移动电视功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (231, '录音功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (232, '蓝牙功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (233, 'Wi-Fi功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (234, '数据线接口')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (235, '输入法')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (236, '输入方式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (237, '通话记录')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (238, '通讯录')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (239, '短信(SMS)')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (240, '彩信(MMS)')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (241, '免提通话')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (242, '情景模式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (243, '闹钟功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (244, '日历功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (245, '电子邮件')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (246, 'WWW浏览器')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (247, 'WAP浏览器')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (248, '语音拨号')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (249, '日程表')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (250, '世界时间')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (251, 'PDA功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (252, 'GPS功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (253, '电子词典')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (254, '待机图片')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (255, '计算器')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (256, '来电铃声识别')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (257, '来电图片识别')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (258, '图形菜单')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (259, '记事本')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (260, '自动键盘锁')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (261, '单位换算')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (262, '其它参数')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (263, '特殊功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (264, '原装标配')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (265, '网络')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (266, '娱乐应用')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (267, '分辨率')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (268, '原装标配')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (269, '上市日期')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (270, '手机制式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (271, '支持频段')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (272, '网络连接')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (273, '和弦铃声')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (274, '图形菜单')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (345, '移动QQ')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (275, '语音菜单')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (276, '内置振动')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (277, '免提通话')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (278, '外观样式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (279, '手机类型')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (280, '产品尺寸')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (281, '手机重量')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (282, '屏幕大小')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (283, '屏幕颜色')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (284, '屏幕类型')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (285, '分辨率')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (286, '输入法')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (287, '短信功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (341, '铃声功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (288, '多媒体短信')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (289, 'E-mail')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (290, '话机通讯录')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (291, '通讯录群组')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (292, '通话记录')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (293, '来电图片识别')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (294, '来电铃音识别')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (295, '摄像头位置')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (296, '像素')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (297, '传感器')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (298, '闪光灯')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (299, '变焦模式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (339, '音乐播放')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (300, '连拍')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (301, '定时拍摄')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (302, '拍摄模式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (303, '操作系统')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (304, '处理器')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (305, '触摸屏')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (306, '手写输入')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (307, '飞行模式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (308, '电子书')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (309, '电子词典')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (340, 'WiFi/Wapi')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (310, '日历')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (311, '计算器')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (312, '闹钟')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (313, '记事本')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (314, '照片质量')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (315, '视频拍摄')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (316, '视频分辨率')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (317, '视频播放')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (318, 'wap浏览器')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (319, 'WWW浏览器')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (320, 'MP3功能')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (321, '内置游戏')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (322, '耳机接口')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (323, '存储卡格式')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (324, '内存容量')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (325, 'JAVA扩展')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (326, '蓝牙')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (327, 'GPS')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (328, '照片特效')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (329, '红外接口')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (330, '录音')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (331, '数据线接口')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (332, 'FM收音机')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (336, '摄像头描述')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (337, '通话时间')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (338, '待机时间')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (347, 'CPU频率')
+go
+INSERT INTO MobileAttributes (id,title) VALUES (348, '视频通话')
+go
+INSERT INTO Mobiles (id, title, description, price_shop, price_market) VALUES (1, '诺基亚 8800a', '<div style="display: block;" id="H_info"><dl>\n<div class="endSummary">\n<ul>\n    <li><span id="digest">　　新推出的8800 Arte除了沿袭完美的做工手感优点，还新增了重力感应、点触显示时间这类新技术，同时还将手机的配置大大提高。</span></li>\n</ul>\n</div>\n<p>　　说到高端、奢华手机，除了名贵的Vertu之外，就非诺基亚8800系列莫属了。从2005年推出的8800至今，已经经历了好几代的变化，如 8800 Sirocco Edition、阿斯顿&middot;马丁特别版、黄金版等，但无论怎么变，8800系列始终是以高贵奢华、完美做工为卖点。前段时间诺基亚发布了两款8800系列的 后续产品8800 Arte以及8800 Sapphire Arte，其中的8800 Arte也正是我们今天的主角。诺基亚8800 Arte除了继承8800系列所有的优点之外，还具有许多革新技术，这些新技术到底是什么？下面我们便一一为大家解答。</p>\n<p align="center"><img width="400" height="600" alt="" src="http://cimg2.163.com/catchpic/B/BC/BC98D8F39F714F14D38ED0B6D3FCF24F.jpg" /></p>\n<p align="center">诺基亚8800 Arte</p>\n<p align="left"><strong>卖点一：承袭贵族血统 做工精致无暇</strong></p>\n<p align="left">　　诺基亚8800系列的几代作品在外型上始终是没多大的变化，依旧是滑盖式的设计，但优秀的做工确实是无可挑剔。 8800 Arte相比8800/8800se的外型，变化算是比较大的，变得更加的简约、线条更加流畅。最明显的区别便是导航键放置在外面，一些常规的操作不需要 推开滑盖也能实现。</p>\n<p align="center"><img width="447" height="335" border="0" alt="" src="http://cimg2.163.com/catchpic/1/1B/1B4C59F6F8FB76742C6D08A973CBEFB2.jpg" /></p>\n<p align="center"><img width="447" height="335" border="0" alt="" src="http://cimg2.163.com/catchpic/2/24/249FA330DC2B1C8F62BB053946ED7E74.jpg" /></p>\n<p align="center">一流的手感</p>\n<p align="left">　　诺基亚8800 Arte背面的设计也有较大的变化，也就是变得更加简约，同时电池后盖改用了亚光的磨砂处理，手感良好之余还能够有效地避免指纹问题，也终于可以把8800一直背负着的&ldquo;指纹收集器&rdquo;的蔑称给摘除。</p>\n<p align="center"><img width="447" height="335" border="0" alt="" src="http://cimg2.163.com/catchpic/3/34/34A01473D87239E8A503B53FE4CF0234.jpg" /></p>\n<p align="center">金属后盖改良，免除指纹问题</p>\n<p align="center">&nbsp;</p>\n<p align="left">　　从诺基亚方面了解到，Arte是阿拉丁语系&ldquo;艺术&rdquo;的意思，设计灵感来自光线照射到天然矿石折射后所产生的光束。因 此8800 Arte的机身材质主要就是以不锈钢为主，加上适当的抛光玻璃，整体看上去非常高端。更为夸张的是中央的确认键采用蓝宝石材料，可谓极尽奢华了。</p>\n<p align="center"><img width="447" height="335" border="0" alt="" src="http://cimg2.163.com/catchpic/7/70/703073AC9538D0E15623478A92512134.jpg" /></p>\n<p align="center">奢华的用料，完美的做工</p>\n<p align="left"><strong>卖点二：重力感应 反转静音</strong></p>\n<p align="left">　　诺基亚8800 Arte的一个技术卖点便是内置重力感应器，与索尼爱立信W910i之流不同的是，8800 Arte的重力感应并不是应用于娱乐，而是通话功能（turn-to-mute）。一般情况下，我们使用手机当然是习惯将正面朝上，而8800 Art的特点就是在这种情况下如果有来电的话，直接将手机反过来放置，便能达到静音功能（注：仅是静音，并不是自动拒接来电），非常有意思。这种重力感应 的操作效应是一次性的，也就是说一直把手机反过来放置（屏幕朝下），当有新来电时还是会响起铃声。当然，诺基亚绝大多数手机本身便有&ldquo;一键静音&rdquo;功能，所 以这个重力感应技术应用的实际意义并不是很大，只不过这样用起来会帅一些。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/D/DD/DD98B265F165D49732E6F8E0E4031AF4.jpg" /></p>\n<p align="center">反转静音功能</p>\n<p align="left"><strong>卖点三：振动反馈 轻触显示时间</strong></p>\n<p align="left">　　除了重力感应外，8800 Arte还具有一项叫做是振动感应功能。如在手机屏幕关闭状态下，用手指轻轻敲两下手机（用指甲接触），手机受到振动后便会在屏幕上显示当前时间的界面，时间界面也有数字时钟和指针时钟两种可选。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/0/00/00C471C8D9D1DF265E1B2A2144160157.jpg" /></p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/1/1A/1AD9E58A2B7611BEC862E02F22D73F3B.jpg" /></p>\n<p align="center">轻触式振动感应</p>\n<p align="left"><strong>卖点四：OLED屏幕 动感背景</strong></p>\n<p align="left">　　诺基亚8800 Arte的屏幕配置与上市不久的7900一样，2.0英寸1600万色QVGA（240&times;320）分辨率的OLED屏幕，相对而言是比较亮丽，而且也比较 节约电量。另外，8800 Arte还支持一种动感背景的功能，也就是待机界面的图案会随着时间而变化，这与三星手机的随机更换壁纸功能有所不同。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/7/77/77C2DBFE8D8E81ADD81B2C1441FF94B3.jpg" /></p>\n<p align="center">2.0英寸OLED屏幕</p>\n<p align="left"><strong>独特的键盘背光灯</strong></p>\n<p align="left">　　诺基亚8800 Arte的键盘背光灯算是比较特别的，特别的是在于导航及功能键部分的灯光在有未接来电或者未读短信时，背光灯会缓慢地闪动提示用户。而在通话过程中，按 键背光灯会自动熄灭，当手指移到按键上方时（还没接触到按键），按键的背光灯便会自动感应亮起，手指移开则又自动熄灭。这个功能比较有趣，而且能够达到节 约用电的目的。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/7/7B/7BB39C33FCABFDFFA068A0A953293E4B.jpg" /></p>\n<p align="center">按键背光灯</p>\n<p align="left">　　诺基亚8800 Arte的用户界面是主流的S40第三版界面，操作使用上与其他S40机型并无区别，在此也不需要多做赘述了，有兴趣的朋友可以翻阅我们手机评测栏目其他S40手机的相关内容。</p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/B/B3/B3F9361531882726360A53E2AA232262.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/C/C8/C83A40F4EBB44F0FF19C0E5663E74E07.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/5/53/535554CA5529D3BAFE6806BD13164264.jpg" /></p>\n<p align="center">S40界面</p>\n<p align="left"><strong>卖点五：内置铃声为大师杰作</strong></p>\n<p align="left">　　诺基亚在手机铃声方面也玩出不少名堂，这次的8800 Arte便是邀请了世界知名作曲家Kruder &amp; Dorfmeister量身打造一套独特的铃声，包括常规的铃声以及视频铃声，让手机增加一份独特感。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/B/BA/BA15163466F94F4675E44B22CE1A4DC8.jpg" /></p>\n<p align="center">世界知名作曲家Kruder &amp; Dorfmeister</p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/5/55/55E4E63E7894213925707F283403B92E.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/4/4F/4F65C7715952C09D200E6D34FE724CC4.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/4/43/4352E13BF1A9A9CC011174823FDCCC05.jpg" /></p>\n<p align="center">大师杰作手机铃声</p>\n<p align="left"><strong>扬声器</strong></p>\n<p align="left">　　先抛开铃声不说，8800 Arte的扬声器本身就是一个不错的卖点，虽然不是立体声，但是铃声的外放效果非常好，音量足、声音够清脆，穿透力非常强。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/a_/AD/AD33E169191F14BD20BB298A6980D732.jpg" /></p>\n<p align="center">侧面的扬声器</p>\n<p align="left"><strong>卖点六：320万像素自动对焦摄像头</strong></p>\n<p align="left">　　虽说诺基亚8800系列的定位从来不是拍照手机，但是这次的8800 Arte还是将摄像头升级到了320万像素自动对焦的级别，而闪光灯就有所欠缺。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/E/E3/E35FE2BAF2628174F5F655AC4E264320.jpg" /></p>\n<p align="center">内置摄像头</p>\n<p align="left">　　虽然拍摄功能并不是主打，但是8800 Arte的拍摄功能还是不错的，与5610等具有同级别摄像头的机型无异。视频拍摄方面8800 Arte也是支持VGA分辨率视频，这点相比8800se或者8600 Luna等是提高不少。8800 Arte并没有独立的快门键，因此半按式的对焦方式是不可能实现的。8800 Arte采用的对焦方式是先按后对焦，与三星D908类似。</p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/B/B7/B719683F5975E326D5E53B0ED0F47B0C.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/8/8F/8F15A4D7DAEBD86CDAF8D63F2DD98BFC.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/A/A2/A26521D7D1343D442334DDB9E90E21DB.jpg" /></p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/D/D1/D1CBC94E1301E8351EDEB8041035A728.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/D/D4/D4365B67B02BB078427E0392C4FC820A.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/F/F1/F15F25247B031DAF142DE97840B94063.jpg" /></p>\n<p align="center">支持VGA视频拍摄</p>\n<p align="left"><strong>拍摄样张</strong></p>\n<p align="center"><img width="222" height="296" border="0" alt="" src="http://cimg2.163.com/catchpic/F/FD/FDF3A6791ED5092F3B68D133C35EF181.jpg" /><img width="222" height="296" border="0" alt="" src="http://cimg2.163.com/catchpic/D/DD/DD23520253776964073017FDDB43633F.jpg" /></p>\n<br />\n<p align="center"><img width="222" height="296" border="0" alt="" src="http://cimg2.163.com/catchpic/B/B1/B122977B05E1839B47442DC7F4D278BD.jpg" /><img width="222" height="296" border="0" alt="" src="http://cimg2.163.com/catchpic/0/03/0307CF0320305B799AAC1E18A4A66663.jpg" /></p>\n<p align="center"><img width="222" height="296" border="0" alt="" src="http://cimg2.163.com/catchpic/E/E5/E5582C5AD0C412FAC6680439DFBBF578.jpg" /><img width="222" height="296" border="0" alt="" src="http://cimg2.163.com/catchpic/9/9C/9C2670C3995766A7BE4CB9FE05B29F56.jpg" /></p>\n<p align="left"><strong>内在功能篇</strong></p>\n<p align="left">　　诺基亚8800 Arte为S40手机，所以在操作上还是比较人性化的，如支持待机图标功能、快捷键操作等。</p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/A/AF/AFBC6791818672DAA318B3B60104E6C3.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/C/CE/CE46C3D3C6CB9C54E5AC3D1C88469B08.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/A/AE/AE4B7B3744CCDC9AD246AB8B2CDCA151.jpg" /></p>\n<p align="center">快捷操作</p>\n<p align="left">　　8800 Arte很大程度上还是需要定位为商务手机，所以电话本功能是商务人士比较看中的。S40手机的电话本许多朋友也都比较熟悉，其中的数据同步功能相信实用价值比较高。</p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/A/A6/A6C27C8B8FF40789124F822C96EB8750.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/6/6C/6C21BE8ADD3636AAF9CE9951A2E6A57E.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/6/63/63DD355C1DAB455ABC1C8C5F55692813.jpg" /></p>\n<p align="center">电话本与其他诺基亚手机同步</p>\n<p align="left">　　8800 Arte支持蓝牙2.0+EDR，蓝牙立体声当然也不在话下。8800 Arte不支持存储卡，但机身容量升级到1GB。</p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/5/55/558BD89396CB0EAD8AB29A1E4E71D5BC.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/C/C9/C9AF46A685993CBC0CDF90FEFDCE1DAE.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/4/4E/4EEB748D06C3A023E2D46EA03744DE0D.jpg" /></p>\n<p align="center">1GB的机身内存</p>\n<p align="left">　　其他的一些比较常见的功能8800 Arte也是有所配备的，如翻译字典、录音、闹钟、日程管理等。此外8800 Arte还内置了Opera Mini浏览器软件，对于有手机上网习惯的用户来说比较实用。</p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/D/D5/D5839AEBFF9E339633026D65509EEB2C.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/9/9E/9ED4F9534BC2E6FEEDC6AC73047BEB69.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/D/DB/DB4130BA505B9ADCCE9C8E4E7547510C.jpg" /></p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/A/A7/A79E78807D630B64A0C0A28B4D2C498C.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/B/BF/BF9F296EAA6957B222C640F619EAA1C4.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/D/D5/D5E4AF9EFA71F15E23E747FC9EBCC5CB.jpg" /></p>\n<p align="center">内置Opera Mini浏览器</p>\n<p align="left"><strong>卖点七：1GB超大内存</strong></p>\n<p align="left">　　前文也有所提及，8800 Arte的机身容量升级到1GB，由于不支持扩展卡，所以数据读取最方面的就是数据线了。8800 Arte与8600 Luna一样，只有一个micro USB新型接口，充电、耳机都只能用此接口。新型的micro USB接口也是有好处的，就是可以直接连接电脑，用数据线充电，这也是诺基亚手机用户期盼已久的功能。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/7/7F/7FF7810B2C70909C68F6B959302E1ECC.jpg" /></p>\n<p align="center">micro USB数据接口</p>\n<p align="left">　　接上USB线，电脑端便能识别出移动盘符，不需要安装驱动。我们对8800 Arte的数据传输进行测速，测试结果还是让我们比较失望的，仅能维持在0.8 MB/秒的阶段。</p>\n<p align="center"><img width="500" height="372" alt="" src="http://cimg2.163.com/catchpic/3/3B/3B5C2A6A56AAC60D120A19B2371A35BA.jpg" /></p>\n<p align="center">数据传输速度较慢</p>\n<p align="left"><strong>音乐功能</strong></p>\n<p align="left">　　诺基亚8800 Arte的娱乐功能也是不错的，虽然不是主要的卖点，但由于也是S40界面，所以和其他S40娱乐手机也是有得一拼。</p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/F/FE/FE9F9562471A9F34E89C92D3A211A9F5.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/0/06/06EB324F5C194C5EC383FCDE521C0877.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/9/9D/9D67649F81F5E855C0E3B3C3CE8F1E19.jpg" /></p>\n<p align="center">音乐功能</p>\n<p align="left"><strong>游戏功能</strong></p>\n<p align="left">　　可能是由于定位的缘故吧，诺基亚8800 Arte内置的两款游戏都是比较&ldquo;高端&rdquo;，如高尔夫和赌牌游戏。当然，8800 Arte也是支持JAVA扩展，只是JAVA的性能让人不敢恭维。</p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/2/2A/2A5A7C752A6D14EBB62588D538CCA832.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/E/E6/E657F83613BF1DCE3F044DF9ED065F00.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/8/8A/8AB60AA1091F510D99FC6C258AB852D8.jpg" /></p>\n<p align="center"><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/D/DD/DDA18A91C5BC4C1E7DBE9254DBF9FDAF.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/F/FB/FB89D2E925CA7BE0AC9CC7B900B0C861.jpg" /><img width="149" height="199" alt="" src="http://cimg2.163.com/catchpic/A/A2/A2D13855FC6F653F5F07F3028328E015.jpg" /></p>\n<p align="center">JAVA性能测试</p>\n<p align="left"><strong>卖点八：1000 mAh大容量电池</strong></p>\n<p align="left">　　诺基亚8800系列手机的待机能力弱的问题一直困扰着许多用户，这次的8800 Arte则有了明显的改进。首先在电池设计上改用一种新型号的BL-4U超薄电池，容量也达到1000 mAh。在我们评测期间，每天的收发短信、通话，以及许多的试用操作的情况下，电池能够维持4天的使用时间，这相对其他前作来说确实有很大的提高。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/7/7E/7EE65B0E1C758F7756967E7D2A00C7AB.jpg" /></p>\n<p align="center"><img width="447" height="335" border="0" alt="" src="http://cimg2.163.com/catchpic/7/7D/7DEEA4283D24B6E0B5DEE03AFE877093.jpg" /></p>\n<p align="center">超薄大容量电池</p>\n<p align="left"><strong>卖点九：丰富的配件</strong></p>\n<p align="left">　　诺基亚8800 Arte的零售包装非常豪华，原配一个精美的充电底座、蓝牙耳机和皮套。</p>\n<p align="center"><img width="447" height="335" border="0" alt="" src="http://cimg2.163.com/catchpic/F/F9/F9424E3DEFAFBD81FE29BCB67349A4B0.jpg" /></p>\n<p align="center">配件比较多</p>\n<p align="left">　　配件里面最独特的当然就是这个HS-89W触控式蓝牙耳机，它的独特之处就在于能够在通话期间，利用手指上下触摸蓝牙耳机正面就能够调节音量，实在够帅的。</p>\n<p align="center"><img width="447" height="335" alt="" src="http://cimg2.163.com/catchpic/3/37/371E282A50D2D4CC4AA86EEE640F81B2.jpg" /></p>\n<p align="center"><img width="447" height="335" border="0" alt="" src="http://cimg2.163.com/catchpic/A/A9/A9052FF3F75C25543BF82D31C6DB3DB7.jpg" /></p>\n<p align="center">众多配件</p>\n<p align="center">&nbsp;</p>\n<p align="left"><strong>评测室总结</strong></p>\n<p align="left">　　诺基亚8800系列向来以高贵为卖点，近乎完美的做工手感确实让人叹服。新推出的8800 Arte除了沿袭8800系列的这些优点，还新增了重力感应、点触显示时间这类新技术，同时还将手机的配置大大提高，如内存升级到1GB、摄像头升级到 320万像素自动对焦，这些都让8800系列手机从&ldquo;贵价花瓶&rdquo;升级到内外兼修的新境界，似乎也离完美越来越近了。但我们从另一个角度去看待，8800 Arte既然已经有&ldquo;一键静音&rdquo;，反转静音似乎显得多此一举；敲击两下手机来看时间，还不如直接按下一个键显示得快。当然，每项新技术的到来都是需要经历 现实的洗礼，8800 Arte的前景还是比较值得我们去期待的，或许近万元的价格门槛会让它只能成为少数人的玩物。</p>\n<p align="center"><img width="447" height="335" border="0" alt="" src="http://cimg2.163.com/catchpic/0/09/09320BC6429D5DF2663A3C0EC66280F7.jpg" /></p>\n<p align="center">诺基亚8800 Arte</p>\n</dl></div>', '1.0', '0.14')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (1053, 1, 58, '109×45.6×14.6mm')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (3, 1, 59, '滑盖')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (17, 1, 81, '高价机')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4924, 1, 194, '2007年12月')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4925, 1, 195, '3G手机')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4926, 1, 196, 'GSM')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4927, 1, 197, 'GSM850/900/1800/1900MHz')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4928, 1, 198, 'GPRS、EDGE')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4929, 1, 199, 'OLED')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4930, 1, 200, '1600万色')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4931, 1, 201, '2.0英寸')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4932, 1, 202, '240×320像素')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4933, 1, 203, '64和弦')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4934, 1, 205, 'S40第五版界面平台')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4935, 1, 207, '1GB')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4936, 1, 209, '锂电池')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4938, 1, 213, '150克')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4939, 1, 215, '内置')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4940, 1, 216, '内置')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4941, 1, 217, '320万像素')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4942, 1, 220, '8倍数码变焦')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4943, 1, 221, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4944, 1, 222, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4945, 1, 223, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4946, 1, 224, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4947, 1, 225, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4948, 1, 226, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4949, 1, 227, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4950, 1, 228, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4951, 1, 229, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4952, 1, 231, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4953, 1, 232, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4954, 1, 239, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4955, 1, 240, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4956, 1, 241, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4957, 1, 242, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4958, 1, 243, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4959, 1, 244, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4960, 1, 245, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4961, 1, 246, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4962, 1, 247, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4963, 1, 248, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4964, 1, 249, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4965, 1, 250, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4966, 1, 251, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4967, 1, 253, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4968, 1, 254, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4969, 1, 255, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4970, 1, 256, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4971, 1, 257, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4972, 1, 258, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4973, 1, 259, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4974, 1, 260, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4975, 1, 261, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (11617, 1, 264, '锂电池，充电底座，BH-803蓝牙耳机，皮革手机套')
+go
+INSERT INTO Mobiles (id, title, description, price_shop, price_market) VALUES (2, '诺基亚 5700', '<h3 style="text-align: center"><br />\n　<span style="font-size: medium">　</span><span style="color: #ff0000"><span style="font-size: medium">[滑盖]双卡双待 诺基亚5700XM手机评测</span></span></h3>\n<hr />\n<p style="text-align: center">　　<span style="color: #808080">来源：<a target="_blank" href="http://www.jajago.com"><span style="color: #ff0000">http://www.jajago.com </span></a>【原创】发布时间:2010-07-19 编辑:JAJAGO</span></p>\n<p>　　2009年4月8日，.诺基亚扭腰一族5700 Xpress Music普通版行货今日在经销商处的报价再度下调，其最新价格为1999元，终于跌破了2000元大关，其配件包括：锂电池，充电器，耳机，USB数据线，PC套件，光盘，用户手册，1G TF卡。</p>\n<center><img height="375" alt="[滑盖]双卡双待 诺基亚5700XM手机评测" width="500" src="http://www.jajago.com/images/upload/Image/01(271).jpg" /></center>\n<p>&nbsp;</p>\n<p style="text-align: center">　　图为：诺基亚5700XM</p>\n<p>　　诺基亚5700XM采用独特的&ldquo;扭腰&rdquo;式设计，可扭动的下半身为的是让用户可以方便开启音乐播放以及拍照等功能。同时圆滑的直板外观也让其受众非常广泛。</p>\n<center><img height="375" alt="[滑盖]双卡双待 诺基亚5700XM手机评测" width="500" src="http://www.jajago.com/images/upload/Image/02(174).jpg" /></center>\n<p>&nbsp;</p>\n<p style="text-align: center">　　图为：诺基亚5700XM</p>\n<p style="text-align: center">&nbsp;</p>\n<center><img alt="[滑盖]双卡双待 诺基亚5700XM手机评测" src="http://www.jajago.com/images/upload/Image/03(169).jpg" /></center>\n<p style="text-align: center"><span style="color: #ff0000">　　图为：诺基亚5700XM</span></p>\n<p>　　编辑点评：</p>\n<p>　　诺基亚5700XM基于Symbian OS v9.2操作系统S60平台第3.1版本，在&ldquo;Xpress Music&rdquo;的耀眼光环下，强劲的音乐能力无疑是该机的最大卖点。当然，2.2英寸1600万色QVGA分辨率彩屏以及200万像素摄像头的组合也没有令我们失望。目前不到2000元的价格在性价比方面还是非常不错的，喜欢的朋友不要错过。</p>\n<p>　　机身风格:</p>\n<p>　　●刚刚拿到诺基亚NOKIA 5700 Xpress Music的感觉就是诺基亚5300+诺基亚3250的混合体，5300的风格与3250的扭转身躯完整结合。机器三围尺寸为 108.2x50.5x17.3毫米，重量为115克，机器外壳采用了工业塑料+橡胶材质打造，整体手感良好，得益于机身上半部分使用橡胶材质，这样在手 握机器的时候不滑不腻，大小也比较适中，男性女性朋友使用都很不</p>\n<center><img height="337" alt="[滑盖]双卡双待 诺基亚5700XM手机评测" width="450" src="http://www.jajago.com/images/upload/Image/04(149).jpg" /></center>\n<p>&nbsp;</p>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　●看看背面的电池盖，硬塑上覆盖橡胶材质并凹刻出NOKIA以及Xpress Music字样，低调稳重的显露出5700以音乐为主打身份。</p>\n<p>　　顺便要说说这个电池盖，新机器时有有个透明的塑料条沾 在电池盖里面，需要开启的时候轻轻一拉 就很方便的就打开电池盖了，但是买回家了自然要扯掉这个塑料条，这时想在机器平放状态下打开电池盖几乎就是件不可能完成的任务，其实只要转动5700的键 盘部分看到小凹槽就可以轻松的撬开电池盖了。</p>\n<center><img height="337" alt="[滑盖]双卡双待 诺基亚5700XM手机评测" width="450" src="http://www.jajago.com/images/upload/Image/05(126).jpg" /></center>\n<p>&nbsp;</p>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　手机系统:</p>\n<p>　　●诺基亚NOKIA 5700 Xpress Music这次将操作系统提升到Symbian OS v9.2，平台界面升级到了S60 3rd Edition, Feature Pack 1[简称S60 3RD FP1或S60第三版FP1]。支持多级文件夹建立，支持图标显示是否该程序在后台运行，支持修改字体大小，支持多种功能表视图显示等等改变。</p>\n<p>　　同时处理器采用了ARM11构架，处理器的主频更是提升到了新高369MHz。操作系统/平台界面与处理器的多重提升让5700凸显优势，在实际操作中几乎没有停顿和延迟，执行软件与媒体播放等等方面的速度远比E60/N73之类的机型更加流畅!</p>\n<p>　　</p>\n<center><img alt="[滑盖]双卡双待 诺基亚5700XM手机评测" src="http://www.jajago.com/images/upload/Image/06(94).jpg" /></center>\n<p>&nbsp;</p>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music&nbsp;</p>\n<p>　　键盘转轴:</p>\n<p>　　●诺基亚5700也采用了之前3250的扭转机身，不 过诺基亚5700的按键设计明显的比 3250宽大舒适。五向摇杆的操作舒适度也是大有提升，不过对五向摇杆有抗拒感觉的朋友想必仍然是不为喜欢的一部分了。想想诺基亚至今也出了不少采用五向 摇杆的机型，暂未听到诺基亚的五向摇杆出过什么大事件噢!</p>\n<p>　　不过5700的功能键与C键与左右功能键设计得太紧密，而功能键与C键接触面积小，比如在按下功能键时则经常发生误按到左功能键的状况发生，不过相信在适应一段时间后误按情况会极少出现。</p>\n<center><img height="337" alt="" width="450" src="http://www.jajago.com/images/upload/Image/07(81).jpg" /></center>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　●在正常状态下，下半部分键盘可以向左旋转180度，同时机器自动进入拍摄模式。而向右旋转180度时候机器也同样自动进入拍摄模式，这时候我们可以方便的进行自拍，什么自拍镜的都没有取景屏上来得更直观，自恋臭美的你就偷着乐吧!!</p>\n<center><img alt="" src="http://www.jajago.com/images/upload/Image/08(69).jpg" /></center>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　●慢慢的转动5700的下半部分键盘，旋转到270度时反面键盘显现出来，同时机器自动进入音乐模式。5700转轴在转动时手感极佳，不过转轴的耐用度以及长时间使用后松动感是否会很明显就无法得知了，只能等待大家在长时间使用后方可得出正确结论。</p>\n<center><img height="337" alt="" width="450" src="http://www.jajago.com/images/upload/Image/09(61).jpg" /></center>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　手机屏幕:</p>\n<p>　　●养眼美图，影片欣赏等等...一块好的屏幕配备是重 要的部分，诺基亚5700就配备上块支 持1600万色显示的2.2英寸TFT彩色屏幕，屏幕分辨率达到240x320像素。5700的屏幕整体偏暖色调，颜色锐利，不过分渲染，色彩还原能力 强，能够清晰准确的将源文件忠实的再现我们的眼前。</p>\n<center><img alt="" src="http://www.jajago.com/images/upload/Image/10(73).jpg" /></center>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　双扬声器:</p>\n<p>　　●5700支持3D立体声铃声，支持的文件格 式：RNG/WAV/WVE/AMR/WB- AMR/AU/MIDI/AAC/MP3/WMA/RMF。开启三维铃声效果，我们可以设置好自己喜欢的来电铃声后选择声音轨迹[循环式/飞越式/之字形 /蜿蜒形/随机]，同时设置好轨迹速度与回声[起居室/洞穴/火车站/森林/管道/水底]是否开启，搭配上诺基亚NOKIA 5700 Xpress Music的双扬声器后效果凸显，铃声清脆悦耳，层次感较强烈。</p>\n<center><img height="337" alt="" width="450" src="http://www.jajago.com/images/upload/Image/11(90).jpg" /></center>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700机身左侧顶部的扬声器</p>\n<center><img height="337" alt="" width="450" src="http://www.jajago.com/images/upload/Image/12(53).jpg" /></center>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700机身右侧底部的扬声器</p>\n<p>　　音乐播放:</p>\n<p>　　●诺基亚NOKIA 5700属于Xpress Music系列的机型，音乐播放自然是主打之一，长按菜单键时就会发现待机与播放器两项长驻选项，相当方便我们在音乐播放与待机间切换。内置的音乐播放器 能够自动搜索存储卡以及机身内存中的音频文件，可以自己创建播放列表，还能按照艺术家/专辑/流派和作曲家等多种形式播放。</p>\n<p>　　5700接上耳机欣赏音乐效果还是很不错的，音乐的张力以及在高中频段都保持很好的成绩，在低音部分稍显不足了，这也是众多音乐手机的弊端，毕竟比不了高档的高品质MP3播放机的那样专业，但是就5700整体音效表现力来看也能算上一款式中档的高品质MP3播放机。</p>\n<center><img alt="" src="http://www.jajago.com/images/upload/Image/13(45).jpg" /></center>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　谈到耳机，之前诺基亚大部分机器都是采用Pop-Port&trade;数据接口做为耳机接口，但Pop-Port&trade;接口在连接上耳机后稍微用力就比较容易与机器断开，就信仔个人而言还是觉得圆孔式的耳机接口更稳定更方便。</p>\n<p>　　诺基亚NOKIA 5700这次就将耳机接口设计为2.5mm的接口，如果想使用音效更好的耳机我们可以使用2.5转3.5的转接线后搭配上更好的耳机来欣赏5700带给我们的美妙音乐。</p>\n<center><img height="337" alt="" width="450" src="http://www.jajago.com/images/upload/Image/14(38).jpg" /></center>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　数据接口:</p>\n<p>　　●既然是音乐主打机型，诺基亚5700除了支持最大2GB的Micro SD[T-flash]卡外，还将数据接口设计为mini USB接口，连接时稳固又高效且通用性也是相当高。</p>\n<center><img height="337" alt="" width="450" src="http://www.jajago.com/images/upload/Image/15(34).jpg" /></center>\n<p>　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　 　　拍摄功能:</p>\n<p>　　●5700虽然主打音乐方面，在拍摄方面也不含糊，配 备了200万像素CMOS摄像头以及闪 光灯，支持夜间模式/连拍模式，30/20/10秒自拍定时，可调整白平衡以及色调，当然还可以设置图片质量以及分辨率，最大可拍摄1600x1200分 辨率的图像。而视频则最大可拍摄分辨率为320x240片段，长度根据存储卡容量来定。</p>\n<center><img height="337" alt="" width="450" src="http://www.jajago.com/images/upload/Image/16(33).jpg" /></center>\n<p>&nbsp;</p>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　●进入拍摄模式后，相关功能自动横向全屏取景，诺基亚NOKIA 5700 Xpress Music拍摄测试将在下一篇相关文章里推出，敬请关注TomPDA资讯网。</p>\n<center><img height="337" alt="" width="450" src="http://www.jajago.com/images/upload/Image/17(26).jpg" /></center>\n<p style="text-align: center">　　▲图为诺基亚NOKIA 5700 Xpress Music</p>\n<p>　　笔形键:</p>\n<p>　　●最后来说说著名的S60笔型键，诺基亚这次将&ldquo;笔形键&rdquo;从5700身上取消，这样在复制粘贴文字上略有不便，我们可以在需要复制粘贴时按住#键并开始选择需要复制的文字部分，然后按下*键选择相关操作，如复制/剪切等。</p>\n<p>　　显著优点:Symbian OS v9.2操作系统，流畅的操作度，1600万色显示屏幕，240x320像素的屏幕分辨率，支持3G[WCDMA]，扭转的机身，支持蓝牙2.0，支持蓝牙立体声耳机，支持红外。</p>\n<p>　　缺点:存储卡/数据线/电源孔 的橡胶挡条时间长后会变形。</p>\n<hr />\n<p class="STYLE3"><span style="background-color: #ff6600"><span style="color: #ffffff">家家网购精彩评测每日更新推荐：　</span></span></p>\n<p>●<a href="http://www.jajago.com/goods-7028.html">[翻盖]09年国产第一美型 联想S700售价超低</a></p>\n<p>●<a href="http://www.jajago.com/goods-7215.html">[滑盖] U盘功能 短信王 长虹M658手机评测</a></p>\n<p>●<a www.jajago.com="" href="http://www.jajago.com/goods-7245.html">[滑盖]拉丝金属 时尚商务手机 天语S986手机评测</a></p>\n<p>●<a href="http://www.jajago.com/goods-7015.html">[翻盖] 双屏设计高端配置 诚基V2手机评测</a></p>\n<p>●<a href="http://www.jajago.com/goods-6966.html">[滑盖]水晶紫色妖艳动人非常适合女生使用 金立S303手机评测</a></p>\n<div><a href="#">更多标签:</a>|<a href="http://www.jajago.com/guochanshouji/">国产手机</a><a target="_blank" href="http://www.jajago.com/category-101-b132-price_x0-net0-nen0-nes0-nep0.html"><span class="STYLE3"> | </span></a><a target="_blank" href="http://www.jajago.com/lenovo/">联想手机</a><a target="_blank" href="http://www.jajago.com/category-101-b132-price_x0-net0-nen0-nes0-nep0.html"><span class="STYLE3"> |</span></a> <a target="_blank" href="http://www.jajago.com/gionee/">金立手机<span class="STYLE3"> |</span></a> <a href="http://www.jajago.com/oppo/">oppo手机</a> <span class="STYLE3">| </span><a href="http://www.jajago.com/konka/">康佳手机</a> <span class="STYLE3">| <a href="http://www.jajago.com/daxian/">大显</a></span><a href="javascript:void(0);/*1277780134171*/">手机</a><span class="STYLE3">|</span>&nbsp;&nbsp;<a target="_blank" href="http://www.jajago.com/chinazhineng/"><span style="color: #0000ff">智能手机</span></a>| <a target="_blank" href="http://www.jajago.com/cuxiao.html">促销专区</a>| <a target="_blank" href="http://www.jajago.com/guochanshouji/"><span style="color: #0000ff">手机</span>品牌</a>|</div>', '1566.0', '2034.89')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93448, 2, 268, '诺基亚电池 BP-5M  小型旅行充电器 AC-4  诺基亚音乐耳机 HS-44 / AD-44  MicroSD 存储卡(储容量可能因地区而异) 诺基亚 USB 数据线 DKE-2  包含诺基亚 PC 套件和附加应用程序的 CD ROM 光盘  《用户手册》')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93449, 2, 269, '2007-4')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93450, 2, 270, 'GSM')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93451, 2, 271, '240×320像素')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93452, 2, 272, 'GPRS')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93453, 2, 273, '64和弦')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93454, 2, 276, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93455, 2, 277, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93456, 2, 278, '滑盖')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93457, 2, 279, '时尚手机')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93458, 2, 280, '108.2×50.5×17.3mm')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93459, 2, 282, '2.2英寸')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93460, 2, 295, '内置')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93461, 2, 296, '200万像素')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93462, 2, 297, 'CMOS')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93463, 2, 303, 'Symbian S60')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93464, 2, 308, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93465, 2, 310, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93466, 2, 311, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93467, 2, 312, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93468, 2, 313, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93469, 2, 326, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93470, 2, 343, '支持, 来电大头贴及来电铃声识别')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93471, 2, 345, '支持')
+go
+INSERT INTO Mobiles (id, title, description, price_shop, price_market) VALUES (6, '诺基亚 6210N', '<h3 style="text-align: center"><span style="color: #ff0000"><br />\n　<span style="font-size: medium">　[滑盖]时尚加速手机 诺基亚6210N时尚评测</span></span></h3>\n<hr />\n<p style="text-align: center">　　<span style="color: #808080">来源：<a target="_blank" href="http://www.jajago.com"><span style="color: #ff0000">http://www.jajago.com </span></a>【原创】发布时间:2010-07-17 编辑:JAJAGO</span></p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 近期诺基亚一些拍摄机型的售价都纷纷上涨，一些机型甚至有200元的升幅，较为令人郁闷，不过在今天我们收到商家的爆料，诺基亚的滑盖导航S60手机6210n的售价已经下滑1700左右了，价格感觉怪怪的!</p>\n<p>　　诺基亚6210N采用了非常时尚的滑盖设计，看起来比较时尚小巧，这款手机外形上看起来外形跟N81很相似，在操作面板末端多了一个很特色的星星，那个可是GPS快捷键，只是觉得有点怪怪的。诺基亚6210 Navigator在机身长度的增加与该机装载了更大的尺寸的手机屏幕有着直接的关系。与过去6110Navigator的2.2英寸QVGA分辨率1600万色TFT液晶屏幕相比，这次6210N虽然在分辨率方面没有变化，但却将液晶屏幕的尺寸提升到了2.4英寸，因此在浏览地图或是查找相关街道信息时可以获得更好的视觉效果。</p>\n<center><img height="298" alt="[滑盖]时尚加速手机 诺基亚6210N时尚评测" width="447" src="http://www.jajago.com/images/upload/Image/01(263).jpg" /></center>\n<p style="text-align: center"><span style="color: #ff0000">　　如图：诺基亚 6210N 手机图片　　　</span></p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 诺基亚6210n内置320万像素摄像头，支持自动对焦和双LED闪光灯功能也在一定程度上丰富了整体的娱乐性，支持TV-OUT的功能能够随意和家人分享。而103&times;49&times;14.9mm的三围设计使得他更像是一款袖珍机型，和前辈诺基亚6110相比有过之而无不及。</p>\n<center><img height="298" alt="[滑盖]时尚加速手机 诺基亚6210N时尚评测" width="447" src="http://www.jajago.com/images/upload/Image/02(166).jpg" /></center>\n<p style="text-align: center">&nbsp;<font color="#ff0000">如图：诺基亚 6210N 手机图片　　</font></p>\n<p>　　这次诺基亚6210 Navigator也支持辅助型GPS(A-GPS)导航功能，让GPS接收器可以在短短的几秒间捕获卫星信号。并且该功能即使在没有SIM卡的情况下也可以开机即用，而借助新版本诺基亚地图2.0 (Nokia Map 2.0)，用户还可以免费享受到清晰的分段显示可视及语音路程引导等导航功能。值得一提的是，该机这次也加入了智能影象定位功能，手机拍摄照片的时候可以同时记录拍摄地点的地理位置，便于用户日后查找。</p>\n<center><img height="298" alt="[滑盖]时尚加速手机 诺基亚6210N时尚评测" width="447" src="http://www.jajago.com/images/upload/Image/03(161).jpg" /></center>\n<p style="text-align: center">&nbsp;<font color="#ff0000">如图：诺基亚 6210N 手机图片　　</font></p>\n<p>　　诺基亚6210N内置的罗盘系统融合了角度和方向定位&rdquo;加速器&rdquo;，使步行者也能轻松地跟着地图畅行。当转动手机时，地图会自动进行方向校正，而诺基亚地图2.0(Nokia Map 2.0)也会重新测定抵达终点的最短距离，并在地图上标记出路径。得益于&ldquo;第3.5G通讯技术&rdquo;&mdash;&mdash;HSDPA高速网络连接，只需轻轻一点，用户兴趣点的详细信息，比如电话以及网络地址就会即时显现，让您一切信息都非常从容地尽在掌握。</p>\n<center><img height="298" alt="[滑盖]时尚加速手机 诺基亚6210N时尚评测" width="447" src="http://www.jajago.com/images/upload/Image/04(142).jpg" /></center>\n<p style="text-align: center">&nbsp;<font color="#ff0000">如图：诺基亚 6210N 手机图片　　</font></p>\n<p>　　诺基亚6210 Navigator一如既往的支持GSM/GPRS/EDGE/WCDMA/HSDPA网络，可通过3.6Mbps的下载速率获得地图及交通信息。此外，该机继续使用了369MHz的AMR11处理器，机身内置了120MB的用户内存，还可通过micro-SD存储卡扩展到8GB的容量。在数据连接方面还配备了蓝牙2.0的传输支持，不过缺没有提供对WIFI连接的支持，让人觉得有些遗憾。</p>\n<center><img height="298" alt="[滑盖]时尚加速手机 诺基亚6210N时尚评测" width="447" src="http://www.jajago.com/images/upload/Image/05(121).jpg" /></center>\n<p style="text-align: center">&nbsp;<font color="#ff0000">如图：诺基亚 6210N 手机图片　　</font></p>\n<p>　　目前这款诺基亚6210n的售价家家购国产手机网价格最低，价格怪怪的可玩性还算OK，不过如果以性价比来说的话，其明显不如500万像素的6220c出色，相信还有较大的价格下滑幅度。</p>\n<hr />\n<p class="STYLE3"><span style="background-color: #ff6600"><span style="color: #ffffff">家家网购精彩评测每日更新推荐：　</span></span></p>\n<p>●<a href="http://www.jajago.com/goods-7028.html">[翻盖]09年国产第一美型 联想S700售价超低</a></p>\n<p>●<a href="http://www.jajago.com/goods-7215.html">[滑盖] U盘功能 短信王 长虹M658手机评测</a></p>\n<p>●<a www.jajago.com="" href="http://www.jajago.com/goods-7245.html">[滑盖]拉丝金属 时尚商务手机 天语S986手机评测</a></p>\n<p>●<a href="http://www.jajago.com/goods-7015.html">[翻盖] 双屏设计高端配置 诚基V2手机评测</a></p>\n<p>●<a href="http://www.jajago.com/goods-6966.html">[滑盖]水晶紫色妖艳动人非常适合女生使用 金立S303手机评测</a></p>\n<div><a href="#">更多标签:</a>|<a href="http://www.jajago.com/guochanshouji/">国产手机</a><a href="http://www.jajago.com/category-101-b132-price_x0-net0-nen0-nes0-nep0.html" target="_blank"><span class="STYLE3"> | </span></a><a href="http://www.jajago.com/lenovo/" target="_blank">联想手机</a><a href="http://www.jajago.com/category-101-b132-price_x0-net0-nen0-nes0-nep0.html" target="_blank"><span class="STYLE3"> |</span></a> <a target="_blank" href="http://www.jajago.com/gionee/">金立手机<span class="STYLE3"> |</span></a> <a href="http://www.jajago.com/oppo/">oppo手机</a> <span class="STYLE3">| </span><a href="http://www.jajago.com/konka/">康佳手机 </a><span class="STYLE3">| <a href="http://www.jajago.com/daxian/">大显</a></span><a href="javascript:void(0);/*1277780134171*/">手机 </a><span class="STYLE3">|</span>&nbsp;&nbsp;<a target="_blank" href="http://www.jajago.com/chinazhineng/"><span style="color: #0000ff">智能 手机</span></a>| <a target="_blank" href="http://www.jajago.com/cuxiao.html">促销专区</a>| <a href="http://www.jajago.com/guochanshouji/" target="_blank"><span style="color: #0000ff">手机</span>品牌</a>|</div>', '1865.0', '2423.85')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44311, 6, 268, '锂电池BL-5F（950mAh），充电器，耳机，数据线，光盘')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44310, 6, 269, '2008年')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44309, 6, 270, 'GSM/3G')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44312, 6, 271, '850/900/1800/1900MHz')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44313, 6, 272, 'GPRS')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33729, 6, 273, '64和弦')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44314, 6, 274, '动态式图形菜单')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44315, 6, 276, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44316, 6, 277, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44317, 6, 278, '滑盖')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44318, 6, 279, '智能手机')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44319, 6, 280, '103×49×14.9mm')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44320, 6, 281, '117克')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33730, 6, 282, '2.4')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44321, 6, 283, '1600万色')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44322, 6, 284, 'TFT')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44323, 6, 285, '240*320pix')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44324, 6, 286, '中文输入法')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44325, 6, 287, '超长短信：支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44326, 6, 288, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44327, 6, 290, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44328, 6, 291, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44329, 6, 292, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44330, 6, 293, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44331, 6, 294, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44332, 6, 295, '内置')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44333, 6, 296, '320万像素')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44334, 6, 297, 'CMOS')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44335, 6, 298, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44336, 6, 299, '数码变焦')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44337, 6, 302, '多种拍摄模式')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44338, 6, 303, 'Symbian系统')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44339, 6, 310, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44340, 6, 311, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44341, 6, 312, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44342, 6, 313, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44343, 6, 314, '多种照片质量选择，支持最大支持拍摄分辨率为640×480像素的照片')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44345, 6, 317, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44348, 6, 320, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44349, 6, 321, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44350, 6, 323, 'TF（microSD）卡')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44351, 6, 324, '120M')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44352, 6, 325, 'JAVA MIDP 2.0')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44353, 6, 326, '内置；蓝牙2.0，支持增强型数据速率，支持A2DP篮牙立体声')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44354, 6, 327, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44355, 6, 330, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (44356, 6, 331, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (34526, 6, 334, '红色-ff0033')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (34525, 6, 334, '黑色-000000')
+go
+INSERT INTO Mobiles (id, title, description, price_shop, price_market) VALUES (7, '诺基亚1200', '<p>&#65279;</p>\n<p>&nbsp;</p>', '186.0', '241.67')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (85, 7, 58, '102x44.1x17.5mm')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (86, 7, 59, '直板')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (91, 7, 81, '低价机')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4780, 7, 194, '2007年12月')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4781, 7, 195, '时尚手机')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4782, 7, 196, 'GSM')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4783, 7, 197, 'GSM900/1800MHz')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4784, 7, 198, 'GPRS')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4785, 7, 200, '单色')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4786, 7, 202, '96 x 68像素')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4787, 7, 203, '32和弦')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4788, 7, 209, '700mAh (BL-5CA)')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4789, 7, 211, '7小时')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4790, 7, 212, '390小时')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4791, 7, 213, '77g')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4792, 7, 215, '内置')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4793, 7, 239, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4794, 7, 240, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4795, 7, 241, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4796, 7, 242, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4797, 7, 243, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4798, 7, 244, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4799, 7, 248, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4800, 7, 249, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4801, 7, 250, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4802, 7, 253, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4803, 7, 254, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4804, 7, 255, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4805, 7, 256, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4806, 7, 257, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4807, 7, 258, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4808, 7, 259, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4809, 7, 260, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (4810, 7, 261, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (11484, 7, 264, '一块BL-5C锂电池,标准充电器 AC-3 ,说明书,保修卡')
+go
+INSERT INTO Mobiles (id, title, description, price_shop, price_market) VALUES (8, '诺基亚1208', '<h3 style="text-align: center"><br />\n　<span style="font-size: medium">　</span><span style="color: #ff0000"><span style="font-size: medium">[直板]经济手机 诺基亚1200 简短评测</span></span></h3>\n<hr />\n<p style="text-align: center">　　<span style="color: #808080">来源：<a target="_blank" href="http://www.jajago.com"><span style="color: #ff0000">http://www.jajago.com </span></a>【原创】发布时间:2010-07-19 编辑:JAJAGO</span></p>\n<p>　　诺基亚如今是越来越重视低端市场了，主力军1系列近期是在低端频频发威，黑白屏幕的1200拥有宽大柔软的按键，价格也就三百元左右，而与1200外观十分相似的的1208最大的不同点就是拥有彩色屏幕，为实用主义者提供了一个不错的选择。</p>\n<center><img height="337" alt="[直板]经济手机 诺基亚1200 简短评测" width="449" src="http://www.jajago.com/images/upload/Image/01(276).jpg" /></center>\n<p>　　既然讲究的是实用，那么手机的外观自然就不会很花哨，1208机身采用了工程塑料材质，体积大小约为102&times;44.1&times;17.5mm，重量仅77克，还是比较小巧的;虽说是彩屏，但1208的的屏幕并不算出色，65536色的CSTN材质，分辨率仅68&times;98像素。</p>\n<p style="text-align: center"><img height="337" alt="[直板]经济手机 诺基亚1200 简短评测" width="449" src="http://www.jajago.com/images/upload/Image/02(178).jpg" /></p>\n<p>　　1208的功能也是比较简单的，拥有32和弦,midi格式铃音，4M的内存 ，不支持扩展;另外最大的亮点就是手机顶部的发光孔还可以充当一下手电筒。</p>\n<center><img height="335" alt="[直板]经济手机 诺基亚1200 简短评测" width="446" src="http://www.jajago.com/images/upload/Image/03(174).jpg" /></center>\n<p>　　追求使用至上的朋友，也可以考虑一下这款手机，感兴趣的朋友可以去看看。</p>\n<hr />\n<p class="STYLE3"><span style="background-color: #ff6600"><span style="color: #ffffff">家家网购精彩评测每日更新推荐：　</span></span></p>\n<p>●<a href="http://www.jajago.com/goods-7028.html">[翻盖]09年国产第一美型 联想S700售价超低</a></p>\n<p>●<a href="http://www.jajago.com/goods-7215.html">[滑盖] U盘功能 短信王 长虹M658手机评测</a></p>\n<p>●<a www.jajago.com="" href="http://www.jajago.com/goods-7245.html">[滑盖]拉丝金属 时尚商务手机 天语S986手机评测</a></p>\n<p>●<a href="http://www.jajago.com/goods-7015.html">[翻盖] 双屏设计高端配置 诚基V2手机评测</a></p>\n<p>●<a href="http://www.jajago.com/goods-6966.html">[滑盖]水晶紫色妖艳动人非常适合女生使用 金立S303手机评测</a></p>\n<div><a href="#">更多标签:</a>|<a href="http://www.jajago.com/guochanshouji/">国产手机</a><a target="_blank" href="http://www.jajago.com/category-101-b132-price_x0-net0-nen0-nes0-nep0.html"><span class="STYLE3"> | </span></a><a target="_blank" href="http://www.jajago.com/lenovo/">联想手机</a><a target="_blank" href="http://www.jajago.com/category-101-b132-price_x0-net0-nen0-nes0-nep0.html"><span class="STYLE3"> |</span></a> <a target="_blank" href="http://www.jajago.com/gionee/">金立手机<span class="STYLE3"> |</span></a> <a href="http://www.jajago.com/oppo/">oppo手机</a> <span class="STYLE3">| </span><a href="http://www.jajago.com/konka/">康佳手机</a> <span class="STYLE3">| <a href="http://www.jajago.com/daxian/">大显</a></span><a href="javascript:void(0);/*1277780134171*/">手机</a><span class="STYLE3">|</span>&nbsp;&nbsp;<a target="_blank" href="http://www.jajago.com/chinazhineng/"><span style="color: #0000ff">智能手机</span></a>| <a target="_blank" href="http://www.jajago.com/cuxiao.html">促销专区</a>| <a target="_blank" href="http://www.jajago.com/guochanshouji/"><span style="color: #0000ff">手机</span>品牌</a>|</div>', '262.0', '293.15')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60278, 8, 268, '		诺基亚电池(BL-5CA), 充电器(AC-3)')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33816, 8, 270, 'GSM')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60279, 8, 271, '	900/1800MHz')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60280, 8, 272, '	GSM/GPRS')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33817, 8, 273, '32和弦')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60281, 8, 276, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60282, 8, 278, '直板')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60283, 8, 279, '	经济手机')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60284, 8, 280, '	102×44.1×17.5mm')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60285, 8, 281, '	77g')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33818, 8, 282, '1.8')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60286, 8, 283, '	65535色')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60287, 8, 284, '	CSTN')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60277, 8, 285, '	96×68像素')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60288, 8, 287, '中文短信；彩信；短信群发')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60289, 8, 290, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60290, 8, 291, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60291, 8, 292, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33820, 8, 310, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33821, 8, 311, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33822, 8, 312, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33823, 8, 313, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60292, 8, 321, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60293, 8, 324, '	约4MBMB')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (34524, 8, 334, '红色-ff0033')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (34523, 8, 334, '黑色-000000')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60294, 8, 337, '	420分钟')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60295, 8, 338, '	365小时')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60296, 8, 339, '	内置播放器, 支持MP3、Midi等音频格式播放　')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (60297, 8, 342, '	黑色、红色')
+go
+INSERT INTO Mobiles (id, title, description, price_shop, price_market) VALUES (9, '诺基亚8600', '<h3 style="text-align: center"><br />\n　<span style="font-size: medium">　</span><span style="color: #ff0000"><span style="font-size: medium">[滑盖]尽享奢华本色 诺基亚靓屏滑盖机8600评测</span></span></h3>\n<hr />\n<p style="text-align: center">　　<span style="color: #808080">来源：<a target="_blank" href="http://www.jajago.com"><span style="color: #ff0000">http://www.jajago.com </span></a>【原创】发布时间:2010-07-22 编辑:JAJAGO</span></p>\n<p>　　几年前提到诺基亚的 8系列，相信大家都会第一时间想到具有里程碑意义的8210、8250、8310等经典机型，上述几名老臣曾经的辉煌至今仍让人记忆犹新。不过一成不变绝 不是一家成功企业的经营理念，所以诺基亚近年来也不断尝试创新，对于8系列来说，最近几年已经成功转型为以卓越工艺和奢华品位为特征的专属系列。</p>\n<center><img height="333" alt="　[滑盖]尽享奢华本色 诺基亚靓屏滑盖机8600评测" width="496" src="http://www.jajago.com/images/upload/Image/17(31).jpg" /></center>\n<p>　　按照近年来诺基亚的惯例，8系列是&ldquo;一年磨一剑&rdquo;，今年7月3日晚，随着诺基亚在湖南长沙隆重发布9款新机，有月光女神之称的8600(报价 图片 热评)Luna正式登陆中国大陆市场。作为年度精品的诺基亚8600Luna，本次又为我们带来了哪些尊贵体验呢?</p>\n<center><img height="334" alt="[滑盖]尽享奢华本色 诺基亚靓屏滑盖机8600评测" width="498" src="http://www.jajago.com/images/upload/Image/01(297).jpg" /></center>\n<p>&nbsp;</p>\n<p>　　从沙漠风暴到月球之旅 　 　既然是8系列的年度作品，我们自然而然的会把最新的8600Luna与去年的8800Sirocco以及前年的8800进行一番比较，在独特的 沙漠风暴Sirocco之后，诺基亚今年带我们&ldquo;远离地球&rdquo;，巧妙引入了月光女神Luna作为设计灵感，独特的品位不禁令人赞叹诺基亚设计团队的创造力。</p>\n<center><img height="332" alt="[滑盖]尽享奢华本色 诺基亚靓屏滑盖机8600评测" width="497" src="http://www.jajago.com/images/upload/Image/02(202).jpg" /></center>\n<p>　　呼吸灯光魅力四射，为月光女神注入生命力 　 　在著名电影《头文字D》中有一句对白非常经典：&ldquo;神也是人&rdquo;，将其引申到月光女神，同样也应该有&ldquo;人&rdquo;的特征，所以此次设计师专门为 8600Luna加入了类似人类呼吸的&ldquo;呼吸式键盘灯光&rdquo;。烟色玻璃透视独特的闪亮灯键盘，一亮一暗的过程犹如人类生生不息的脉搏和呼吸，为原本刚性的躯 体注入了一股生命力，呼唤月光女神的苏醒。</p>\n<center><img height="332" alt="[滑盖]尽享奢华本色 诺基亚靓屏滑盖机8600评测" width="496" src="http://www.jajago.com/images/upload/Image/03(195).jpg" /></center>\n<p>　　实际上8600Luna呼吸灯特效的实现是通过指示灯时间设定来完成的，倘若在设置中选择&ldquo;总是&rdquo;，则呼吸灯会一直持续呼吸的状态，不过要注意的是此时的耗电会较多，如果用户对此不感冒的话可以直接将其设为关闭。 卓越工艺再次升华 　　卓越的工艺在新作8600Luna上得到了再次升华，与此前8800与8800Sirocco浓烈的&ldquo;钢&rdquo;性所不同，8600Luna只在机身背面保留了精钢本色，而在手机正面改用了独特的全玻璃前壳，另外还以鉻金属进行装饰和过渡，塑造出无与伦比的质感。</p>\n<center><img height="335" alt="" width="499" src="http://www.jajago.com/images/upload/Image/04(173).jpg" /></center>\n<p>　　8600Luna透明质感的玻璃壳非常罕见，靓丽得让许多接触过该机的人均爱不释手，而更难得可贵的是唯美的玻璃外壳非常耐用，对于一般的摩擦 有着不错的抵触力，不至于沦为华而不实。当然，玻璃材质天生容易残留印，于是8600Luna随机准备有皮质抛光布，与此同时还附赠了一个专用皮质软包供 用户安置手机。</p>\n<center><img height="340" alt="[滑盖]尽享奢华本色 诺基亚靓屏滑盖机8600评测" width="506" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/05.jpg" /></center>\n<p>　　&ldquo;高傲&rdquo;的全功能插槽，不兼容诺基亚通用配件 　　月光女神8600Luna拥有流畅迷人的线条，手机左侧的音量键非常隐蔽，近乎和银色侧边框融为一体以保持侧边的线性美。把这样一款高档的手机挂在胸前无疑是品位的体现，于是设计师在8600Luna的顶端设有挂饰孔，但其143克的重量还是有些沉的。</p>\n<center><img height="331" alt="[滑盖]尽享奢华本色 诺基亚靓屏滑盖机8600评测" width="495" src="http://www.jajago.com/images/upload/Image/05(148).jpg" /></center>\n<p>　　为了不破坏整机的美感，诺基亚8600Luna专门改用了多合一的全功能插槽，但此举显得有些&ldquo;高傲&rdquo;，因为直接导致了不能使用以往机型的兼容配件，充电器、数据线、乃至耳机均是如此。</p>\n<center><img height="337" alt="[滑盖]尽享奢华本色 诺基亚靓屏滑盖机8600评测" width="503" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/07.jpg" /></center>\n<p>　　继续选用滑盖机型式结构以及优质滚珠轴承精工打造的8600Luna拥有非凡的滑盖体验，与先前作品一样位于导航键以上的突起助推条可作为开启 或关闭滑盖的着力点。由于滑盖力度较大，使用期间8600Luna依然避免不了夹手意外的发生，而连锁反应恐怕是用户的下意识松手导致&ldquo;坠机&rdquo;，所以建议 用户关闭滑盖时务必小心操作。</p>\n<p style="text-align: center"><img height="328" alt="" width="498" src="http://www.jajago.com/images/upload/Image/06(113).jpg" /></p>\n<p style="text-align: center">　　单纯比较8600Luna(107&times;45&times;15.9mm)与8800Sirocco(107&times;45&times;17.2mm)的三围，前者似乎只在厚度上 进行了调整，然而在实际使用期间8600Luna却给人更舒适的把持感，精妙之处在于其滑盖完全开启后的长度不会像8800Sirocco那样长得不够协 调。不过有得必有失，8600Luna的键盘区域因此而缩水，直接导致*键和#键因位置狭小而操作较为别扭，另外其五向导航键感觉偏小，确认键虽然采用了 抛光镜面材质打造，然而日常生活中此键容易磨损，而整体而言，8600Luna的按键有些偏硬。 <img height="218" alt="" width="488" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/09.jpg" /></p>\n<p>　　待屏幕背景灯熄灭后，月光女神并未完全沉睡，上面提到的特色呼吸灯此时会自动开启，让我们慢慢感受到其迷人的呼吸。基于S40的共 性，8600Luna也提供有视图列表、图标、带标签的图标、多级显示四种功能表样式，在周围环境较安静的时候还可以尝试使用其声控命令指挥手机工作。诺 基亚8600Luna支持待机模式设置、屏幕保护(可使用Flash)、节电保护、睡眠模式等，而信息、通讯录、网络的字体能够由用户分别进行设定，表现 出很高的人性化，不过不能实现多任务切换可谓是S40不大不小的遗憾，毕竟诺基亚的强有力竞争对手索尼爱立信的非智能机型普遍已经提供了多任务切换功能。</p>\n<center><img height="449" alt="" width="489" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/10.jpg" /></center>\n<p>　　一如第三版的S40机型，8600Luna内置的多媒体播放器支持流媒体功能，而对于本地播放的媒体格式兼容主流的3GP与MP4格式，欣赏视 频期间仅需按*键便能切换至全屏模式，只不过2英寸的屏幕用于电影播放还是有意犹未尽的感觉。遇上喜欢的视频内容，用户在播放器中可直接将其设为屏幕保 护、来电视频、联系人视频提示等，但要注意该功能仅对部分短视频有效。除了多媒体播放器之外，8600Luna还内置有1.1版本的Flash lite播放器。</p>\n<center><img height="220" alt="" width="487" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/11.jpg" /></center>\n<p>　　立体声双扬声器 　 　期盼已久的双扬声器终于在8系列的新掌门8600Luna中出现，位于手机左右两侧的长条状双扬声器严阵以待，似乎诠释着其非一般的音乐功底。 不可否认，就实际听感而言8600Luna的立体声确实强劲，声音的穿透力也颇佳，但外放力度不足难免让人遗憾，户外仅开启铃声的话往往容易错过来电，所 以同时开启振动提示是很有必要的。</p>\n<center><img height="332" alt="" width="501" src="http://www.jajago.com/images/upload/Image/07(101).jpg" /></center>\n<p>　　在MP3铃声大行其道的今天，8600Luna的64和弦铃声只是充当陪衬意义，手机支持AAC、AAC+、eAAC+、MP3、MIDI、 AMR、WMA等多种格式的音乐文件，并允许将以上资源随心所欲地设置为来电、信息提示、闹钟提示音等，包含航班模式在内的七种情景模式已足够一般玩家的 使用了。</p>\n<center><img height="447" alt="" width="489" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/13.jpg" /></center>\n<p>　　音乐播放器与调频收音机 　　S40第三版的音乐播放器尽管界面不华丽，但功能全面且操控便捷，直接使用五向方向键即能切换不同均衡器，播放/暂停、上一首、下一首均可快速控制。</p>\n<center><img height="224" alt="" width="493" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/14.jpg" /></center>\n<p>　　无论使用手机扬声器外放音乐还是连接耳机欣赏，8600Luna的音质表现均不错，喜欢立体声鉴赏音乐的朋友不妨开启其立体声强化功能作进一步补充。手机内置七组均衡器，其中两组可由用户自由DIY，此外8600Luna还能连接立体声蓝牙耳机欣赏高品质的无线音乐。</p>\n<center><img height="332" alt="" width="497" src="http://www.jajago.com/images/upload/Image/08(88).jpg" /></center>\n<p>　　曲目列表、音乐发送(彩信或蓝牙)、随机播放、重复播放、后台播放等实用功能都在8600Luna支持的范围之内，不过使用其音乐播放器时需注意文件存放路径，因为需要设置音乐来源来指定播放器具体播放哪个目录下的音乐文件，评测人员认为此点有待改善。</p>\n<center><img height="451" alt="" width="487" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/16.jpg" /></center>\n<p>　　连接耳机的状态下，8600Luna内置的立体声调频收音机可正常工作，至于手机的语音备忘支持每段最长五分钟的录音，功能仅是一般。 所见即所拍，不过依然没有补光灯</p>\n<center><img height="328" alt="" width="499" src="http://www.jajago.com/images/upload/Image/09(79).jpg" /></center>\n<p>　　低调的摄像头依然隐藏在8600Luna滑盖机身的背面，只有在滑盖开启之后才显山露水，尽管缺乏自动对焦(AF)功能，但所见即所拍的随拍理念在日常生活中还是非常实用的，最大可输出200万像素的照片(1600&times;1200像素)也不失为当前主流的配置。</p>\n<center><img alt="" src="http://www.jajago.com/images/upload/Image/10(90).jpg" /></center>\n<p>　　虽说8600Luna没有独立的拍摄键，但用户完全可通过设置快捷键(左右软键或者导航键的四个方向)来实现一键开启拍摄功能。手机以横向全屏 进行取景，界面上有剩余张数、分辨率级别等状态提示，直接使用导航键便能控制拍照/录像模式的切换以及数码变焦(最大四倍)，而手机侧面的音量键也有调节 数码变焦的作用。</p>\n<center><img height="568" alt="" width="501" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/19.jpg" /></center>\n<p>　　鉴于8600Luna的拍摄功能与当前主流的S40机型大同小异，我们在此不再展开叙述，各位可通过以下拍摄菜单进行具体了解。手机内置的图像编辑功能支持文字、相框、剪切画的插入，并有裁剪、设置对比度等功能，所提供的DIY空间还是较广的。</p>\n<center><img height="564" alt="" width="508" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/20.jpg" /></center>\n<p>　　录像功能方面，8600Luna最大支持176&times;144像素的视频录制，质量有三种选择，录像期间可进行同步变焦，也能随时暂停/继续拍摄。 128MB内存，仍然不支持外接存储卡 　　考虑到8600Luna并非定位多媒体娱乐手机，所以诺基亚仍然没有为其增加外接存储卡功能，对此不少网友均表示遗憾，评测人员的态度也是一样，毕竟对于一款高端手机而言，稍微增加一些成本加入扩展卡设计完全是可行的。</p>\n<center><img height="330" alt="" width="493" src="http://www.jajago.com/images/upload/Image/11(104).jpg" /></center>\n<p>　　S40系统对于文件夹的分类很明确，而用户其实可以自行创建新文件夹存放数据，在手机中直接复制、移动数据也是完全可行的。机身128MB内存由各种多媒体文件、游戏等资源共同分配，连接数据线还能与PC交换数据，但必须指出的是其数据线为专用接口，通用性不理想。</p>\n<center><img height="447" alt="" width="488" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/22.jpg" /></center>\n<p>　　配备蓝牙2.0的8600Luna可实现一系列主流的蓝牙应用，经过测试其数据传输速度较快，平均可达65KB/S，不失为小容量数据交换时的首选。</p>\n<center><img height="217" alt="" width="489" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/24.jpg" /></center>\n<p>　　基本功能 　 　在拼音词组输入与模糊拼音设置的支持下，8600Luna的输入效率得以保证，以*键调出标点字符的插入以及#键作为输入法切换的操控方式想必 各位诺基亚的fans已经是再为熟悉不过。在编辑信息期间通过菜单中的&ldquo;更改信息类型&rdquo;一项便可在不退出当前编辑文字的基础上任意改变短信类型(有文字信 息、彩信、即显信息、声音信息四种选择)，倘若是在MMS编辑界面下，用户还可直接激活手机的拍照、录像、录音功能。</p>\n<center><img height="679" alt="" width="493" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/25.jpg" /></center>\n<p>　　默认情况下，8600Luna收到的短信息是存储在手机上，但实测发现在手机上的短信息并不能复制到SIM卡上存储，是个不足。为了让用户确切 了解信息收发的具体数目，8600Luna配有信息通讯录记录功能，至于通话报告、分组数据计数器也是颇为实用的设计。在电子邮件功能方面，诺基亚 8600Luna支持最常用的IMAP4、POP3、SMTP协议，简单设置好相关参数之后便能让手机随时随地收发电子邮件。</p>\n<center><img height="330" alt="" width="496" src="http://www.jajago.com/images/upload/Image/12(67).jpg" /></center>\n<p>　　在名片式管理的机制下，8600Luna的通讯录允许用户为联系人添加多个号码、电子邮件、网址、公司、职务、昵称、通讯地址、生日、注释、分组、个人铃声、图像、视频等丰富信息，个人名片支持以信息、彩信、蓝牙方式发送，而通讯录可以连接服务器实现同步管理。</p>\n<center><img height="677" alt="" width="486" src="http://www.ouku.com/upimg/ouku/Image/pingce/nokia/8600c/27.jpg" /></center>\n<p>　　日常工具 　 　无论从机型数量还是用户数量来看，S40家族均是诺基亚手机当之无愧的王牌，由此也可看出S40深受用户的支持。不断完善的S40在内置工具方 面以全面著称，日历功能包含有农历显示，且能够方便地添加待办事项与备忘;计算器功能在8600Luna上除了一般的四则运算之外还拥有科学计算器的进阶 应用。</p>\n<center><img height="328" alt="" width="498" src="http://www.jajago.com/images/upload/Image/14(46).jpg" /></center>\n<p>　　尽管8600Luna内置的闹钟支持关机闹钟、可进行完全周期设定、还有再响超时提示功能，但只能设置一组闹钟对于越来越繁忙的现代人而言往往是不够用的，所以在不关机的前提下，评测人员建议用户使用日历提醒功能充当&ldquo;闹钟&rdquo;之用。 　　另外，诺基亚8600Luna还配备有定时器、秒表、字典功能(英汉双语互译)，手机软件支持由用户自行下载更新。</p>\n<center><img height="330" alt="" width="495" src="http://www.jajago.com/images/upload/Image/15(40).jpg" /></center>\n<p>　　私密性方面，8600Luna可对通讯录或者手机设置保密，如果嫌复杂的话不妨直接开启其保密键盘锁功能，人离手机的时候直接锁定键盘便能实现有效的手机保护。</p>\n<center><img height="333" alt="" width="496" src="http://www.jajago.com/images/upload/Image/16(40).jpg" /></center>\n<p>　　JAVA应用，性能一般 　 　在手机内置的JAVA软件方面8600Luna并没有突出其品位的差异性，高尔夫巡回赛、Highroller赌城、3维足球、 Sudoku(数独游戏)四款游戏在此前的S40机型中已经悉数亮相;而收藏目录中的单位转换(二)、世界时钟、演示器也是S40手机的常见面孔了。</p>\n<center><img height="333" alt="" width="496" src="http://www.jajago.com/images/upload/Image/17(32).jpg" /></center>\n<p>　　由多款JAVA性能测试软件实测得出的结论，诺基亚8600Luna的JAVA性能一般，当然这与其非娱乐手机的定位是有着较大的关系的，但评测人员相信购买8600Luna的消费者是不会介意这些的。</p>\n<center><img height="332" alt="" width="495" src="http://www.jajago.com/images/upload/Image/13(57).jpg" /></center>\n<p>　　或许，有人会抱怨8600Luna不支持存储卡是个软肋，也有人觉得高端的8600Luna理应配备更强的摄像头，甚至是搭载开放性更高的 S60智能系统&hellip;&hellip;诚然，呼风唤雨的诺基亚完全有能力把8600Luna的功能做得更强，但一味专注功能的话便脱离了8系列的原汁原味，反而会让其变得平 庸，幸庆的是经验老到的诺基亚并没有这样做。</p>\n<hr />\n<p class="STYLE3"><span style="background-color: #ff6600"><span style="color: #ffffff">家家网购精彩评测每日更新推荐：　</span></span></p>\n<p>●<a href="http://www.jajago.com/goods-7028.html">[翻盖]09年国产第一美型 联想S700售价超低</a></p>\n<p>●<a href="http://www.jajago.com/goods-7215.html">[滑盖] U盘功能 短信王 长虹M658手机评测</a></p>\n<p>●<a www.jajago.com="" href="http://www.jajago.com/goods-7245.html">[滑盖]拉丝金属 时尚商务手机 天语S986手机评测</a></p>\n<p>●<a href="http://www.jajago.com/goods-7015.html">[翻盖] 双屏设计高端配置 诚基V2手机评测</a></p>\n<p>●<a href="http://www.jajago.com/goods-6966.html">[滑盖]水晶紫色妖艳动人非常适合女生使用 金立S303手机评测</a></p>\n<div><a href="#">更多标签:</a>|<a href="http://www.jajago.com/guochanshouji/">国产手机</a><a target="_blank" href="http://www.jajago.com/category-101-b132-price_x0-net0-nen0-nes0-nep0.html"><span class="STYLE3"> | </span></a><a target="_blank" href="http://www.jajago.com/lenovo/">联想手机</a><a target="_blank" href="http://www.jajago.com/category-101-b132-price_x0-net0-nen0-nes0-nep0.html"><span class="STYLE3"> |</span></a> <a target="_blank" href="http://www.jajago.com/gionee/">金立手机<span class="STYLE3"> |</span></a> <a href="http://www.jajago.com/oppo/">oppo手机</a> <span class="STYLE3">| </span><a href="http://www.jajago.com/konka/">康佳手机</a> <span class="STYLE3">| <a href="http://www.jajago.com/daxian/">大显</a></span><a href="javascript:void(0);/*1277780134171*/">手机</a><span class="STYLE3">|</span>&nbsp;&nbsp;<a target="_blank" href="http://www.jajago.com/chinazhineng/"><span style="color: #0000ff">智能手机</span></a>| <a target="_blank" href="http://www.jajago.com/cuxiao.html">促销专区</a>| <a target="_blank" href="http://www.jajago.com/guochanshouji/"><span style="color: #0000ff">手机</span>品牌</a>|</div>', '3205.0', '4165.59')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93690, 9, 268, '诺基亚电池 BP-5M ,诺基亚充电器 AC-6 (microUSB) ,诺基亚耳机 HS-47 ,诺基亚适配器 AD-55 ,诺基亚 microUSB 数据连接线 CA-101 ,CD ROM 光盘，其中包含诺基亚 PC 套件 (第 6.83 版) ,《用户手册》,诺基亚 8600 Luna 宣传文档 ,皮质抛光布 ,皮质软包 ,挂绳')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93691, 9, 269, '2009年')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33808, 9, 270, 'GSM/GPRS')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93692, 9, 271, '850/900/1800/1900MHz')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93693, 9, 272, 'GSM/GPRS')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33809, 9, 273, '64和弦')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93694, 9, 276, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93695, 9, 277, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93696, 9, 278, '滑盖')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93697, 9, 279, '时尚手机')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93698, 9, 280, '130.8×107×45mm')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93699, 9, 281, '143.0g')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93689, 9, 282, '2.0英寸')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93700, 9, 283, '1670万色')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33811, 9, 285, '240*320pix')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33812, 9, 286, '中文输入法')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33813, 9, 287, 'EMS短信')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33814, 9, 288, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (33815, 9, 290, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93701, 9, 295, '内置')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93702, 9, 296, '200万像素')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93703, 9, 297, 'CMOS')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93704, 9, 308, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93705, 9, 310, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93706, 9, 311, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93707, 9, 312, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93708, 9, 315, '支持有声视频拍摄')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93709, 9, 318, '支持,WAP2.0')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93710, 9, 319, '支持, HTML/XHTML')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93711, 9, 325, 'MIDP 2.0')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93712, 9, 326, '第 2.0 版立体声蓝牙实现高级连接功能')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93713, 9, 330, '支持')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (34522, 9, 334, '黑色-000000')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93714, 9, 335, 'IMAP4、POP3、SMTP,持 IMAP IDLE、OMA 电子邮件通知、MIME.附件:jpg、.3gp、.mp3')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93715, 9, 337, '165分钟')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93716, 9, 338, '240小时')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93717, 9, 343, '支持, 来电大头贴及来电铃声识别')
+go
+INSERT INTO MobileInAttributes (id,mobile_id,attribute_id,title) VALUES (93718, 9, 345, '支持')
+go

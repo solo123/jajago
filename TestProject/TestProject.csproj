@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="TestMobiles.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -55,9 +55,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SA\SA.csproj">
-      <Project>{37D0AF9E-9AE9-4840-935C-D1F2C08E9AC6}</Project>
-      <Name>SA</Name>
+    <ProjectReference Include="..\Biz\Biz.csproj">
+      <Project>{E7A8D08D-B3D5-4AAC-99B2-A020C3E778E2}</Project>
+      <Name>Biz</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

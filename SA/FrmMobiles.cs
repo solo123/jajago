@@ -6,7 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using com.jajago.SA.Biz;
+
+using com.jajago.Biz;
 
 namespace com.jajago.SA
 {
