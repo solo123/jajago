@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using com.jajago.SA.Biz;
+using System.IO;
 
 namespace com.jajago.SA
 {
@@ -25,7 +26,20 @@ namespace com.jajago.SA
             lbDescription.Text = m.description;
             lbProps.Text = m.props;
             lbStandard.Text = m.standard;
-            //pictureBox1.Image = System.Drawing.Image.FromFile(m.photo_path);
+            tsslTitle.Text = m.title;
+            //byte[] img = m.small_icon;
+            System.Drawing.Image returnImage = System.Drawing.Image.FromFile(@"d:\logo.jpg");
+            //MemoryStream ms = new MemoryStream(m.small_icon);
+            //System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+            pbShowImage.Image = returnImage;
+            pbShowImage.Height = returnImage.Height;
+            pbShowImage.Width = returnImage.Width;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmAllImage fai = new FrmAllImage();
+            fai.ShowDialog();
         }
     }
 }
