@@ -64,7 +64,7 @@
             // 
             // lbDescription
             // 
-            this.lbDescription.Location = new System.Drawing.Point(50, 274);
+            this.lbDescription.Location = new System.Drawing.Point(38, 274);
             this.lbDescription.Name = "lbDescription";
             this.lbDescription.Size = new System.Drawing.Size(623, 45);
             this.lbDescription.TabIndex = 3;
@@ -72,7 +72,7 @@
             // 
             // lbProps
             // 
-            this.lbProps.Location = new System.Drawing.Point(50, 319);
+            this.lbProps.Location = new System.Drawing.Point(38, 319);
             this.lbProps.Name = "lbProps";
             this.lbProps.Size = new System.Drawing.Size(623, 73);
             this.lbProps.TabIndex = 4;
@@ -110,7 +110,7 @@
             this.tsslTitle});
             this.statusStrip1.Location = new System.Drawing.Point(0, 392);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(673, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(679, 22);
             this.statusStrip1.TabIndex = 9;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 414);
+            this.ClientSize = new System.Drawing.Size(679, 414);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lbStandard);
             this.Controls.Add(this.lbRefPrice);

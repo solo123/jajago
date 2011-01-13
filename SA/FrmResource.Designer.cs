@@ -272,6 +272,8 @@
             // 
             // gridResource
             // 
+            this.gridResource.AllowUserToAddRows = false;
+            this.gridResource.AllowUserToDeleteRows = false;
             this.gridResource.AllowUserToResizeRows = false;
             this.gridResource.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
@@ -282,6 +284,7 @@
             this.gridResource.Name = "gridResource";
             this.gridResource.ReadOnly = true;
             this.gridResource.RowTemplate.Height = 23;
+            this.gridResource.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridResource.Size = new System.Drawing.Size(373, 421);
             this.gridResource.TabIndex = 0;
             // 
