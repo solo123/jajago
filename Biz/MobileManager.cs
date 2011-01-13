@@ -32,9 +32,13 @@ namespace com.jajago.Biz
 
         public Mobile GetMobile(int id)
         {
-            MobilesEntities ent = new MobilesEntities();
             if (ent.Mobiles.Count() == 0) return null;
             return ent.Mobiles.First( m => m.id == id );
+        }
+
+        public IQueryable<MobileInAttribute> GetAttributes(int mobile_id)
+        {
+            return from r in ent.MobileInAttributes where r.mobile_id == mobile_id select r;
         }
 
     }

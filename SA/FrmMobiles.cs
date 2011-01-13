@@ -28,9 +28,10 @@ namespace com.jajago.SA
         {
             DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
             int id = Convert.ToInt32(row.Cells[0].Value);
-            FrmMobile fm = new FrmMobile();
-            fm.Show();
-            fm.ShowMobile(id);
+            FrmMobile f = new FrmMobile();
+            f.MdiParent = this.MdiParent;
+            f.Show();
+            f.ShowMobile(id);
         }
     }
 }

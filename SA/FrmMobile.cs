@@ -24,9 +24,8 @@ namespace com.jajago.SA
             MobileManager mm = MobileManager.Instance;
             Mobile m = mm.GetMobile(id);
             lbName.Text = m.title;
-            lbDescription.Text = m.description;
 
-            tsslTitle.Text = m.title;
+ 
             //byte[] img = m.small_icon;
             System.Drawing.Image returnImage = System.Drawing.Image.FromFile(@"d:\logo.jpg");
             //MemoryStream ms = new MemoryStream(m.small_icon);
@@ -34,12 +33,18 @@ namespace com.jajago.SA
             pbShowImage.Image = returnImage;
             pbShowImage.Height = returnImage.Height;
             pbShowImage.Width = returnImage.Width;
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FrmAllImage fai = new FrmAllImage();
-            fai.ShowDialog();
+            webBrowser1.DocumentText = m.description;
+            lbPrice.Text = m.price_shop.ToString();
+            lbRefPrice.Text = m.price_market.ToString();
+            StringBuilder sb = new StringBuilder();
+            foreach (MobileInAttribute ma in mm.GetAttributes(id))
+            {
+                sb.Append(ma.attribute_id);
+                sb.Append(":");
+                sb.Append(ma.title);
+                sb.Append(@"\n");
+            }
+            lbProps.Text = sb.ToString();
         }
     }
 }
