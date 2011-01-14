@@ -58,9 +58,10 @@
             this.pbShowImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.pbShowImage.BackColor = System.Drawing.Color.White;
-            this.pbShowImage.Location = new System.Drawing.Point(399, 112);
+            this.pbShowImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbShowImage.Location = new System.Drawing.Point(530, 112);
             this.pbShowImage.Name = "pbShowImage";
-            this.pbShowImage.Size = new System.Drawing.Size(195, 182);
+            this.pbShowImage.Size = new System.Drawing.Size(228, 182);
             this.pbShowImage.TabIndex = 5;
             this.pbShowImage.TabStop = false;
             // 
@@ -70,7 +71,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(3, 3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(619, 417);
+            this.webBrowser1.Size = new System.Drawing.Size(635, 397);
             this.webBrowser1.TabIndex = 10;
             // 
             // tabControl1
@@ -85,28 +86,31 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(28, 3);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(633, 476);
+            this.tabControl1.Size = new System.Drawing.Size(818, 501);
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
             // 
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 49);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(625, 423);
+            this.tabPage1.Size = new System.Drawing.Size(810, 448);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "基本信息";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage2.Controls.Add(this.webBrowser1);
             this.tabPage2.Location = new System.Drawing.Point(4, 49);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(625, 423);
+            this.tabPage2.Size = new System.Drawing.Size(645, 407);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "详细信息";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -119,7 +123,7 @@
             // 
             // lbStandard
             // 
-            this.lbStandard.Location = new System.Drawing.Point(53, 250);
+            this.lbStandard.Location = new System.Drawing.Point(118, 260);
             this.lbStandard.Name = "lbStandard";
             this.lbStandard.Size = new System.Drawing.Size(82, 44);
             this.lbStandard.TabIndex = 21;
@@ -137,15 +141,15 @@
             this.panel1.Controls.Add(this.lbRefPrice);
             this.panel1.Controls.Add(this.pbShowImage);
             this.panel1.Controls.Add(this.lbStandard);
-            this.panel1.Location = new System.Drawing.Point(8, 17);
+            this.panel1.Location = new System.Drawing.Point(6, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(608, 403);
+            this.panel1.Size = new System.Drawing.Size(793, 437);
             this.panel1.TabIndex = 26;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::com.jajago.SA.Properties.Resources.ecshop_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(101, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(81, 42);
             this.pictureBox1.TabIndex = 32;
@@ -154,7 +158,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(130, 221);
+            this.label3.Location = new System.Drawing.Point(178, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 29;
@@ -163,7 +167,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 180);
+            this.label2.Location = new System.Drawing.Point(177, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 30;
@@ -171,9 +175,10 @@
             // 
             // lbName
             // 
+            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbName.Location = new System.Drawing.Point(128, 21);
+            this.lbName.Location = new System.Drawing.Point(228, 31);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(75, 20);
             this.lbName.TabIndex = 26;
@@ -184,7 +189,7 @@
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbPrice.ForeColor = System.Drawing.Color.Orange;
-            this.lbPrice.Location = new System.Drawing.Point(180, 173);
+            this.lbPrice.Location = new System.Drawing.Point(228, 173);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(79, 19);
             this.lbPrice.TabIndex = 27;
@@ -195,7 +200,7 @@
             this.lbRefPrice.AutoSize = true;
             this.lbRefPrice.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbRefPrice.ForeColor = System.Drawing.Color.Orange;
-            this.lbRefPrice.Location = new System.Drawing.Point(180, 216);
+            this.lbRefPrice.Location = new System.Drawing.Point(228, 216);
             this.lbRefPrice.Name = "lbRefPrice";
             this.lbRefPrice.Size = new System.Drawing.Size(109, 19);
             this.lbRefPrice.TabIndex = 28;
@@ -204,12 +209,13 @@
             // tbProps
             // 
             this.tbProps.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbProps.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbProps.Location = new System.Drawing.Point(83, 84);
+            this.tbProps.Enabled = false;
+            this.tbProps.Location = new System.Drawing.Point(132, 83);
             this.tbProps.Multiline = true;
             this.tbProps.Name = "tbProps";
             this.tbProps.ReadOnly = true;
-            this.tbProps.Size = new System.Drawing.Size(280, 55);
+            this.tbProps.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbProps.Size = new System.Drawing.Size(350, 61);
             this.tbProps.TabIndex = 33;
             this.tbProps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -217,8 +223,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 476);
+            this.ClientSize = new System.Drawing.Size(817, 501);
             this.Controls.Add(this.tabControl1);
+            this.MinimumSize = new System.Drawing.Size(825, 535);
             this.Name = "FrmMobile";
             this.Text = "FrmMobile";
             ((System.ComponentModel.ISupportInitialize)(this.pbShowImage)).EndInit();
