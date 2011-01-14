@@ -34,23 +34,23 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.lbStandard = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbProps = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbRefPrice = new System.Windows.Forms.Label();
-            this.tbProps = new System.Windows.Forms.TextBox();
+            this.lbStandard = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbShowImage)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbShowImage
@@ -71,7 +71,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(3, 3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(635, 397);
+            this.webBrowser1.Size = new System.Drawing.Size(800, 438);
             this.webBrowser1.TabIndex = 10;
             // 
             // tabControl1
@@ -103,32 +103,6 @@
             this.tabPage1.Text = "基本信息";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Controls.Add(this.webBrowser1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 49);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(645, 407);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "详细信息";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // lbStandard
-            // 
-            this.lbStandard.Location = new System.Drawing.Point(118, 260);
-            this.lbStandard.Name = "lbStandard";
-            this.lbStandard.Size = new System.Drawing.Size(82, 44);
-            this.lbStandard.TabIndex = 21;
-            this.lbStandard.Text = "lbStandard";
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -146,19 +120,33 @@
             this.panel1.Size = new System.Drawing.Size(793, 437);
             this.panel1.TabIndex = 26;
             // 
+            // tbProps
+            // 
+            this.tbProps.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.tbProps.Location = new System.Drawing.Point(132, 153);
+            this.tbProps.Multiline = true;
+            this.tbProps.Name = "tbProps";
+            this.tbProps.ReadOnly = true;
+            this.tbProps.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbProps.Size = new System.Drawing.Size(367, 98);
+            this.tbProps.TabIndex = 33;
+            this.tbProps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::com.jajago.SA.Properties.Resources.ecshop_logo;
             this.pictureBox1.Location = new System.Drawing.Point(101, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(81, 42);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(178, 221);
+            this.label3.Location = new System.Drawing.Point(197, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 29;
@@ -167,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(177, 180);
+            this.label2.Location = new System.Drawing.Point(196, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 30;
@@ -189,7 +177,7 @@
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbPrice.ForeColor = System.Drawing.Color.Orange;
-            this.lbPrice.Location = new System.Drawing.Point(228, 173);
+            this.lbPrice.Location = new System.Drawing.Point(247, 77);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(79, 19);
             this.lbPrice.TabIndex = 27;
@@ -200,41 +188,55 @@
             this.lbRefPrice.AutoSize = true;
             this.lbRefPrice.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbRefPrice.ForeColor = System.Drawing.Color.Orange;
-            this.lbRefPrice.Location = new System.Drawing.Point(228, 216);
+            this.lbRefPrice.Location = new System.Drawing.Point(247, 120);
             this.lbRefPrice.Name = "lbRefPrice";
             this.lbRefPrice.Size = new System.Drawing.Size(109, 19);
             this.lbRefPrice.TabIndex = 28;
             this.lbRefPrice.Text = "lbRefPrice";
             // 
-            // tbProps
+            // lbStandard
             // 
-            this.tbProps.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbProps.Enabled = false;
-            this.tbProps.Location = new System.Drawing.Point(132, 83);
-            this.tbProps.Multiline = true;
-            this.tbProps.Name = "tbProps";
-            this.tbProps.ReadOnly = true;
-            this.tbProps.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbProps.Size = new System.Drawing.Size(350, 61);
-            this.tbProps.TabIndex = 33;
-            this.tbProps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lbStandard.Location = new System.Drawing.Point(130, 254);
+            this.lbStandard.Name = "lbStandard";
+            this.lbStandard.Size = new System.Drawing.Size(82, 44);
+            this.lbStandard.TabIndex = 21;
+            this.lbStandard.Text = "lbStandard";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.webBrowser1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 49);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(810, 448);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "详细信息";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // FrmMobile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(817, 501);
             this.Controls.Add(this.tabControl1);
             this.MinimumSize = new System.Drawing.Size(825, 535);
             this.Name = "FrmMobile";
-            this.Text = "FrmMobile";
+            this.Text = "手机信息";
             ((System.ComponentModel.ISupportInitialize)(this.pbShowImage)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

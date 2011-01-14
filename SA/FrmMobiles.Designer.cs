@@ -106,7 +106,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBox1);
             this.Name = "FrmMobiles";
-            this.Text = "FrmMobiles";
+            this.Text = "手机列表";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

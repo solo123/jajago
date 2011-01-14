@@ -24,6 +24,7 @@ namespace com.jajago.SA
             MobileManager mm = MobileManager.Instance;
             Mobile m = mm.GetMobile(id);
             lbName.Text = m.title;
+            FrmMobile fm = new FrmMobile();
             System.Drawing.Image returnImage = System.Drawing.Image.FromFile(@"d:\logo.jpg");
             pbShowImage.Image = returnImage;
             pbShowImage.Height = returnImage.Height;
@@ -40,6 +41,11 @@ namespace com.jajago.SA
                 sb.Append("\n");
             }
             tbProps.Text = sb.ToString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.jajago.com");
         }
     }
 }
