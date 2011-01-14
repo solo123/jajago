@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using com.jajago.SA.Biz;
+using com.jajago.Biz;
 
 namespace com.jajago.SA
 {
@@ -68,32 +68,35 @@ namespace com.jajago.SA
                 if (MessageBox.Show("你还没有保存，是否保存", "退出", MessageBoxButtons.YesNo, 
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    rm.ClearSearchPath();
-                    foreach (object item in listResourcePath.Items)
-                    {
-                        rm.AddSearchPath(item.ToString());
-                    }
-                    this.Close();
+                    btnSave_Click(sender, e);
                 }
             }
         }
 
         private void FrmConfig_Load(object sender, EventArgs e)
         {
-            foreach (SearchPath sp in rm.GetSearchPath())
+            string path = rm.ConfigSearchPath;
+            if (path != null)
             {
-                listResourcePath.Items.Add(sp.path);
+                string[] paths = path.Split(';');
+                Array.Sort(paths);
+                foreach (string s in paths)
+                {
+                    listResourcePath.Items.Add(s);
+                }
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            rm.ClearSearchPath();
+            StringBuilder sb = new StringBuilder();
             foreach (object item in listResourcePath.Items)
             {
-                rm.AddSearchPath(item.ToString());
+                sb.Append(item.ToString());
+                sb.Append(';');
             }
-            IsChange = true;
+            sb.Remove(sb.Length - 1, 1);
+            rm.ConfigSearchPath = sb.ToString();
             this.Close();
         }
     }
