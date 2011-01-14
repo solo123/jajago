@@ -22,13 +22,12 @@ namespace com.jajago.SA
                     foreach(com.jajago.SA.Biz.Image res in rsm.GetList(value.id))
                     {
                         ListViewItem li = new ListViewItem();
+                        
                         li.Text = res.id;
                         listView1.Items.Add(li);
                     }
                     dataGridView1.Hide();
                     listView1.Show();
-                    
-
                 }
                 else
                 {

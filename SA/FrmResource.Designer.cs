@@ -35,6 +35,7 @@
             this.btnScan = new System.Windows.Forms.Button();
             this.btnselect = new System.Windows.Forms.Button();
             this.pnResources = new System.Windows.Forms.Panel();
+            this.ucResources = new com.jajago.SA.UcResources();
             this.treeselect = new System.Windows.Forms.TreeView();
             this.lbcount = new System.Windows.Forms.Label();
             this.btnwrite = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ucResources = new com.jajago.SA.UcResources();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.pnResources.SuspendLayout();
@@ -128,6 +128,16 @@
             this.pnResources.Name = "pnResources";
             this.pnResources.Size = new System.Drawing.Size(601, 421);
             this.pnResources.TabIndex = 2;
+            // 
+            // ucResources
+            // 
+            this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucResources.Location = new System.Drawing.Point(2, 0);
+            this.ucResources.Name = "ucResources";
+            this.ucResources.Size = new System.Drawing.Size(370, 419);
+            this.ucResources.TabIndex = 7;
             // 
             // treeselect
             // 
@@ -264,16 +274,6 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // ucResources
-            // 
-            this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucResources.Location = new System.Drawing.Point(14, 8);
-            this.ucResources.Name = "ucResources";
-            this.ucResources.Size = new System.Drawing.Size(358, 411);
-            this.ucResources.TabIndex = 7;
             // 
             // FrmResource
             // 
