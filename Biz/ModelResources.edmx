@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ResourcesModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ResourcesModelStoreContainer">
+          <EntitySet Name="Configs" EntityType="ResourcesModel.Store.Configs" store:Type="Tables" />
+          <EntitySet Name="ResImages" EntityType="ResourcesModel.Store.ResImages" store:Type="Tables" />
+          <EntitySet Name="ResMusics" EntityType="ResourcesModel.Store.ResMusics" store:Type="Tables" />
+          <EntitySet Name="Resources" EntityType="ResourcesModel.Store.Resources" store:Type="Tables" />
+          <EntitySet Name="Taxonomies" EntityType="ResourcesModel.Store.Taxonomies" store:Type="Tables" />
+          <EntitySet Name="Taxons" EntityType="ResourcesModel.Store.Taxons" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="Configs">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="value" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="ResImages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="filename" Type="nvarchar" MaxLength="200" />
+          <Property Name="fileext" Type="nvarchar" MaxLength="20" />
+          <Property Name="thumb" Type="varbinary" MaxLength="6000" />
+          <Property Name="width" Type="nvarchar" MaxLength="100" />
+          <Property Name="height" Type="nvarchar" MaxLength="100" />
+          <Property Name="dpi" Type="nvarchar" MaxLength="100" />
+          <Property Name="filetype" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ResMusics">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="title" Type="nvarchar" MaxLength="200" />
+          <Property Name="artist" Type="nvarchar" MaxLength="100" />
+          <Property Name="album" Type="nvarchar" MaxLength="100" />
+          <Property Name="publish" Type="nvarchar" MaxLength="50" />
+          <Property Name="music_type" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Resources">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="taxonomy_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="taxon_id" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="path" Type="nvarchar" MaxLength="500" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Taxonomies">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="position" Type="int" />
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="pattern" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Taxons">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="parent_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="taxonomy_id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ResourcesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ResourcesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Configs" EntityType="ResourcesModel.Config" />
+          <EntitySet Name="ResImages" EntityType="ResourcesModel.ResImage" />
+          <EntitySet Name="ResMusics" EntityType="ResourcesModel.ResMusic" />
+          <EntitySet Name="Resources" EntityType="ResourcesModel.Resource" />
+          <EntitySet Name="Taxonomies" EntityType="ResourcesModel.Taxonomy" />
+          <EntitySet Name="Taxons" EntityType="ResourcesModel.Taxon" />
+        </EntityContainer>
+        <EntityType Name="Config">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="id" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="value" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ResImage">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="id" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="filename" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="fileext" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="thumb" MaxLength="6000" FixedLength="false" />
+          <Property Type="String" Name="width" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="height" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="dpi" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="filetype" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ResMusic">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="id" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="title" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="artist" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="album" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="publish" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="music_type" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="taxonomy_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="taxon_id" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="path" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="created_at" />
+          <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Taxonomy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="position" />
+          <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pattern" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Taxon">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="String" Name="parent_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="taxonomy_id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="name" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ResourcesModelStoreContainer" CdmEntityContainer="ResourcesEntities">
+          <EntitySetMapping Name="Configs">
+            <EntityTypeMapping TypeName="ResourcesModel.Config">
+              <MappingFragment StoreEntitySet="Configs">
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ResImages">
+            <EntityTypeMapping TypeName="ResourcesModel.ResImage">
+              <MappingFragment StoreEntitySet="ResImages">
+                <ScalarProperty Name="filetype" ColumnName="filetype" />
+                <ScalarProperty Name="dpi" ColumnName="dpi" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="width" ColumnName="width" />
+                <ScalarProperty Name="thumb" ColumnName="thumb" />
+                <ScalarProperty Name="fileext" ColumnName="fileext" />
+                <ScalarProperty Name="filename" ColumnName="filename" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ResMusics">
+            <EntityTypeMapping TypeName="ResourcesModel.ResMusic">
+              <MappingFragment StoreEntitySet="ResMusics">
+                <ScalarProperty Name="music_type" ColumnName="music_type" />
+                <ScalarProperty Name="publish" ColumnName="publish" />
+                <ScalarProperty Name="album" ColumnName="album" />
+                <ScalarProperty Name="artist" ColumnName="artist" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resources">
+            <EntityTypeMapping TypeName="ResourcesModel.Resource">
+              <MappingFragment StoreEntitySet="Resources">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="taxon_id" ColumnName="taxon_id" />
+                <ScalarProperty Name="taxonomy_id" ColumnName="taxonomy_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Taxonomies">
+            <EntityTypeMapping TypeName="ResourcesModel.Taxonomy">
+              <MappingFragment StoreEntitySet="Taxonomies">
+                <ScalarProperty Name="pattern" ColumnName="pattern" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="position" ColumnName="position" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Taxons">
+            <EntityTypeMapping TypeName="ResourcesModel.Taxon">
+              <MappingFragment StoreEntitySet="Taxons">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="taxonomy_id" ColumnName="taxonomy_id" />
+                <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModelResources">
+        <EntityTypeShape EntityType="ResourcesModel.Config" Width="1.5" PointX="0.75" PointY="0.75" Height="1.2849739583333317" />
+        <EntityTypeShape EntityType="ResourcesModel.ResImage" Width="1.5" PointX="2.75" PointY="0.75" Height="2.2966927083333317" />
+        <EntityTypeShape EntityType="ResourcesModel.ResMusic" Width="1.5" PointX="4.75" PointY="0.75" Height="1.9594531249999996" />
+        <EntityTypeShape EntityType="ResourcesModel.Resource" Width="1.5" PointX="0.75" PointY="4.75" Height="1.9594531250000031" />
+        <EntityTypeShape EntityType="ResourcesModel.Taxonomy" Width="1.5" PointX="2.75" PointY="4.75" Height="1.6222135416666674" />
+        <EntityTypeShape EntityType="ResourcesModel.Taxon" Width="1.5" PointX="4.75" PointY="3.75" Height="1.6222135416666674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
