@@ -67,7 +67,7 @@
             // lbFolder
             // 
             this.lbFolder.AutoSize = true;
-            this.lbFolder.Location = new System.Drawing.Point(71, 99);
+            this.lbFolder.Location = new System.Drawing.Point(71, 129);
             this.lbFolder.Name = "lbFolder";
             this.lbFolder.Size = new System.Drawing.Size(41, 12);
             this.lbFolder.TabIndex = 4;
@@ -76,7 +76,7 @@
             // lbFile
             // 
             this.lbFile.AutoSize = true;
-            this.lbFile.Location = new System.Drawing.Point(71, 125);
+            this.lbFile.Location = new System.Drawing.Point(71, 174);
             this.lbFile.Name = "lbFile";
             this.lbFile.Size = new System.Drawing.Size(41, 12);
             this.lbFile.TabIndex = 5;

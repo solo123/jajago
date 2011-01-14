@@ -98,7 +98,7 @@
             // 
             // btnScan
             // 
-            this.btnScan.Location = new System.Drawing.Point(96, 6);
+            this.btnScan.Location = new System.Drawing.Point(128, 4);
             this.btnScan.Name = "btnScan";
             this.btnScan.Size = new System.Drawing.Size(75, 23);
             this.btnScan.TabIndex = 0;
@@ -108,7 +108,7 @@
             // 
             // btnselect
             // 
-            this.btnselect.Location = new System.Drawing.Point(186, 6);
+            this.btnselect.Location = new System.Drawing.Point(230, 4);
             this.btnselect.Name = "btnselect";
             this.btnselect.Size = new System.Drawing.Size(75, 23);
             this.btnselect.TabIndex = 3;

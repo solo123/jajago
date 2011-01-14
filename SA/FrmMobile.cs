@@ -47,5 +47,23 @@ namespace com.jajago.SA
         {
             System.Diagnostics.Process.Start("http://www.jajago.com");
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.jajago.com");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmMobiles frmMobiles = new FrmMobiles();
+            if (frmMobiles == null || frmMobiles.IsDisposed)
+            {
+                frmMobiles = new FrmMobiles();
+                FrmContainer fc=new FrmContainer();
+            }
+            frmMobiles.WindowState = FormWindowState.Maximized;
+            this.ActivateMdiChild(frmMobiles);
+            frmMobiles.Show();
+        }
     }
 }

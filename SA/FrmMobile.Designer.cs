@@ -35,6 +35,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tbProps = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +47,7 @@
             this.lbStandard = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowImage)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -59,9 +62,9 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.pbShowImage.BackColor = System.Drawing.Color.White;
             this.pbShowImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbShowImage.Location = new System.Drawing.Point(530, 112);
+            this.pbShowImage.Location = new System.Drawing.Point(574, 85);
             this.pbShowImage.Name = "pbShowImage";
-            this.pbShowImage.Size = new System.Drawing.Size(228, 182);
+            this.pbShowImage.Size = new System.Drawing.Size(231, 170);
             this.pbShowImage.TabIndex = 5;
             this.pbShowImage.TabStop = false;
             // 
@@ -87,6 +90,7 @@
             this.tabControl1.Padding = new System.Drawing.Point(28, 3);
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(818, 501);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 11;
             // 
             // tabPage1
@@ -106,6 +110,10 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.linkLabel2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.tbProps);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
@@ -115,20 +123,41 @@
             this.panel1.Controls.Add(this.lbRefPrice);
             this.panel1.Controls.Add(this.pbShowImage);
             this.panel1.Controls.Add(this.lbStandard);
-            this.panel1.Location = new System.Drawing.Point(6, 1);
+            this.panel1.Location = new System.Drawing.Point(-1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(793, 437);
+            this.panel1.Size = new System.Drawing.Size(809, 442);
             this.panel1.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(295, 417);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 12);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "网络版权所有 著作权保护声明";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(711, 31);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(29, 12);
+            this.linkLabel1.TabIndex = 34;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "官网";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // tbProps
             // 
             this.tbProps.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbProps.Location = new System.Drawing.Point(132, 153);
+            this.tbProps.Location = new System.Drawing.Point(132, 183);
             this.tbProps.Multiline = true;
             this.tbProps.Name = "tbProps";
             this.tbProps.ReadOnly = true;
             this.tbProps.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbProps.Size = new System.Drawing.Size(367, 98);
+            this.tbProps.Size = new System.Drawing.Size(378, 72);
             this.tbProps.TabIndex = 33;
             this.tbProps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -146,7 +175,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(197, 125);
+            this.label3.Location = new System.Drawing.Point(197, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 29;
@@ -155,7 +184,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(196, 84);
+            this.label2.Location = new System.Drawing.Point(196, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 30;
@@ -166,7 +195,7 @@
             this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbName.Location = new System.Drawing.Point(228, 31);
+            this.lbName.Location = new System.Drawing.Point(235, 31);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(75, 20);
             this.lbName.TabIndex = 26;
@@ -177,7 +206,7 @@
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbPrice.ForeColor = System.Drawing.Color.Orange;
-            this.lbPrice.Location = new System.Drawing.Point(247, 77);
+            this.lbPrice.Location = new System.Drawing.Point(277, 102);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(79, 19);
             this.lbPrice.TabIndex = 27;
@@ -188,7 +217,7 @@
             this.lbRefPrice.AutoSize = true;
             this.lbRefPrice.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbRefPrice.ForeColor = System.Drawing.Color.Orange;
-            this.lbRefPrice.Location = new System.Drawing.Point(247, 120);
+            this.lbRefPrice.Location = new System.Drawing.Point(277, 144);
             this.lbRefPrice.Name = "lbRefPrice";
             this.lbRefPrice.Size = new System.Drawing.Size(109, 19);
             this.lbRefPrice.TabIndex = 28;
@@ -196,7 +225,7 @@
             // 
             // lbStandard
             // 
-            this.lbStandard.Location = new System.Drawing.Point(130, 254);
+            this.lbStandard.Location = new System.Drawing.Point(130, 258);
             this.lbStandard.Name = "lbStandard";
             this.lbStandard.Size = new System.Drawing.Size(82, 44);
             this.lbStandard.TabIndex = 21;
@@ -219,6 +248,17 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(676, 387);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(53, 12);
+            this.linkLabel2.TabIndex = 36;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "返回列表";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // FrmMobile
             // 
@@ -258,6 +298,9 @@
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label lbRefPrice;
         private System.Windows.Forms.TextBox tbProps;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
 
     }
 }
