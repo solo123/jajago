@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-using com.jajago.SA.Biz;
+using System.IO;
+using com.jajago.Biz;
 namespace com.jajago.SA
 {
     public partial class UcResources : UserControl
     {
+        bool image_loaded = false;
         public Taxonomy current_taxonomy {
             set
             {
@@ -19,12 +21,18 @@ namespace com.jajago.SA
 
                 if (value.id == "IMG")
                 {
-                    foreach(com.jajago.SA.Biz.Image res in rsm.GetList(value.id))
+                    if (!image_loaded)
                     {
-                        ListViewItem li = new ListViewItem();
-                        
-                        li.Text = res.id;
-                        listView1.Items.Add(li);
+                        foreach (ResImage res in rsm.GetList(value.id))
+                        {
+                            MemoryStream ms = new MemoryStream(res.thumb);
+                            Image img = Image.FromStream(ms);
+                            imageList1.Images.Add(img);
+                            ListViewItem li = new ListViewItem();
+                            li.Text = res.filename;
+                            li.ImageIndex = imageList1.Images.Count - 1;
+                            listView1.Items.Add(li);
+                        }
                     }
                     dataGridView1.Hide();
                     listView1.Show();

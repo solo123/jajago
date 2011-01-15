@@ -32,6 +32,7 @@
           <Property Name="height" Type="nvarchar" MaxLength="100" />
           <Property Name="dpi" Type="nvarchar" MaxLength="100" />
           <Property Name="filetype" Type="nvarchar" MaxLength="100" />
+          <Property Name="filesize" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="ResMusics">
           <Key>
@@ -104,6 +105,7 @@
           <Property Type="String" Name="height" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="dpi" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="filetype" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="filesize" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ResMusic">
           <Key>
@@ -162,6 +164,7 @@
           <EntitySetMapping Name="ResImages">
             <EntityTypeMapping TypeName="ResourcesModel.ResImage">
               <MappingFragment StoreEntitySet="ResImages">
+                <ScalarProperty Name="filesize" ColumnName="filesize" />
                 <ScalarProperty Name="filetype" ColumnName="filetype" />
                 <ScalarProperty Name="dpi" ColumnName="dpi" />
                 <ScalarProperty Name="height" ColumnName="height" />
