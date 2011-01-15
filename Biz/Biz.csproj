@@ -80,6 +80,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ResourceManager.cs" />
+    <Compile Include="ScanNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

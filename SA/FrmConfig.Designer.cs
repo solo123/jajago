@@ -31,11 +31,12 @@
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("资源路径");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("资源配置", new System.Windows.Forms.TreeNode[] {
             treeNode1});
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("节点4");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("节点5");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("常规");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("自定义", new System.Windows.Forms.TreeNode[] {
+            treeNode3});
             System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("其他配置", new System.Windows.Forms.TreeNode[] {
-            treeNode3,
             treeNode4});
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfig));
             this.treeConfig = new System.Windows.Forms.TreeView();
             this.plConfig = new System.Windows.Forms.Panel();
             this.btnDelResourcePath = new System.Windows.Forms.Button();
@@ -57,9 +58,9 @@
             treeNode2.Name = "节点0";
             treeNode2.Text = "资源配置";
             treeNode3.Name = "节点4";
-            treeNode3.Text = "节点4";
+            treeNode3.Text = "常规";
             treeNode4.Name = "节点5";
-            treeNode4.Text = "节点5";
+            treeNode4.Text = "自定义";
             treeNode5.Name = "节点3";
             treeNode5.Text = "其他配置";
             this.treeConfig.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
@@ -71,6 +72,7 @@
             // 
             // plConfig
             // 
+            this.plConfig.BackColor = System.Drawing.SystemColors.Control;
             this.plConfig.Controls.Add(this.btnDelResourcePath);
             this.plConfig.Controls.Add(this.btnAddResourcePath);
             this.plConfig.Controls.Add(this.listResourcePath);
@@ -83,7 +85,7 @@
             // 
             // btnDelResourcePath
             // 
-            this.btnDelResourcePath.Location = new System.Drawing.Point(346, 137);
+            this.btnDelResourcePath.Location = new System.Drawing.Point(338, 220);
             this.btnDelResourcePath.Name = "btnDelResourcePath";
             this.btnDelResourcePath.Size = new System.Drawing.Size(75, 23);
             this.btnDelResourcePath.TabIndex = 3;
@@ -93,7 +95,7 @@
             // 
             // btnAddResourcePath
             // 
-            this.btnAddResourcePath.Location = new System.Drawing.Point(265, 137);
+            this.btnAddResourcePath.Location = new System.Drawing.Point(257, 220);
             this.btnAddResourcePath.Name = "btnAddResourcePath";
             this.btnAddResourcePath.Size = new System.Drawing.Size(75, 23);
             this.btnAddResourcePath.TabIndex = 2;
@@ -107,7 +109,7 @@
             this.listResourcePath.ItemHeight = 12;
             this.listResourcePath.Location = new System.Drawing.Point(6, 19);
             this.listResourcePath.Name = "listResourcePath";
-            this.listResourcePath.Size = new System.Drawing.Size(415, 112);
+            this.listResourcePath.Size = new System.Drawing.Size(407, 196);
             this.listResourcePath.TabIndex = 1;
             // 
             // label1
@@ -121,7 +123,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(238, 264);
+            this.btnSave.Location = new System.Drawing.Point(200, 264);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 2;
@@ -131,7 +133,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(319, 264);
+            this.btnCancel.Location = new System.Drawing.Point(281, 264);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
@@ -148,6 +150,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.plConfig);
             this.Controls.Add(this.treeConfig);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConfig";
             this.Text = "选项";
             this.Load += new System.EventHandler(this.FrmConfig_Load);

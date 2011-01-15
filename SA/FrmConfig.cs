@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 using com.jajago.Biz;
 
@@ -19,12 +20,18 @@ namespace com.jajago.SA
         public FrmConfig()
         {
             InitializeComponent();
+            btnSave.Visible = false;
+            btnCancel.Visible = false;
         }
 
         private void treeConfig_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (treeConfig.SelectedNode.Text == "资源路径")
+            {
                 plConfig.Visible = true;
+                btnSave.Visible= true;
+                btnCancel.Visible = true;
+            }
         }
 
         private void btnAddResourcePath_Click(object sender, EventArgs e)
@@ -37,16 +44,22 @@ namespace com.jajago.SA
                 {
                     for (int i = 0; i < listResourcePath.Items.Count; i++)
                     {
-                        if (folderBrowserDialog1.SelectedPath == listResourcePath.Items[i].ToString())
-                        {
-                            MessageBox.Show("你当前选择的文件已经存在!");
-                            break;
-                        }
-                        else if (i == listResourcePath.Items.Count - 1)
-                        {
-                            listResourcePath.Items.Add(folderBrowserDialog1.SelectedPath);
-                            break;
-                        }
+                           if (folderBrowserDialog1.SelectedPath == listResourcePath.Items[i].ToString()
+                               || Directory.GetDirectoryRoot(folderBrowserDialog1.SelectedPath.Trim()).ToString() == listResourcePath.Items[i].ToString())
+                           {
+                               MessageBox.Show("你当前选择的文件已经存在!");
+                               break;
+                           }
+                           else if (Directory.GetDirectoryRoot(listResourcePath.Items[i].ToString()) == folderBrowserDialog1.SelectedPath.Trim().ToString())
+                           {
+                               MessageBox.Show("当前文件与此前文件存在重复的部分！");
+                               break;
+                           }
+                           else if (i == listResourcePath.Items.Count - 1)
+                           {
+                               listResourcePath.Items.Add(folderBrowserDialog1.SelectedPath);
+                               break;
+                           }
                     }
                 }
             }

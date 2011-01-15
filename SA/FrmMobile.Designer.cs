@@ -176,9 +176,9 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::com.jajago.SA.Properties.Resources.ecshop_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(101, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(108, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 42);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
