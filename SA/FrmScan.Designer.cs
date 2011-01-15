@@ -109,10 +109,11 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "扫描路径";
+            this.columnHeader1.Width = 350;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "状态";
+            this.columnHeader2.Text = "数量";
             // 
             // FrmScan
             // 

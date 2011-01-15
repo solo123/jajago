@@ -98,27 +98,29 @@ namespace com.jajago.SA
 
         ListViewItem lastItem = null;
         int fileCount = 0;
+
+        
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            if (e.ProgressPercentage == 1)
-            {
-                DirectoryInfo dir = (DirectoryInfo)e.UserState;
-                lastItem = new ListViewItem(dir.FullName);
-                lastItem.SubItems.Add("...");
-                listView1.Items.Add(lastItem);
-                listView1.EnsureVisible(listView1.Items.Count - 1);
-                fileCount = 0;
-            }
-            else
-            {
-                FileInfo f = (FileInfo)e.UserState;
-                lbFile.Text = f.Name;
-                progressBar1.Value = 50;
-                if (lastItem != null)
+                if (e.ProgressPercentage == 1)
                 {
-                    lastItem.SubItems[1].Text = fileCount++.ToString();
+                    DirectoryInfo dir = (DirectoryInfo)e.UserState;
+                    lastItem = new ListViewItem(dir.FullName);
+                    lastItem.SubItems.Add("...");
+                    listView1.Items.Add(lastItem);
+                    listView1.EnsureVisible(listView1.Items.Count - 1);
+                    fileCount = 0;
                 }
-            }
+                else
+                {
+                    FileInfo f = (FileInfo)e.UserState;
+                    lbFile.Text = f.Name;
+                    progressBar1.Value = 50;
+                    if (lastItem != null)
+                    {
+                        lastItem.SubItems[1].Text = fileCount++.ToString();
+                    }
+                }
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
