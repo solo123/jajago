@@ -45,7 +45,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(418, 301);
+            this.btnCancel.Location = new System.Drawing.Point(615, 327);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
@@ -57,7 +57,7 @@
             // 
             this.lbFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbFile.AutoSize = true;
-            this.lbFile.Location = new System.Drawing.Point(134, 270);
+            this.lbFile.Location = new System.Drawing.Point(134, 296);
             this.lbFile.Name = "lbFile";
             this.lbFile.Size = new System.Drawing.Size(59, 12);
             this.lbFile.TabIndex = 5;
@@ -66,7 +66,7 @@
             // btnStart
             // 
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStart.Location = new System.Drawing.Point(331, 301);
+            this.btnStart.Location = new System.Drawing.Point(528, 327);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 7;
@@ -85,9 +85,9 @@
             // progressBar1
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.progressBar1.Location = new System.Drawing.Point(14, 301);
+            this.progressBar1.Location = new System.Drawing.Point(14, 327);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(297, 23);
+            this.progressBar1.Size = new System.Drawing.Size(429, 23);
             this.progressBar1.TabIndex = 9;
             // 
             // listView1
@@ -106,7 +106,7 @@
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(481, 245);
+            this.listView1.Size = new System.Drawing.Size(678, 271);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -126,7 +126,7 @@
             // 
             this.lbOp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbOp.AutoSize = true;
-            this.lbOp.Location = new System.Drawing.Point(406, 270);
+            this.lbOp.Location = new System.Drawing.Point(603, 296);
             this.lbOp.Name = "lbOp";
             this.lbOp.Size = new System.Drawing.Size(0, 12);
             this.lbOp.TabIndex = 11;
@@ -135,7 +135,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 269);
+            this.label1.Location = new System.Drawing.Point(12, 295);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 12;
@@ -145,7 +145,7 @@
             // 
             this.lbCnt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbCnt.AutoSize = true;
-            this.lbCnt.Location = new System.Drawing.Point(74, 269);
+            this.lbCnt.Location = new System.Drawing.Point(74, 295);
             this.lbCnt.Name = "lbCnt";
             this.lbCnt.Size = new System.Drawing.Size(29, 12);
             this.lbCnt.TabIndex = 13;
@@ -156,7 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(505, 338);
+            this.ClientSize = new System.Drawing.Size(702, 364);
             this.Controls.Add(this.lbCnt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbOp);

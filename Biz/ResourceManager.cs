@@ -109,7 +109,7 @@ namespace com.jajago.Biz
             img.fileext = folder.GetDetailsOf(folderitem, 2);
             img.filesize = folder.GetDetailsOf(folderitem, 1);
             img.filetype = img.fileext;
-            img.width = folder.GetDetailsOf(folderitem, 27);
+            img.width = folder.GetDetailsOf(folderitem, 26);
             img.height = folder.GetDetailsOf(folderitem, 28);
             img.dpi = folder.GetDetailsOf(folderitem, 22);
             img.thumb = ImageManager.BinaryThumbnail(file.FullName, 100);

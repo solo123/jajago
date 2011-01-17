@@ -16,5 +16,17 @@ namespace com.jajago.SA
         {
             InitializeComponent();
         }
+
+        private void FrmTest_Load(object sender, EventArgs e)
+        {
+            ResourceManager rsm = ResourceManager.Instance;
+            dataGridView1.DataSource = rsm.GetList("IMG");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int c = dataGridView1.SelectedRows.Count;
+            MessageBox.Show(c.ToString());
+        }
     }
 }

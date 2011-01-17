@@ -59,30 +59,24 @@ namespace com.jajago.SA
             fp.ShowDialog();
         }
 
-        /*
-       int allcount = 0;
-       jajagoEntities ent = new jajagoEntities();
-       private void btnselect_Click(object sender, EventArgs e)
-       {
-           DataGridViewSelectedRowCollection cells = gridResource.SelectedRows;
-           foreach (DataGridViewRow cell in cells)
-           {
-               foreach (TreeNode parent in selectedRoot)
-               {
-                   parent.Collapse();
-                   if (parent.Text == cell.Cells[0].Value.ToString())
-                   {
-                       parent.Expand();
-                       parent.Nodes.Add(cell.Cells[2].Value.ToString());
-                       allcount++;
-                   }
-               }
-           }
-           int count = gridResource.SelectedRows.Count;
-           lbcount.Text = "本次选中" + count + "条," + "总共选中" + allcount + "条";
+        int Total = 0;
+        private void btnselect_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow cell in ucResources.DataGridSR())
+            {
+                treeselect.Nodes.Add(cell.Cells[2].Value.ToString());
+                Total++;
+            }
+            foreach (ListViewItem lv in ucResources.ListSR())
+            {
+                treeselect.Nodes.Add(lv.Text);
+                Total++;
+            }
+            int Count=ucResources.ImageCount()+ucResources.DataCount();
+            lbCount.Text = "总共选中" + Total.ToString();
+        }
 
-       }
-       
+        /*
        private void btnwrite_Click(object sender, EventArgs e)
        {
            StreamWriter sw = new StreamWriter("d:\\temp.txt");

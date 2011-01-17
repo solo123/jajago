@@ -124,6 +124,8 @@ namespace com.jajago.SA
                 progressBar1.Value = 100;
                 lbOp.Text = "扫描完成";
                 lbOp.ForeColor = Color.Blue;
+                MessageBox.Show("扫描已经完成");
+                this.Close();
             }
 
         }

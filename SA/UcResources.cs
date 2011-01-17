@@ -29,10 +29,11 @@ namespace com.jajago.SA
                             Image img = Image.FromStream(ms);
                             imageList1.Images.Add(img);
                             ListViewItem li = new ListViewItem();
-                            li.Text = res.filename;
+                            li.Text = res.filename+"\n"+res.width+res.filesize;
                             li.ImageIndex = imageList1.Images.Count - 1;
                             listView1.Items.Add(li);
                         }
+                        image_loaded = true;
                     }
                     dataGridView1.Hide();
                     listView1.Show();
@@ -46,9 +47,35 @@ namespace com.jajago.SA
             }
         }
 
+        public DataGridViewSelectedRowCollection DataGridSR()
+        {
+            return dataGridView1.SelectedRows;
+        }
+
+        public ListView.SelectedListViewItemCollection ListSR()
+        {
+            return listView1.SelectedItems;
+        }
+
+        public int ImageCount()
+        {
+            return listView1.SelectedItems.Count;
+        }
+
+        public int DataCount()
+        {
+            return dataGridView1.SelectedRows.Count;
+        }
+
         public UcResources()
         {
             InitializeComponent();
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            FrmShowPic fsp = new FrmShowPic();
+            fsp.ShowDialog();
         }
     }
 }
