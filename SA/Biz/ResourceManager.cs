@@ -74,6 +74,7 @@ namespace com.jajago.SA.Biz
                         {
                             Music music = new Music();
                             music.id = res.id;
+
                             ent.AddToMusics(music);
                         }
                         else if (t.id == "IMG")

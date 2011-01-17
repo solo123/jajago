@@ -10,7 +10,7 @@ using System.IO;
 using System.Windows.Forms;
 
 using System.Data.Objects;
-using com.jajago.SA.Biz;
+using com.jajago.Biz;
 
 namespace com.jajago.SA
 {
@@ -22,30 +22,24 @@ namespace com.jajago.SA
         public FrmResource()
         {
             InitializeComponent();
-            //DoSplash();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            toolTip1.SetToolTip(pictureBox1, "家家购");
-
-            foreach (Taxonomy t in rsm.AllTaxonomies)
+            foreach (ResourceTaxonomyNode t in rsm.AllTaxonomies)
             {
-                TreeNode node = new TreeNode(t.name);
-                node.Tag = t;
+                TreeNode node = new TreeNode(t.taxonomy.name);
+                node.Tag = t.taxonomy;
                 treeCatalog.Nodes.Add(node);
-                treeView2.Nodes.Add(t.name);
-                TreeNode node1 = new TreeNode(t.name);
+                TreeNode node1 = new TreeNode(t.taxonomy.name);
                 treeselect.Nodes.Add(node1);
                 selectedRoot.Add(node);
             }
-            treeCatalog.AfterSelect += new TreeViewEventHandler(catalog_selected);
         }
         private void catalog_selected(object sender, TreeViewEventArgs e)
         {
             Taxonomy tx = (Taxonomy)treeCatalog.SelectedNode.Tag;
             ucResources.current_taxonomy = tx;
-            
         }
 
         private void DoSplash()
@@ -57,18 +51,6 @@ namespace com.jajago.SA
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("欢迎使用家家购");
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://www.jajago.com");
-        }
-
-        private void comBobox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comBobox2.Items != null && comBobox2.Items.Count > 0 && comBobox2.SelectedItem != null)
-                if (comBobox2.SelectedItem.Equals("k660i"))
-                    MessageBox.Show("k660i");
         }
 
         private void btnScan_Click(object sender, EventArgs e)

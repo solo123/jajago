@@ -29,138 +29,48 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnScan = new System.Windows.Forms.Button();
             this.btnselect = new System.Windows.Forms.Button();
-            this.pnResources = new System.Windows.Forms.Panel();
-            this.ucResources = new com.jajago.SA.UcResources();
             this.treeselect = new System.Windows.Forms.TreeView();
-            this.lbcount = new System.Windows.Forms.Label();
             this.btnwrite = new System.Windows.Forms.Button();
             this.treeCatalog = new System.Windows.Forms.TreeView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.treeView2 = new System.Windows.Forms.TreeView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comBobox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabControl2.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.pnResources.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ucResources = new com.jajago.SA.UcResources();
             this.SuspendLayout();
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(651, 30);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(29, 12);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "关于";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.HotTrack = true;
-            this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(737, 486);
-            this.tabControl2.TabIndex = 0;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.btnScan);
-            this.tabPage4.Controls.Add(this.btnselect);
-            this.tabPage4.Controls.Add(this.pnResources);
-            this.tabPage4.Controls.Add(this.treeCatalog);
-            this.tabPage4.Controls.Add(this.checkBox1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 21);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(729, 461);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "手机资源";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // btnScan
             // 
-            this.btnScan.Location = new System.Drawing.Point(128, 4);
+            this.btnScan.Location = new System.Drawing.Point(12, 12);
             this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(75, 23);
+            this.btnScan.Size = new System.Drawing.Size(116, 23);
             this.btnScan.TabIndex = 0;
-            this.btnScan.Text = "扫描本地资源";
+            this.btnScan.Text = "搜索本地资源";
             this.btnScan.UseVisualStyleBackColor = true;
             this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
             // 
             // btnselect
             // 
-            this.btnselect.Location = new System.Drawing.Point(230, 4);
+            this.btnselect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnselect.Location = new System.Drawing.Point(457, 177);
             this.btnselect.Name = "btnselect";
-            this.btnselect.Size = new System.Drawing.Size(75, 23);
+            this.btnselect.Size = new System.Drawing.Size(35, 34);
             this.btnselect.TabIndex = 3;
-            this.btnselect.Text = "选中";
+            this.btnselect.Text = ">>";
             this.btnselect.UseVisualStyleBackColor = true;
-            // 
-            // pnResources
-            // 
-            this.pnResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnResources.Controls.Add(this.ucResources);
-            this.pnResources.Controls.Add(this.treeselect);
-            this.pnResources.Controls.Add(this.lbcount);
-            this.pnResources.Controls.Add(this.btnwrite);
-            this.pnResources.Location = new System.Drawing.Point(126, 34);
-            this.pnResources.Name = "pnResources";
-            this.pnResources.Size = new System.Drawing.Size(601, 421);
-            this.pnResources.TabIndex = 2;
-            // 
-            // ucResources
-            // 
-            this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucResources.Location = new System.Drawing.Point(2, 0);
-            this.ucResources.Name = "ucResources";
-            this.ucResources.Size = new System.Drawing.Size(370, 419);
-            this.ucResources.TabIndex = 7;
             // 
             // treeselect
             // 
             this.treeselect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeselect.Location = new System.Drawing.Point(378, 0);
+            this.treeselect.Location = new System.Drawing.Point(498, 41);
             this.treeselect.Name = "treeselect";
-            this.treeselect.Size = new System.Drawing.Size(221, 373);
+            this.treeselect.Size = new System.Drawing.Size(227, 316);
             this.treeselect.TabIndex = 1;
-            // 
-            // lbcount
-            // 
-            this.lbcount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbcount.AutoSize = true;
-            this.lbcount.Location = new System.Drawing.Point(392, 380);
-            this.lbcount.Name = "lbcount";
-            this.lbcount.Size = new System.Drawing.Size(0, 12);
-            this.lbcount.TabIndex = 6;
             // 
             // btnwrite
             // 
             this.btnwrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnwrite.Location = new System.Drawing.Point(437, 395);
+            this.btnwrite.Location = new System.Drawing.Point(650, 363);
             this.btnwrite.Name = "btnwrite";
             this.btnwrite.Size = new System.Drawing.Size(75, 23);
             this.btnwrite.TabIndex = 4;
@@ -171,159 +81,51 @@
             // 
             this.treeCatalog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
-            this.treeCatalog.Location = new System.Drawing.Point(6, 34);
+            this.treeCatalog.Location = new System.Drawing.Point(12, 41);
             this.treeCatalog.Name = "treeCatalog";
-            this.treeCatalog.Size = new System.Drawing.Size(116, 421);
+            this.treeCatalog.Size = new System.Drawing.Size(116, 316);
             this.treeCatalog.TabIndex = 1;
             this.treeCatalog.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.catalog_selected);
             // 
-            // checkBox1
+            // ucResources
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 15);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(84, 16);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "只显示本地";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.treeView2);
-            this.tabPage5.Controls.Add(this.label3);
-            this.tabPage5.Controls.Add(this.comBobox2);
-            this.tabPage5.Controls.Add(this.label2);
-            this.tabPage5.Controls.Add(this.comboBox1);
-            this.tabPage5.Controls.Add(this.label1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 21);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(729, 461);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "套装";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // treeView2
-            // 
-            this.treeView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.treeView2.Location = new System.Drawing.Point(8, 90);
-            this.treeView2.Name = "treeView2";
-            this.treeView2.Size = new System.Drawing.Size(121, 266);
-            this.treeView2.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(136, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "型号";
-            // 
-            // comBobox2
-            // 
-            this.comBobox2.FormattingEnabled = true;
-            this.comBobox2.Location = new System.Drawing.Point(8, 64);
-            this.comBobox2.Name = "comBobox2";
-            this.comBobox2.Size = new System.Drawing.Size(121, 20);
-            this.comBobox2.TabIndex = 3;
-            this.comBobox2.Text = "请选择";
-            this.comBobox2.SelectedIndexChanged += new System.EventHandler(this.comBobox2_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(136, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "品牌";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "诺基亚",
-            "索爱",
-            "三星",
-            "摩托罗拉",
-            "LG",
-            "多普达"});
-            this.comboBox1.Location = new System.Drawing.Point(8, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.Text = "请选择";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "手机型号";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::com.jajago.SA.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 71);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucResources.Location = new System.Drawing.Point(134, 41);
+            this.ucResources.Name = "ucResources";
+            this.ucResources.Size = new System.Drawing.Size(317, 316);
+            this.ucResources.TabIndex = 7;
             // 
             // FrmResource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(737, 486);
-            this.Controls.Add(this.tabControl2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel1);
-            this.MinimumSize = new System.Drawing.Size(745, 513);
+            this.ClientSize = new System.Drawing.Size(737, 479);
+            this.Controls.Add(this.treeselect);
+            this.Controls.Add(this.btnwrite);
+            this.Controls.Add(this.ucResources);
+            this.Controls.Add(this.btnselect);
+            this.Controls.Add(this.btnScan);
+            this.Controls.Add(this.treeCatalog);
+            this.MinimumSize = new System.Drawing.Size(545, 513);
             this.Name = "FrmResource";
-            this.Text = "家家购";
+            this.Text = "FrmResources";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.pnResources.ResumeLayout(false);
-            this.pnResources.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TreeView treeCatalog;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comBobox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TreeView treeView2;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Panel pnResources;
         private System.Windows.Forms.Button btnScan;
         private System.Windows.Forms.Button btnselect;
         private System.Windows.Forms.Button btnwrite;
         private System.Windows.Forms.TreeView treeselect;
-        private System.Windows.Forms.Label lbcount;
         private com.jajago.SA.UcResources ucResources;
 
     }

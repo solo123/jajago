@@ -517,6 +517,30 @@ namespace com.jajago.Biz
         private global::System.String _filetype;
         partial void OnfiletypeChanging(global::System.String value);
         partial void OnfiletypeChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String filesize
+        {
+            get
+            {
+                return _filesize;
+            }
+            set
+            {
+                OnfilesizeChanging(value);
+                ReportPropertyChanging("filesize");
+                _filesize = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("filesize");
+                OnfilesizeChanged();
+            }
+        }
+        private global::System.String _filesize;
+        partial void OnfilesizeChanging(global::System.String value);
+        partial void OnfilesizeChanged();
 
         #endregion
     

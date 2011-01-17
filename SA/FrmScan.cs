@@ -41,60 +41,7 @@ namespace com.jajago.SA
             listView1.Columns[0].Width = listView1.Width - 90;
         }
 
-        private void do_scan()
-        {
-            resourceCount = 0;
-            totalProgress = 0;
-            Stack dirStack = new Stack();
-            float tot = scanPaths.Count();
-            foreach (string s in scanPaths)
-            {
-                ScanNode sn = new ScanNode();
-                sn.path = s;
-                sn.weight = 100 / (float)tot;
-                dirStack.Push(sn);
-            }
-
-            while (dirStack.Count > 0)
-            {
-                if (backgroundWorker1.CancellationPending) return;
-                ScanNode sn = (ScanNode)dirStack.Pop();
-                DirectoryInfo cur = new DirectoryInfo(sn.path);
-                DirectoryInfo[] subDirs;
-                try
-                {
-                    subDirs = cur.GetDirectories();
-                }
-                catch
-                {
-                    backgroundWorker1.ReportProgress(103, sn.path);
-                    continue;
-                }
-                if (subDirs.Length > 0)
-                {
-                    sn.weight = sn.weight / (subDirs.Length + 1);
-                    foreach (DirectoryInfo sub in subDirs)
-                    {
-                        if (backgroundWorker1.CancellationPending) return;
-                        ScanNode subnode = new ScanNode();
-                        subnode.path = sub.FullName;
-                        subnode.weight = sn.weight;
-                        dirStack.Push(subnode);
-                    }
-                }
-
-                backgroundWorker1.ReportProgress(101, sn.path);
-                FileInfo[] files = cur.GetFiles();
-                foreach (FileInfo f in files)
-                {
-                    if (backgroundWorker1.CancellationPending) return;
-                    rm.AddResource(f);
-                    backgroundWorker1.ReportProgress(102, f.Name);
-                }
-                backgroundWorker1.ReportProgress(1, sn.weight);
-            }
-        }
-
+       
         private void btnStart_Click(object sender, EventArgs e)
         {
             if (backgroundWorker1.IsBusy) return;
@@ -106,7 +53,6 @@ namespace com.jajago.SA
             lbOp.ForeColor = Color.Green;
             scan_cancled = false;
         }
-
         bool scan_cancled = false;
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -121,6 +67,10 @@ namespace com.jajago.SA
             if (backgroundWorker1.IsBusy) backgroundWorker1.CancelAsync();
         }
 
+        private void FrmScan_Resize(object sender, EventArgs e)
+        {
+            listView1.Columns[0].Width = listView1.Width - 90;
+        }
 
         #region Multi-thread scan directory
         // 多线程读取数据
@@ -158,16 +108,6 @@ namespace com.jajago.SA
                 totalProgress += (float)e.UserState;
                 progressBar1.Value = (int)totalProgress;
             }
-            else if (e.ProgressPercentage == 103) // error
-            {
-                string s = (string)e.UserState;
-                lastItem = new ListViewItem(s);
-                lastItem.SubItems.Add("出错");
-                listView1.Items.Add(lastItem);
-                listView1.EnsureVisible(listView1.Items.Count - 1);
-                fileCount = 0;
-            }
-
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -187,13 +127,52 @@ namespace com.jajago.SA
             }
 
         }
-        #endregion
 
-        private void FrmScan_Resize(object sender, EventArgs e)
+        private void do_scan()
         {
-            listView1.Columns[0].Width = listView1.Width - 90;
-        }
+            resourceCount = 0;
+            totalProgress = 0;
+            Stack dirStack = new Stack();
+            float tot = scanPaths.Count();
+            foreach (string s in scanPaths)
+            {
+                ScanNode sn = new ScanNode();
+                sn.path = s;
+                sn.weight = 100 / (float)tot;
+                dirStack.Push(sn);
+            }
 
+            while (dirStack.Count > 0)
+            {
+                if (backgroundWorker1.CancellationPending) return;
+                ScanNode sn = (ScanNode)dirStack.Pop();
+                DirectoryInfo cur = new DirectoryInfo(sn.path);
+                DirectoryInfo[] subDirs = cur.GetDirectories();
+                if (subDirs.Length > 0)
+                {
+                    sn.weight = sn.weight / (subDirs.Length + 1);
+                    foreach (DirectoryInfo sub in subDirs)
+                    {
+                        if (backgroundWorker1.CancellationPending) return;
+                        ScanNode subnode = new ScanNode();
+                        subnode.path = sub.FullName;
+                        subnode.weight = sn.weight;
+                        dirStack.Push(subnode);
+                    }
+                }
+
+                backgroundWorker1.ReportProgress(101, sn.path);
+                FileInfo[] files = cur.GetFiles();
+                foreach (FileInfo f in files)
+                {
+                    if (backgroundWorker1.CancellationPending) return;
+                    rm.AddResource(f);
+                    backgroundWorker1.ReportProgress(102, f.Name);
+                }
+                backgroundWorker1.ReportProgress(1, sn.weight);
+            }
+        }
+        #endregion
 
     }
 }

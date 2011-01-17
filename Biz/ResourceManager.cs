@@ -5,7 +5,7 @@ using System.Text;
 using System.IO;
 
 using System.Text.RegularExpressions;
-
+using Shell32;
 namespace com.jajago.Biz
 {
     public class ResourceTaxonomyNode
@@ -19,6 +19,7 @@ namespace com.jajago.Biz
         private static ResourceManager theInstance = null;
         ResourcesEntities ent = new ResourcesEntities();
         public List<ResourceTaxonomyNode> AllTaxonomies = new List<ResourceTaxonomyNode>();
+        ShellClass osShell = new ShellClass();
 
         private ResourceManager()
         {
@@ -81,10 +82,7 @@ namespace com.jajago.Biz
                         ent.AddToResMusics(music);
                         break;
                     case "IMG":
-                        ResImage image = new ResImage();
-                        image.id = res.id;
-                        image.thumb = ImageManager.BinaryThumbnail(res.path, 100);
-                        ent.AddToResImages(image);
+                        ent.AddToResImages(GetImageDetail(res.id, f));
                         break;
                 }
                 ent.SaveChanges();
@@ -99,6 +97,23 @@ namespace com.jajago.Biz
                     return t.taxonomy.id;
             }
             return null;
+        }
+
+        private ResImage GetImageDetail(string res_id, FileInfo file)
+        {
+            ResImage img = new ResImage();
+            img.id = res_id;
+            Folder folder = osShell.NameSpace(file.DirectoryName);
+            FolderItem folderitem = folder.ParseName(file.Name);
+            img.filename = folder.GetDetailsOf(folderitem, 0);
+            img.fileext = folder.GetDetailsOf(folderitem, 2);
+            img.filesize = folder.GetDetailsOf(folderitem, 1);
+            img.filetype = img.fileext;
+            img.width = folder.GetDetailsOf(folderitem, 27);
+            img.height = folder.GetDetailsOf(folderitem, 28);
+            img.dpi = folder.GetDetailsOf(folderitem, 22);
+            img.thumb = ImageManager.BinaryThumbnail(file.FullName, 100);
+            return img;
         }
 
         public string ConfigSearchPath
