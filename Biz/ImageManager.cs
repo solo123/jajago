@@ -25,7 +25,8 @@ namespace com.jajago.Biz
                 oh = size * originalImage.Height / originalImage.Width;
             else
                 ow = size * originalImage.Width / originalImage.Height;
-
+            if (ow == 0) ow = 1;
+            if (oh == 0) oh = 1;
             System.Drawing.Image bitmap = new System.Drawing.Bitmap(ow, oh);
             Graphics g = Graphics.FromImage(bitmap);
             g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;

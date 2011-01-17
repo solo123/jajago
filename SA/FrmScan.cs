@@ -60,7 +60,16 @@ namespace com.jajago.SA
                 if (backgroundWorker1.CancellationPending) return;
                 ScanNode sn = (ScanNode)dirStack.Pop();
                 DirectoryInfo cur = new DirectoryInfo(sn.path);
-                DirectoryInfo[] subDirs = cur.GetDirectories();
+                DirectoryInfo[] subDirs;
+                try
+                {
+                    subDirs = cur.GetDirectories();
+                }
+                catch
+                {
+                    backgroundWorker1.ReportProgress(103, sn.path);
+                    continue;
+                }
                 if (subDirs.Length > 0)
                 {
                     sn.weight = sn.weight / (subDirs.Length + 1);
@@ -149,6 +158,16 @@ namespace com.jajago.SA
                 totalProgress += (float)e.UserState;
                 progressBar1.Value = (int)totalProgress;
             }
+            else if (e.ProgressPercentage == 103) // error
+            {
+                string s = (string)e.UserState;
+                lastItem = new ListViewItem(s);
+                lastItem.SubItems.Add("出错");
+                listView1.Items.Add(lastItem);
+                listView1.EnsureVisible(listView1.Items.Count - 1);
+                fileCount = 0;
+            }
+
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
