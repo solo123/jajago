@@ -57,14 +57,9 @@ namespace com.jajago.SA
             return listView1.SelectedItems;
         }
 
-        public int ImageCount()
+        public void CacelSelect()
         {
-            return listView1.SelectedItems.Count;
-        }
-
-        public int DataCount()
-        {
-            return dataGridView1.SelectedRows.Count;
+            dataGridView1.ClearSelection();
         }
 
         public UcResources()

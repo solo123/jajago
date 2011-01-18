@@ -102,7 +102,6 @@ namespace com.jajago.Biz
         private ResImage GetImageDetail(string res_id, FileInfo file)
         {
             ResImage img = new ResImage();
-            img.id = res_id;
             Folder folder = osShell.NameSpace(file.DirectoryName);
             FolderItem folderitem = folder.ParseName(file.Name);
             img.filename = folder.GetDetailsOf(folderitem, 0);
