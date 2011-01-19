@@ -32,12 +32,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.lbDownloading = new System.Windows.Forms.Label();
             this.bwDownload = new System.ComponentModel.BackgroundWorker();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pbShow = new System.Windows.Forms.ProgressBar();
             this.bwShowImage = new System.ComponentModel.BackgroundWorker();
             this.button1 = new System.Windows.Forms.Button();
             this.fpanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.pbDownload = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // textBox1
@@ -63,15 +63,6 @@
             this.imageList1.ImageSize = new System.Drawing.Size(100, 100);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // lbDownloading
-            // 
-            this.lbDownloading.AutoSize = true;
-            this.lbDownloading.Location = new System.Drawing.Point(410, 15);
-            this.lbDownloading.Name = "lbDownloading";
-            this.lbDownloading.Size = new System.Drawing.Size(41, 12);
-            this.lbDownloading.TabIndex = 4;
-            this.lbDownloading.Text = "label1";
-            // 
             // bwDownload
             // 
             this.bwDownload.WorkerReportsProgress = true;
@@ -79,12 +70,12 @@
             this.bwDownload.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwDownload_DoWork);
             this.bwDownload.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bwDownload_ProgressChanged);
             // 
-            // progressBar1
+            // pbShow
             // 
-            this.progressBar1.Location = new System.Drawing.Point(467, 10);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(227, 23);
-            this.progressBar1.TabIndex = 5;
+            this.pbShow.Location = new System.Drawing.Point(453, 10);
+            this.pbShow.Name = "pbShow";
+            this.pbShow.Size = new System.Drawing.Size(120, 23);
+            this.pbShow.TabIndex = 5;
             // 
             // bwShowImage
             // 
@@ -100,7 +91,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(44, 23);
             this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
+            this.button1.Text = "取消";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -115,15 +106,22 @@
             this.fpanel.Size = new System.Drawing.Size(682, 360);
             this.fpanel.TabIndex = 7;
             // 
+            // pbDownload
+            // 
+            this.pbDownload.Location = new System.Drawing.Point(574, 10);
+            this.pbDownload.Name = "pbDownload";
+            this.pbDownload.Size = new System.Drawing.Size(120, 23);
+            this.pbDownload.TabIndex = 8;
+            // 
             // FrmMobiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 411);
+            this.Controls.Add(this.pbDownload);
             this.Controls.Add(this.fpanel);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.lbDownloading);
+            this.Controls.Add(this.pbShow);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBox1);
             this.Name = "FrmMobiles";
@@ -138,12 +136,12 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label lbDownloading;
         private System.ComponentModel.BackgroundWorker bwDownload;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar pbShow;
         private System.Windows.Forms.ImageList imageList1;
         private System.ComponentModel.BackgroundWorker bwShowImage;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel fpanel;
+        private System.Windows.Forms.ProgressBar pbDownload;
     }
 }

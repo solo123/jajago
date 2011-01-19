@@ -9,12 +9,15 @@ using System.Windows.Forms;
 
 using System.IO;
 using System.Diagnostics;
+
+using com.jajago.Biz;
 namespace com.jajago.SA
 {
     public partial class FrmContainer : Form
     {
         private FrmResource frmResource;
         private FrmMobiles frmMobiles;
+        private AppManager app = AppManager.Instance;
 
         public FrmContainer()
         {
@@ -23,6 +26,11 @@ namespace com.jajago.SA
 
             InitializeComponent();
             FrmSplash.CloseSplash();
+            app.ShowStatusText += new EventHandler(on_show_status_text);
+        }
+        private void on_show_status_text(object sender, EventArgs e)
+        {
+            lbstatus.Text = sender.ToString();
         }
         private void tsResource_Click(object sender, EventArgs e)
         {

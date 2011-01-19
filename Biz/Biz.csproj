@@ -81,6 +81,7 @@
     </Compile>
     <Compile Include="ResourceManager.cs" />
     <Compile Include="ScanNode.cs" />
+    <Compile Include="AppManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

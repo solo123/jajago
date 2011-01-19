@@ -7,23 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using com.jajago.Biz;
 namespace com.jajago.SA.Ctls
 {
     public partial class CtlMobileItem : UserControl
     {
-        private string _title = null;
+        private Mobile _mobile = null;
         public CtlMobileItem()
         {
             InitializeComponent();
         }
-        public string title
+        public Mobile mobile
         {
-            get { return _title; }
-            set { _title = value; lbTitle.Text = value; }
+            get { return _mobile; }
+            set { _mobile = value; lbTitle.Text = value.title; }
         }
         public Image image
         {
             set { pcb.Image = value; }
+        }
+        public event EventHandler OnClicked;
+
+        private void pcb_DoubleClick(object sender, EventArgs e)
+        {
+            if (OnClicked!=null) OnClicked(_mobile, e);
         }
     }
 }

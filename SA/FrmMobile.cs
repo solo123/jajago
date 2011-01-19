@@ -25,7 +25,7 @@ namespace com.jajago.SA
             Mobile m = mm.GetMobile(id);
             lbName.Text = m.title;
             FrmMobile fm = new FrmMobile();
-            System.Drawing.Image returnImage = System.Drawing.Image.FromFile(@"d:\logo.jpg");
+            System.Drawing.Image returnImage = System.Drawing.Image.FromFile("mobiles/Download.png");
             pbShowImage.Image = returnImage;
             pbShowImage.Height = returnImage.Height;
             pbShowImage.Width = returnImage.Width;
