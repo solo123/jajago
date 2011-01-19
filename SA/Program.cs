@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-using com.jajago.SA.Biz;
+using com.jajago.Biz;
 namespace com.jajago.SA
 {
     static class Program
