@@ -35,16 +35,18 @@
             // 
             // pcb
             // 
-            this.pcb.Location = new System.Drawing.Point(3, 3);
+            this.pcb.Location = new System.Drawing.Point(13, 13);
             this.pcb.Name = "pcb";
             this.pcb.Size = new System.Drawing.Size(100, 100);
             this.pcb.TabIndex = 0;
             this.pcb.TabStop = false;
+            this.pcb.Click += new System.EventHandler(this.pcb_DoubleClick);
+            this.pcb.DoubleClick += new System.EventHandler(this.pcb_DoubleClick);
             // 
             // lbTitle
             // 
             this.lbTitle.AutoSize = true;
-            this.lbTitle.Location = new System.Drawing.Point(0, 110);
+            this.lbTitle.Location = new System.Drawing.Point(16, 125);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(47, 12);
             this.lbTitle.TabIndex = 1;
@@ -57,7 +59,7 @@
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.pcb);
             this.Name = "CtlMobileItem";
-            this.Size = new System.Drawing.Size(107, 130);
+            this.Size = new System.Drawing.Size(127, 151);
             ((System.ComponentModel.ISupportInitialize)(this.pcb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

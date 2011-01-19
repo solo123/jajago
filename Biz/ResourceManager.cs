@@ -20,6 +20,7 @@ namespace com.jajago.Biz
         ResourcesEntities ent = new ResourcesEntities();
         public List<ResourceTaxonomyNode> AllTaxonomies = new List<ResourceTaxonomyNode>();
         ShellClass osShell = new ShellClass();
+        public event EventHandler ShowStatusText;
 
         private ResourceManager()
         {
@@ -40,6 +41,11 @@ namespace com.jajago.Biz
                 if (theInstance == null) theInstance = new ResourceManager();
                 return theInstance;
             }
+        }
+
+        public void StatusText(string text)
+        {
+            if (ShowStatusText != null) ShowStatusText(text, null);
         }
 
 

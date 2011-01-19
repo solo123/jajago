@@ -44,8 +44,10 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.StatusMain = new System.Windows.Forms.StatusStrip();
+            this.lbstatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.MenuMain.SuspendLayout();
             this.ToolMain.SuspendLayout();
+            this.StatusMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuMain
@@ -178,17 +180,25 @@
             // 
             // StatusMain
             // 
-            this.StatusMain.Location = new System.Drawing.Point(0, 415);
+            this.StatusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lbstatus});
+            this.StatusMain.Location = new System.Drawing.Point(0, 308);
             this.StatusMain.Name = "StatusMain";
             this.StatusMain.Size = new System.Drawing.Size(729, 22);
             this.StatusMain.TabIndex = 3;
             this.StatusMain.Text = "statusStrip1";
             // 
+            // lbstatus
+            // 
+            this.lbstatus.Name = "lbstatus";
+            this.lbstatus.Size = new System.Drawing.Size(131, 17);
+            this.lbstatus.Text = "toolStripStatusLabel1";
+            // 
             // FrmContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 437);
+            this.ClientSize = new System.Drawing.Size(729, 330);
             this.Controls.Add(this.StatusMain);
             this.Controls.Add(this.ToolMain);
             this.Controls.Add(this.MenuMain);
@@ -201,6 +211,8 @@
             this.MenuMain.PerformLayout();
             this.ToolMain.ResumeLayout(false);
             this.ToolMain.PerformLayout();
+            this.StatusMain.ResumeLayout(false);
+            this.StatusMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +235,6 @@
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imgTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel lbstatus;
     }
 }
