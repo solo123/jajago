@@ -37,6 +37,9 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lbCount = new System.Windows.Forms.Label();
             this.ucResources = new com.jajago.SA.UcResources();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnScan
@@ -72,7 +75,7 @@
             // btnwrite
             // 
             this.btnwrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnwrite.Location = new System.Drawing.Point(654, 438);
+            this.btnwrite.Location = new System.Drawing.Point(654, 436);
             this.btnwrite.Name = "btnwrite";
             this.btnwrite.Size = new System.Drawing.Size(67, 23);
             this.btnwrite.TabIndex = 4;
@@ -108,12 +111,29 @@
             this.ucResources.Size = new System.Drawing.Size(313, 397);
             this.ucResources.TabIndex = 7;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 457);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(733, 22);
+            this.statusStrip1.TabIndex = 9;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(131, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
             // FrmResource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(733, 479);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.treeselect);
             this.Controls.Add(this.btnwrite);
@@ -126,6 +146,8 @@
             this.Text = "FrmResources";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,6 +163,8 @@
         private System.Windows.Forms.TreeView treeselect;
         private com.jajago.SA.UcResources ucResources;
         private System.Windows.Forms.Label lbCount;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
 
     }
 }

@@ -73,9 +73,10 @@ namespace com.jajago.SA
             fsp.ShowDialog();
         }
 
-        public string SelectImage()
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            return listView1.SelectedItems[0].Tag.ToString();
+            FrmResource fr=new FrmResource();
+            fr.ShowInfo(listView1.FocusedItem.Text);
         }
 
     }
