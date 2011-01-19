@@ -24,7 +24,11 @@ class EcsGoodsAttr < JajagoDB
 end
 
 def gen_mobile(mobile)
-  "INSERT INTO Mobiles (id, title, description, price_shop, price_market) VALUES (#{mobile.goods_id}, '#{mobile.goods_name}', '#{sql_escape(mobile.goods_desc)}', '#{mobile.shop_price}', '#{mobile.shopout_price}')\ngo\n" 
+  imgurl = mobile.original_img
+  if !imgurl || imgurl.empty?
+	imgurl = mobile.goods_img
+  end
+  "INSERT INTO Mobiles (id, title, description, price_shop, price_market, img_url, status) VALUES (#{mobile.goods_id}, '#{mobile.goods_name}', '#{sql_escape(mobile.goods_desc)}', '#{mobile.shop_price}', '#{mobile.shopout_price}', '#{imgurl}', 0)\ngo\n" 
 end
 def gen_attribute(attribute)
   "INSERT INTO MobileAttributes (id,title) VALUES (#{attribute.attr_id}, '#{sql_escape attribute.attr_name}')\ngo\n"
@@ -37,9 +41,10 @@ def sql_escape(str)
 end
 
 File.open('out.txt', 'w') do|f| 
+  f.puts "delete from mobiles\ngo\ndelete from mobileattributes\ngo\ndelete from mobileinattributes\ngo\n\n";
   # attributes
   EcsAttribute.all.each { |attr| f.puts gen_attribute(attr) }
-  EcsGood.where('goods_id<10').order('goods_id').each do |m| 
+  EcsGood.where('goods_id<200').order('goods_id').each do |m| 
 	f.puts gen_mobile(m)
 	EcsGoodsAttr.where('goods_id=?', m.id).order('attr_id').each { |attr| f.puts gen_mobile_attr(attr) }
   end

@@ -69,20 +69,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Biz\BuffLines.cs" />
-    <Compile Include="Biz\ImageManager.cs" />
-    <Compile Include="Biz\JajagoBiz.cs" />
-    <Compile Include="Biz\MobileManager.cs" />
-    <Compile Include="Biz\MobileModels.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MobileModels.edmx</DependentUpon>
+    <Compile Include="Ctls\CtlMobileItem.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Biz\ResourceManager.cs" />
-    <Compile Include="Biz\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.edmx</DependentUpon>
+    <Compile Include="Ctls\CtlMobileItem.Designer.cs">
+      <DependentUpon>CtlMobileItem.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmConfig.cs">
       <SubType>Form</SubType>
@@ -152,6 +143,9 @@
     <Compile Include="UcResources.Designer.cs">
       <DependentUpon>UcResources.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ctls\CtlMobileItem.resx">
+      <DependentUpon>CtlMobileItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConfig.resx">
       <DependentUpon>FrmConfig.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,14 +192,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <EntityDeploy Include="Biz\Resources.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <EntityDeploy Include="Biz\MobileModels.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MobileModels.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="Properties\DataSources\com.jajago.SA.Biz.jajagoEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -254,7 +240,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="jajago.sdf">
+    <Content Include="mobiles\Download.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mobiles\readme.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\ajax-loader.gif" />
@@ -269,6 +258,7 @@
       <Name>Biz</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Net;
+using System.IO;
+
 namespace com.jajago.Biz
 {
     public class MobileManager
@@ -23,7 +26,7 @@ namespace com.jajago.Biz
             }
         }
 
-        public IQueryable<object> GetList()
+        public IQueryable<Mobile> GetList()
         {
             return from r in ent.Mobiles
                     select r;
@@ -39,6 +42,11 @@ namespace com.jajago.Biz
         public IQueryable<MobileInAttribute> GetAttributes(int mobile_id)
         {
             return from r in ent.MobileInAttributes where r.mobile_id == mobile_id select r;
+        }
+
+        public void SaveChanges()
+        {
+            ent.SaveChanges();
         }
 
     }

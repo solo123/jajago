@@ -390,6 +390,54 @@ namespace com.jajago.Biz
         private Nullable<global::System.Decimal> _price_market;
         partial void Onprice_marketChanging(Nullable<global::System.Decimal> value);
         partial void Onprice_marketChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String img_url
+        {
+            get
+            {
+                return _img_url;
+            }
+            set
+            {
+                Onimg_urlChanging(value);
+                ReportPropertyChanging("img_url");
+                _img_url = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("img_url");
+                Onimg_urlChanged();
+            }
+        }
+        private global::System.String _img_url;
+        partial void Onimg_urlChanging(global::System.String value);
+        partial void Onimg_urlChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> status
+        {
+            get
+            {
+                return _status;
+            }
+            set
+            {
+                OnstatusChanging(value);
+                ReportPropertyChanging("status");
+                _status = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("status");
+                OnstatusChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _status;
+        partial void OnstatusChanging(Nullable<global::System.Int32> value);
+        partial void OnstatusChanged();
 
         #endregion
     
