@@ -109,5 +109,11 @@ pause
             // 强制关闭当前进程
             Environment.Exit(0);
         }
+
+        private void imgTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTestImg f = new FrmTestImg();
+            f.Show();
+        }
     }
 }

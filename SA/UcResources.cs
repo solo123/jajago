@@ -72,5 +72,11 @@ namespace com.jajago.SA
             FrmShowPic fsp = new FrmShowPic();
             fsp.ShowDialog();
         }
+
+        public string SelectImage()
+        {
+            return listView1.SelectedItems[0].Tag.ToString();
+        }
+
     }
 }

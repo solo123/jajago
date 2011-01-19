@@ -27,12 +27,15 @@ namespace com.jajago.Biz
                 ow = size * originalImage.Width / originalImage.Height;
             if (ow == 0) ow = 1;
             if (oh == 0) oh = 1;
-            System.Drawing.Image bitmap = new System.Drawing.Bitmap(ow, oh);
+            System.Drawing.Image bitmap = new System.Drawing.Bitmap(size, size);
             Graphics g = Graphics.FromImage(bitmap);
             g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.High;
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             g.Clear(Color.White);
-            g.DrawImage(originalImage, new Rectangle(0, 0, ow, oh), new Rectangle(0, 0, originalImage.Width, originalImage.Height), GraphicsUnit.Pixel);
+            int startX = (size - ow) / 2;
+            int startY = (size - oh) / 2;
+
+            g.DrawImage(originalImage, new Rectangle(startX, startY, ow, oh), new Rectangle(0, 0, originalImage.Width, originalImage.Height), GraphicsUnit.Pixel);
             return bitmap;
         }
 
