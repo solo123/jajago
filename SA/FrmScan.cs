@@ -130,6 +130,8 @@ namespace com.jajago.SA
 
         }
 
+        DirectoryInfo cur = null;
+        DirectoryInfo[] subDirs = null;
         private void do_scan()
         {
             resourceCount = 0;
@@ -148,8 +150,12 @@ namespace com.jajago.SA
             {
                 if (backgroundWorker1.CancellationPending) return;
                 ScanNode sn = (ScanNode)dirStack.Pop();
-                DirectoryInfo cur = new DirectoryInfo(sn.path);
-                DirectoryInfo[] subDirs = cur.GetDirectories();
+                try
+                {
+                     cur = new DirectoryInfo(sn.path);
+                     subDirs = cur.GetDirectories();
+                }
+                catch { }
                 if (subDirs.Length > 0)
                 {
                     sn.weight = sn.weight / (subDirs.Length + 1);
@@ -162,15 +168,20 @@ namespace com.jajago.SA
                         dirStack.Push(subnode);
                     }
                 }
-
+                FileInfo[] files = null;
                 backgroundWorker1.ReportProgress(101, sn.path);
-                FileInfo[] files = cur.GetFiles();
+                try
+                {
+                    files = cur.GetFiles();
+                
                 foreach (FileInfo f in files)
                 {
                     if (backgroundWorker1.CancellationPending) return;
                     rm.AddResource(f);
                     backgroundWorker1.ReportProgress(102, f.Name);
                 }
+                }
+                catch { }
                 backgroundWorker1.ReportProgress(1, sn.weight);
             }
         }

@@ -62,7 +62,6 @@ namespace com.jajago.SA
         int Total = 0;
         private void btnselect_Click(object sender, EventArgs e)
         {
-            
             foreach (DataGridViewRow cell in ucResources.DataGridSR())
             {
                 treeselect.Nodes.Add(cell.Cells[2].Value.ToString());
@@ -73,7 +72,7 @@ namespace com.jajago.SA
                 treeselect.Nodes.Add(lv.Text);
                 Total++;
             }
-            lbCount.Text = "总共选中" + Total.ToString();
+            lbCount.Text = "总共选中" + Total.ToString()+"条";
             ucResources.CacelSelect();
         }
 

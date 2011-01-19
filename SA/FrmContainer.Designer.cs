@@ -36,13 +36,14 @@
             this.menuConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.tuiChuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolMain = new System.Windows.Forms.ToolStrip();
-            this.StatusMain = new System.Windows.Forms.StatusStrip();
+            this.imgTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolMain = new System.Windows.Forms.ToolStrip();
             this.tsResource = new System.Windows.Forms.ToolStripButton();
             this.tsMobiles = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.StatusMain = new System.Windows.Forms.StatusStrip();
             this.MenuMain.SuspendLayout();
             this.ToolMain.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +91,7 @@
             // 
             this.tuiChuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.testToolStripMenuItem,
+            this.imgTestToolStripMenuItem,
             this.updateToolStripMenuItem});
             this.tuiChuToolStripMenuItem.Name = "tuiChuToolStripMenuItem";
             this.tuiChuToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
@@ -99,9 +101,23 @@
             // testToolStripMenuItem
             // 
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.testToolStripMenuItem.Text = "test";
             this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            // 
+            // imgTestToolStripMenuItem
+            // 
+            this.imgTestToolStripMenuItem.Name = "imgTestToolStripMenuItem";
+            this.imgTestToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.imgTestToolStripMenuItem.Text = "img test";
+            this.imgTestToolStripMenuItem.Click += new System.EventHandler(this.imgTestToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.updateToolStripMenuItem.Text = "update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // ToolMain
             // 
@@ -115,21 +131,6 @@
             this.ToolMain.Size = new System.Drawing.Size(729, 39);
             this.ToolMain.TabIndex = 2;
             this.ToolMain.Text = "toolStrip1";
-            // 
-            // StatusMain
-            // 
-            this.StatusMain.Location = new System.Drawing.Point(0, 415);
-            this.StatusMain.Name = "StatusMain";
-            this.StatusMain.Size = new System.Drawing.Size(729, 22);
-            this.StatusMain.TabIndex = 3;
-            this.StatusMain.Text = "statusStrip1";
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.updateToolStripMenuItem.Text = "update";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // tsResource
             // 
@@ -175,6 +176,14 @@
             this.toolStripButton3.Size = new System.Drawing.Size(23, 36);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
+            // StatusMain
+            // 
+            this.StatusMain.Location = new System.Drawing.Point(0, 415);
+            this.StatusMain.Name = "StatusMain";
+            this.StatusMain.Size = new System.Drawing.Size(729, 22);
+            this.StatusMain.TabIndex = 3;
+            this.StatusMain.Text = "statusStrip1";
+            // 
             // FrmContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -213,5 +222,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuConfig;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imgTestToolStripMenuItem;
     }
 }

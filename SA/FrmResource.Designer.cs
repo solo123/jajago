@@ -52,7 +52,7 @@
             // btnselect
             // 
             this.btnselect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnselect.Location = new System.Drawing.Point(457, 177);
+            this.btnselect.Location = new System.Drawing.Point(453, 177);
             this.btnselect.Name = "btnselect";
             this.btnselect.Size = new System.Drawing.Size(35, 34);
             this.btnselect.TabIndex = 3;
@@ -64,7 +64,7 @@
             // 
             this.treeselect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeselect.Location = new System.Drawing.Point(498, 41);
+            this.treeselect.Location = new System.Drawing.Point(494, 41);
             this.treeselect.Name = "treeselect";
             this.treeselect.Size = new System.Drawing.Size(227, 397);
             this.treeselect.TabIndex = 1;
@@ -72,7 +72,7 @@
             // btnwrite
             // 
             this.btnwrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnwrite.Location = new System.Drawing.Point(658, 444);
+            this.btnwrite.Location = new System.Drawing.Point(654, 438);
             this.btnwrite.Name = "btnwrite";
             this.btnwrite.Size = new System.Drawing.Size(67, 23);
             this.btnwrite.TabIndex = 4;
@@ -93,7 +93,7 @@
             // 
             this.lbCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCount.AutoSize = true;
-            this.lbCount.Location = new System.Drawing.Point(507, 449);
+            this.lbCount.Location = new System.Drawing.Point(503, 449);
             this.lbCount.Name = "lbCount";
             this.lbCount.Size = new System.Drawing.Size(0, 12);
             this.lbCount.TabIndex = 8;
@@ -105,7 +105,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.ucResources.Location = new System.Drawing.Point(134, 41);
             this.ucResources.Name = "ucResources";
-            this.ucResources.Size = new System.Drawing.Size(317, 397);
+            this.ucResources.Size = new System.Drawing.Size(313, 397);
             this.ucResources.TabIndex = 7;
             // 
             // FrmResource
@@ -113,7 +113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(737, 479);
+            this.ClientSize = new System.Drawing.Size(733, 479);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.treeselect);
             this.Controls.Add(this.btnwrite);
