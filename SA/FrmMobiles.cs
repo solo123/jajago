@@ -73,8 +73,6 @@ namespace com.jajago.SA
             //f.ShowMobile(id);
         }
 
-        int thumb_count = 0;
-        int thumb_loaded = 0;
         private void bwDownload_DoWork(object sender, DoWorkEventArgs e)
         {
             int total = queDownload.Count;

@@ -132,6 +132,7 @@ namespace com.jajago.SA
 
         DirectoryInfo cur = null;
         DirectoryInfo[] subDirs = null;
+        
         private void do_scan()
         {
             resourceCount = 0;

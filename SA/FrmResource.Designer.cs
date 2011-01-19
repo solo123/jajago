@@ -36,9 +36,9 @@
             this.treeCatalog = new System.Windows.Forms.TreeView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lbCount = new System.Windows.Forms.Label();
-            this.ucResources = new com.jajago.SA.UcResources();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ucResources = new com.jajago.SA.UcResources();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,16 +101,6 @@
             this.lbCount.Size = new System.Drawing.Size(0, 12);
             this.lbCount.TabIndex = 8;
             // 
-            // ucResources
-            // 
-            this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucResources.Location = new System.Drawing.Point(134, 41);
-            this.ucResources.Name = "ucResources";
-            this.ucResources.Size = new System.Drawing.Size(313, 397);
-            this.ucResources.TabIndex = 7;
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -126,6 +116,16 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(131, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // ucResources
+            // 
+            this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucResources.Location = new System.Drawing.Point(134, 41);
+            this.ucResources.Name = "ucResources";
+            this.ucResources.Size = new System.Drawing.Size(313, 397);
+            this.ucResources.TabIndex = 7;
             // 
             // FrmResource
             // 
