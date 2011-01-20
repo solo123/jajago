@@ -15,6 +15,10 @@ namespace com.jajago.SA
         public FrmShowPic()
         {
             InitializeComponent();
+        }
+
+        public void ShowImage(string id)
+        {
             
         }
     }

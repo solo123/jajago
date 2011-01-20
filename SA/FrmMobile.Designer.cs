@@ -64,7 +64,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.pbShowImage.BackColor = System.Drawing.Color.White;
             this.pbShowImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbShowImage.Location = new System.Drawing.Point(574, 85);
+            this.pbShowImage.Location = new System.Drawing.Point(568, 109);
             this.pbShowImage.Name = "pbShowImage";
             this.pbShowImage.Size = new System.Drawing.Size(231, 170);
             this.pbShowImage.TabIndex = 5;

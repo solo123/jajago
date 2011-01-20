@@ -75,8 +75,11 @@ namespace com.jajago.SA
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            FrmResource fr=new FrmResource();
-            fr.ShowInfo(listView1.FocusedItem.Text);
+            //FrmResource fr=new FrmResource();
+            //fr.ShowInfo(listView1.FocusedItem.Text);
+            ResImage image=(ResImage)sender;
+            FrmShowPic fsp = new FrmShowPic();
+            fsp.ShowImage(image.id);
         }
 
     }

@@ -76,10 +76,10 @@ namespace com.jajago.SA
             ucResources.CacelSelect();
         }
 
-        public void ShowInfo(string a)
-        {
-            toolStripStatusLabel1.Text=a;
-        }
+        //public void ShowInfo(string a)
+        //{
+            //toolStripStatusLabel1.Text=a;
+        //}
 
 
         /*
