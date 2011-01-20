@@ -35,10 +35,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.tbProps = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,12 +48,14 @@
             this.lbStandard = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowImage)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbShowImage
@@ -111,10 +113,10 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.linkLabel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.tbProps);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -127,6 +129,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(809, 442);
             this.panel1.TabIndex = 26;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(448, 33);
+            this.tableLayoutPanel1.TabIndex = 37;
             // 
             // linkLabel2
             // 
@@ -159,18 +175,6 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "官网";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // tbProps
-            // 
-            this.tbProps.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.tbProps.Location = new System.Drawing.Point(132, 183);
-            this.tbProps.Multiline = true;
-            this.tbProps.Name = "tbProps";
-            this.tbProps.ReadOnly = true;
-            this.tbProps.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbProps.Size = new System.Drawing.Size(378, 72);
-            this.tbProps.TabIndex = 33;
-            this.tbProps.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
@@ -236,7 +240,7 @@
             // 
             // lbStandard
             // 
-            this.lbStandard.Location = new System.Drawing.Point(130, 258);
+            this.lbStandard.Location = new System.Drawing.Point(658, 333);
             this.lbStandard.Name = "lbStandard";
             this.lbStandard.Size = new System.Drawing.Size(82, 44);
             this.lbStandard.TabIndex = 21;
@@ -260,6 +264,15 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Location = new System.Drawing.Point(63, 175);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(453, 239);
+            this.panel2.TabIndex = 38;
+            // 
             // FrmMobile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -277,6 +290,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -297,10 +312,11 @@
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label lbRefPrice;
-        private System.Windows.Forms.TextBox tbProps;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel2;
 
     }
 }

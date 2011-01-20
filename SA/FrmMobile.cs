@@ -33,14 +33,24 @@ namespace com.jajago.SA
             lbPrice.Text = "￥" + m.price_shop.ToString();
             lbRefPrice.Text = "￥" + m.price_market.ToString();
             StringBuilder sb = new StringBuilder();
+
+            int i = 0;
+            int j = 0;
             foreach (MobileInAttribute ma in mm.GetAttributes(id))
             {
-                sb.Append(ma.attribute_id);
-                sb.Append(":");
-                sb.Append(ma.title);
-                sb.Append("\n");
+                Label lbId = new Label();
+                Label lbTitle = new Label();
+                lbId.Text = ma.attribute_id.ToString();
+                lbTitle.Text = ma.title;
+                tableLayoutPanel1.SetRow(lbId, i++);
+                tableLayoutPanel1.SetColumn(lbId, 0);
+                tableLayoutPanel1.SetRow(lbTitle, j++);
+                tableLayoutPanel1.SetColumn(lbTitle, 1);
+                tableLayoutPanel1.Controls.Add(lbId);
+                tableLayoutPanel1.Controls.Add(lbTitle);
             }
-            tbProps.Text = sb.ToString();
+            tableLayoutPanel1.Show();
+            //tbProps.Text = sb.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
