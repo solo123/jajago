@@ -69,8 +69,8 @@ namespace com.jajago.SA
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            FrmShowPic fsp = new FrmShowPic();
-            fsp.ShowDialog();
+            FrmShowPic f = new FrmShowPic();
+            f.ShowDialog();
         }
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
