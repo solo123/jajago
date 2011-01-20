@@ -76,12 +76,6 @@ namespace com.jajago.SA
             ucResources.CacelSelect();
         }
 
-        //public void ShowInfo(string a)
-        //{
-            //toolStripStatusLabel1.Text=a;
-        //}
-
-
         /*
        private void btnwrite_Click(object sender, EventArgs e)
        {

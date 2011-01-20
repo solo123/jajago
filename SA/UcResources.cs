@@ -31,6 +31,7 @@ namespace com.jajago.SA
                             ListViewItem li = new ListViewItem();
                             li.Text = res.filename+"\n"+res.width+res.filesize;
                             li.ImageIndex = imageList1.Images.Count - 1;
+                            li.Tag = res;
                             listView1.Items.Add(li);
                         }
                         image_loaded = true;
@@ -69,17 +70,19 @@ namespace com.jajago.SA
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            FrmShowPic f = new FrmShowPic();
-            f.ShowDialog();
+            if (listView1.SelectedItems.Count > 0)
+            {
+                ListViewItem item = listView1.SelectedItems[0];
+                ResImage res = (ResImage)item.Tag;
+                FrmShowPic f = new FrmShowPic();
+                f.ShowImage(res);
+                f.ShowDialog();
+            }
         }
 
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            //FrmResource fr=new FrmResource();
-            //fr.ShowInfo(listView1.FocusedItem.Text);
-            ResImage image=(ResImage)sender;
-            FrmShowPic fsp = new FrmShowPic();
-            fsp.ShowImage(image.id);
+            
         }
 
     }

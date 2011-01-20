@@ -28,12 +28,14 @@ namespace com.jajago.SA
         {
             InitializeComponent();
         }
+
         private void FrmMobiles_Load(object sender, EventArgs e)
         {
             Image img = Image.FromFile("mobiles/Download.png");
             imageList1.Images.Add(img);
             show_mobiles();
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             show_mobiles();
@@ -41,7 +43,6 @@ namespace com.jajago.SA
 
         private void show_mobiles()
         {
-
             foreach (Mobile m in mm.GetList())
             {
                 Ctls.CtlMobileItem item = new Ctls.CtlMobileItem();
@@ -73,7 +74,6 @@ namespace com.jajago.SA
             f.ShowMobile((int)m.id);
         }
 
-
         private void bwDownload_DoWork(object sender, DoWorkEventArgs e)
         {
             AppManager app = AppManager.Instance;
@@ -91,7 +91,6 @@ namespace com.jajago.SA
                 MobileNode mn = (MobileNode)queDownload.Dequeue();
                 Mobile m = mn.mobile;
                 app.StatusText = "下载: " + m.img_url;
-
                 string img_path = img_org_path + "/" + m.id + ".jpg";
                 string thu_path = img_thu_path + "/" + m.id + ".jpg";
                 web.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.0.3705;)");
@@ -103,6 +102,7 @@ namespace com.jajago.SA
                 bwDownload.ReportProgress((++cnt)*100/total, mn);
             }
         }
+
         private void bwDownload_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             MobileNode mn = (MobileNode)e.UserState;
@@ -111,8 +111,6 @@ namespace com.jajago.SA
             if (File.Exists(imagefile))
                 mn.ctl.image = Image.FromFile(imagefile);
         }
-
-       
 
         private void bwShowImage_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -131,6 +129,7 @@ namespace com.jajago.SA
                 //System.Threading.Thread.Sleep(500);
             }
         }
+
         private void bwShowImage_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             MobileNode mn = (MobileNode)e.UserState;
@@ -144,6 +143,7 @@ namespace com.jajago.SA
                 queDownload.Enqueue(mn);
             }
         }
+
         private void bwShowImage_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             AppManager app = AppManager.Instance;
@@ -164,6 +164,7 @@ namespace com.jajago.SA
             }
         }
     }
+
     public class MobileNode
     {
         public Mobile mobile { get; set; }

@@ -35,6 +35,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,14 +49,13 @@
             this.lbStandard = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowImage)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbShowImage
@@ -64,9 +64,9 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.pbShowImage.BackColor = System.Drawing.Color.White;
             this.pbShowImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbShowImage.Location = new System.Drawing.Point(568, 109);
+            this.pbShowImage.Location = new System.Drawing.Point(610, 109);
             this.pbShowImage.Name = "pbShowImage";
-            this.pbShowImage.Size = new System.Drawing.Size(231, 170);
+            this.pbShowImage.Size = new System.Drawing.Size(189, 170);
             this.pbShowImage.TabIndex = 5;
             this.pbShowImage.TabStop = false;
             // 
@@ -130,6 +130,18 @@
             this.panel1.Size = new System.Drawing.Size(809, 442);
             this.panel1.TabIndex = 26;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.AutoScroll = true;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Location = new System.Drawing.Point(41, 177);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(540, 224);
+            this.panel2.TabIndex = 38;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSize = true;
@@ -137,15 +149,16 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(448, 33);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(512, 33);
             this.tableLayoutPanel1.TabIndex = 37;
             // 
             // linkLabel2
             // 
+            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(676, 387);
             this.linkLabel2.Name = "linkLabel2";
@@ -157,6 +170,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(295, 417);
@@ -182,7 +196,7 @@
             this.pictureBox1.Image = global::com.jajago.SA.Properties.Resources.ecshop_logo;
             this.pictureBox1.Location = new System.Drawing.Point(108, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(99, 42);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -264,15 +278,6 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.tableLayoutPanel1);
-            this.panel2.Location = new System.Drawing.Point(63, 175);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(453, 239);
-            this.panel2.TabIndex = 38;
-            // 
             // FrmMobile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -288,10 +293,10 @@
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
