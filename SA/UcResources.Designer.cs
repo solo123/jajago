@@ -68,7 +68,7 @@
             // 
             // imageList1
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(100, 100);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 

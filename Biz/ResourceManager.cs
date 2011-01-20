@@ -74,7 +74,7 @@ namespace com.jajago.Biz
                 Resource res = new Resource();
                 res.name = f.Name;
                 res.id = Guid.NewGuid().ToString();
-                res.taxon_id = null;
+                res.taxon_id = "0";
                 res.taxonomy_id = rest;
                 res.path = f.FullName;
                 res.created_at = DateTime.Now;
@@ -110,6 +110,7 @@ namespace com.jajago.Biz
             ResImage img = new ResImage();
             Folder folder = osShell.NameSpace(file.DirectoryName);
             FolderItem folderitem = folder.ParseName(file.Name);
+            img.id = res_id;
             img.filename = folder.GetDetailsOf(folderitem, 0);
             img.fileext = folder.GetDetailsOf(folderitem, 2);
             img.filesize = folder.GetDetailsOf(folderitem, 1);
