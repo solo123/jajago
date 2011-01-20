@@ -21,10 +21,18 @@ namespace com.jajago.Biz
             System.Drawing.Image originalImage = System.Drawing.Image.FromFile(originalImagePath);
             int oh, ow;
             oh = ow = size;
-            if (originalImage.Width > originalImage.Height)
-                oh = size * originalImage.Height / originalImage.Width;
+            if (originalImage.Width <= size && originalImage.Height <= size)
+            {
+                ow = originalImage.Width;
+                oh = originalImage.Height;
+            }
             else
-                ow = size * originalImage.Width / originalImage.Height;
+            {
+                if (originalImage.Width > originalImage.Height)
+                    oh = size * originalImage.Height / originalImage.Width;
+                else
+                    ow = size * originalImage.Width / originalImage.Height;
+            }
             if (ow == 0) ow = 1;
             if (oh == 0) oh = 1;
             System.Drawing.Image bitmap = new System.Drawing.Bitmap(size, size);
@@ -38,10 +46,20 @@ namespace com.jajago.Biz
             g.DrawImage(originalImage, new Rectangle(startX, startY, ow, oh), new Rectangle(0, 0, originalImage.Width, originalImage.Height), GraphicsUnit.Pixel);
             return bitmap;
         }
-
+        public static Image QuickThumbnail(string original_filename, int size)
+        {
+            Image ori = Image.FromFile(original_filename);
+            Image thumb = ori.GetThumbnailImage(size, size, thumb_cb, IntPtr.Zero);
+            return thumb;
+        }
+        public static bool thumb_cb()
+        {
+            return true;
+        }
         public static byte[] BinaryThumbnail(string path, int size)
         {
-            System.Drawing.Image img = MakeThumbnail(path, size);
+            Image img = MakeThumbnail(path, size);
+            //Image img = QuickThumbnail(path, size);
             if (img==null) return null;
 
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
