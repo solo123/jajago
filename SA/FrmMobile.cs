@@ -32,7 +32,6 @@ namespace com.jajago.SA
             webBrowser1.DocumentText = m.description;
             lbPrice.Text = "￥" + m.price_shop.ToString();
             lbRefPrice.Text = "￥" + m.price_market.ToString();
-            StringBuilder sb = new StringBuilder();
 
             int i = 0;
             int j = 0;
@@ -50,7 +49,6 @@ namespace com.jajago.SA
                 tableLayoutPanel1.Controls.Add(lbTitle);
             }
             tableLayoutPanel1.Show();
-            //tbProps.Text = sb.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

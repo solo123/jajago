@@ -36,7 +36,6 @@
             this.treeCatalog = new System.Windows.Forms.TreeView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lbCount = new System.Windows.Forms.Label();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ucResources = new com.jajago.SA.UcResources();
             this.SuspendLayout();
             // 
@@ -73,7 +72,7 @@
             // btnwrite
             // 
             this.btnwrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnwrite.Location = new System.Drawing.Point(654, 436);
+            this.btnwrite.Location = new System.Drawing.Point(643, 449);
             this.btnwrite.Name = "btnwrite";
             this.btnwrite.Size = new System.Drawing.Size(67, 23);
             this.btnwrite.TabIndex = 4;
@@ -99,14 +98,6 @@
             this.lbCount.Size = new System.Drawing.Size(0, 12);
             this.lbCount.TabIndex = 8;
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 457);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(733, 22);
-            this.statusStrip1.TabIndex = 9;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
             // ucResources
             // 
             this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -123,7 +114,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(733, 479);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.treeselect);
             this.Controls.Add(this.btnwrite);
@@ -151,7 +141,6 @@
         private System.Windows.Forms.TreeView treeselect;
         private com.jajago.SA.UcResources ucResources;
         private System.Windows.Forms.Label lbCount;
-        private System.Windows.Forms.StatusStrip statusStrip1;
 
     }
 }

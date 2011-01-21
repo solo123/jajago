@@ -29,7 +29,7 @@ namespace com.jajago.SA
                             Image img = Image.FromStream(ms);
                             imageList1.Images.Add(img);
                             ListViewItem li = new ListViewItem();
-                            li.Text = res.filename+"\n"+res.width+res.filesize;
+                            li.Text = res.filename+"\n"+res.width+"|"+res.filesize;
                             li.ImageIndex = imageList1.Images.Count - 1;
                             li.Tag = res;
                             listView1.Items.Add(li);
