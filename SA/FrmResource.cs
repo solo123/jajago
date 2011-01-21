@@ -67,13 +67,15 @@ namespace com.jajago.SA
                 treeselect.Nodes.Add(cell.Cells[2].Value.ToString());
                 Total++;
             }
+            /*
             foreach (ListViewItem lv in ucResources.ListSR())
             {
                 treeselect.Nodes.Add(lv.Text);
                 Total++;
             }
+             */
             lbCount.Text = "总共选中" + Total.ToString()+"条";
-            ucResources.CacelSelect();
+            //ucResources.CacelSelect();
         }
 
         /*
