@@ -114,13 +114,13 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "扫描路径";
-            this.columnHeader1.Width = 340;
+            this.columnHeader1.Width = 341;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "资源数";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader2.Width = 38;
+            this.columnHeader2.Width = 54;
             // 
             // lbOp
             // 

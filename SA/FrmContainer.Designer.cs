@@ -143,7 +143,7 @@
             this.tsResource.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsResource.Name = "tsResource";
             this.tsResource.Size = new System.Drawing.Size(124, 36);
-            this.tsResource.Text = "打开窗口";
+            this.tsResource.Text = "资源管理";
             this.tsResource.Click += new System.EventHandler(this.tsResource_Click);
             // 
             // tsMobiles
@@ -155,7 +155,7 @@
             this.tsMobiles.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsMobiles.Name = "tsMobiles";
             this.tsMobiles.Size = new System.Drawing.Size(124, 36);
-            this.tsMobiles.Text = "toolStripButton1";
+            this.tsMobiles.Text = "选机中心";
             this.tsMobiles.Click += new System.EventHandler(this.tsMobiles_Click);
             // 
             // toolStripButton2
@@ -167,7 +167,7 @@
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(124, 36);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Text = "会员服务";
             // 
             // toolStripButton3
             // 

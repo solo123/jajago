@@ -17,15 +17,18 @@ namespace com.jajago.SA.Ctls
         {
             InitializeComponent();
         }
+
         public Mobile mobile
         {
             get { return _mobile; }
             set { _mobile = value; lbTitle.Text = value.title; }
         }
+
         public Image image
         {
             set { pcb.Image = value; }
         }
+
         public event EventHandler OnClicked;
 
         private void pcb_DoubleClick(object sender, EventArgs e)
