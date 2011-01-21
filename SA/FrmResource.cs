@@ -28,18 +28,20 @@ namespace com.jajago.SA
         {
             foreach (ResourceTaxonomyNode t in rsm.AllTaxonomies)
             {
-                TreeNode node = new TreeNode(t.taxonomy.name);
-                node.Tag = t.taxonomy;
-                treeCatalog.Nodes.Add(node);
-                TreeNode node1 = new TreeNode(t.taxonomy.name);
-                treeselect.Nodes.Add(node1);
-                selectedRoot.Add(node);
+                ListViewItem item = new ListViewItem(t.taxonomy.name);
+                item.SubItems.Add("0");
+                item.SubItems.Add("0");
+                item.Tag = t.taxonomy;
+                lstTaxonomy.Items.Add(item);
             }
         }
-        private void catalog_selected(object sender, TreeViewEventArgs e)
+        private void lstTaxonomy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Taxonomy tx = (Taxonomy)treeCatalog.SelectedNode.Tag;
-            ucResources.current_taxonomy = tx;
+            if (lstTaxonomy.SelectedItems.Count > 0)
+            {
+                Taxonomy tx = (Taxonomy)lstTaxonomy.SelectedItems[0].Tag;
+                ucResources.current_taxonomy = tx;
+            }
         }
 
         private void DoSplash()
@@ -58,38 +60,6 @@ namespace com.jajago.SA
             FrmScan fp = new FrmScan();
             fp.ShowDialog();
         }
-
-        int Total = 0;
-        private void btnselect_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow cell in ucResources.DataGridSR())
-            {
-                treeselect.Nodes.Add(cell.Cells[2].Value.ToString());
-                Total++;
-            }
-            /*
-            foreach (ListViewItem lv in ucResources.ListSR())
-            {
-                treeselect.Nodes.Add(lv.Text);
-                Total++;
-            }
-             */
-            lbCount.Text = "总共选中" + Total.ToString()+"条";
-            //ucResources.CacelSelect();
-        }
-
-        /*
-       private void btnwrite_Click(object sender, EventArgs e)
-       {
-           StreamWriter sw = new StreamWriter("d:\\temp.txt");
-           DataGridViewSelectedRowCollection cells = gridResource.SelectedRows;
-           foreach (DataGridViewRow cell in cells)
-           {
-               sw.WriteLine(cell.Cells[2].Value.ToString());
-           }
-           sw.Close();
-       }
-       */
 
     }
 }
