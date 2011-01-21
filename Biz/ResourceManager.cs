@@ -87,9 +87,7 @@ namespace com.jajago.Biz
                 switch(rest)
                 {
                     case "MUSIC":
-                        ResMusic music = new ResMusic();
-                        music.id = res.id;
-                        ent.AddToResMusics(music);
+                        ent.AddToResMusics(GetMusicDetail(res.id,f));
                         break;
                     case "IMG":
                         ent.AddToResImages(GetImageDetail(res.id, f));
@@ -124,6 +122,20 @@ namespace com.jajago.Biz
             img.dpi = folder.GetDetailsOf(folderitem, 22);
             img.thumb = ImageManager.BinaryThumbnail(file.FullName, 100);
             return img;
+        }
+
+        private ResMusic GetMusicDetail(string res_id, FileInfo file)
+        {
+            ResMusic music = new ResMusic();
+            Folder folder = osShell.NameSpace(file.DirectoryName);
+            FolderItem folderitem = folder.ParseName(file.Name);
+            music.id = res_id;
+            music.title = folder.GetDetailsOf(folderitem, 10);
+            music.artist = folder.GetDetailsOf(folderitem, 9);
+            music.album = folder.GetDetailsOf(folderitem, 17);
+            music.publish = folder.GetDetailsOf(folderitem, 4);
+            music.music_type = folder.GetDetailsOf(folderitem, 2);
+            return music;
         }
 
         public string ConfigSearchPath

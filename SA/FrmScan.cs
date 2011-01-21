@@ -122,14 +122,15 @@ namespace com.jajago.SA
                 }
                 FileInfo[] files = null;
                 backgroundWorker1.ReportProgress(101, sn.path);
-                    files = cur.GetFiles();
+                try { files = cur.GetFiles(); }
+                catch (UnauthorizedAccessException ex) { continue; }
 
-                    foreach (FileInfo f in files)
-                    {
-                        if (backgroundWorker1.CancellationPending) return;
-                        rm.AddResource(f);
-                        backgroundWorker1.ReportProgress(102, f.Name);
-                    }
+                foreach (FileInfo f in files)
+                {
+                    if (backgroundWorker1.CancellationPending) return;
+                    rm.AddResource(f);
+                    backgroundWorker1.ReportProgress(102, f.Name);
+                }
                 backgroundWorker1.ReportProgress(1, sn.weight);
             }
         }
