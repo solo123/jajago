@@ -75,6 +75,18 @@
     <Compile Include="Ctls\CtlMobileItem.Designer.cs">
       <DependentUpon>CtlMobileItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ctls\CtlPhotoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctls\CtlPhotoItem.Designer.cs">
+      <DependentUpon>CtlPhotoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ctls\CtlResources.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ctls\CtlResources.Designer.cs">
+      <DependentUpon>CtlResources.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +157,12 @@
     </Compile>
     <EmbeddedResource Include="Ctls\CtlMobileItem.resx">
       <DependentUpon>CtlMobileItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctls\CtlPhotoItem.resx">
+      <DependentUpon>CtlPhotoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ctls\CtlResources.resx">
+      <DependentUpon>CtlResources.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmConfig.resx">
       <DependentUpon>FrmConfig.cs</DependentUpon>

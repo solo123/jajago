@@ -19,14 +19,23 @@ namespace com.jajago.SA
         }
 
         ResourceManager rsm = ResourceManager.Instance;
-        public void ShowImage(ResImage res)
+        public ResImage res_image
         {
-            this.Text = res.filename;
-            lbSize.Text = res.filesize;
-            lbType.Text = res.filetype;
-            MemoryStream ms = new MemoryStream(res.thumb);
-            Image img = Image.FromStream(ms);
-            pictureBox1.Image = img;
+            set
+            {
+                ResImage res = value;
+                this.Text = res.filename;
+                lbFilename.Text = res.filename;
+                lbFileext.Text = res.fileext;
+                lbWidth.Text = res.width;
+                lbHeight.Text = res.height;
+                lbDpi.Text = res.dpi;
+                lbFiletype.Text = res.filetype;
+                lbFilesize.Text = res.filesize;
+                Resource rs = rsm.GetResource(res.id);
+                Image img = Image.FromFile(rs.path);
+                pictureBox1.Image = img;
+            }
         }
     }
 }

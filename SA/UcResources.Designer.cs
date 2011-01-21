@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.plPhotos = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,29 +53,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(553, 440);
             this.dataGridView1.TabIndex = 0;
             // 
-            // listView1
+            // plPhotos
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.LargeImageList = this.imageList1;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(553, 440);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
-            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(100, 100);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.plPhotos.AutoScroll = true;
+            this.plPhotos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plPhotos.Location = new System.Drawing.Point(0, 0);
+            this.plPhotos.Name = "plPhotos";
+            this.plPhotos.Size = new System.Drawing.Size(553, 440);
+            this.plPhotos.TabIndex = 1;
             // 
             // UcResources
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listView1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.plPhotos);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UcResources";
             this.Size = new System.Drawing.Size(553, 440);
@@ -89,7 +79,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.FlowLayoutPanel plPhotos;
     }
 }

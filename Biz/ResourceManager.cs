@@ -65,6 +65,10 @@ namespace com.jajago.Biz
             }
             
         }
+        public Resource GetResource(string id)
+        {
+            return ent.Resources.First(m => m.id == id);
+        }
 
         public void AddResource(FileInfo f)
         {

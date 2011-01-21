@@ -25,38 +25,36 @@ namespace com.jajago.SA
                     {
                         foreach (ResImage res in rsm.GetList(value.id))
                         {
-                            MemoryStream ms = new MemoryStream(res.thumb);
-                            Image img = Image.FromStream(ms);
-                            imageList1.Images.Add(img);
-                            ListViewItem li = new ListViewItem();
-                            li.Text = res.filename+"\n"+res.width+"|"+res.filesize;
-                            li.ImageIndex = imageList1.Images.Count - 1;
-                            li.Tag = res;
-                            listView1.Items.Add(li);
+                            Ctls.CtlPhotoItem li = new Ctls.CtlPhotoItem();
+                            li.res_image = res;
+                            li.OnClicked += new EventHandler(PhotoDoubleClicked);
+                            plPhotos.Controls.Add(li);
                         }
                         image_loaded = true;
                     }
                     dataGridView1.Hide();
-                    listView1.Show();
+                    plPhotos.Show();
                 }
                 else
                 {
-                    listView1.Hide();
+                    plPhotos.Hide();
                     dataGridView1.Show();
                     dataGridView1.DataSource = rsm.GetList(value.id);
                 }
             }
         }
-
+        public void PhotoDoubleClicked(object sender, EventArgs e)
+        {
+            FrmShowPic f = new FrmShowPic();
+            f.res_image = (ResImage)sender;
+            f.ShowDialog();
+        }
         public DataGridViewSelectedRowCollection DataGridSR()
         {
             return dataGridView1.SelectedRows;
         }
 
-        public ListView.SelectedListViewItemCollection ListSR()
-        {
-            return listView1.SelectedItems;
-        }
+
 
         public void CacelSelect()
         {
@@ -68,22 +66,7 @@ namespace com.jajago.SA
             InitializeComponent();
         }
 
-        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                ListViewItem item = listView1.SelectedItems[0];
-                ResImage res = (ResImage)item.Tag;
-                FrmShowPic f = new FrmShowPic();
-                f.ShowImage(res);
-                f.ShowDialog();
-            }
-        }
-
-        private void listView1_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
+ 
 
     }
 }
