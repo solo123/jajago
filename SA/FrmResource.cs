@@ -26,6 +26,8 @@ namespace com.jajago.SA
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            ucResources.OnSelectChanged += new EventHandler(Resource_Select_Changed);
+            ucResources.InitControl();
             foreach (ResourceTaxonomyNode t in rsm.AllTaxonomies)
             {
                 ListViewItem item = new ListViewItem(t.taxonomy.name);
@@ -59,6 +61,12 @@ namespace com.jajago.SA
         {
             FrmScan fp = new FrmScan();
             fp.ShowDialog();
+        }
+        private void Resource_Select_Changed(object sender, EventArgs e)
+        {
+            AppManager app = AppManager.Instance;
+            Ctls.CtlLists ct = (Ctls.CtlLists)sender;
+            app.StatusText = "Selected: " + ct.TotalSize + "/" + ct.TotalCount + "/" + ct.SelectedSize + "/" + ct.SelectedCount;
         }
 
     }

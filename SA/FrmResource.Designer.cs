@@ -32,7 +32,6 @@
             this.btnScan = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lbCount = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.lbSdSize = new System.Windows.Forms.Label();
             this.lbSelectedSize = new System.Windows.Forms.Label();
             this.lstTaxonomy = new System.Windows.Forms.ListView();
@@ -40,7 +39,8 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnWriteSD = new System.Windows.Forms.Button();
-            this.ucResources = new com.jajago.SA.UcResources();
+            this.ucResources = new com.jajago.SA.Ctls.CtlResources();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // btnScan
@@ -61,15 +61,6 @@
             this.lbCount.Name = "lbCount";
             this.lbCount.Size = new System.Drawing.Size(0, 12);
             this.lbCount.TabIndex = 8;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(387, 41);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(334, 23);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar1.TabIndex = 9;
             // 
             // lbSdSize
             // 
@@ -143,6 +134,16 @@
             this.ucResources.Size = new System.Drawing.Size(506, 393);
             this.ucResources.TabIndex = 7;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(387, 41);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(334, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 9;
+            this.progressBar1.Value = 20;
+            // 
             // FrmResource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -171,9 +172,8 @@
 
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnScan;
-        private com.jajago.SA.UcResources ucResources;
+        private com.jajago.SA.Ctls.CtlResources ucResources;
         private System.Windows.Forms.Label lbCount;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label lbSdSize;
         private System.Windows.Forms.Label lbSelectedSize;
         private System.Windows.Forms.ListView lstTaxonomy;
@@ -181,6 +181,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button btnWriteSD;
+        private System.Windows.Forms.ProgressBar progressBar1;
 
     }
 }

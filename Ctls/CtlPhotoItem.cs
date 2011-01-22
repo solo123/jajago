@@ -11,10 +11,13 @@ using System.IO;
 using com.jajago.Biz;
 namespace com.jajago.SA.Ctls
 {
-    public partial class CtlPhotoItem : UserControl
+    public partial class CtlPhotoItem : CtlLists
     {
         private ResImage _res_image = null;
         private bool _is_selected = false;
+        public event EventHandler OnClicked;
+        public event EventHandler OnSelectChanged;
+
         public CtlPhotoItem()
         {
             InitializeComponent();
@@ -31,7 +34,6 @@ namespace com.jajago.SA.Ctls
                 pcb.Image = Image.FromStream(ms);
             }
         }
-        public event EventHandler OnClicked;
 
         private void pcb_DoubleClick(object sender, EventArgs e)
         {
@@ -45,12 +47,17 @@ namespace com.jajago.SA.Ctls
             {
                 this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                 this.BackColor = Color.LightYellow;
+                SelectedCount = 1;
+                SelectedSize = 500;
             }
             else
             {
                 this.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 this.BackColor = Color.Transparent;
+                SelectedCount = -1;
+                SelectedSize = -500;
             }
+            if (OnSelectChanged != null) OnSelectChanged(this, null);
         }
     }
 }
