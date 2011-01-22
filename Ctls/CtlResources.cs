@@ -9,12 +9,22 @@ using System.Windows.Forms;
 
 using System.IO;
 using com.jajago.Biz;
-namespace com.jajago.SA
+namespace com.jajago.SA.Ctls
 {
-    public partial class UcResources : UserControl
+    public partial class CtlResources : UserControl
     {
         bool image_loaded = false;
         bool music_loaded = false;
+        public event EventHandler OnSelectChanged;
+        public CtlResources()
+        {
+            InitializeComponent();
+        }
+        public void InitControl()
+        {
+            ctlMusicList.OnSelectChanged += this.OnSelectChanged;
+        }
+
         public Taxonomy current_taxonomy {
             set
             {
@@ -25,20 +35,15 @@ namespace com.jajago.SA
                     case "IMG":
                         if (!image_loaded)
                         {
-                            foreach (ResImage res in rsm.GetList(value.id))
-                            {
-                                Ctls.CtlPhotoItem li = new Ctls.CtlPhotoItem();
-                                li.res_image = res;
-                                li.OnClicked += new EventHandler(PhotoDoubleClicked);
-                                plPhotos.Controls.Add(li);
-                            }
+                            ctlPhotoList.OnSelectChanged += this.OnSelectChanged;
+                            ctlPhotoList.DataSource = rsm.GetList(value.id);
                             image_loaded = true;
                         }
                         break;
                     case "MUSIC":
                         if (!music_loaded)
                         {
-                            listMusics.DataSource = rsm.GetList(value.id);
+                            ctlMusicList.DataSource = rsm.GetList(value.id);
                             music_loaded = true;
                         }
                         break;
@@ -54,31 +59,24 @@ namespace com.jajago.SA
             switch (taxonomy_id)
             {
                 case "IMG":
-                    plPhotos.Dock = DockStyle.Fill;
-                    plPhotos.Show();
+                    ctlPhotoList.Dock = DockStyle.Fill;
+                    ctlPhotoList.Show();
                     dataGridView1.Hide();
-                    listMusics.Hide();
+                    ctlMusicList.Hide();
                     break;
                 case "MUSIC":
-                    plPhotos.Hide();
+                    ctlPhotoList.Hide();
                     dataGridView1.Hide();
-                    listMusics.Dock = DockStyle.Fill;
-                    listMusics.Show();
+                    ctlMusicList.Dock = DockStyle.Fill;
+                    ctlMusicList.Show();
                     break;
                 default:
                     dataGridView1.Dock = DockStyle.Fill;
                     dataGridView1.Show();
-                    plPhotos.Hide();
-                    listMusics.Hide();
+                    ctlPhotoList.Hide();
+                    ctlMusicList.Hide();
                     break;
             }
-        }
-
-        public void PhotoDoubleClicked(object sender, EventArgs e)
-        {
-            FrmShowPic f = new FrmShowPic();
-            f.res_image = (ResImage)sender;
-            f.ShowDialog();
         }
 
         public DataGridViewSelectedRowCollection DataGridSR()
@@ -86,26 +84,13 @@ namespace com.jajago.SA
             return dataGridView1.SelectedRows;
         }
 
+
+
         public void CacelSelect()
         {
             dataGridView1.ClearSelection();
         }
 
-        public UcResources()
-        {
-            InitializeComponent();
-        }
-
-        private void listMusics_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            foreach (DataGridViewCell cell in listMusics.Rows[e.RowIndex].Cells)
-            {
-                cell.Style.BackColor = SystemColors.Highlight;
-                cell.Style.ForeColor = Color.White;
-            }
-        }
-
- 
 
     }
 }

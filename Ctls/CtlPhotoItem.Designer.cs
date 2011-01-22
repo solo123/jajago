@@ -37,6 +37,7 @@
             // 
             // pcb
             // 
+            this.pcb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcb.Location = new System.Drawing.Point(12, 9);
             this.pcb.Name = "pcb";
             this.pcb.Size = new System.Drawing.Size(100, 100);

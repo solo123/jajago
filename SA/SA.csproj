@@ -69,24 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ctls\CtlMobileItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Ctls\CtlMobileItem.Designer.cs">
-      <DependentUpon>CtlMobileItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ctls\CtlPhotoItem.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Ctls\CtlPhotoItem.Designer.cs">
-      <DependentUpon>CtlPhotoItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ctls\CtlResources.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Ctls\CtlResources.Designer.cs">
-      <DependentUpon>CtlResources.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,21 +131,6 @@
     <Compile Include="FrmSplash.Designer.cs">
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcResources.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UcResources.Designer.cs">
-      <DependentUpon>UcResources.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Ctls\CtlMobileItem.resx">
-      <DependentUpon>CtlMobileItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ctls\CtlPhotoItem.resx">
-      <DependentUpon>CtlPhotoItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ctls\CtlResources.resx">
-      <DependentUpon>CtlResources.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmConfig.resx">
       <DependentUpon>FrmConfig.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,9 +170,6 @@
     </Compile>
     <EmbeddedResource Include="FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UcResources.resx">
-      <DependentUpon>UcResources.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
@@ -281,8 +245,11 @@
       <Project>{E7A8D08D-B3D5-4AAC-99B2-A020C3E778E2}</Project>
       <Name>Biz</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Ctls\Ctls.csproj">
+      <Project>{52B889A3-0929-49C6-A4D3-1C3E4FC5855A}</Project>
+      <Name>Ctls</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
