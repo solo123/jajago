@@ -43,12 +43,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
-            this.lbPrice = new System.Windows.Forms.Label();
-            this.lbRefPrice = new System.Windows.Forms.Label();
             this.lbStandard = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbPrice = new System.Windows.Forms.TextBox();
+            this.tbRefPrice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowImage)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -113,6 +113,9 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.tbRefPrice);
+            this.panel1.Controls.Add(this.tbPrice);
+            this.panel1.Controls.Add(this.tbName);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.linkLabel2);
             this.panel1.Controls.Add(this.label1);
@@ -120,9 +123,6 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lbName);
-            this.panel1.Controls.Add(this.lbPrice);
-            this.panel1.Controls.Add(this.lbRefPrice);
             this.panel1.Controls.Add(this.pbShowImage);
             this.panel1.Controls.Add(this.lbStandard);
             this.panel1.Location = new System.Drawing.Point(-1, 1);
@@ -204,53 +204,22 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(197, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 29;
             this.label3.Text = "市场价：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(196, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 30;
             this.label2.Text = "批发价：";
-            // 
-            // lbName
-            // 
-            this.lbName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbName.Location = new System.Drawing.Point(235, 31);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(75, 20);
-            this.lbName.TabIndex = 26;
-            this.lbName.Text = "lbName";
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbPrice.ForeColor = System.Drawing.Color.Orange;
-            this.lbPrice.Location = new System.Drawing.Point(277, 102);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(79, 19);
-            this.lbPrice.TabIndex = 27;
-            this.lbPrice.Text = "lbPrice";
-            // 
-            // lbRefPrice
-            // 
-            this.lbRefPrice.AutoSize = true;
-            this.lbRefPrice.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbRefPrice.ForeColor = System.Drawing.Color.Orange;
-            this.lbRefPrice.Location = new System.Drawing.Point(277, 144);
-            this.lbRefPrice.Name = "lbRefPrice";
-            this.lbRefPrice.Size = new System.Drawing.Size(109, 19);
-            this.lbRefPrice.TabIndex = 28;
-            this.lbRefPrice.Text = "lbRefPrice";
             // 
             // lbStandard
             // 
@@ -278,6 +247,43 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // tbName
+            // 
+            this.tbName.BackColor = System.Drawing.Color.White;
+            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbName.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbName.Location = new System.Drawing.Point(240, 22);
+            this.tbName.Multiline = true;
+            this.tbName.Name = "tbName";
+            this.tbName.ReadOnly = true;
+            this.tbName.Size = new System.Drawing.Size(129, 43);
+            this.tbName.TabIndex = 39;
+            this.tbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbPrice
+            // 
+            this.tbPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPrice.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbPrice.ForeColor = System.Drawing.Color.SandyBrown;
+            this.tbPrice.Location = new System.Drawing.Point(269, 100);
+            this.tbPrice.Multiline = true;
+            this.tbPrice.Name = "tbPrice";
+            this.tbPrice.Size = new System.Drawing.Size(116, 31);
+            this.tbPrice.TabIndex = 40;
+            this.tbPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbRefPrice
+            // 
+            this.tbRefPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRefPrice.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbRefPrice.ForeColor = System.Drawing.Color.SandyBrown;
+            this.tbRefPrice.Location = new System.Drawing.Point(269, 141);
+            this.tbRefPrice.Multiline = true;
+            this.tbRefPrice.Name = "tbRefPrice";
+            this.tbRefPrice.Size = new System.Drawing.Size(116, 30);
+            this.tbRefPrice.TabIndex = 41;
+            this.tbRefPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmMobile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -285,6 +291,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(817, 501);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(825, 535);
             this.Name = "FrmMobile";
             this.Text = "手机信息";
@@ -314,14 +321,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.Label lbPrice;
-        private System.Windows.Forms.Label lbRefPrice;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbRefPrice;
+        private System.Windows.Forms.TextBox tbPrice;
 
     }
 }
