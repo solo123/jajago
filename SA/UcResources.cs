@@ -43,18 +43,18 @@ namespace com.jajago.SA
                 }
             }
         }
+
         public void PhotoDoubleClicked(object sender, EventArgs e)
         {
             FrmShowPic f = new FrmShowPic();
             f.res_image = (ResImage)sender;
             f.ShowDialog();
         }
+
         public DataGridViewSelectedRowCollection DataGridSR()
         {
             return dataGridView1.SelectedRows;
         }
-
-
 
         public void CacelSelect()
         {

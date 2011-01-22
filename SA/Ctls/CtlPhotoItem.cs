@@ -15,10 +15,12 @@ namespace com.jajago.SA.Ctls
     {
         private ResImage _res_image = null;
         private bool _is_selected = false;
+
         public CtlPhotoItem()
         {
             InitializeComponent();
         }
+
         public ResImage res_image
         {
             get { return _res_image; }
