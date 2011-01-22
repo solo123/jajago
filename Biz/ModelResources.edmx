@@ -55,6 +55,7 @@
           <Property Name="path" Type="nvarchar" MaxLength="500" />
           <Property Name="created_at" Type="datetime" />
           <Property Name="id" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="size" Type="bigint" />
         </EntityType>
         <EntityType Name="Taxonomies">
           <Key>
@@ -128,6 +129,7 @@
           <Property Type="String" Name="path" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="created_at" />
           <Property Type="String" Name="id" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="size" />
         </EntityType>
         <EntityType Name="Taxonomy">
           <Key>
@@ -191,6 +193,7 @@
           <EntitySetMapping Name="Resources">
             <EntityTypeMapping TypeName="ResourcesModel.Resource">
               <MappingFragment StoreEntitySet="Resources">
+                <ScalarProperty Name="size" ColumnName="size" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
                 <ScalarProperty Name="path" ColumnName="path" />

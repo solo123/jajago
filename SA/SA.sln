@@ -14,8 +14,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biz", "..\Biz\Biz.csproj", "{E7A8D08D-B3D5-4AAC-99B2-A020C3E778E2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{A911055E-6AB9-4A7F-A460-AD0AB7930274}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ctls", "..\Ctls\Ctls.csproj", "{52B889A3-0929-49C6-A4D3-1C3E4FC5855A}"
 EndProject
 Global

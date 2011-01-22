@@ -893,6 +893,30 @@ namespace com.jajago.Biz
         private global::System.String _id;
         partial void OnidChanging(global::System.String value);
         partial void OnidChanged();
+    
+        /// <summary>
+        /// 没有元数据文档可用。
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int64> size
+        {
+            get
+            {
+                return _size;
+            }
+            set
+            {
+                OnsizeChanging(value);
+                ReportPropertyChanging("size");
+                _size = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("size");
+                OnsizeChanged();
+            }
+        }
+        private Nullable<global::System.Int64> _size;
+        partial void OnsizeChanging(Nullable<global::System.Int64> value);
+        partial void OnsizeChanged();
 
         #endregion
     
