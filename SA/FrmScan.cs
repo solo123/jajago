@@ -123,7 +123,7 @@ namespace com.jajago.SA
                 FileInfo[] files = null;
                 backgroundWorker1.ReportProgress(101, sn.path);
                 try { files = cur.GetFiles(); }
-                catch (UnauthorizedAccessException ex) { continue; }
+                catch (UnauthorizedAccessException) { continue; }
 
                 foreach (FileInfo f in files)
                 {

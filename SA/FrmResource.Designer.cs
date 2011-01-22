@@ -30,64 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnScan = new System.Windows.Forms.Button();
-            this.btnselect = new System.Windows.Forms.Button();
-            this.treeselect = new System.Windows.Forms.TreeView();
-            this.btnwrite = new System.Windows.Forms.Button();
-            this.treeCatalog = new System.Windows.Forms.TreeView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lbCount = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lbSdSize = new System.Windows.Forms.Label();
+            this.lbSelectedSize = new System.Windows.Forms.Label();
+            this.lstTaxonomy = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnWriteSD = new System.Windows.Forms.Button();
             this.ucResources = new com.jajago.SA.UcResources();
             this.SuspendLayout();
             // 
             // btnScan
             // 
-            this.btnScan.Location = new System.Drawing.Point(12, 12);
+            this.btnScan.Location = new System.Drawing.Point(12, 45);
             this.btnScan.Name = "btnScan";
             this.btnScan.Size = new System.Drawing.Size(116, 23);
             this.btnScan.TabIndex = 0;
             this.btnScan.Text = "搜索本地资源";
             this.btnScan.UseVisualStyleBackColor = true;
             this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
-            // 
-            // btnselect
-            // 
-            this.btnselect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnselect.Location = new System.Drawing.Point(453, 177);
-            this.btnselect.Name = "btnselect";
-            this.btnselect.Size = new System.Drawing.Size(35, 34);
-            this.btnselect.TabIndex = 3;
-            this.btnselect.Text = ">>";
-            this.btnselect.UseVisualStyleBackColor = true;
-            this.btnselect.Click += new System.EventHandler(this.btnselect_Click);
-            // 
-            // treeselect
-            // 
-            this.treeselect.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeselect.Location = new System.Drawing.Point(494, 41);
-            this.treeselect.Name = "treeselect";
-            this.treeselect.Size = new System.Drawing.Size(227, 397);
-            this.treeselect.TabIndex = 1;
-            // 
-            // btnwrite
-            // 
-            this.btnwrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnwrite.Location = new System.Drawing.Point(643, 449);
-            this.btnwrite.Name = "btnwrite";
-            this.btnwrite.Size = new System.Drawing.Size(67, 23);
-            this.btnwrite.TabIndex = 4;
-            this.btnwrite.Text = "写入";
-            this.btnwrite.UseVisualStyleBackColor = true;
-            // 
-            // treeCatalog
-            // 
-            this.treeCatalog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.treeCatalog.Location = new System.Drawing.Point(12, 41);
-            this.treeCatalog.Name = "treeCatalog";
-            this.treeCatalog.Size = new System.Drawing.Size(116, 397);
-            this.treeCatalog.TabIndex = 1;
-            this.treeCatalog.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.catalog_selected);
             // 
             // lbCount
             // 
@@ -98,14 +62,85 @@
             this.lbCount.Size = new System.Drawing.Size(0, 12);
             this.lbCount.TabIndex = 8;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(387, 41);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(334, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 9;
+            // 
+            // lbSdSize
+            // 
+            this.lbSdSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSdSize.AutoSize = true;
+            this.lbSdSize.Location = new System.Drawing.Point(644, 26);
+            this.lbSdSize.Name = "lbSdSize";
+            this.lbSdSize.Size = new System.Drawing.Size(77, 12);
+            this.lbSdSize.TabIndex = 10;
+            this.lbSdSize.Text = "SD卡容量：2G";
+            // 
+            // lbSelectedSize
+            // 
+            this.lbSelectedSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSelectedSize.AutoSize = true;
+            this.lbSelectedSize.Location = new System.Drawing.Point(385, 26);
+            this.lbSelectedSize.Name = "lbSelectedSize";
+            this.lbSelectedSize.Size = new System.Drawing.Size(107, 12);
+            this.lbSelectedSize.TabIndex = 11;
+            this.lbSelectedSize.Text = "已选中资源：1.06G";
+            // 
+            // lstTaxonomy
+            // 
+            this.lstTaxonomy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.lstTaxonomy.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.lstTaxonomy.FullRowSelect = true;
+            this.lstTaxonomy.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lstTaxonomy.Location = new System.Drawing.Point(12, 74);
+            this.lstTaxonomy.MultiSelect = false;
+            this.lstTaxonomy.Name = "lstTaxonomy";
+            this.lstTaxonomy.Size = new System.Drawing.Size(197, 393);
+            this.lstTaxonomy.TabIndex = 12;
+            this.lstTaxonomy.UseCompatibleStateImageBehavior = false;
+            this.lstTaxonomy.View = System.Windows.Forms.View.Details;
+            this.lstTaxonomy.SelectedIndexChanged += new System.EventHandler(this.lstTaxonomy_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "类型";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "资源(M)";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "选中(M)";
+            // 
+            // btnWriteSD
+            // 
+            this.btnWriteSD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWriteSD.Location = new System.Drawing.Point(296, 41);
+            this.btnWriteSD.Name = "btnWriteSD";
+            this.btnWriteSD.Size = new System.Drawing.Size(75, 23);
+            this.btnWriteSD.TabIndex = 13;
+            this.btnWriteSD.Text = "写入SD卡";
+            this.btnWriteSD.UseVisualStyleBackColor = true;
+            // 
             // ucResources
             // 
             this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucResources.Location = new System.Drawing.Point(134, 41);
+            this.ucResources.BackColor = System.Drawing.Color.White;
+            this.ucResources.Location = new System.Drawing.Point(215, 74);
             this.ucResources.Name = "ucResources";
-            this.ucResources.Size = new System.Drawing.Size(313, 397);
+            this.ucResources.Size = new System.Drawing.Size(506, 393);
             this.ucResources.TabIndex = 7;
             // 
             // FrmResource
@@ -114,13 +149,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(733, 479);
+            this.Controls.Add(this.btnWriteSD);
+            this.Controls.Add(this.lstTaxonomy);
+            this.Controls.Add(this.lbSelectedSize);
+            this.Controls.Add(this.lbSdSize);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lbCount);
-            this.Controls.Add(this.treeselect);
-            this.Controls.Add(this.btnwrite);
             this.Controls.Add(this.ucResources);
-            this.Controls.Add(this.btnselect);
             this.Controls.Add(this.btnScan);
-            this.Controls.Add(this.treeCatalog);
             this.MinimumSize = new System.Drawing.Size(545, 513);
             this.Name = "FrmResource";
             this.Text = "FrmResources";
@@ -133,14 +169,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeCatalog;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnScan;
-        private System.Windows.Forms.Button btnselect;
-        private System.Windows.Forms.Button btnwrite;
-        private System.Windows.Forms.TreeView treeselect;
         private com.jajago.SA.UcResources ucResources;
         private System.Windows.Forms.Label lbCount;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label lbSdSize;
+        private System.Windows.Forms.Label lbSelectedSize;
+        private System.Windows.Forms.ListView lstTaxonomy;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button btnWriteSD;
 
     }
 }

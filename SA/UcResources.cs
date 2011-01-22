@@ -14,33 +14,63 @@ namespace com.jajago.SA
     public partial class UcResources : UserControl
     {
         bool image_loaded = false;
+        bool music_loaded = false;
         public Taxonomy current_taxonomy {
             set
             {
                 ResourceManager rsm = ResourceManager.Instance;
-
-                if (value.id == "IMG")
+                ShowCurrentPanel(value.id);
+                switch (value.id)
                 {
-                    if (!image_loaded)
-                    {
-                        foreach (ResImage res in rsm.GetList(value.id))
+                    case "IMG":
+                        if (!image_loaded)
                         {
-                            Ctls.CtlPhotoItem li = new Ctls.CtlPhotoItem();
-                            li.res_image = res;
-                            li.OnClicked += new EventHandler(PhotoDoubleClicked);
-                            plPhotos.Controls.Add(li);
+                            foreach (ResImage res in rsm.GetList(value.id))
+                            {
+                                Ctls.CtlPhotoItem li = new Ctls.CtlPhotoItem();
+                                li.res_image = res;
+                                li.OnClicked += new EventHandler(PhotoDoubleClicked);
+                                plPhotos.Controls.Add(li);
+                            }
+                            image_loaded = true;
                         }
-                        image_loaded = true;
-                    }
-                    dataGridView1.Hide();
+                        break;
+                    case "MUSIC":
+                        if (!music_loaded)
+                        {
+                            listMusics.DataSource = rsm.GetList(value.id);
+                            music_loaded = true;
+                        }
+                        break;
+                    default:
+                        dataGridView1.DataSource = rsm.GetList(value.id);
+                        break;
+                }
+
+            }
+        }
+        public void ShowCurrentPanel(string taxonomy_id)
+        {
+            switch (taxonomy_id)
+            {
+                case "IMG":
+                    plPhotos.Dock = DockStyle.Fill;
                     plPhotos.Show();
-                }
-                else
-                {
+                    dataGridView1.Hide();
+                    listMusics.Hide();
+                    break;
+                case "MUSIC":
                     plPhotos.Hide();
+                    dataGridView1.Hide();
+                    listMusics.Dock = DockStyle.Fill;
+                    listMusics.Show();
+                    break;
+                default:
+                    dataGridView1.Dock = DockStyle.Fill;
                     dataGridView1.Show();
-                    dataGridView1.DataSource = rsm.GetList(value.id);
-                }
+                    plPhotos.Hide();
+                    listMusics.Hide();
+                    break;
             }
         }
 
@@ -64,6 +94,15 @@ namespace com.jajago.SA
         public UcResources()
         {
             InitializeComponent();
+        }
+
+        private void listMusics_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewCell cell in listMusics.Rows[e.RowIndex].Cells)
+            {
+                cell.Style.BackColor = SystemColors.Highlight;
+                cell.Style.ForeColor = Color.White;
+            }
         }
 
  
