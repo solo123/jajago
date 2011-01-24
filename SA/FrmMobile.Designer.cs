@@ -33,17 +33,17 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbRefPrice = new System.Windows.Forms.Label();
-            this.lbPrice = new System.Windows.Forms.Label();
             this.lbStandard = new System.Windows.Forms.Label();
             this.lstProp = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbRefPrice = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowImage)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -108,75 +108,6 @@
             this.tabPage1.Text = "基本信息";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(369, 419);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 12);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "网络版权所有 著作权保护声明";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPage2.Controls.Add(this.webBrowser1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 49);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(810, 448);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "详细信息";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbName.Location = new System.Drawing.Point(368, 15);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(82, 22);
-            this.lbName.TabIndex = 42;
-            this.lbName.Text = "label4";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(374, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "市场价：";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(374, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "价  格：";
-            // 
-            // lbRefPrice
-            // 
-            this.lbRefPrice.AutoSize = true;
-            this.lbRefPrice.Location = new System.Drawing.Point(433, 67);
-            this.lbRefPrice.Name = "lbRefPrice";
-            this.lbRefPrice.Size = new System.Drawing.Size(41, 12);
-            this.lbRefPrice.TabIndex = 45;
-            this.lbRefPrice.Text = "label4";
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Location = new System.Drawing.Point(433, 96);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(41, 12);
-            this.lbPrice.TabIndex = 46;
-            this.lbPrice.Text = "label5";
-            // 
             // lbStandard
             // 
             this.lbStandard.AutoSize = true;
@@ -196,9 +127,9 @@
             this.columnHeader2});
             this.lstProp.GridLines = true;
             this.lstProp.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lstProp.Location = new System.Drawing.Point(372, 168);
+            this.lstProp.Location = new System.Drawing.Point(376, 168);
             this.lstProp.Name = "lstProp";
-            this.lstProp.Size = new System.Drawing.Size(424, 270);
+            this.lstProp.Size = new System.Drawing.Size(420, 270);
             this.lstProp.TabIndex = 48;
             this.lstProp.UseCompatibleStateImageBehavior = false;
             this.lstProp.View = System.Windows.Forms.View.Details;
@@ -210,6 +141,75 @@
             // columnHeader2
             // 
             this.columnHeader2.Width = 306;
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Location = new System.Drawing.Point(433, 96);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(41, 12);
+            this.lbPrice.TabIndex = 46;
+            this.lbPrice.Text = "label5";
+            // 
+            // lbRefPrice
+            // 
+            this.lbRefPrice.AutoSize = true;
+            this.lbRefPrice.Location = new System.Drawing.Point(433, 67);
+            this.lbRefPrice.Name = "lbRefPrice";
+            this.lbRefPrice.Size = new System.Drawing.Size(41, 12);
+            this.lbRefPrice.TabIndex = 45;
+            this.lbRefPrice.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(374, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "价  格：";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(369, 419);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 12);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "网络版权所有 著作权保护声明";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(374, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "市场价：";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbName.Location = new System.Drawing.Point(368, 15);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(82, 22);
+            this.lbName.TabIndex = 42;
+            this.lbName.Text = "label4";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.webBrowser1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 49);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(810, 448);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "详细信息";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // FrmMobile
             // 

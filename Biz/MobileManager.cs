@@ -56,6 +56,7 @@ namespace com.jajago.Biz
             }
             return props;
         }
+
         public string MobileProp(long mobile_id, long prop_id)
         {
             MobileInAttribute ma = ent.MobileInAttributes.FirstOrDefault(m => m.mobile_id==mobile_id && m.attribute_id == prop_id);
@@ -64,6 +65,7 @@ namespace com.jajago.Biz
             else
                 return null;
         }
+
         public string MobileStandard(long mobile_id)
         {
             if (standard_id==0)
