@@ -24,7 +24,7 @@ namespace com.jajago.Biz
 
         private ResourceManager()
         {
-            foreach (Taxonomy t in ent.Taxonomies)
+            foreach (Taxonomy t in ent.Taxonomies.OrderBy( t => t.position))
             {
                 ResourceTaxonomyNode node = new ResourceTaxonomyNode();
                 node.taxonomy = t;

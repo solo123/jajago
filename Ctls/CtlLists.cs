@@ -8,13 +8,23 @@ namespace com.jajago.SA.Ctls
 {
     public class CtlLists : UserControl
     {
-        public int TotalSize { get; set; }
+        public event EventHandler SelectChanged;
+        public string TaxonomyID = "BASE CLASS";
+        public bool IsLoaded = false;
+        public long TotalSize { get; set; }
         public int TotalCount { get; set; }
-        public int SelectedSize { get; set; }
+        public long SelectedSize { get; set; }
         public int SelectedCount { get; set; }
+        public virtual object DataSource { get; set; }
         public CtlLists()
         {
-            TotalCount = TotalSize = SelectedCount = SelectedSize = 0;
+            TotalSize = SelectedSize = 0;
+            TotalCount = SelectedCount = 0;
+        }
+
+        protected void OnSelectChanged(object sender, EventArgs e)
+        {
+            if (SelectChanged != null) SelectChanged(sender, e);
         }
     }
 }

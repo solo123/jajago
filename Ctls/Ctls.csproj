@@ -83,7 +83,26 @@
     <Compile Include="CtlResources.Designer.cs">
       <DependentUpon>CtlResources.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CtlImageList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlImageList.Designer.cs">
+      <DependentUpon>CtlImageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBookList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBookList.Designer.cs">
+      <DependentUpon>CtlBookList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlVideoList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlVideoList.Designer.cs">
+      <DependentUpon>CtlVideoList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CtlMobileItem.resx">
       <DependentUpon>CtlMobileItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +128,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="CtlImageList.resx">
+      <DependentUpon>CtlImageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBookList.resx">
+      <DependentUpon>CtlBookList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlVideoList.resx">
+      <DependentUpon>CtlVideoList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
