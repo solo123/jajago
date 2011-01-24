@@ -18,6 +18,9 @@ namespace com.jajago.SA
     {
         ResourceManager rsm = ResourceManager.Instance;
         List<TreeNode> selectedRoot = new List<TreeNode>();
+        long selected_size = 0;
+        int selected_count = 0;
+        long sd_size = 2000000000;
 
         public FrmResource()
         {
@@ -27,7 +30,6 @@ namespace com.jajago.SA
         private void FrmMain_Load(object sender, EventArgs e)
         {
             ucResources.OnSelectChanged += new EventHandler(Resource_Select_Changed);
-            ucResources.InitControl();
             foreach (ResourceTaxonomyNode t in rsm.AllTaxonomies)
             {
                 ListViewItem item = new ListViewItem(t.taxonomy.name);
@@ -69,14 +71,22 @@ namespace com.jajago.SA
             AppManager app = AppManager.Instance;
             Ctls.CtlLists ct = (Ctls.CtlLists)sender;
             app.StatusText = "Selected: " + ct.TotalSize + "/" + ct.TotalCount + "/" + ct.SelectedSize + "/" + ct.SelectedCount;
-            //ListViewItem item1 = lstTaxonomy.Items[0];
-            //item1.SubItems[1].Text = ct.TotalCount.ToString() + "/" + ct.TotalSize.ToString();
-            //item1.SubItems[2].Text = ct.SelectedCount.ToString() + "/" + ct.SelectedSize.ToString();
-            ListViewItem item = lstTaxonomy.Items[1];
-            item.SubItems[1].Text = ct.TotalCount.ToString()+"/"+ct.TotalSize.ToString();
-            item.SubItems[2].Text = ct.SelectedCount.ToString() + "/" + ct.SelectedSize.ToString();
-            //progressBar1.Value += ct.SelectedSize;
-            //lbSelectedSize.Text ="已选中资源："+ct.SelectedSize;
+
+            foreach (ListViewItem item in lstTaxonomy.Items)
+            {
+                Taxonomy tx = (Taxonomy)item.Tag;
+                if (tx.id == ct.TaxonomyID)
+                {
+                    item.SubItems[1].Text = ct.TotalCount.ToString() + "/" + ct.TotalSize.ToString();
+                    item.SubItems[2].Text = ct.SelectedCount.ToString() + "/" + (ct.SelectedSize >> 10);
+                    selected_size += ct.SelectedSize;
+                    selected_count += ct.SelectedCount;
+                    break;
+                }
+            }
+
+            progressBar1.Value += Convert.ToInt32(selected_size * 100 / sd_size);
+            lbSelectedSize.Text ="选中"+selected_count+"个资源，共"+(selected_size >> 10)+"M";
         }
 
     }

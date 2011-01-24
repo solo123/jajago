@@ -14,9 +14,9 @@ namespace com.jajago.SA.Ctls
     public partial class CtlPhotoItem : CtlLists
     {
         private ResImage _res_image = null;
+        private Resource _resource = null;
         private bool _is_selected = false;
         public event EventHandler OnClicked;
-        public event EventHandler OnSelectChanged;
 
         public CtlPhotoItem()
         {
@@ -40,26 +40,31 @@ namespace com.jajago.SA.Ctls
             if (OnClicked!=null) OnClicked(_res_image, e);
         }
 
-        ResourceManager rm = ResourceManager.Instance;
+        
         private void pcb_Click(object sender, EventArgs e)
         {
+            if (_resource == null)
+            {
+                ResourceManager rm = ResourceManager.Instance;
+                _resource = rm.GetResource(_res_image.id);
+            }
+
             _is_selected = !_is_selected;
-            Resource r = rm.GetResource(_res_image.id);
             if (_is_selected)
             {
                 this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                 this.BackColor = Color.LightYellow;
                 SelectedCount = 1;
-                SelectedSize += (int)r.size;
+                SelectedSize = Convert.ToInt32(_resource.size);
             }
             else
             {
                 this.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 this.BackColor = Color.Transparent;
                 SelectedCount = -1;
-                SelectedSize -= (int)r.size;
+                SelectedSize = 0 - Convert.ToInt32(_resource.size);
             }
-            if (OnSelectChanged != null) OnSelectChanged(this, null);
+            base.OnSelectChanged(this, null);
         }
     }
 }

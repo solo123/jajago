@@ -10,20 +10,20 @@ using System.Windows.Forms;
 using com.jajago.Biz;
 namespace com.jajago.SA.Ctls
 {
-    public partial class CtlMusicList : CtlLists
+    public partial class CtlBookList : CtlLists
     {
         private List<int> _selected_items = new List<int>();
         ResourceManager rm = null;
-        public CtlMusicList()
+        public CtlBookList()
         {
-            TaxonomyID = "MUSIC";
+            TaxonomyID = "BOOK";
             InitializeComponent();
         }
         public override object DataSource 
         { 
             set 
             { 
-                listMusics.DataSource = value;
+                listData.DataSource = value;
                 TotalSize = 107832;
                 TotalCount = 1031;
             } 
@@ -35,7 +35,7 @@ namespace com.jajago.SA.Ctls
             if (idx < 0) return;
 
             if (rm == null) rm = ResourceManager.Instance;
-            DataGridViewRow crow = listMusics.Rows[idx];
+            DataGridViewRow crow = listData.Rows[idx];
             ResMusic music = (ResMusic)crow.DataBoundItem;
             Resource res = rm.GetResource(music.id);
             if (_selected_items.IndexOf(idx) < 0)
@@ -53,7 +53,7 @@ namespace com.jajago.SA.Ctls
             else
             {
                 _selected_items.Remove(idx);
-                foreach (DataGridViewCell cell in listMusics.Rows[e.RowIndex].Cells)
+                foreach (DataGridViewCell cell in listData.Rows[e.RowIndex].Cells)
                 {
                     cell.Style.BackColor = SystemColors.Control;
                     cell.Style.ForeColor = SystemColors.WindowText;

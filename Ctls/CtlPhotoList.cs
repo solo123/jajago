@@ -12,12 +12,12 @@ namespace com.jajago.SA.Ctls
 {
     public partial class CtlPhotoList : CtlLists
     {
-        public event EventHandler OnSelectChanged;
         public CtlPhotoList()
         {
+            TaxonomyID = "IMG";
             InitializeComponent();
         }
-        public object DataSource
+        public override object DataSource
         {
             set
             {
@@ -26,7 +26,7 @@ namespace com.jajago.SA.Ctls
                     Ctls.CtlPhotoItem li = new Ctls.CtlPhotoItem();
                     li.res_image = res;
                     li.OnClicked += new EventHandler(PhotoDoubleClicked);
-                    li.OnSelectChanged += new EventHandler(Item_Select_Changed);
+                    li.SelectChanged += new EventHandler(Item_Select_Changed);
                     plPhotos.Controls.Add(li);
                 }
             }
@@ -46,7 +46,7 @@ namespace com.jajago.SA.Ctls
             CtlLists ct = (CtlLists)sender;
             SelectedCount += ct.SelectedCount;
             SelectedSize += ct.SelectedSize;
-            if (this.OnSelectChanged != null) OnSelectChanged(this, null);
+            base.OnSelectChanged(this, null);
         }
 
     }

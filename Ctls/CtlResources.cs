@@ -13,83 +13,50 @@ namespace com.jajago.SA.Ctls
 {
     public partial class CtlResources : UserControl
     {
-        bool image_loaded = false;
-        bool music_loaded = false;
+        List<CtlLists> control_list = new List<CtlLists>();
         public event EventHandler OnSelectChanged;
         public CtlResources()
         {
             InitializeComponent();
-        }
-        public void InitControl()
-        {
-            ctlMusicList.OnSelectChanged += this.OnSelectChanged;
+
+            control_list.Add(new CtlPhotoList());
+            control_list.Add(new CtlMusicList());
+            control_list.Add(new CtlVideoList());
+            control_list.Add(new CtlImageList());
+            control_list.Add(new CtlVideoList());
+
+            foreach (CtlLists ctl in control_list)
+            {
+                ctl.Dock = DockStyle.Fill;
+                ctl.Hide();
+                this.Controls.Add(ctl);
+            }
         }
 
         public Taxonomy current_taxonomy {
             set
             {
                 ResourceManager rsm = ResourceManager.Instance;
-                ShowCurrentPanel(value.id);
-                switch (value.id)
+                foreach (CtlLists ctl in control_list)
                 {
-                    case "IMG":
-                        if (!image_loaded)
+                    if (value.id == ctl.TaxonomyID)
+                    {
+                        ctl.Show();
+                        if (!ctl.IsLoaded)
                         {
-                            ctlPhotoList.OnSelectChanged += this.OnSelectChanged;
-                            ctlPhotoList.DataSource = rsm.GetList(value.id);
-                            image_loaded = true;
+                            ctl.SelectChanged += this.OnSelectChanged;
+                            ctl.DataSource = rsm.GetList(value.id);
+                            ctl.IsLoaded = true;
                         }
-                        break;
-                    case "MUSIC":
-                        if (!music_loaded)
-                        {
-                            ctlMusicList.DataSource = rsm.GetList(value.id);
-                            music_loaded = true;
-                        }
-                        break;
-                    default:
-                        dataGridView1.DataSource = rsm.GetList(value.id);
-                        break;
+                    }
+                    else ctl.Hide();
                 }
 
-            }
-        }
-        public void ShowCurrentPanel(string taxonomy_id)
-        {
-            switch (taxonomy_id)
-            {
-                case "IMG":
-                    ctlPhotoList.Dock = DockStyle.Fill;
-                    ctlPhotoList.Show();
-                    dataGridView1.Hide();
-                    ctlMusicList.Hide();
-                    break;
-                case "MUSIC":
-                    ctlPhotoList.Hide();
-                    dataGridView1.Hide();
-                    ctlMusicList.Dock = DockStyle.Fill;
-                    ctlMusicList.Show();
-                    break;
-                default:
-                    dataGridView1.Dock = DockStyle.Fill;
-                    dataGridView1.Show();
-                    ctlPhotoList.Hide();
-                    ctlMusicList.Hide();
-                    break;
+
             }
         }
 
-        public DataGridViewSelectedRowCollection DataGridSR()
-        {
-            return dataGridView1.SelectedRows;
-        }
 
-
-
-        public void CacelSelect()
-        {
-            dataGridView1.ClearSelection();
-        }
 
 
     }
