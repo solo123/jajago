@@ -19,63 +19,30 @@ namespace com.jajago.SA
             InitializeComponent();
         }
 
-        public void ShowMobile(int id)
+        public Mobile mobile
         {
-            MobileManager mm = MobileManager.Instance;
-            Mobile m = mm.GetMobile(id);
-            tbName.Text = m.title;
-            FrmMobile fm = new FrmMobile();
-            System.Drawing.Image returnImage = System.Drawing.Image.FromFile("mobiles/Download.png");
-            pbShowImage.Image = returnImage;
-            pbShowImage.Height = returnImage.Height;
-            pbShowImage.Width = returnImage.Width;
-            webBrowser1.DocumentText = m.description;
-            tbPrice.Text = "￥" + m.price_shop.ToString();
-            tbRefPrice.Text = "￥" + m.price_market.ToString();
-
-            int i = 0;
-            int j = 0;
-            foreach (MobileInAttribute ma in mm.GetAttributes(id))
+            set
             {
-                Label lbId = new Label();
-                TextBox tbTitle = new TextBox();
-                lbId.Text = ma.attribute_id.ToString();
-                tbTitle.Text = ma.title;
-                tbTitle.BorderStyle = BorderStyle.None;
-                tbTitle.ReadOnly = true;
-                tbTitle.BackColor = Color.White;
-                tbTitle.Dock = DockStyle.Fill;
-                tableLayoutPanel1.SetRow(lbId, i++);
-                tableLayoutPanel1.SetColumn(lbId, 0);
-                tableLayoutPanel1.SetRow(tbTitle, j++);
-                tableLayoutPanel1.SetColumn(tbTitle, 1);
-                tableLayoutPanel1.Controls.Add(lbId);
-                tableLayoutPanel1.Controls.Add(tbTitle);
+                MobileManager mm = MobileManager.Instance;
+                Mobile m = value;
+                lbName.Text = m.title;
+                FrmMobile fm = new FrmMobile();
+                string imageFile = "mobiles/photos/original/" + m.id + ".jpg";
+                if (File.Exists(imageFile))
+                    pbShowImage.Image = Image.FromFile(imageFile);
+                webBrowser1.DocumentText = m.description;
+                lbPrice.Text = "￥" + m.price_shop.ToString();
+                lbRefPrice.Text = "￥" + m.price_market.ToString();
+                lbStandard.Text = mm.MobileStandard(m.id);
+
+                foreach (KeyValuePair<string, string> a in mm.GetAttributes(m.id))
+                {
+                    ListViewItem item = new ListViewItem(a.Key);
+                    item.SubItems.Add(a.Value);
+                    lstProp.Items.Add(item);
+                }
             }
-            tableLayoutPanel1.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://www.jajago.com");
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://www.jajago.com");
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FrmMobiles frmMobiles = new FrmMobiles();
-            if (frmMobiles == null || frmMobiles.IsDisposed)
-            {
-                frmMobiles = new FrmMobiles();
-                FrmContainer fc=new FrmContainer();
-            }
-            frmMobiles.WindowState = FormWindowState.Maximized;
-            this.ActivateMdiChild(frmMobiles);
-            frmMobiles.Show();
-        }
     }
 }
