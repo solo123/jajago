@@ -20,9 +20,10 @@ namespace com.jajago.SA
         Queue queDownload = new Queue(500);
         WebClient web = new WebClient();
         MobileManager mm = MobileManager.Instance;
+        static string mobile_path = "mobiles/";
         string photo_path = "mobiles/photos";
-        Image no_img = Image.FromFile("mobiles/downloading.png");
-        Image loading_img = Image.FromFile("mobiles/loading.png");
+        Image no_img = Image.FromFile(mobile_path + "downloading.png");
+        Image loading_img = Image.FromFile(mobile_path + "loading.png");
 
         public FrmMobiles()
         {
@@ -31,8 +32,6 @@ namespace com.jajago.SA
 
         private void FrmMobiles_Load(object sender, EventArgs e)
         {
-            Image img = Image.FromFile("mobiles/Download.png");
-            imageList1.Images.Add(img);
             show_mobiles();
         }
 
@@ -43,7 +42,9 @@ namespace com.jajago.SA
 
         private void show_mobiles()
         {
-            foreach (Mobile m in mm.GetList())
+            fpanel.SuspendLayout();
+            fpanel.Controls.Clear();
+            foreach (Mobile m in mm.GetList(txtFilter.Text))
             {
                 Ctls.CtlMobileItem item = new Ctls.CtlMobileItem();
                 item.mobile = m;
@@ -57,12 +58,23 @@ namespace com.jajago.SA
                 }
                 else
                 {
-                    item.image = loading_img;
+                    string imagefile = mobile_path + "photos/thumb/" + mn.mobile.id + ".jpg";
+                    if (File.Exists(imagefile))
+                        item.image = Image.FromFile(imagefile);
+                    else
+                    {
+                        item.image = loading_img;
+                        queDownload.Enqueue(mn);
+                    }
                     queLoadImage.Enqueue(mn);
                 }
             }
-            bwShowImage.RunWorkerAsync();
-            //bwDownload.RunWorkerAsync();
+            fpanel.ResumeLayout();
+            plProgress.Show();
+            progressBar.Value = 0;
+            lbProgressMessage.Text = "读取图片：";
+            Application.DoEvents();
+            if (!bwDownload.IsBusy) bwDownload.RunWorkerAsync();
         }
 
         private void item_clicked(object sender, EventArgs e)
@@ -71,13 +83,16 @@ namespace com.jajago.SA
             FrmMobile f = new FrmMobile();
             f.MdiParent = this.MdiParent;
             f.Show();
-            f.ShowMobile((int)m.id);
+            f.mobile = m;
         }
 
+        #region background download
         private void bwDownload_DoWork(object sender, DoWorkEventArgs e)
         {
             AppManager app = AppManager.Instance;
             int total = queDownload.Count;
+            if (total < 1) return;
+
             int cnt = 0;
             string img_org_path = photo_path + "/original";
             string img_thu_path = photo_path + "/thumb";
@@ -106,63 +121,38 @@ namespace com.jajago.SA
         private void bwDownload_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             MobileNode mn = (MobileNode)e.UserState;
-            pbDownload.Value = e.ProgressPercentage;
-            string imagefile = "mobiles/photos/thumb/" + mn.mobile.id.ToString() + ".jpg";
+            progressBar.Value = e.ProgressPercentage;
+            string imagefile = mobile_path + "photos/thumb/" + mn.mobile.id.ToString() + ".jpg";
             if (File.Exists(imagefile))
                 mn.ctl.image = Image.FromFile(imagefile);
         }
-
-        private void bwShowImage_DoWork(object sender, DoWorkEventArgs e)
-        {
-            int total = queLoadImage.Count;
-            int cnt = 0;
-            while (queLoadImage.Count > 0)
-            {
-                BackgroundWorker bw = (BackgroundWorker)sender;
-                if (bw.CancellationPending)
-                {
-                    e.Cancel = true;
-                    break;
-                }
-                MobileNode mn = (MobileNode)queLoadImage.Dequeue();
-                bwShowImage.ReportProgress((++cnt) * 100 / total, mn);
-                //System.Threading.Thread.Sleep(500);
-            }
-        }
-
-        private void bwShowImage_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            MobileNode mn = (MobileNode)e.UserState;
-            pbShow.Value = e.ProgressPercentage;
-            string imagefile = "mobiles/photos/thumb/" + mn.mobile.id.ToString() + ".jpg";
-            if (File.Exists(imagefile))
-                mn.ctl.image = Image.FromFile(imagefile);
-            else
-            {
-                mn.ctl.image = no_img;
-                queDownload.Enqueue(mn);
-            }
-        }
-
-        private void bwShowImage_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void bwDownload_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             AppManager app = AppManager.Instance;
             if (e.Cancelled)
-                app.StatusText = "显示图片被取消。";
+                app.StatusText = "下载图片被取消。";
             else
             {
-                bwDownload.RunWorkerAsync();
-                app.StatusText = "图片已全部显示。";
+                app.StatusText = "下载图片完成。";
+                plProgress.Hide();
             }
         }
+        #endregion
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (bwShowImage.IsBusy)
+            if (bwDownload.IsBusy)
             {
-                bwShowImage.CancelAsync();
+                bwDownload.CancelAsync();
             }
         }
+
+        private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+            show_mobiles();
+        }
+
+
     }
 
     public class MobileNode
