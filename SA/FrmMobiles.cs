@@ -126,6 +126,7 @@ namespace com.jajago.SA
             if (File.Exists(imagefile))
                 mn.ctl.image = Image.FromFile(imagefile);
         }
+
         private void bwDownload_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             AppManager app = AppManager.Instance;

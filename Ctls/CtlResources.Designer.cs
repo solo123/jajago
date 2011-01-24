@@ -75,6 +75,7 @@
             this.ctlMusicList.TabIndex = 2;
             this.ctlMusicList.TotalCount = 0;
             this.ctlMusicList.TotalSize = 0;
+            this.ctlMusicList.Visible = false;
             // 
             // CtlResources
             // 

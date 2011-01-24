@@ -31,7 +31,6 @@ namespace com.jajago.Biz
                 if (t.pattern!=null) node.regex = new Regex(@"\.(" + t.pattern + ")$");
                 AllTaxonomies.Add(node);
             }
-
         }
 
         public static ResourceManager Instance

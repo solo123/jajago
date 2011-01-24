@@ -63,6 +63,7 @@ namespace com.jajago.SA
             FrmScan fp = new FrmScan();
             fp.ShowDialog();
         }
+
         private void Resource_Select_Changed(object sender, EventArgs e)
         {
             AppManager app = AppManager.Instance;

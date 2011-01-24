@@ -17,6 +17,7 @@ namespace com.jajago.Biz
         private MobileManager()
         {
         }
+
         public static MobileManager Instance
         {
             get
@@ -83,6 +84,7 @@ namespace com.jajago.Biz
         }
 
     }
+
     public class MobileProperty
     {
 
