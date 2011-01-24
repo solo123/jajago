@@ -31,6 +31,7 @@ namespace com.jajago.SA.Ctls
                 }
             }
         }
+
         public void PhotoDoubleClicked(object sender, EventArgs e)
         {
             /*
@@ -39,6 +40,7 @@ namespace com.jajago.SA.Ctls
             f.ShowDialog();
              */
         }
+
         private void Item_Select_Changed(object sender, EventArgs e)
         {
             CtlLists ct = (CtlLists)sender;
