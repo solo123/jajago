@@ -40,22 +40,24 @@ namespace com.jajago.SA.Ctls
             if (OnClicked!=null) OnClicked(_res_image, e);
         }
 
+        ResourceManager rm = ResourceManager.Instance;
         private void pcb_Click(object sender, EventArgs e)
         {
             _is_selected = !_is_selected;
+            Resource r = rm.GetResource(_res_image.id);
             if (_is_selected)
             {
                 this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                 this.BackColor = Color.LightYellow;
                 SelectedCount = 1;
-                SelectedSize = 500;
+                SelectedSize += (int)r.size;
             }
             else
             {
                 this.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 this.BackColor = Color.Transparent;
                 SelectedCount = -1;
-                SelectedSize = -500;
+                SelectedSize -= (int)r.size;
             }
             if (OnSelectChanged != null) OnSelectChanged(this, null);
         }

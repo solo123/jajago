@@ -37,6 +37,7 @@ namespace com.jajago.SA
                 lstTaxonomy.Items.Add(item);
             }
         }
+
         private void lstTaxonomy_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstTaxonomy.SelectedItems.Count > 0)
@@ -67,6 +68,14 @@ namespace com.jajago.SA
             AppManager app = AppManager.Instance;
             Ctls.CtlLists ct = (Ctls.CtlLists)sender;
             app.StatusText = "Selected: " + ct.TotalSize + "/" + ct.TotalCount + "/" + ct.SelectedSize + "/" + ct.SelectedCount;
+            //ListViewItem item1 = lstTaxonomy.Items[0];
+            //item1.SubItems[1].Text = ct.TotalCount.ToString() + "/" + ct.TotalSize.ToString();
+            //item1.SubItems[2].Text = ct.SelectedCount.ToString() + "/" + ct.SelectedSize.ToString();
+            ListViewItem item = lstTaxonomy.Items[1];
+            item.SubItems[1].Text = ct.TotalCount.ToString()+"/"+ct.TotalSize.ToString();
+            item.SubItems[2].Text = ct.SelectedCount.ToString() + "/" + ct.SelectedSize.ToString();
+            //progressBar1.Value += ct.SelectedSize;
+            //lbSelectedSize.Text ="已选中资源："+ct.SelectedSize;
         }
 
     }

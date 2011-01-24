@@ -39,8 +39,13 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnWriteSD = new System.Windows.Forms.Button();
-            this.ucResources = new com.jajago.SA.Ctls.CtlResources();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.ucResources = new com.jajago.SA.Ctls.CtlResources();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnScan
@@ -84,18 +89,17 @@
             // 
             // lstTaxonomy
             // 
-            this.lstTaxonomy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
             this.lstTaxonomy.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.lstTaxonomy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstTaxonomy.FullRowSelect = true;
             this.lstTaxonomy.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lstTaxonomy.Location = new System.Drawing.Point(12, 74);
+            this.lstTaxonomy.Location = new System.Drawing.Point(0, 0);
             this.lstTaxonomy.MultiSelect = false;
             this.lstTaxonomy.Name = "lstTaxonomy";
-            this.lstTaxonomy.Size = new System.Drawing.Size(197, 393);
+            this.lstTaxonomy.Size = new System.Drawing.Size(187, 405);
             this.lstTaxonomy.TabIndex = 12;
             this.lstTaxonomy.UseCompatibleStateImageBehavior = false;
             this.lstTaxonomy.View = System.Windows.Forms.View.Details;
@@ -123,17 +127,6 @@
             this.btnWriteSD.Text = "写入SD卡";
             this.btnWriteSD.UseVisualStyleBackColor = true;
             // 
-            // ucResources
-            // 
-            this.ucResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucResources.BackColor = System.Drawing.Color.White;
-            this.ucResources.Location = new System.Drawing.Point(215, 74);
-            this.ucResources.Name = "ucResources";
-            this.ucResources.Size = new System.Drawing.Size(506, 393);
-            this.ucResources.TabIndex = 7;
-            // 
             // progressBar1
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -142,7 +135,35 @@
             this.progressBar1.Size = new System.Drawing.Size(334, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 9;
-            this.progressBar1.Value = 20;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Location = new System.Drawing.Point(3, 74);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.lstTaxonomy);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.ucResources);
+            this.splitContainer1.Panel2MinSize = 425;
+            this.splitContainer1.Size = new System.Drawing.Size(726, 405);
+            this.splitContainer1.SplitterDistance = 187;
+            this.splitContainer1.TabIndex = 14;
+            // 
+            // ucResources
+            // 
+            this.ucResources.BackColor = System.Drawing.Color.White;
+            this.ucResources.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucResources.Location = new System.Drawing.Point(0, 0);
+            this.ucResources.Name = "ucResources";
+            this.ucResources.Size = new System.Drawing.Size(535, 405);
+            this.ucResources.TabIndex = 7;
             // 
             // FrmResource
             // 
@@ -150,19 +171,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(733, 479);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btnWriteSD);
-            this.Controls.Add(this.lstTaxonomy);
             this.Controls.Add(this.lbSelectedSize);
             this.Controls.Add(this.lbSdSize);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lbCount);
-            this.Controls.Add(this.ucResources);
             this.Controls.Add(this.btnScan);
             this.MinimumSize = new System.Drawing.Size(545, 513);
             this.Name = "FrmResource";
             this.Text = "FrmResources";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +206,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button btnWriteSD;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
 
     }
 }

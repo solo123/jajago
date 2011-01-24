@@ -81,6 +81,7 @@ namespace com.jajago.Biz
                 res.taxon_id = "0";
                 res.taxonomy_id = rest;
                 res.path = f.FullName;
+                res.size = f.Length;
                 res.created_at = DateTime.Now;
                 ent.AddToResources(res);
 

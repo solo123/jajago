@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using com.jajago.Biz;
 namespace com.jajago.SA.Ctls
 {
     public partial class CtlMusicList : CtlLists
@@ -40,7 +41,6 @@ namespace com.jajago.SA.Ctls
                     cell.Style.BackColor = SystemColors.Highlight;
                     cell.Style.ForeColor = SystemColors.HighlightText;
                 }
-                //crow.HeaderCell.Style.BackColor = Color.Blue;
                 crow.HeaderCell.Value = "√";
                 SelectedSize++;
                 SelectedCount += 10000;
@@ -53,7 +53,6 @@ namespace com.jajago.SA.Ctls
                     cell.Style.BackColor = SystemColors.Control;
                     cell.Style.ForeColor = SystemColors.WindowText;
                 }
-                //crow.HeaderCell.Style.BackColor = SystemColors.Control;
                 crow.HeaderCell.Value = "";
                 SelectedSize--;
                 SelectedCount -= 10000;

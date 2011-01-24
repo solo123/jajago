@@ -30,8 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ctlMusicList = new com.jajago.SA.Ctls.CtlMusicList();
             this.ctlPhotoList = new com.jajago.SA.Ctls.CtlPhotoList();
+            this.ctlMusicList = new com.jajago.SA.Ctls.CtlMusicList();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +54,17 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Visible = false;
             // 
+            // ctlPhotoList
+            // 
+            this.ctlPhotoList.Location = new System.Drawing.Point(3, 114);
+            this.ctlPhotoList.Name = "ctlPhotoList";
+            this.ctlPhotoList.SelectedCount = 0;
+            this.ctlPhotoList.SelectedSize = 0;
+            this.ctlPhotoList.Size = new System.Drawing.Size(148, 74);
+            this.ctlPhotoList.TabIndex = 3;
+            this.ctlPhotoList.TotalCount = 0;
+            this.ctlPhotoList.TotalSize = 0;
+            // 
             // ctlMusicList
             // 
             this.ctlMusicList.Location = new System.Drawing.Point(165, 18);
@@ -64,13 +75,6 @@
             this.ctlMusicList.TabIndex = 2;
             this.ctlMusicList.TotalCount = 0;
             this.ctlMusicList.TotalSize = 0;
-            // 
-            // ctlPhotoList
-            // 
-            this.ctlPhotoList.Location = new System.Drawing.Point(3, 114);
-            this.ctlPhotoList.Name = "ctlPhotoList";
-            this.ctlPhotoList.Size = new System.Drawing.Size(148, 74);
-            this.ctlPhotoList.TabIndex = 3;
             // 
             // CtlResources
             // 
