@@ -17,6 +17,7 @@ namespace com.jajago.SA
     {
         private FrmResource frmResource;
         private FrmMobiles frmMobiles;
+        private FrmUpdate frmUpdate;
         private AppManager app = AppManager.Instance;
 
         public FrmContainer()
@@ -68,12 +69,6 @@ namespace com.jajago.SA
             frmMobiles.Show();
         }
 
-        private void testToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmTest f = new FrmTest();
-            f.MdiParent = this;
-            f.Show();
-        }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -102,6 +97,10 @@ goto :TASKLIST
  
 :NOT_FOUND 
 echo good, not running.
+
+update\unzip update\20110124\update.pak -o
+update\sqlcecmd -d ""data source=Mobiles.sdf;password=liang"" -i ""mobiles.sql""
+
 goto EXIT 
  
 :EXIT 
@@ -117,10 +116,17 @@ pause
             Environment.Exit(0);
         }
 
-        private void imgTestToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void tsUpdate_Click(object sender, EventArgs e)
         {
-            FrmTestImg f = new FrmTestImg();
-            f.Show();
+            if (frmUpdate == null)
+            {
+                frmUpdate = new FrmUpdate();
+            }
+            frmUpdate.ShowDialog();
+
+            this.Dispose();
+            KillSelfThenRun();
         }
     }
 }

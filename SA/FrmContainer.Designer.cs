@@ -35,9 +35,8 @@
             this.huiyuanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.tuiChuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imgTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolMain = new System.Windows.Forms.ToolStrip();
             this.tsResource = new System.Windows.Forms.ToolStripButton();
             this.tsMobiles = new System.Windows.Forms.ToolStripButton();
@@ -92,34 +91,26 @@
             // tuiChuToolStripMenuItem
             // 
             this.tuiChuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testToolStripMenuItem,
-            this.imgTestToolStripMenuItem,
-            this.updateToolStripMenuItem});
+            this.updateToolStripMenuItem,
+            this.tsUpdate});
             this.tuiChuToolStripMenuItem.Name = "tuiChuToolStripMenuItem";
             this.tuiChuToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.tuiChuToolStripMenuItem.Text = "关于";
             this.tuiChuToolStripMenuItem.Click += new System.EventHandler(this.tuiChuToolStripMenuItem_Click);
             // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.testToolStripMenuItem.Text = "test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
-            // 
-            // imgTestToolStripMenuItem
-            // 
-            this.imgTestToolStripMenuItem.Name = "imgTestToolStripMenuItem";
-            this.imgTestToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.imgTestToolStripMenuItem.Text = "img test";
-            this.imgTestToolStripMenuItem.Click += new System.EventHandler(this.imgTestToolStripMenuItem_Click);
-            // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.updateToolStripMenuItem.Text = "update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
+            // tsUpdate
+            // 
+            this.tsUpdate.Name = "tsUpdate";
+            this.tsUpdate.Size = new System.Drawing.Size(152, 22);
+            this.tsUpdate.Text = "在线更新";
+            this.tsUpdate.Click += new System.EventHandler(this.tsUpdate_Click);
             // 
             // ToolMain
             // 
@@ -232,9 +223,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripMenuItem menuConfig;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem imgTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel lbstatus;
+        private System.Windows.Forms.ToolStripMenuItem tsUpdate;
     }
 }
