@@ -77,6 +77,12 @@
     <Compile Include="CtlPhotoList.Designer.cs">
       <DependentUpon>CtlPhotoList.cs</DependentUpon>
     </Compile>
+    <Compile Include="CtlProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlProgressBar.Designer.cs">
+      <DependentUpon>CtlProgressBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CtlResources.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CtlPhotoList.resx">
       <DependentUpon>CtlPhotoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlProgressBar.resx">
+      <DependentUpon>CtlProgressBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CtlResources.resx">
       <DependentUpon>CtlResources.cs</DependentUpon>

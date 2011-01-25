@@ -10,7 +10,11 @@ namespace com.jajago.Biz
 {
     public class ResourceTaxonomyNode
     {
-        public Taxonomy taxonomy { get; set; }
+        public string id { get; set; }
+        public string title { get; set; }
+        public int count { get; set; }
+        public long size { get; set; }
+        public string pattern { get; set; }
         public Regex regex { get; set; }
     }
  
@@ -24,12 +28,29 @@ namespace com.jajago.Biz
 
         private ResourceManager()
         {
-            foreach (Taxonomy t in ent.Taxonomies.OrderBy( t => t.position))
+            var o = 
+                    from t in ent.Taxonomies
+                    orderby t.position
+                    let cnt = (
+                        from c in ent.Resources
+                        where c.taxonomy_id==t.id
+                        select c).Count()
+                    let size = (
+                        from c in ent.Resources
+                        where c.taxonomy_id == t.id
+                        select c.size).Sum()
+                    select new ResourceTaxonomyNode()
+                    {
+                        id=t.id,
+                        title = t.name,
+                        pattern = t.pattern,
+                        count = cnt,
+                        size = size==null ? 0 : (long)size
+                    };
+            AllTaxonomies = o.ToList();
+            foreach (ResourceTaxonomyNode r in AllTaxonomies)
             {
-                ResourceTaxonomyNode node = new ResourceTaxonomyNode();
-                node.taxonomy = t;
-                if (t.pattern!=null) node.regex = new Regex(@"\.(" + t.pattern + ")$");
-                AllTaxonomies.Add(node);
+                r.regex = new Regex(@"\.(" + r.pattern + ")$");
             }
         }
 
@@ -102,7 +123,7 @@ namespace com.jajago.Biz
             foreach (ResourceTaxonomyNode t in AllTaxonomies)
             {
                 if (t.regex != null && t.regex.IsMatch(file.Extension))
-                    return t.taxonomy.id;
+                    return t.id;
             }
             return null;
         }
