@@ -99,7 +99,7 @@
             this.lstTaxonomy.Location = new System.Drawing.Point(0, 0);
             this.lstTaxonomy.MultiSelect = false;
             this.lstTaxonomy.Name = "lstTaxonomy";
-            this.lstTaxonomy.Size = new System.Drawing.Size(187, 405);
+            this.lstTaxonomy.Size = new System.Drawing.Size(216, 405);
             this.lstTaxonomy.TabIndex = 12;
             this.lstTaxonomy.UseCompatibleStateImageBehavior = false;
             this.lstTaxonomy.View = System.Windows.Forms.View.Details;
@@ -112,10 +112,14 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "资源(M)";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 77;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "选中(M)";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 77;
             // 
             // btnWriteSD
             // 
@@ -144,7 +148,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.ucResources);
             this.splitContainer1.Panel2MinSize = 425;
             this.splitContainer1.Size = new System.Drawing.Size(726, 405);
-            this.splitContainer1.SplitterDistance = 187;
+            this.splitContainer1.SplitterDistance = 216;
             this.splitContainer1.TabIndex = 14;
             // 
             // ucResources
@@ -153,7 +157,7 @@
             this.ucResources.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucResources.Location = new System.Drawing.Point(0, 0);
             this.ucResources.Name = "ucResources";
-            this.ucResources.Size = new System.Drawing.Size(535, 405);
+            this.ucResources.Size = new System.Drawing.Size(506, 405);
             this.ucResources.TabIndex = 7;
             // 
             // ctlProgressBar1

@@ -56,9 +56,9 @@ namespace com.jajago.SA
         private void Resource_Select_Changed(object sender, EventArgs e)
         {
             AppManager app = AppManager.Instance;
-            Ctls.CtlLists ct = (Ctls.CtlLists)sender;
+            Ctls.CtlLists ct = (Ctls.CtlLists)sender; 
             app.StatusText = "Selected: " + ct.TotalSize + "/" + ct.TotalCount + "/" + ct.SelectedSize + "/" + ct.SelectedCount;
-
+            
             int cnt = 0;
             long size = 0;
             foreach (ListViewItem item in lstTaxonomy.Items)

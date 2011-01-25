@@ -34,14 +34,7 @@ namespace com.jajago.SA.Ctls
         private void listMusics_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
-            //if (idx < 0) return;
-            //CtlMusicList c = new CtlMusicList();
-            //if (rm == null) rm = ResourceManager.Instance;
-            //DataGridViewRow crow = listData.Rows[idx];
-            //Resource res = (Resource)crow.DataBoundItem;
-            //c.a(idx, res, crow);
             if (idx < 0) return;
-
             if (rm == null) rm = ResourceManager.Instance;
             DataGridViewRow crow = listData.Rows[idx];
             Resource res = (Resource)crow.DataBoundItem;
