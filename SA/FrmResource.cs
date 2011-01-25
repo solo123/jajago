@@ -18,9 +18,7 @@ namespace com.jajago.SA
     {
         ResourceManager rsm = ResourceManager.Instance;
         List<TreeNode> selectedRoot = new List<TreeNode>();
-        long selected_size = 0;
-        int selected_count = 0;
-        long sd_size = 2000000000;
+        long sd_size = (long)2 << 30;
 
         public FrmResource()
         {
@@ -32,32 +30,22 @@ namespace com.jajago.SA
             ucResources.OnSelectChanged += new EventHandler(Resource_Select_Changed);
             foreach (ResourceTaxonomyNode t in rsm.AllTaxonomies)
             {
-                ListViewItem item = new ListViewItem(t.taxonomy.name);
+                ListViewItem item = new ListViewItem(t.title);
+                item.SubItems.Add(t.count.ToString() + "/" + (t.size >> 20).ToString("n0"));
                 item.SubItems.Add("0");
-                item.SubItems.Add("0");
-                item.Tag = t.taxonomy;
+                item.Tag = t;
                 lstTaxonomy.Items.Add(item);
             }
+            ctlProgressBar1.Draw(0);
         }
 
         private void lstTaxonomy_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstTaxonomy.SelectedItems.Count > 0)
             {
-                Taxonomy tx = (Taxonomy)lstTaxonomy.SelectedItems[0].Tag;
-                ucResources.current_taxonomy = tx;
+                ResourceTaxonomyNode r = (ResourceTaxonomyNode)lstTaxonomy.SelectedItems[0].Tag;
+                ucResources.current_taxonomy_id = r.id;
             }
-        }
-
-        private void DoSplash()
-        {
-            FrmSplash sp = new FrmSplash();
-            sp.ShowDialog();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MessageBox.Show("欢迎使用家家购");
         }
 
         private void btnScan_Click(object sender, EventArgs e)
@@ -71,21 +59,24 @@ namespace com.jajago.SA
             Ctls.CtlLists ct = (Ctls.CtlLists)sender;
             app.StatusText = "Selected: " + ct.TotalSize + "/" + ct.TotalCount + "/" + ct.SelectedSize + "/" + ct.SelectedCount;
 
+            int cnt = 0;
+            long size = 0;
             foreach (ListViewItem item in lstTaxonomy.Items)
             {
-                Taxonomy tx = (Taxonomy)item.Tag;
-                if (tx.id == ct.TaxonomyID)
+                ResourceTaxonomyNode r = (ResourceTaxonomyNode)item.Tag;
+                if (r.id == ct.TaxonomyID)
                 {
-                    item.SubItems[1].Text = ct.TotalCount.ToString() + "/" + ct.TotalSize.ToString();
-                    item.SubItems[2].Text = ct.SelectedCount.ToString() + "/" + (ct.SelectedSize >> 10);
-                    selected_size += ct.SelectedSize;
-                    selected_count += ct.SelectedCount;
-                    break;
+                    item.SubItems[2].Text = ct.SelectedCount.ToString() + "/" + (ct.SelectedSize >> 20).ToString("n0");
+                }
+                string[] s = item.SubItems[2].Text.Split('/');
+                if (s != null && s.Length > 1)
+                {
+                    cnt += Convert.ToInt32(s[0]);
+                    size += long.Parse(s[1], System.Globalization.NumberStyles.AllowThousands);
                 }
             }
-
-            progressBar1.Value += Convert.ToInt32(selected_size * 100 / sd_size);
-            lbSelectedSize.Text ="选中"+selected_count+"个资源，共"+(selected_size >> 10)+"M";
+            ctlProgressBar1.Draw(Convert.ToInt32(((size * 100)<<20) / sd_size ));
+            lbSelectedSize.Text ="选中"+cnt+"个资源，共"+size+"M";
         }
 
     }

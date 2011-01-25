@@ -33,19 +33,19 @@ namespace com.jajago.SA.Ctls
             }
         }
 
-        public Taxonomy current_taxonomy {
+        public string current_taxonomy_id {
             set
             {
                 ResourceManager rsm = ResourceManager.Instance;
                 foreach (CtlLists ctl in control_list)
                 {
-                    if (value.id == ctl.TaxonomyID)
+                    if (value == ctl.TaxonomyID)
                     {
                         ctl.Show();
                         if (!ctl.IsLoaded)
                         {
                             ctl.SelectChanged += this.OnSelectChanged;
-                            ctl.DataSource = rsm.GetList(value.id);
+                            ctl.DataSource = rsm.GetList(value);
                             ctl.IsLoaded = true;
                         }
                     }

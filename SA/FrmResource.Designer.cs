@@ -39,9 +39,9 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnWriteSD = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ucResources = new com.jajago.SA.Ctls.CtlResources();
+            this.ctlProgressBar1 = new com.jajago.SA.Ctls.CtlProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,7 +71,7 @@
             // 
             this.lbSdSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbSdSize.AutoSize = true;
-            this.lbSdSize.Location = new System.Drawing.Point(644, 26);
+            this.lbSdSize.Location = new System.Drawing.Point(609, 26);
             this.lbSdSize.Name = "lbSdSize";
             this.lbSdSize.Size = new System.Drawing.Size(77, 12);
             this.lbSdSize.TabIndex = 10;
@@ -127,15 +127,6 @@
             this.btnWriteSD.Text = "写入SD卡";
             this.btnWriteSD.UseVisualStyleBackColor = true;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(387, 41);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(334, 23);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar1.TabIndex = 9;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -165,17 +156,25 @@
             this.ucResources.Size = new System.Drawing.Size(535, 405);
             this.ucResources.TabIndex = 7;
             // 
+            // ctlProgressBar1
+            // 
+            this.ctlProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctlProgressBar1.Location = new System.Drawing.Point(378, 42);
+            this.ctlProgressBar1.Name = "ctlProgressBar1";
+            this.ctlProgressBar1.Size = new System.Drawing.Size(351, 22);
+            this.ctlProgressBar1.TabIndex = 15;
+            // 
             // FrmResource
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(733, 479);
+            this.Controls.Add(this.ctlProgressBar1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btnWriteSD);
             this.Controls.Add(this.lbSelectedSize);
             this.Controls.Add(this.lbSdSize);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.btnScan);
             this.MinimumSize = new System.Drawing.Size(545, 513);
@@ -205,8 +204,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button btnWriteSD;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private Ctls.CtlProgressBar ctlProgressBar1;
 
     }
 }
