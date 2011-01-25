@@ -28,19 +28,18 @@ namespace com.jajago.SA
             FrmSplash.CloseSplash();
             app.ShowStatusText += new EventHandler(on_show_status_text);
         }
+
         private void on_show_status_text(object sender, EventArgs e)
         {
             lbstatus.Text = sender.ToString();
         }
+
         private void tsResource_Click(object sender, EventArgs e)
         {
-
             if (frmResource == null || frmResource.IsDisposed)
             {
-
                 frmResource = new FrmResource();
                 frmResource.MdiParent = this;
-                
             }
             frmResource.WindowState = FormWindowState.Maximized;
             this.ActivateMdiChild(frmResource);  

@@ -23,7 +23,7 @@ namespace com.jajago.SA.Ctls
             control_list.Add(new CtlMusicList());
             control_list.Add(new CtlVideoList());
             control_list.Add(new CtlImageList());
-            control_list.Add(new CtlVideoList());
+            //control_list.Add(new CtlVideoList());
 
             foreach (CtlLists ctl in control_list)
             {
@@ -51,13 +51,7 @@ namespace com.jajago.SA.Ctls
                     }
                     else ctl.Hide();
                 }
-
-
             }
         }
-
-
-
-
     }
 }

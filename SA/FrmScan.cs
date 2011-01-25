@@ -41,7 +41,6 @@ namespace com.jajago.SA
             listView1.Columns[0].Width = listView1.Width - 90;
         }
 
-       
         private void btnStart_Click(object sender, EventArgs e)
         {
             if (backgroundWorker1.IsBusy) return;
@@ -52,10 +51,12 @@ namespace com.jajago.SA
             lbOp.ForeColor = Color.Green; 
             backgroundWorker1.RunWorkerAsync(100);
         }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             if (backgroundWorker1.IsBusy) backgroundWorker1.CancelAsync();
         }
+
         private void FrmScan_FormClosing(object sender, FormClosingEventArgs e)
         {
             btnCancel_Click(null,null);

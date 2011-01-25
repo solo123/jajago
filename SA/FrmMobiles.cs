@@ -152,8 +152,6 @@ namespace com.jajago.SA
         {
             show_mobiles();
         }
-
-
     }
 
     public class MobileNode

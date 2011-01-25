@@ -47,7 +47,7 @@ namespace com.jajago.SA.Ctls
                 }
                 crow.HeaderCell.Value = "√";
                 SelectedCount++;
-                if (res!=null && res.size!=null) SelectedSize += res.size.Value;
+                if (res != null && res.size != null) SelectedSize += res.size.Value;
             }
             else
             {

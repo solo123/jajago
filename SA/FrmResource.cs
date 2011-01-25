@@ -55,11 +55,6 @@ namespace com.jajago.SA
             sp.ShowDialog();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            MessageBox.Show("欢迎使用家家购");
-        }
-
         private void btnScan_Click(object sender, EventArgs e)
         {
             FrmScan fp = new FrmScan();
@@ -84,7 +79,6 @@ namespace com.jajago.SA
                     break;
                 }
             }
-
             progressBar1.Value += Convert.ToInt32(selected_size * 100 / sd_size);
             lbSelectedSize.Text ="选中"+selected_count+"个资源，共"+(selected_size >> 10)+"M";
         }
