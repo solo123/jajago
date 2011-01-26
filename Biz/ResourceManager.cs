@@ -28,25 +28,29 @@ namespace com.jajago.Biz
 
         private ResourceManager()
         {
-            var o = 
-                    from t in ent.Taxonomies
-                    orderby t.position
-                    let cnt = (
-                        from c in ent.Resources
-                        where c.taxonomy_id==t.id
-                        select c).Count()
-                    let size = (
-                        from c in ent.Resources
-                        where c.taxonomy_id == t.id
-                        select c.size).Sum()
-                    select new ResourceTaxonomyNode()
-                    {
-                        id=t.id,
-                        title = t.name,
-                        pattern = t.pattern,
-                        count = cnt,
-                        size = size==null ? 0 : (long)size
-                    };
+            ReloadAllTaxonomy();
+        }
+        public void ReloadAllTaxonomy()
+        {
+            var o =
+                from t in ent.Taxonomies
+                orderby t.position
+                let cnt = (
+                    from c in ent.Resources
+                    where c.taxonomy_id == t.id
+                    select c).Count()
+                let size = (
+                    from c in ent.Resources
+                    where c.taxonomy_id == t.id
+                    select c.size).Sum()
+                select new ResourceTaxonomyNode()
+                {
+                    id = t.id,
+                    title = t.name,
+                    pattern = t.pattern,
+                    count = cnt,
+                    size = size == null ? 0 : (long)size
+                };
             AllTaxonomies = o.ToList();
             foreach (ResourceTaxonomyNode r in AllTaxonomies)
             {

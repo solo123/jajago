@@ -33,9 +33,12 @@ namespace com.jajago.SA
                 Array.Sort(scanPaths);
                 foreach (string s in scanPaths)
                 {
-                    Button btn = new Button();
-                    btn.Text = "删除";
-                    listView1.Items.Add(s);
+                    if (s != null && s.Trim() != string.Empty)
+                    {
+                        Button btn = new Button();
+                        btn.Text = "删除";
+                        listView1.Items.Add(s);
+                    }
                 }
             }
             listView1.Columns[0].Width = listView1.Width - 90;
@@ -43,12 +46,20 @@ namespace com.jajago.SA
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            if (AllPaths() == null)
+            {
+                MessageBox.Show("请先添加搜索目录");
+                return;
+            }
+            scanPaths = AllPaths().Split(';');
+
             if (backgroundWorker1.IsBusy) return;
             listView1.Items.Clear();
             btnStart.Enabled = false;
             btnCancel.Enabled = true;
             lbOp.Text = "扫描中...";
-            lbOp.ForeColor = Color.Green; 
+            lbOp.ForeColor = Color.Green;
+            btnAdd.Visible = false;
             backgroundWorker1.RunWorkerAsync(100);
         }
 
@@ -78,22 +89,19 @@ namespace com.jajago.SA
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (scanPaths == null || scanPaths.Length < 1)
-            {
-                MessageBox.Show("请先添加搜索目录");
-                return;
-            }
-
             resourceCount = 0;
             totalProgress = 0;
             Stack dirStack = new Stack();
             float tot = scanPaths.Count();
             foreach (string s in scanPaths)
             {
-                ScanNode sn = new ScanNode();
-                sn.path = s;
-                sn.weight = 100 / (float)tot;
-                dirStack.Push(sn);
+                if (s != null && s.Trim() != string.Empty)
+                {
+                    ScanNode sn = new ScanNode();
+                    sn.path = s;
+                    sn.weight = 100 / (float)tot;
+                    dirStack.Push(sn);
+                }
             }
 
             while (dirStack.Count > 0)
@@ -189,9 +197,49 @@ namespace com.jajago.SA
                 lbOp.Text = "扫描完成";
                 lbOp.ForeColor = Color.Blue;
             }
+            btnAdd.Visible = true;
+            rm.ReloadAllTaxonomy();
         }
 
         #endregion
+
+        private void btnAdd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string path = folderBrowserDialog1.SelectedPath;
+                if (ConfigManager.Exist(path))
+                {
+                    MessageBox.Show("此搜索目录已经存在，不能重复添加。");
+                    return;
+                }
+                rm.ConfigSearchPath = string.Join(";", rm.ConfigSearchPath, path);
+                listView1.Items.Add(path);
+            }
+        }
+
+        private void listView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (listView1.SelectedItems.Count > 0)
+                {
+                    listView1.SelectedItems[0].Remove();
+                    rm.ConfigSearchPath = AllPaths();
+                }
+            }
+        }
+        private string AllPaths()
+        {
+            string s = null;
+            foreach (ListViewItem li in listView1.Items)
+            {
+                s = string.Join(";", li.Text, s);
+            }
+            return s;
+
+        }
+
 
     }
 }

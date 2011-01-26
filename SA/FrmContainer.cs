@@ -128,5 +128,10 @@ pause
             this.Dispose();
             KillSelfThenRun();
         }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

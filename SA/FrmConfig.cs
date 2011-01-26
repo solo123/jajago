@@ -23,6 +23,19 @@ namespace com.jajago.SA
             btnSave.Visible = false;
             btnCancel.Visible = false;
         }
+        private void FrmConfig_Load(object sender, EventArgs e)
+        {
+            string path = rm.ConfigSearchPath;
+            if (path != null)
+            {
+                string[] paths = path.Split(';');
+                Array.Sort(paths);
+                foreach (string s in paths)
+                {
+                    listResourcePath.Items.Add(s);
+                }
+            }
+        }
 
         private void treeConfig_AfterSelect(object sender, TreeViewEventArgs e)
         {
@@ -86,20 +99,7 @@ namespace com.jajago.SA
             }
         }
 
-        private void FrmConfig_Load(object sender, EventArgs e)
-        {
-            string path = rm.ConfigSearchPath;
-            if (path != null)
-            {
-                string[] paths = path.Split(';');
-                Array.Sort(paths);
-                foreach (string s in paths)
-                {
-                    listResourcePath.Items.Add(s);
-                }
-            }
-        }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();

@@ -40,11 +40,14 @@
             this.lbOp = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbCnt = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.LinkLabel();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.Enabled = false;
             this.btnCancel.Location = new System.Drawing.Point(615, 327);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -110,10 +113,11 @@
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listView1_KeyDown);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "扫描路径";
+            this.columnHeader1.Text = "查找路径";
             this.columnHeader1.Width = 341;
             // 
             // columnHeader2
@@ -126,10 +130,12 @@
             // 
             this.lbOp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbOp.AutoSize = true;
-            this.lbOp.Location = new System.Drawing.Point(603, 296);
+            this.lbOp.Location = new System.Drawing.Point(491, 295);
             this.lbOp.Name = "lbOp";
-            this.lbOp.Size = new System.Drawing.Size(0, 12);
+            this.lbOp.Size = new System.Drawing.Size(17, 12);
             this.lbOp.TabIndex = 11;
+            this.lbOp.Text = "op";
+            this.lbOp.Visible = false;
             // 
             // label1
             // 
@@ -151,12 +157,30 @@
             this.lbCnt.TabIndex = 13;
             this.lbCnt.Text = "0 个";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.AutoSize = true;
+            this.btnAdd.Location = new System.Drawing.Point(613, 296);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(77, 12);
+            this.btnAdd.TabIndex = 14;
+            this.btnAdd.TabStop = true;
+            this.btnAdd.Text = "添加查找路径";
+            this.btnAdd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.btnAdd_LinkClicked);
+            // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyComputer;
+            this.folderBrowserDialog1.ShowNewFolderButton = false;
+            // 
             // FrmScan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(702, 364);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lbCnt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbOp);
@@ -190,5 +214,7 @@
         private System.Windows.Forms.Label lbOp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbCnt;
+        private System.Windows.Forms.LinkLabel btnAdd;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
