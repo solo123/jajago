@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biz", "..\Biz\Biz.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ctls", "..\Ctls\Ctls.csproj", "{52B889A3-0929-49C6-A4D3-1C3E4FC5855A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\Setup1\Setup1.vdproj", "{9C18BDAB-3BEF-4068-B57B-5CD751EA575A}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = SA.vsmdi
@@ -69,6 +71,12 @@ Global
 		{52B889A3-0929-49C6-A4D3-1C3E4FC5855A}.Release|Mixed Platforms.Build.0 = Release|x86
 		{52B889A3-0929-49C6-A4D3-1C3E4FC5855A}.Release|x86.ActiveCfg = Release|x86
 		{52B889A3-0929-49C6-A4D3-1C3E4FC5855A}.Release|x86.Build.0 = Release|x86
+		{9C18BDAB-3BEF-4068-B57B-5CD751EA575A}.Debug|Any CPU.ActiveCfg = Debug
+		{9C18BDAB-3BEF-4068-B57B-5CD751EA575A}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{9C18BDAB-3BEF-4068-B57B-5CD751EA575A}.Debug|x86.ActiveCfg = Debug
+		{9C18BDAB-3BEF-4068-B57B-5CD751EA575A}.Release|Any CPU.ActiveCfg = Release
+		{9C18BDAB-3BEF-4068-B57B-5CD751EA575A}.Release|Mixed Platforms.ActiveCfg = Release
+		{9C18BDAB-3BEF-4068-B57B-5CD751EA575A}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
