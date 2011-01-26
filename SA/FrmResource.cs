@@ -79,5 +79,11 @@ namespace com.jajago.SA
             lbSelectedSize.Text ="选中"+cnt+"个资源，共"+size+"M";
         }
 
+        private void btnWriteSD_Click(object sender, EventArgs e)
+        {
+            FrmWrite f = new FrmWrite();
+            f.ShowDialog();
+        }
+
     }
 }

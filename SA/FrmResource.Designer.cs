@@ -125,12 +125,13 @@
             // btnWriteSD
             // 
             this.btnWriteSD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnWriteSD.Location = new System.Drawing.Point(296, 41);
+            this.btnWriteSD.Location = new System.Drawing.Point(280, 41);
             this.btnWriteSD.Name = "btnWriteSD";
-            this.btnWriteSD.Size = new System.Drawing.Size(75, 23);
+            this.btnWriteSD.Size = new System.Drawing.Size(91, 23);
             this.btnWriteSD.TabIndex = 13;
-            this.btnWriteSD.Text = "写入SD卡";
+            this.btnWriteSD.Text = "准备写入SD卡";
             this.btnWriteSD.UseVisualStyleBackColor = true;
+            this.btnWriteSD.Click += new System.EventHandler(this.btnWriteSD_Click);
             // 
             // splitContainer1
             // 
