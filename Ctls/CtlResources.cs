@@ -32,6 +32,21 @@ namespace com.jajago.SA.Ctls
                 this.Controls.Add(ctl);
             }
         }
+        public List<object> selected_items()
+        {
+            List<object> s = new List<object>();
+            foreach (CtlLists ctl in control_list)
+            {
+                if (ctl.SelectedItems != null)
+                {
+                    foreach (object o in ctl.SelectedItems)
+                    {
+                        s.Add(o);
+                    }
+                }
+            }
+            return s;
+        }
 
         public string current_taxonomy_id {
             set

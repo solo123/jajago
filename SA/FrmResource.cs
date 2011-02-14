@@ -82,6 +82,7 @@ namespace com.jajago.SA
         private void btnWriteSD_Click(object sender, EventArgs e)
         {
             FrmWrite f = new FrmWrite();
+            f.SetSelectedResource(ucResources.selected_items());
             f.ShowDialog();
         }
 

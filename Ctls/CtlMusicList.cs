@@ -13,7 +13,7 @@ namespace com.jajago.SA.Ctls
     public partial class CtlMusicList : CtlLists
     {
         private List<int> _selected_items = new List<int>();
-        ResourceManager rm = null;
+        ResourceManager rm = ResourceManager.Instance;
         public CtlMusicList()
         {
             TaxonomyID = "MUSIC";
@@ -28,7 +28,21 @@ namespace com.jajago.SA.Ctls
                 TotalCount = 1031;
             } 
         }
-
+        public override List<object> SelectedItems
+        {
+            get
+            {
+                List<object> s = new List<object>();
+                foreach (int i in _selected_items)
+                {
+                    DataGridViewRow crow = listMusics.Rows[i];
+                    ResMusic music = (ResMusic)crow.DataBoundItem;
+                    object r = rm.GetResource(music.id);
+                    s.Add(r);
+                }
+                return s;
+            }
+        }
         private void listMusics_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;

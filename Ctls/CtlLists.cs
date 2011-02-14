@@ -16,6 +16,7 @@ namespace com.jajago.SA.Ctls
         public long SelectedSize { get; set; }
         public int SelectedCount { get; set; }
         public virtual object DataSource { get; set; }
+        public virtual List<object> SelectedItems { get; set; }
         public CtlLists()
         {
             TotalSize = SelectedSize = 0;

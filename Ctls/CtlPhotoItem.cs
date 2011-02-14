@@ -22,6 +22,7 @@ namespace com.jajago.SA.Ctls
         {
             InitializeComponent();
         }
+        public bool Is_Selected { get { return _is_selected; } }
         public ResImage res_image
         {
             get { return _res_image; }

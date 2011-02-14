@@ -44,9 +44,15 @@
             // lstData
             // 
             this.lstData.AllowUserToAddRows = false;
+            this.lstData.AllowUserToDeleteRows = false;
+            this.lstData.AllowUserToResizeRows = false;
+            this.lstData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lstData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lstData.Location = new System.Drawing.Point(12, 12);
             this.lstData.Name = "lstData";
+            this.lstData.ReadOnly = true;
             this.lstData.RowTemplate.Height = 23;
             this.lstData.Size = new System.Drawing.Size(578, 272);
             this.lstData.TabIndex = 0;

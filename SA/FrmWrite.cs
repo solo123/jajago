@@ -16,9 +16,11 @@ namespace com.jajago.SA
         public FrmWrite()
         {
             InitializeComponent();
-            List<Resource> SelectSource = new List<Resource>();
-            ResourceManager rm = ResourceManager.Instance;
-            lstData.DataSource = rm.GetList("VIDEO");
+        }
+
+        public void SetSelectedResource(object datasource)
+        {
+            lstData.DataSource = datasource;
         }
 
         private void btnFolder_Click(object sender, EventArgs e)
@@ -34,22 +36,26 @@ namespace com.jajago.SA
             } 
         }
 
-        int i=1;
         private void btnWrite_Click(object sender, EventArgs e)
         {
             if (txtPath.Text != null && txtPath.Text != "")
             {
-                String oldPath = lstData.SelectedCells[3].Value.ToString();
-                String newPath = txtPath.Text + @"\" + lstData.SelectedCells[2].Value.ToString();
-                FileInfo f = new FileInfo(oldPath);
-                if (File.Exists(newPath))
+                foreach (DataGridViewRow d in lstData.Rows)
                 {
-                    while (File.Exists(newPath + i.ToString()))
-                        i++;
-                    f.CopyTo(newPath + i++.ToString());
+                    int i = 1;
+                    DirectoryInfo di = new DirectoryInfo(txtPath.Text + @"\" + d.Cells[0].Value.ToString());
+                    if (!di.Exists)
+                        Directory.CreateDirectory(txtPath.Text + @"\" + d.Cells[0].Value.ToString());
+                    FileInfo f = new FileInfo(d.Cells[3].Value.ToString());
+                    if (File.Exists(txtPath.Text + @"\" + d.Cells[0].Value.ToString() + @"\" + d.Cells[2].Value.ToString()))
+                    {
+                        while (File.Exists(txtPath.Text + @"\" + d.Cells[0].Value.ToString()+@"\"+d.Cells[2].Value.ToString() + i.ToString()))
+                            i++;
+                        f.CopyTo(txtPath.Text + @"\" + d.Cells[0].Value.ToString() + @"\" + d.Cells[2].Value.ToString() + i++.ToString());
+                    }
+                    else
+                        f.CopyTo(txtPath.Text + @"\" + d.Cells[0].Value.ToString() + @"\" + d.Cells[2].Value.ToString());
                 }
-                else
-                    f.CopyTo(newPath);
                 MessageBox.Show("写入成功");
                 this.Close();
             }

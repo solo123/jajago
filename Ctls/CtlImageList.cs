@@ -64,5 +64,21 @@ namespace com.jajago.SA.Ctls
             }
             base.OnSelectChanged(this, null);
         }
+
+        public override List<object> SelectedItems
+        {
+            get
+            {
+                List<object> s = new List<object>();
+                foreach (int i in _selected_items)
+                {
+                    DataGridViewRow crow = listData.Rows[i];
+                    Resource r = (Resource)crow.DataBoundItem;
+                    s.Add(r);
+                }
+                return s;
+            }
+        }
+
     }
 }

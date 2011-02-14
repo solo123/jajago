@@ -13,7 +13,7 @@ namespace com.jajago.SA.Ctls
     public partial class CtlVideoList : CtlLists
     {
         private List<int> _selected_items = new List<int>();
-        ResourceManager rm = null;
+        ResourceManager rm = ResourceManager.Instance;
         public CtlVideoList()
         {
             TaxonomyID = "VIDEO";
@@ -34,7 +34,6 @@ namespace com.jajago.SA.Ctls
             int idx = e.RowIndex;
             if (idx < 0) return;
 
-            if (rm == null) rm = ResourceManager.Instance;
             DataGridViewRow crow = listData.Rows[idx];
             Resource res = (Resource)crow.DataBoundItem;
             if (_selected_items.IndexOf(idx) < 0)
@@ -63,5 +62,21 @@ namespace com.jajago.SA.Ctls
             }
             base.OnSelectChanged(this, null);
         }
+
+        public override List<object> SelectedItems
+        {
+            get
+            {
+                List<object> s = new List<object>();
+                foreach (int i in _selected_items)
+                {
+                    DataGridViewRow crow = listData.Rows[i];
+                    Resource r = (Resource)crow.DataBoundItem;
+                    s.Add(r);
+                }
+                return s;
+            }
+        }
+
     }
 }

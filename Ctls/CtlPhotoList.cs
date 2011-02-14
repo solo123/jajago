@@ -48,6 +48,23 @@ namespace com.jajago.SA.Ctls
             SelectedSize += ct.SelectedSize;
             base.OnSelectChanged(this, null);
         }
+        public override List<object> SelectedItems
+        {
+            get
+            {
+                ResourceManager rm = ResourceManager.Instance;
+                List<object> s = new List<object>();
+                foreach( CtlPhotoItem item in plPhotos.Controls)
+                {
+                    if (item.Is_Selected)
+                    {
+                        object r = rm.GetResource(item.res_image.id);
+                        s.Add(r);
+                    }
+                }
+                return s;
+            }
+        }
 
     }
 }
