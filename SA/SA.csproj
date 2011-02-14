@@ -246,12 +246,6 @@
     <Content Include="Resources\btn_mobile.jpg" />
     <Content Include="Resources\btn_resource.jpg" />
     <Content Include="Resources\ipad.ico" />
-    <Content Include="update\SqlCeCmd.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="update\Unzip.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Biz\Biz.csproj">

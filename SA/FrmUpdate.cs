@@ -49,9 +49,6 @@ namespace com.jajago.SA
             }
             else
                 MessageBox.Show("没有找到更新!");
-
-
-            
         }
     }
 }

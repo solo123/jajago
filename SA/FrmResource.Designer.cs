@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmResource));
             this.btnScan = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lbCount = new System.Windows.Forms.Label();
@@ -40,8 +41,8 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnWriteSD = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.ucResources = new com.jajago.SA.Ctls.CtlResources();
             this.ctlProgressBar1 = new com.jajago.SA.Ctls.CtlProgressBar();
+            this.ucResources = new com.jajago.SA.Ctls.CtlResources();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -152,6 +153,14 @@
             this.splitContainer1.SplitterDistance = 216;
             this.splitContainer1.TabIndex = 14;
             // 
+            // ctlProgressBar1
+            // 
+            this.ctlProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctlProgressBar1.Location = new System.Drawing.Point(378, 42);
+            this.ctlProgressBar1.Name = "ctlProgressBar1";
+            this.ctlProgressBar1.Size = new System.Drawing.Size(351, 22);
+            this.ctlProgressBar1.TabIndex = 15;
+            // 
             // ucResources
             // 
             this.ucResources.BackColor = System.Drawing.Color.White;
@@ -160,14 +169,6 @@
             this.ucResources.Name = "ucResources";
             this.ucResources.Size = new System.Drawing.Size(506, 405);
             this.ucResources.TabIndex = 7;
-            // 
-            // ctlProgressBar1
-            // 
-            this.ctlProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctlProgressBar1.Location = new System.Drawing.Point(378, 42);
-            this.ctlProgressBar1.Name = "ctlProgressBar1";
-            this.ctlProgressBar1.Size = new System.Drawing.Size(351, 22);
-            this.ctlProgressBar1.TabIndex = 15;
             // 
             // FrmResource
             // 
@@ -182,9 +183,10 @@
             this.Controls.Add(this.lbSdSize);
             this.Controls.Add(this.lbCount);
             this.Controls.Add(this.btnScan);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(545, 513);
             this.Name = "FrmResource";
-            this.Text = "FrmResources";
+            this.Text = "资源中心";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
