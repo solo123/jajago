@@ -37,11 +37,13 @@
             this.lbInfo = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.lstData)).BeginInit();
             this.SuspendLayout();
             // 
             // lstData
             // 
+            this.lstData.AllowUserToAddRows = false;
             this.lstData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lstData.Location = new System.Drawing.Point(12, 12);
             this.lstData.Name = "lstData";
@@ -73,6 +75,7 @@
             this.btnFolder.TabIndex = 3;
             this.btnFolder.Text = "浏览";
             this.btnFolder.UseVisualStyleBackColor = true;
+            this.btnFolder.Click += new System.EventHandler(this.btnFolder_Click);
             // 
             // btnWrite
             // 
@@ -82,6 +85,7 @@
             this.btnWrite.TabIndex = 4;
             this.btnWrite.Text = "写入！";
             this.btnWrite.UseVisualStyleBackColor = true;
+            this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
             // btnCancel
             // 
@@ -91,6 +95,7 @@
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lbInfo
             // 
@@ -153,5 +158,6 @@
         private System.Windows.Forms.Label lbInfo;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
