@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_19D7052E389D4DF08F116E52CBFF3031"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1E1D8B07B1E840808252D64ADCE25DFD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -100,13 +106,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_53D04546FE274CCFB9B3110A6CE230E3"
+        "OwnerKey" = "8:_D3E4CC2FC252767F1B78477F5081F333"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D3E4CC2FC252767F1B78477F5081F333"
+        "OwnerKey" = "8:_9FE99D3980C04722934ABEC348BB65D6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -124,7 +130,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9FE99D3980C04722934ABEC348BB65D6"
+        "OwnerKey" = "8:_53D04546FE274CCFB9B3110A6CE230E3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -145,13 +151,34 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
         "Release"
         {
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\Setup.msi"
+        "OutputFilename" = "8:Release\\MobileSetup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -161,6 +188,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -190,6 +238,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_19D7052E389D4DF08F116E52CBFF3031"
+            {
+            "SourcePath" = "8:..\\Resources\\ipad.ico"
+            "TargetName" = "8:ipad.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_29939225EF4E4E31B5A43BA988473BF5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E1D8B07B1E840808252D64ADCE25DFD"
             {
             "SourcePath" = "8:..\\bin\\Release\\update\\Unzip.exe"
@@ -565,6 +633,17 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_938683EC2C584FD48E755E8BF265C8A7"
+                    {
+                    "Name" = "8:酷购"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_ADA57C5B77134320ACDA71EAE3E314FE"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
@@ -582,9 +661,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:酷购手机店铺助手"
+        "ProductName" = "8:手机门店助手"
         "ProductCode" = "8:{BAFAB99E-2778-4E76-BDCE-80BE03362D2F}"
-        "PackageCode" = "8:{1862C54B-E420-4A5B-B8A9-6407DFBC2E1C}"
+        "PackageCode" = "8:{97B99949-6017-4073-A0AC-9CEE4C14B227}"
         "UpgradeCode" = "8:{66E358A8-7769-40A5-BB7D-A8EC7E604419}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -592,16 +671,16 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Jajago"
+        "Manufacturer" = "8:Coolpur"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://www.jajago.com"
-        "Title" = "8:酷购手机店铺助手安装程序"
+        "Title" = "8:酷购.手机门店助手 - 安装程序"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:coolpur"
+        "ARPCONTACT" = "8:Coolpur"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
-        "ARPURLINFOABOUT" = "8:http://www.jajago.com"
-        "ARPPRODUCTICON" = "8:"
+        "ARPURLINFOABOUT" = "8:http://www.coolpur.com"
+        "ARPPRODUCTICON" = "8:_19D7052E389D4DF08F116E52CBFF3031"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -704,18 +783,32 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6D25BD0840C6451E8C49CB9BFE0AD616"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0C93CFA9CE134219ABE5434CCCDFCA53"
             {
-            "Name" = "8:酷购手机助手"
+            "Name" = "8:手机门店助手"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
             "Target" = "8:_1DB3375CB41A4EEA80229E9101B79322"
-            "Folder" = "8:_A11528C3944D4CC2BF5722865A91508D"
+            "Folder" = "8:_938683EC2C584FD48E755E8BF265C8A7"
             "WorkingFolder" = "8:_29939225EF4E4E31B5A43BA988473BF5"
-            "Icon" = "8:"
+            "Icon" = "8:_19D7052E389D4DF08F116E52CBFF3031"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6D25BD0840C6451E8C49CB9BFE0AD616"
+            {
+            "Name" = "8:手机门店助手"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_1DB3375CB41A4EEA80229E9101B79322"
+            "Folder" = "8:_2437DE56E3974C268C3E9862467DC3CB"
+            "WorkingFolder" = "8:_29939225EF4E4E31B5A43BA988473BF5"
+            "Icon" = "8:_19D7052E389D4DF08F116E52CBFF3031"
             "Feature" = "8:"
             }
         }
@@ -1119,7 +1212,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1DB3375CB41A4EEA80229E9101B79322"
             {
-            "SourcePath" = "8:..\\obj\\x86\\Release\\com.jajago.SA.exe"
+            "SourcePath" = "8:..\\obj\\x86\\Release\\mobile.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_29939225EF4E4E31B5A43BA988473BF5"

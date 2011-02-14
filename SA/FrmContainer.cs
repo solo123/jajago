@@ -22,9 +22,6 @@ namespace com.jajago.SA
 
         public FrmContainer()
         {
-            // Load....
-            System.Threading.Thread.Sleep(1000);
-
             InitializeComponent();
             FrmSplash.CloseSplash();
             app.ShowStatusText += new EventHandler(on_show_status_text);
