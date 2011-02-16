@@ -24,13 +24,14 @@ namespace com.jajago.SA
             lstData.DataSource = datasource;
             if (lstData.Rows.Count > 0)
             {
+                lstData.Columns[0].HeaderCell.Value = "类型";
                 lstData.Columns[2].HeaderCell.Value = "名称";
                 lstData.Columns[3].HeaderCell.Value = "路径";
                 lstData.Columns[4].HeaderCell.Value = "创建时间";
                 lstData.Columns[6].HeaderCell.Value = "大小";
-            }
+            } 
             int count = lstData.Rows.Count;
-            lbInfo.Text = "准备写入"+count+"个文件";
+            lbInfo.Text = "准备写入" + count + "个文件";
         }
 
         private void btnFolder_Click(object sender, EventArgs e)
@@ -53,18 +54,23 @@ namespace com.jajago.SA
                 foreach (DataGridViewRow d in lstData.Rows)
                 {
                     int i = 1;
-                    DirectoryInfo di = new DirectoryInfo(txtPath.Text + @"\" + d.Cells[0].Value.ToString());
+                    string fileName = d.Cells[2].Value.ToString();
+                    string file = d.Cells[0].Value.ToString();
+                    string[] array = fileName.Split('.');
+                    string fileend = array[array.Length - 1];
+
+                    DirectoryInfo di = new DirectoryInfo(txtPath.Text + @"\" + file);
                     if (!di.Exists)
                         Directory.CreateDirectory(txtPath.Text + @"\" + d.Cells[0].Value.ToString());
                     FileInfo f = new FileInfo(d.Cells[3].Value.ToString());
-                    if (File.Exists(txtPath.Text + @"\" + d.Cells[0].Value.ToString() + @"\" + d.Cells[2].Value.ToString()))
+                    if (File.Exists(txtPath.Text + @"\" + file + @"\" + fileName))
                     {
-                        while (File.Exists(txtPath.Text + @"\" + d.Cells[0].Value.ToString()+@"\"+d.Cells[2].Value.ToString() + i.ToString()))
+                        while (File.Exists(txtPath.Text + @"\" + file + @"\" + fileName.Remove(fileName.LastIndexOf('.')) + i.ToString() + "." + fileend))
                             i++;
-                        f.CopyTo(txtPath.Text + @"\" + d.Cells[0].Value.ToString() + @"\" + d.Cells[2].Value.ToString() + i++.ToString());
+                        f.CopyTo(txtPath.Text + @"\" + file + @"\" + fileName.Remove(fileName.LastIndexOf('.')) + i++.ToString()+"."+fileend);
                     }
                     else
-                        f.CopyTo(txtPath.Text + @"\" + d.Cells[0].Value.ToString() + @"\" + d.Cells[2].Value.ToString());
+                        f.CopyTo(txtPath.Text + @"\" + file + @"\" + fileName);
                 }
                 MessageBox.Show("写入成功");
                 this.Close();

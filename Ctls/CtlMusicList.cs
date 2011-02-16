@@ -32,6 +32,8 @@ namespace com.jajago.SA.Ctls
                     listMusics.Columns[2].HeaderCell.Value = "歌手";
                     listMusics.Columns[4].HeaderCell.Value = "创建时间";
                     listMusics.Columns[5].HeaderCell.Value = "类型";
+                    listMusics.Columns.RemoveAt(3);
+                    listMusics.Columns.RemoveAt(0);
                 }
                 TotalSize = 107832;
                 TotalCount = 1031;
