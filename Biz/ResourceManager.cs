@@ -87,8 +87,8 @@ namespace com.jajago.Biz
                             where r.taxonomy_id == taxonomy_id
                             select r;
             }
-            
         }
+
         public Resource GetResource(string id)
         {
             return ent.Resources.First(m => m.id == id);
@@ -102,7 +102,7 @@ namespace com.jajago.Biz
                 Resource res = new Resource();
                 res.name = f.Name;
                 res.id = Guid.NewGuid().ToString();
-                res.taxon_id = "0";
+                //res.taxon_id = "0";
                 res.taxonomy_id = rest;
                 res.path = f.FullName;
                 res.size = f.Length;

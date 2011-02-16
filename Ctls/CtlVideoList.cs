@@ -24,6 +24,13 @@ namespace com.jajago.SA.Ctls
             set 
             { 
                 listData.DataSource = value;
+                if (listData.Rows.Count > 0)
+                {
+                    listData.Columns[2].HeaderCell.Value = "名称";
+                    listData.Columns[3].HeaderCell.Value = "路径";
+                    listData.Columns[4].HeaderCell.Value = "创建时间";
+                    listData.Columns[6].HeaderCell.Value = "大小";
+                }
                 TotalSize = 107832;
                 TotalCount = 1031;
             } 

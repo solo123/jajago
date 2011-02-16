@@ -14,20 +14,30 @@ namespace com.jajago.SA.Ctls
     {
         private List<int> _selected_items = new List<int>();
         ResourceManager rm = ResourceManager.Instance;
+
         public CtlMusicList()
         {
             TaxonomyID = "MUSIC";
             InitializeComponent();
         }
+
         public override object DataSource 
         { 
             set 
             { 
                 listMusics.DataSource = value;
+                if (listMusics.Rows.Count > 0)
+                {
+                    listMusics.Columns[1].HeaderCell.Value = "歌名";
+                    listMusics.Columns[2].HeaderCell.Value = "歌手";
+                    listMusics.Columns[4].HeaderCell.Value = "创建时间";
+                    listMusics.Columns[5].HeaderCell.Value = "类型";
+                }
                 TotalSize = 107832;
                 TotalCount = 1031;
             } 
         }
+
         public override List<object> SelectedItems
         {
             get
@@ -43,6 +53,7 @@ namespace com.jajago.SA.Ctls
                 return s;
             }
         }
+
         private void listMusics_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;

@@ -53,12 +53,13 @@ namespace com.jajago.SA
             FrmScan fp = new FrmScan();
             fp.ShowDialog();
         }
+
         private void Resource_Select_Changed(object sender, EventArgs e)
         {
             AppManager app = AppManager.Instance;
             Ctls.CtlLists ct = (Ctls.CtlLists)sender; 
             app.StatusText = "Selected: " + ct.TotalSize + "/" + ct.TotalCount + "/" + ct.SelectedSize + "/" + ct.SelectedCount;
-            
+
             int cnt = 0;
             long size = 0;
             foreach (ListViewItem item in lstTaxonomy.Items)
@@ -85,6 +86,5 @@ namespace com.jajago.SA
             f.SetSelectedResource(ucResources.selected_items());
             f.ShowDialog();
         }
-
     }
 }

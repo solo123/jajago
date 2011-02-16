@@ -16,11 +16,21 @@ namespace com.jajago.SA
         public FrmWrite()
         {
             InitializeComponent();
+            checkBox1.Checked = true;
         }
 
         public void SetSelectedResource(object datasource)
         {
             lstData.DataSource = datasource;
+            if (lstData.Rows.Count > 0)
+            {
+                lstData.Columns[2].HeaderCell.Value = "名称";
+                lstData.Columns[3].HeaderCell.Value = "路径";
+                lstData.Columns[4].HeaderCell.Value = "创建时间";
+                lstData.Columns[6].HeaderCell.Value = "大小";
+            }
+            int count = lstData.Rows.Count;
+            lbInfo.Text = "准备写入"+count+"个文件";
         }
 
         private void btnFolder_Click(object sender, EventArgs e)
