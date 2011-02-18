@@ -33,6 +33,7 @@
             // 
             // plPhotos
             // 
+            this.plPhotos.AutoScroll = true;
             this.plPhotos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plPhotos.Location = new System.Drawing.Point(0, 0);
             this.plPhotos.Name = "plPhotos";
@@ -43,6 +44,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Controls.Add(this.plPhotos);
             this.Name = "CtlPhotoList";
             this.Size = new System.Drawing.Size(288, 279);

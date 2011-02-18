@@ -33,6 +33,10 @@ namespace com.jajago.SA.Ctls
                     listData.Columns.RemoveAt(5);
                     listData.Columns.RemoveAt(1);
                     listData.Columns.RemoveAt(0);
+                    listData.Columns[0].FillWeight = 20;
+                    listData.Columns[1].FillWeight = 40;
+                    listData.Columns[2].FillWeight = 15;
+                    listData.Columns[3].FillWeight = 15;
                 }
                 TotalSize = 107832;
                 TotalCount = 1031;

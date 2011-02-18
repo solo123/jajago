@@ -18,6 +18,7 @@ namespace com.jajago.SA
         private FrmResource frmResource;
         private FrmMobiles frmMobiles;
         private FrmUpdate frmUpdate;
+        private FrmPrice frmPrice;
         private AppManager app = AppManager.Instance;
 
         public FrmContainer()
@@ -48,10 +49,6 @@ namespace com.jajago.SA
         {
             FrmConfig f = new FrmConfig();
             f.ShowDialog();
-        }
-
-        private void tuiChuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
         }
 
         private void tsMobiles_Click(object sender, EventArgs e)
@@ -126,9 +123,16 @@ pause
             KillSelfThenRun();
         }
 
-        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripButton2_Click(object sender, EventArgs e)
         {
-
+            if (frmPrice == null || frmPrice.IsDisposed)
+            {
+                frmPrice = new FrmPrice();
+                frmPrice.MdiParent = this;
+            }
+            frmPrice.WindowState = FormWindowState.Maximized;
+            this.ActivateMdiChild(frmPrice);
+            frmPrice.Show();
         }
     }
 }

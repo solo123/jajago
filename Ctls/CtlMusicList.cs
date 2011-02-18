@@ -34,6 +34,10 @@ namespace com.jajago.SA.Ctls
                     listMusics.Columns[5].HeaderCell.Value = "类型";
                     listMusics.Columns.RemoveAt(3);
                     listMusics.Columns.RemoveAt(0);
+                    listMusics.Columns[0].FillWeight = 30;
+                    listMusics.Columns[1].FillWeight = 20;
+                    listMusics.Columns[2].FillWeight = 25;
+                    listMusics.Columns[3].FillWeight = 25;
                 }
                 TotalSize = 107832;
                 TotalCount = 1031;
