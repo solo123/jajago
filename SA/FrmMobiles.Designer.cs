@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("联想");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("天语");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("长虹");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("康佳");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("oppo");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("金立");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("创维");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("七喜");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("诺基亚");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("三星");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("摩托罗拉");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("诺基亚");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("三星");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("摩托罗拉");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("联想");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("天语");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("长虹");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("康佳");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("oppo");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("金立");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("创维");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("七喜");
             System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("国产手机品牌分类", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
@@ -179,28 +179,28 @@
                         | System.Windows.Forms.AnchorStyles.Left)));
             this.tvSelect.Location = new System.Drawing.Point(12, 54);
             this.tvSelect.Name = "tvSelect";
-            treeNode1.Name = "节点1";
-            treeNode1.Text = "联想";
-            treeNode2.Name = "节点2";
-            treeNode2.Text = "天语";
-            treeNode3.Name = "节点3";
-            treeNode3.Text = "长虹";
-            treeNode4.Name = "节点4";
-            treeNode4.Text = "康佳";
-            treeNode5.Name = "节点5";
-            treeNode5.Text = "oppo";
-            treeNode6.Name = "节点6";
-            treeNode6.Text = "金立";
-            treeNode7.Name = "节点7";
-            treeNode7.Text = "创维";
-            treeNode8.Name = "节点8";
-            treeNode8.Text = "七喜";
-            treeNode9.Name = "节点0";
-            treeNode9.Text = "诺基亚";
-            treeNode10.Name = "节点1";
-            treeNode10.Text = "三星";
-            treeNode11.Name = "节点2";
-            treeNode11.Text = "摩托罗拉";
+            treeNode1.Name = "节点0";
+            treeNode1.Text = "诺基亚";
+            treeNode2.Name = "节点1";
+            treeNode2.Text = "三星";
+            treeNode3.Name = "节点2";
+            treeNode3.Text = "摩托罗拉";
+            treeNode4.Name = "节点1";
+            treeNode4.Text = "联想";
+            treeNode5.Name = "节点2";
+            treeNode5.Text = "天语";
+            treeNode6.Name = "节点3";
+            treeNode6.Text = "长虹";
+            treeNode7.Name = "节点4";
+            treeNode7.Text = "康佳";
+            treeNode8.Name = "节点5";
+            treeNode8.Text = "oppo";
+            treeNode9.Name = "节点6";
+            treeNode9.Text = "金立";
+            treeNode10.Name = "节点7";
+            treeNode10.Text = "创维";
+            treeNode11.Name = "节点8";
+            treeNode11.Text = "七喜";
             treeNode12.Name = "节点0";
             treeNode12.Text = "国产手机品牌分类";
             treeNode13.Name = "节点10";
