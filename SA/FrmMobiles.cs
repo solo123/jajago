@@ -152,6 +152,43 @@ namespace com.jajago.SA
         {
             show_mobiles();
         }
+
+        private void tvSelect_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            fpanel.SuspendLayout();
+            fpanel.Controls.Clear();
+            foreach (Mobile m in mm.GetList(e.Node.Text))
+            {
+                Ctls.CtlMobileItem item = new Ctls.CtlMobileItem();
+                item.mobile = m;
+                item.OnClicked += new EventHandler(item_clicked);
+                fpanel.Controls.Add(item);
+                MobileNode mn = new MobileNode(m, item);
+                if (m.status == 0)
+                {
+                    item.image = no_img;
+                    queDownload.Enqueue(mn);
+                }
+                else
+                {
+                    string imagefile = mobile_path + "photos/thumb/" + mn.mobile.id + ".jpg";
+                    if (File.Exists(imagefile))
+                        item.image = Image.FromFile(imagefile);
+                    else
+                    {
+                        item.image = loading_img;
+                        queDownload.Enqueue(mn);
+                    }
+                    queLoadImage.Enqueue(mn);
+                }
+            }
+            fpanel.ResumeLayout();
+            plProgress.Show();
+            progressBar.Value = 0;
+            lbProgressMessage.Text = "读取图片：";
+            Application.DoEvents();
+            if (!bwDownload.IsBusy) bwDownload.RunWorkerAsync();
+        }
     }
 
     public class MobileNode

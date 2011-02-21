@@ -22,6 +22,7 @@ namespace com.jajago.SA
         public void SetSelectedResource(object datasource)
         {
             lstData.DataSource = datasource;
+            lstData.AutoGenerateColumns = false;
             if (lstData.Rows.Count > 0)
             {
                 lstData.Columns[0].HeaderCell.Value = "类型";
@@ -29,7 +30,14 @@ namespace com.jajago.SA
                 lstData.Columns[3].HeaderCell.Value = "路径";
                 lstData.Columns[4].HeaderCell.Value = "创建时间";
                 lstData.Columns[6].HeaderCell.Value = "大小";
-            } 
+                lstData.Columns.RemoveAt(5);
+                lstData.Columns.RemoveAt(1);
+                lstData.Columns[0].FillWeight = 15;
+                lstData.Columns[1].FillWeight = 20;
+                lstData.Columns[2].FillWeight = 35;
+                lstData.Columns[3].FillWeight = 15;
+                lstData.Columns[4].FillWeight = 15;
+            }
             int count = lstData.Rows.Count;
             lbInfo.Text = "准备写入" + count + "个文件";
         }
@@ -44,7 +52,7 @@ namespace com.jajago.SA
             else
             {
                 txtPath.Text = "";
-            } 
+            }
         }
 
         private void btnWrite_Click(object sender, EventArgs e)

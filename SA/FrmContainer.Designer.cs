@@ -42,7 +42,6 @@
             this.tsResource = new System.Windows.Forms.ToolStripButton();
             this.tsMobiles = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.StatusMain = new System.Windows.Forms.StatusStrip();
             this.lbstatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.MenuMain.SuspendLayout();
@@ -124,8 +123,7 @@
             this.ToolMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsResource,
             this.tsMobiles,
-            this.toolStripButton2,
-            this.toolStripButton3});
+            this.toolStripButton2});
             this.ToolMain.Location = new System.Drawing.Point(0, 24);
             this.ToolMain.Name = "ToolMain";
             this.ToolMain.Size = new System.Drawing.Size(729, 39);
@@ -167,15 +165,6 @@
             this.toolStripButton2.Size = new System.Drawing.Size(124, 36);
             this.toolStripButton2.Text = "会员服务";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 36);
-            this.toolStripButton3.Text = "toolStripButton3";
             // 
             // StatusMain
             // 
@@ -229,7 +218,6 @@
         private System.Windows.Forms.ToolStripMenuItem tuiChuToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton tsMobiles;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripMenuItem menuConfig;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel lbstatus;
