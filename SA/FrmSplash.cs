@@ -20,6 +20,7 @@ namespace com.jajago.SA
         {
             InitializeComponent();
         }
+
         public static void ShowSplash()
         {
             _splashLauncher = new Thread(new ThreadStart(LaunchSplash));
@@ -32,6 +33,7 @@ namespace com.jajago.SA
             _splashScreen = new FrmSplash();
             Application.Run(_splashScreen);  //Create new message pump
         }
+
         private static void CloseSplashDown()
         {
             Application.ExitThread();

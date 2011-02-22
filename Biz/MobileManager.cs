@@ -31,10 +31,17 @@ namespace com.jajago.Biz
         {
             if (filter==null || filter.Trim().Length<1) 
                 return from r in ent.Mobiles select r;
-            var result = from r in ent.Mobiles 
+            var result = from r in ent.Mobiles
                          where r.title.Contains(filter)
                          select r;
             return result;
+        }
+
+        public IQueryable<Mobile> GetPriceList(int i,int j)
+        {
+            return from r in ent.Mobiles
+                   where i<r.price_shop&&r.price_shop<j
+                   select r;
         }
 
         public Mobile GetMobile(int id)

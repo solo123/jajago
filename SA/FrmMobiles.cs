@@ -157,31 +157,77 @@ namespace com.jajago.SA
         {
             fpanel.SuspendLayout();
             fpanel.Controls.Clear();
-            foreach (Mobile m in mm.GetList(e.Node.Text))
+            string s = e.Node.Text;
+            if (e.Node.Parent != null && e.Node.Parent.Text.Equals("国产手机报价"))
             {
-                Ctls.CtlMobileItem item = new Ctls.CtlMobileItem();
-                item.mobile = m;
-                item.OnClicked += new EventHandler(item_clicked);
-                fpanel.Controls.Add(item);
-                MobileNode mn = new MobileNode(m, item);
-                if (m.status == 0)
+
+                int p1 = Convert.ToInt16(s.Substring(0, 4));
+                int p2;
+                if (p1 == 2000)
+                    p2 = 10000;
+                else if (p1 == 200)
                 {
-                    item.image = no_img;
-                    queDownload.Enqueue(mn);
+                    p1 = 0;
+                    p2 = 200;
                 }
                 else
+                    p2 = Convert.ToInt16(s.Substring(6, 4));
+                foreach (Mobile m in mm.GetPriceList(p1, p2))
                 {
-                    string imagefile = mobile_path + "photos/thumb/" + mn.mobile.id + ".jpg";
-                    if (File.Exists(imagefile))
-                        item.image = Image.FromFile(imagefile);
-                    else
+                    Ctls.CtlMobileItem item = new Ctls.CtlMobileItem();
+                    item.mobile = m;
+                    item.OnClicked += new EventHandler(item_clicked);
+                    fpanel.Controls.Add(item);
+                    MobileNode mn = new MobileNode(m, item);
+                    if (m.status == 0)
                     {
-                        item.image = loading_img;
+                        item.image = no_img;
                         queDownload.Enqueue(mn);
                     }
-                    queLoadImage.Enqueue(mn);
+                    else
+                    {
+                        string imagefile = mobile_path + "photos/thumb/" + mn.mobile.id + ".jpg";
+                        if (File.Exists(imagefile))
+                            item.image = Image.FromFile(imagefile);
+                        else
+                        {
+                            item.image = loading_img;
+                            queDownload.Enqueue(mn);
+                        }
+                        queLoadImage.Enqueue(mn);
+                    }
                 }
             }
+            else if (e.Node.Parent != null && e.Node.Parent.Text.Equals("国产手机品牌分类"))
+            {
+                foreach (Mobile m in mm.GetList(e.Node.Text))
+                {
+                    Ctls.CtlMobileItem item = new Ctls.CtlMobileItem();
+                    item.mobile = m;
+                    item.OnClicked += new EventHandler(item_clicked);
+                    fpanel.Controls.Add(item);
+                    MobileNode mn = new MobileNode(m, item);
+                    if (m.status == 0)
+                    {
+                        item.image = no_img;
+                        queDownload.Enqueue(mn);
+                    }
+                    else
+                    {
+                        string imagefile = mobile_path + "photos/thumb/" + mn.mobile.id + ".jpg";
+                        if (File.Exists(imagefile))
+                            item.image = Image.FromFile(imagefile);
+                        else
+                        {
+                            item.image = loading_img;
+                            queDownload.Enqueue(mn);
+                        }
+                        queLoadImage.Enqueue(mn);
+                    }
+                }
+            }
+            else
+                show_mobiles();
             fpanel.ResumeLayout();
             plProgress.Show();
             progressBar.Value = 0;

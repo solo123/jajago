@@ -30,6 +30,7 @@ namespace com.jajago.Biz
         {
             ReloadAllTaxonomy();
         }
+
         public void ReloadAllTaxonomy()
         {
             var o =
