@@ -91,10 +91,5 @@ namespace com.jajago.Biz
         }
 
     }
-
-    public class MobileProperty
-    {
-
-    }
     
 }

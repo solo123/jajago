@@ -160,7 +160,6 @@ namespace com.jajago.SA
             string s = e.Node.Text;
             if (e.Node.Parent != null && e.Node.Parent.Text.Equals("国产手机报价"))
             {
-
                 int p1 = Convert.ToInt16(s.Substring(0, 4));
                 int p2;
                 if (p1 == 2000)
