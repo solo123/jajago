@@ -62,7 +62,7 @@ namespace com.jajago.SA
                 foreach (DataGridViewRow d in lstData.Rows)
                 {
                     int i = 1;
-                    string fileName = d.Cells[2].Value.ToString();
+                    string fileName = d.Cells[1].Value.ToString();
                     string file = d.Cells[0].Value.ToString();
                     string[] array = fileName.Split('.');
                     string fileend = array[array.Length - 1];
@@ -70,7 +70,7 @@ namespace com.jajago.SA
                     DirectoryInfo di = new DirectoryInfo(txtPath.Text + @"\" + file);
                     if (!di.Exists)
                         Directory.CreateDirectory(txtPath.Text + @"\" + d.Cells[0].Value.ToString());
-                    FileInfo f = new FileInfo(d.Cells[3].Value.ToString());
+                    FileInfo f = new FileInfo(d.Cells[2].Value.ToString());
                     if (File.Exists(txtPath.Text + @"\" + file + @"\" + fileName))
                     {
                         while (File.Exists(txtPath.Text + @"\" + file + @"\" + fileName.Remove(fileName.LastIndexOf('.')) + i.ToString() + "." + fileend))
