@@ -40,7 +40,7 @@
             System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("金立");
             System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("创维");
             System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("七喜");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("国产手机品牌分类", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("手机品牌分类", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
@@ -74,7 +74,7 @@
             System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("1000- 1500 元");
             System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("1500- 2000 元");
             System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("2000 元以上");
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("国产手机报价", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("手机价格分类", new System.Windows.Forms.TreeNode[] {
             treeNode22,
             treeNode23,
             treeNode24,
@@ -206,7 +206,7 @@
             treeNode12.Name = "节点8";
             treeNode12.Text = "七喜";
             treeNode13.Name = "节点0";
-            treeNode13.Text = "国产手机品牌分类";
+            treeNode13.Text = "手机品牌分类";
             treeNode14.Name = "节点10";
             treeNode14.Text = "电信天翼 3G";
             treeNode15.Name = "节点11";
@@ -237,7 +237,7 @@
             treeNode27.Name = "节点24";
             treeNode27.Text = "2000 元以上";
             treeNode28.Name = "节点17";
-            treeNode28.Text = "国产手机报价";
+            treeNode28.Text = "手机价格分类";
             this.tvSelect.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode13,
             treeNode21,

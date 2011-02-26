@@ -30,16 +30,16 @@
         {
             this.tbUserName = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.llbExit = new System.Windows.Forms.LinkLabel();
+            this.lstPriceData = new System.Windows.Forms.DataGridView();
             this.lbUserName = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
-            this.lstPriceData = new System.Windows.Forms.DataGridView();
-            this.llbExit = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lstPriceData)).BeginInit();
@@ -60,15 +60,15 @@
             this.tbPassword.Size = new System.Drawing.Size(180, 21);
             this.tbPassword.TabIndex = 2;
             // 
-            // button2
+            // btnLogin
             // 
-            this.button2.Location = new System.Drawing.Point(59, 140);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "登录";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnLogin.Location = new System.Drawing.Point(59, 140);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "登录";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -94,7 +94,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.tbUserName);
             this.panel1.Controls.Add(this.tbPassword);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Location = new System.Drawing.Point(145, 58);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 173);
@@ -112,6 +112,35 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(573, 336);
             this.panel2.TabIndex = 6;
+            // 
+            // llbExit
+            // 
+            this.llbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.llbExit.AutoSize = true;
+            this.llbExit.Location = new System.Drawing.Point(505, 21);
+            this.llbExit.Name = "llbExit";
+            this.llbExit.Size = new System.Drawing.Size(29, 12);
+            this.llbExit.TabIndex = 4;
+            this.llbExit.TabStop = true;
+            this.llbExit.Text = "退出";
+            this.llbExit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbExit_LinkClicked);
+            // 
+            // lstPriceData
+            // 
+            this.lstPriceData.AllowUserToAddRows = false;
+            this.lstPriceData.AllowUserToDeleteRows = false;
+            this.lstPriceData.AllowUserToResizeRows = false;
+            this.lstPriceData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstPriceData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.lstPriceData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lstPriceData.Location = new System.Drawing.Point(3, 61);
+            this.lstPriceData.Name = "lstPriceData";
+            this.lstPriceData.ReadOnly = true;
+            this.lstPriceData.RowTemplate.Height = 23;
+            this.lstPriceData.Size = new System.Drawing.Size(567, 272);
+            this.lstPriceData.TabIndex = 3;
             // 
             // lbUserName
             // 
@@ -140,36 +169,9 @@
             this.tbSearch.Size = new System.Drawing.Size(185, 21);
             this.tbSearch.TabIndex = 0;
             // 
-            // lstPriceData
-            // 
-            this.lstPriceData.AllowUserToAddRows = false;
-            this.lstPriceData.AllowUserToDeleteRows = false;
-            this.lstPriceData.AllowUserToResizeRows = false;
-            this.lstPriceData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstPriceData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.lstPriceData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lstPriceData.Location = new System.Drawing.Point(3, 61);
-            this.lstPriceData.Name = "lstPriceData";
-            this.lstPriceData.RowTemplate.Height = 23;
-            this.lstPriceData.Size = new System.Drawing.Size(567, 272);
-            this.lstPriceData.TabIndex = 3;
-            // 
-            // llbExit
-            // 
-            this.llbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.llbExit.AutoSize = true;
-            this.llbExit.Location = new System.Drawing.Point(505, 21);
-            this.llbExit.Name = "llbExit";
-            this.llbExit.Size = new System.Drawing.Size(29, 12);
-            this.llbExit.TabIndex = 4;
-            this.llbExit.TabStop = true;
-            this.llbExit.Text = "退出";
-            this.llbExit.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbExit_LinkClicked);
-            // 
             // FrmPrice
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 336);
@@ -190,7 +192,7 @@
 
         private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;

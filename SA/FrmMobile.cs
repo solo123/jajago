@@ -43,5 +43,15 @@ namespace com.jajago.SA
                 }
             }
         }
+
+        private string proName { get; set; }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            FrmOrder fo = new FrmOrder();
+            proName = lbName.Text;
+            fo.ListOrder(proName);
+            fo.ShowDialog();
+        }
     }
 }

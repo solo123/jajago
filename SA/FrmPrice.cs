@@ -59,6 +59,8 @@ namespace com.jajago.SA
         {
             tbUserName.Text = "";
             tbPassword.Text = "";
+            tbSearch.Text = "";
+            lstPriceData.DataSource = null;
             panel2.Visible = false;
             panel1.Visible = true;
         }

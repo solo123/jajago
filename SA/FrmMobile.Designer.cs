@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbShowImage)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -91,6 +92,7 @@
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.btnOrder);
             this.tabPage1.Controls.Add(this.lbStandard);
             this.tabPage1.Controls.Add(this.lstProp);
             this.tabPage1.Controls.Add(this.lbPrice);
@@ -127,9 +129,9 @@
             this.columnHeader2});
             this.lstProp.GridLines = true;
             this.lstProp.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lstProp.Location = new System.Drawing.Point(376, 168);
+            this.lstProp.Location = new System.Drawing.Point(376, 182);
             this.lstProp.Name = "lstProp";
-            this.lstProp.Size = new System.Drawing.Size(420, 270);
+            this.lstProp.Size = new System.Drawing.Size(420, 256);
             this.lstProp.TabIndex = 48;
             this.lstProp.UseCompatibleStateImageBehavior = false;
             this.lstProp.View = System.Windows.Forms.View.Details;
@@ -211,6 +213,16 @@
             this.tabPage2.Text = "详细信息";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnOrder
+            // 
+            this.btnOrder.Location = new System.Drawing.Point(376, 153);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnOrder.TabIndex = 49;
+            this.btnOrder.Text = "快速订购";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
             // FrmMobile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -248,6 +260,7 @@
         private System.Windows.Forms.ListView lstProp;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Button btnOrder;
 
     }
 }

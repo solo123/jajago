@@ -22,7 +22,7 @@ namespace com.jajago.SA
 
         public FrmResource()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
