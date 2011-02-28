@@ -158,7 +158,7 @@ namespace com.jajago.SA
             fpanel.SuspendLayout();
             fpanel.Controls.Clear();
             string s = e.Node.Text;
-            if (e.Node.Parent != null && e.Node.Parent.Text.Equals("国产手机报价"))
+            if (e.Node.Parent != null && e.Node.Parent.Text.Equals("手机价格分类"))
             {
                 int p1 = Convert.ToInt16(s.Substring(0, 4));
                 int p2;
@@ -197,7 +197,7 @@ namespace com.jajago.SA
                     }
                 }
             }
-            else if (e.Node.Parent != null && e.Node.Parent.Text.Equals("国产手机品牌分类"))
+            else if (e.Node.Parent != null && e.Node.Parent.Text.Equals("手机品牌分类"))
             {
                 foreach (Mobile m in mm.GetList(e.Node.Text))
                 {

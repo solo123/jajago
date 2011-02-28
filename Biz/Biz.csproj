@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelMobiles.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ModelOrders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOrders.edmx</DependentUpon>
+    </Compile>
     <Compile Include="ModelResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,12 +99,21 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelResources.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="ModelOrders.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelOrders.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DataSources\MobilesEntities.datasource" />
+    <None Include="Properties\DataSources\ResourcesEntities.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Orders.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

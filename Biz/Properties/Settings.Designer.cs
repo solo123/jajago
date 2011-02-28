@@ -42,5 +42,15 @@ namespace com.jajago.Biz.Properties {
                 return ((string)(this["ResourceConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|\\Orders.sdf")]
+        public string OrdersConnectionString {
+            get {
+                return ((string)(this["OrdersConnectionString"]));
+            }
+        }
     }
 }
